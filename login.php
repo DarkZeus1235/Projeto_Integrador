@@ -30,7 +30,7 @@
                     <a href="#" class="ls-login-forgot">Esqueci minha senha</a>
     
                     <p class="txt-center ls-login-signup">Não possui um usuário na Taverna?
-                        <a href="#">Cadastre-se agora</a>
+                        <a href="cadastro.php">Cadastre-se agora</a>
                     </p>
                     <input type="submit" value="Entrar" class="btn btn-primary btn-lg btn-block">
                 </fieldset>
