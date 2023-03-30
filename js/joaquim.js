@@ -84,5 +84,26 @@ document.write("O meu nome é " + obj.nome + " minha idade é " + obj.idade + " 
 
 var arr = [5, "Dieimes", true, {teste: 1, teste: 2}];
 console.log(arr);
-var arr2 = [3,4, 5];
+var arr2 = [3,4,5,6,7,8];
 console.log(arr2);
+console.log(arr[1]); // Acessar elemento
+console.log(arr2[0]);
+var arrei = [10];
+console.log(arrei);
+arr[4] = 10;
+arr[0] = "Teste";
+console.log(arr);
+
+// Operadores condicionais são determinadas instruções aplicadas para determinar o fluxo de uma aplicação, por exemplo 'else, elseif, if'
+// If => Executa uma instrução enquanto ela for 'verdadeira'
+
+var idade = 14;
+var idadeMinima = 18;
+if(idade >=idadeMinima){
+    console.log("Pode fazer a carteira de habilitação");
+}
+if(idade<18){
+    console.log("Precisa esperar alguns anos ainda");
+}
+
+// Operadores de comparação 
