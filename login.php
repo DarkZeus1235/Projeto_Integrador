@@ -11,10 +11,37 @@
     </head>
     <body>
         <div class="container">
-        <form action="">
-            <label for="userPassword">Senha</label>
-            <input type="password">
-        </form>
+            <div class="teste">
+            <h2>Não é cadastrado? Cadastre-se agora!!</h2>
+            <p>Para se cadastrar basta ter os seguintes requisitos:</p>
+                <p>-Idade maior de 18 anos</p>
+                <p>-Seu endereço de e-mail</p>
+                <p>-Sua senha pessoal</p>
+                <p>-Seu CPF </p>
+            <h1>Login - Taverna de Valhalla</h1>
+            <p id="email">Digite seu e-mail e senha para entrar:</p>
+            </div>
+                <form>
+                    <div class="teste2">
+                    <div class="mb-3">
+                        <label >Email:</label>
+                        <input placeholder="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu e-mail com ninguém!!.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Senha:</label>
+                        <input placeholder="Senha" type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <a href="senha.php">Esqueceu sua senha?</a>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Lembre-me</label>
+                    </div>
+                    <a type="submit" id="Entrar" href="#" class="btn btn-primary">Entrar</a>
+                </form>
+            </div>
         </div>
+    </div>
+    <a href="cadastro.php" type="submit" class="btn btn-success" id="cadastrar">Cadastrar</a>
     </body>
 </html>
