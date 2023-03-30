@@ -29,10 +29,10 @@
             <a class="nav-link active" href="#">Produtos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Contate-nos</a>
+            <a class="nav-link active" href="#">Entrega e prazo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Entrega e Prazo</a>
+            <a class="nav-link active" href="#">Contato</a>
           </li>
         </ul>
       </div>
