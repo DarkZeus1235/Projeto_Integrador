@@ -11,27 +11,36 @@
     </head>
     <body>
         <div class="container">
-            <h3>Cadastro na Taverna de Valhalla</h3>
-            <div class="mb-3">
-            <form>
-                <label>Seu nome Completo:</label>
-                <input placeholder="Nome e Sobrenome" type="text">
+            <div class="centralizar">
+                <h3>Cadastro na Taverna de Valhalla</h3>
+                <form>
+                    <div id="central" class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Nome Completo:</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div id="central2" class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Data de Nascimento:</label>
+                        <input type="date" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div id="central3" class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">CPF:</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div id="central4" class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Endereço:</label>
+                        <input type="text" placeholder="Endereço da sua casa" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div id="central5" class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Endereço de e-mail:</label>
+                        <input type="email" placeholder="Seu email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div id="central6" class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Senha:</label>
+                        <input type="password"placeholder="Sua senha pessoal"  class="form-control" id="exampleInputPassword1">
+                    </div>
+            </form>
             </div>
-            <div class="mb-3">
-                <label>Data de nascimento:</label>
-                <input type="date">
-            </div>
-                <label>Seu CPF:</label>
-                <input placeholder="Número de CPF" type="text">
-            <div class="mb-3">
-                <label>Endereço de E-mail:</label>
-                <input placeholder="Seu E-mail" type="text">
-            </div>
-            <div class="mb-3">
-                <label>Sua senha:</label>
-                <input placeholder="Sua senha" type="text">  
-            </div>    
-            </div>
+            <a href="login.php" id="centralizar" type="submit" class="btn btn-primary">Cadastrar</a>
         </div>
     </body>
 </html>

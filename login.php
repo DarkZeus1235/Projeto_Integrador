@@ -23,21 +23,21 @@
             </div>
                 <form>
                     <div class="teste2">
-                    <div class="mb-3">
+                    <div id="centralizar2" class="mb-3">
                         <label >Email:</label>
                         <input placeholder="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu e-mail com ninguém!!.</div>
                     </div>
-                    <div class="mb-3">
+                    <div id="centralizar3" class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Senha:</label>
                         <input placeholder="Senha" type="password" class="form-control" id="exampleInputPassword1">
                     </div>
-                    <a href="senha.php">Esqueceu sua senha?</a>
-                    <div class="mb-3 form-check">
+                    <a id="centralizar6" href="senha.php">Esqueceu sua senha?</a>
+                    <div id="centralizar4" class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Lembre-me</label>
                     </div>
-                    <a type="submit" id="Entrar" href="#" class="btn btn-primary">Entrar</a>
+                    <a type="submit" id="centralizar5" href="#" class="btn btn-primary">Entrar</a>
                 </form>
             </div>
         </div>
