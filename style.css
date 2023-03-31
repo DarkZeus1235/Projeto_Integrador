@@ -1,0 +1,123 @@
+:root {
+    --color-primary: #1b120e;
+    --color-white: #e9e9e9;
+    --color-black: #E25822;
+    --color-black-1: #0c0d0e;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #232525;
+    font-size: 19px;
+  }
+  
+  .btn{
+    color: #31190d;
+    font-size: 10px;
+  }
+  
+  .logo {
+    color: var(--color-white);
+    font-size: 28px;
+    padding: 10px;
+    text-shadow: 2px 2px #221919;
+  }
+  
+  .logo span {
+    color: var(--color-primary);
+    text-shadow: 2px 2px #E25822;
+  }
+  
+  .menu-bar {
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu-bar ul li {
+    /* width: 120px; */
+    padding: 5px 32px;
+    /* text-align: center; */
+  
+    position: relative;
+  }
+  
+  .menu-bar ul li a {
+    font-size: 15px;
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    transition: all 0.2s;
+    text-shadow: 1px 1px #3a3737;
+  }
+  
+  .menu-bar ul li a:hover {
+    color: var(--color-primary);
+  }
+  
+  .fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+  }
+  
+  /* dropdown menu style */
+  .dropdown-menu {
+    display: none;
+    padding: 30px;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+  }
+  
+  .dropdown-menu-1 {
+    display: none;
+  }
+  
+  .dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: var(--color-black);
+    border-radius: 15px;
+
+  }
+  
+  .hero {
+    height: calc(100vh - 80px);
+    background-image: url(./bg.jpg);
+    background-position: center;
+  }
