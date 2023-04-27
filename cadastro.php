@@ -16,31 +16,31 @@
                 <form>
                     <div id="central" class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Nome Completo:</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input name="nome" type="text" class="form-control" id="exampleInputPassword1">
                     </div>
                     <div id="central2" class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Data de Nascimento:</label>
-                        <input type="date" class="form-control" id="exampleInputPassword1">
+                        <input name="nascimento" type="date" class="form-control" id="exampleInputPassword1">
                     </div>
                     <div id="central3" class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">CPF:</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input name="cpf" type="text" class="form-control" id="exampleInputPassword1">
                     </div>
                     <div id="central4" class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Endereço:</label>
-                        <input type="text" placeholder="Endereço da sua casa" class="form-control" id="exampleInputPassword1">
+                        <input name="endereco" type="text" placeholder="Endereço da sua casa" class="form-control" id="exampleInputPassword1">
                     </div>
                     <div id="central5" class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Endereço de e-mail:</label>
-                        <input type="email" placeholder="Seu email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input name="email" type="email" placeholder="Seu email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div id="central6" class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Senha:</label>
-                        <input type="password"placeholder="Sua senha pessoal"  class="form-control" id="exampleInputPassword1">
+                        <input name="senha" type="password"placeholder="Sua senha pessoal"  class="form-control" id="exampleInputPassword1">
                     </div>
             </form>
             </div>
-            <a href="login.php" id="centralizar" type="submit" class="btn btn-primary">Cadastrar</a>
+            <a href="" id="centralizar" type="submit" class="btn btn-primary">Cadastrar</a>
         </div>
     </body>
 </html>

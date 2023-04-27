@@ -1,3 +1,11 @@
+    <?php
+        include('protect.php');
+
+        if(!isset($_SESSION)){
+            session_start();
+        }
+    ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,6 +15,12 @@
     <title>Principal</title>
 </head>
 <body>
-    
+ Bem-vindo a Taverrna de Valhalla, <?php echo $_SESSION['nome']; ?>
+ <?php
+                include("conexao.php");
+            ?>
+ <p>
+    <a href="logout.php">Sair</a>
+</p>
 </body>
 </html>
