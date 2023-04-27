@@ -1,11 +1,11 @@
 <?php
-
 include('conexao.php');
+
 if(isset($_POST['email']) || isset($_POST['senha'])) {
 
     if(strlen($_POST['email']) == 0){
     echo("Preencha seu email");
-    
+
     }elseif(strlen($_POST['senha']) == 0){
         echo("Preencha sua senha");
     }else{
