@@ -253,3 +253,42 @@ while (i <= 3){
     console.log(palavra[i]);
     i++;
 }
+
+// Operadores de atribuição atribuem um valor a uma variável, utilizando +=, -=, *=, /= sendo uma forma resumida de x = x + y. Em loops é normal usar ++ ou --
+
+// soma de valores 
+
+var x = 1;
+var y = 2;
+
+console.log(x = x + y);
+console.log (x += y);
+
+// subtração de valores 
+
+console.log (x -= y);
+
+// multiplicação de valores
+
+console.log(x *= y);
+
+// divisão de valores
+
+console.log(x /= y);
+
+// Loops
+
+console.log (x++);
+console.log(x--);
+
+while (x <= 100){
+    console.log(x);
+    x *= 2;
+}
+
+var j = 5;
+
+while (x > 0){
+    console.log(x);
+    x -= 5;
+}
