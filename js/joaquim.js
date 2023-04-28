@@ -292,3 +292,198 @@ while (x > 0){
     console.log(x);
     x -= 5;
 }
+
+// O atributo FOR é mais complexo que as outras instruções de repetição, mas é usado por proporcionar um maior controle
+// Veja o exemplo
+
+for(var u = 0; u < 10; u ++){
+    console.log("Repetindo for: " + u);
+}
+
+var batata = [1, 2, 3, 4];
+for (var f = 0; f < batata.length; f++){
+    console.log(batata[f]);
+}
+
+for(var damasco = 2; damasco < 100; damasco *= 2){
+    console.log(damasco);
+}
+
+// O break pode servir para encerrar uma instrução
+// O continue serve para pular uma instrução
+// Geralmente ambos são usados em loops
+// Veja o exemplo abaixo
+
+for(var jabuti = 10; jabuti > 0; jabuti--){
+    console.log(jabuti);
+    if(jabuti === 5){
+        break;
+    }
+}
+console.log("Deu break");
+
+var d = 10;
+
+while(d < 100){
+    d += 10;
+    if(d === 60 || d === 80){
+        console.log("CONTINUE");
+        continue;
+    }
+    console.log("Testando o continue: " + d);
+}
+
+// O function pode ser reutilizado que evita diversas repetições de lógica em um programa
+// Ela pode ser usada em diversas partes do código
+// A function precisa ser invocada e executada
+// Veja o exemplo abaixo
+
+function funcaoUm(){
+    console.log("Dieimes é legal");
+}
+
+funcaoUm();
+
+function dizerNome(nome){
+    console.log("O nome do meu professor é: " + nome);
+}
+dizerNome("Dieimes");
+dizerNome("Julius");
+dizerNome("Hans");
+dizerNome("Cleverson");
+
+var MelhorProfessor = "Dieimes Nunes";
+
+dizerNome(MelhorProfessor);
+
+function soma(a, b){
+    var soma = a + b;
+    return soma;
+}
+
+var somaUm = soma(2, 5)
+console.log(somaUm);
+
+var somaDois = soma(120, 180);
+console.log(somaDois);
+
+console.log(soma(9, 6));
+
+// Um escopo no JavaScript possui vários tipos, o global que se inicia em toda a aplicação e locais que existem em várias intruções como funções
+// Veja o exemplo abaixo
+
+var s = 5;
+var e = 10;
+console.log(s, e);
+function testezinho(){
+    var z = 5;
+    console.log(z);
+}
+testezinho();
+
+if (true){
+    var p = 1;
+}
+console.log(p);
+
+// O let e o const podem criar escopos mais confiáveis em instruções como if
+// Além de separar cada bloco em um escopo
+// Veja um exemplo abaixo
+
+let framboesa = 5; // var framboesa = 5;
+const arroz = 10;
+framboesa = 12;
+console.log(framboesa);
+console.log('const: ' + arroz);
+if(true){
+    let framboesa = 20;
+    console.log(framboesa);
+    const arroz = 50;
+    console.log('const if: ' + arroz);
+}
+console.log(framboesa);
+if(20 > 10){
+    const arroz = 100;
+    console.log(arroz);
+}
+for(let aaa = 0; aaa < 10; aaa++){
+    console.log(aaa);
+}
+
+// O objeto Number foca especificamente nos números e exerce diversas funções nas instruções
+// Veja o exemplo abaixo
+
+// parseFLoat 10.0
+
+console.log(parseFloat('12.999'));
+console.log(Number.parseFloat('12.999'));
+
+// parseInt
+
+console.log(parseInt('10'));
+console.log(parseInt(16.90));
+
+// toFixed
+
+console.log(23.99.toFixed(1));
+
+// isNan
+
+console.log(isNaN('teste'));
+console.log(isNaN(12));
+console.log(isNaN("12"));
+console.log(isNaN('Dieimes'));
+
+// MAX_VALUE e MIN_VALUE
+
+console.log(Number.MAX_VALUE);
+console.log(Number.MIN_VALUE);
+
+// O objeto String serve para manusear textos em nossos softwares
+// Veja o exemplo abaixo
+
+// lenght
+
+var informar = "Dieimes";
+console.log(informar.length);
+
+// indexOf
+
+var frase = "O Dieimes é muito legal";
+console.log(frase.indexOf("legal"));
+
+// slice
+
+var malu = frase.slice(8, 18);
+console.log(malu);
+
+// replace
+
+var novaFrase = frase.replace("muito", "absurdamente");
+
+console.log(novaFrase);
+
+// toLowerCase e toUpperCase
+
+var textao = "A frase será manipulada";
+console.log(textao.toLowerCase());
+console.log(textao.toUpperCase());
+
+// trim
+
+var pessoa = "           nome        ";
+var pessoaTrim = pessoa.trim();
+console.log(pessoa);
+console.log(pessoaTrim);
+
+// split
+
+console.log(frase.split(" "));
+
+var tags = "PHP, Javascript, HTML, CSS";
+console.log(tags.split(","));
+
+// lastIndexOf
+
+var fraseDois = "Eu acho que deveria achar alguma coisa"
+console.log(fraseDois.lastIndexOf("coisa"));
