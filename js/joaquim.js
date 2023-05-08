@@ -487,3 +487,99 @@ console.log(tags.split(","));
 
 var fraseDois = "Eu acho que deveria achar alguma coisa"
 console.log(fraseDois.lastIndexOf("coisa"));
+
+// O array pode adicionar e remover alguns elementos
+// Veja o exemplo abaixo
+
+// length
+
+var farofa = [1, 2, 3, 4, 5, 6];
+console.log(farofa.length);
+
+// push
+
+farofa.push(6);
+farofa.push("Qualquer coisa mesmo");
+console.log(farofa);
+
+// pop
+
+farofa.pop();
+console.log(farofa);
+
+// unshift
+farofa.unshift(0);
+console.log(farofa);
+
+// shift
+
+farofa.shift("teste");
+console.log(farofa);
+
+// Para acessar o último elemento
+
+console.log(farofa[farofa.length - 1]);
+
+// isArray
+
+console.log(Array.isArray(5));
+console.log(Array.isArray(farofa));
+
+// splice
+
+var farofa = [1, 2, 3, 4, 5];
+farofa.splice(2, 0, 99);
+console.log(farofa);
+
+// indexOf
+
+console.log(farofa.indexOf(5));
+
+// join
+
+var farofa2 = ["O", "rato", "roeu", "a", "roupa", "do", "rei", "de", "Roma"];
+console.log(farofa2.join(","));
+
+// reverse
+
+console.log(farofa2.reverse());
+
+// Os objetos possuem diversas propriedades e podem auxiliar nos programas
+// Veja o exemplo abaixo
+
+let pessoal = {
+    nome: "Dieimes",
+    idade: 18,
+    falar: function() {
+        console.log("O meu nome é Dieimes Nunes");
+    },
+    somar: function (a, b){
+        return a + b;
+    },
+    apresentar: function(){
+        console.log("O meu nome é: " + this.nome + " e tenho: " + this.idade + " anos");
+    },
+    aniversario: function(){
+        this.idade += 1;
+    },
+    saudar: function (){
+        return "Sr. " + this.nome; 
+    }
+};
+console.log(pessoal.nome);
+pessoal.falar();
+var somatoria = pessoal.somar(5, 10);
+console.log(somatoria);
+
+// O this sempre se refere ao objeto global Window
+// Em objetos o this pode acessar suas propriedades
+// Veja o exemplo abaixo
+
+fabio = 7;
+console.log(this.fabio);
+pessoal.apresentar();
+pessoal.aniversario();
+pessoal.aniversario();
+var sdc = pessoal.saudar();
+console.log(pessoal.idade); 
+console.log("OLá " + sdc);
