@@ -41,7 +41,7 @@
               </div>
         </li>
         <li><a href="#">Fale Conosco</a>
-        <li><a id="entrar-cadastrar" href="#">Entrar | Cadastrar</a>
+        <li><a id="entrar-cadastrar" href="#">Entrar</a> | <a id="entrar-cadastrar" href="#">Cadastrar</a>
         </li>
 
       </ul>
