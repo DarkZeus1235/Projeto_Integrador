@@ -10,21 +10,15 @@
     </head>
     <body>
 
-    <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css" />
-    <title>dropdown Menu</title>
-  </head>
-  <body>
     <div class="menu-bar">
-      <h1 class="logo">Taverna de <span>Valhalla</span></h1>
+      <img src="vikingpinguço.png" alt="" width="90px">
+      <h1  class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Pages <i class="fas fa-caret-down"></i></a>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#">Novidades</a>
+        <li><a href="#">+ Vendidos <i class="bi bi-caret-down"></i></a>
+        
 
             <div class="dropdown-menu">
                 <ul>
@@ -37,30 +31,24 @@
                       <ul>
                         <li><a href="#">Team-1</a></li>
                         <li><a href="#">Team-2</a></li>
-                        <li><a href="#">Team-3</a></li>
+                        <li><a href="#">Team-3</a></li>   
                         <li><a href="#">Team-4</a></li>
                       </ul>
                     </div>
+                    
                   </li>
-                  <li><a href="#">FAQ</a></li>
                 </ul>
               </div>
         </li>
-        <li><a href="#">Blog</a>
+        <li><a href="#">Fale Conosco</a>
+        <li><a id="entrar-cadastrar" href="#">Entrar | Cadastrar</a>
         </li>
-        <li><a href="#">Contact us</a></li>
-        <form class="d-flex" role="search">
-        <input class="form-control me-2" type="pesquisar" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn" type="submit">Pesquisar</button>
-      </form>
+
       </ul>
     </div>
-
     <div class="hero">
       &nbsp;
     </div>
-  </body>
-</html>
 
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
