@@ -1,31 +1,10 @@
-    <?php
-
-        include("conexao.php");
-        
-        if(!isset($_SESSION)){
-            session_start();
-        }
-    ?>
-
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
-</head>
-<body>
- Bem-vindo a Taverrna de Valhalla, <?php echo $_SESSION['nome']; ?>
-
-
-    <!DOCTYPE html>
     <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Taverna de Valhalla</title>
     </head>
@@ -62,7 +41,7 @@
               </div>
         </li>
         <li><a href="#">Fale Conosco</a>
-        <li><a id="entrar-cadastrar" href="#">Entrar | Cadastrar</a>
+        <li><a id="entrar-cadastrar" href="login.php">Entrar</a> <a href="cadastro.php">| Cadastrar</a>
         </li>
 
       </ul>
@@ -73,7 +52,4 @@
 
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-</html>
-</p>
-</body>
 </html>

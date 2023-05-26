@@ -1,71 +1,49 @@
 <?php
         include('conexao.php');
 
-        if(isset($_POST['Nome'])){
+        if(isset($_POST['bt_nome'])){
             /*----------------------------------*/
-            $nome = $_POST['Nome'];
-            $data_de_nascimento = $_POST['data_de_nascimento'];
-            $cpf = $_POST['cpf'];
-            $endereco = $_POST['endereco'];
-            $email = $_POST['email'];
-            $senha = $_POST['senha'];
+            $email = $_POST['bt_email'];
+            $senha = $_POST['bt_senha'];
+            $nome = $_POST['bt_nome'];
+            $cpf = $_POST['bt_cpf'];
+            $endereco = $_POST['bt_endereco'];
             /*----------------------------------*/
-            $mysqli -> query("INSERT INTO teste (nome, data_de_nascimento, cpf, endereco, email, senha) values('$nome','$data_de_nascimento', '$cpf ',$endereco','$email', '$senha',)") or
+            $mysqli -> query("INSERT INTO cadastro (email, senha, nome, cpf, endereco ) values('$email', '$senha', '$nome', '$cpf', '$endereco')") or
             die ($mysqli->error);
 
-            
+            if(isset($_POST['nome']) || isset($_POST['endereco'])) {
+
             if(($_POST['nome']) == 1){
                 echo("Parabéns você está logado");
 
             if(($_POST['endereco']) == 1){
                 echo("Parabéns você está logado");
+            }    
             }
         }
-        }
-        ?>
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="Imagens\vikingpinguço.png">
-        <title>Cadastro - Taverna</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="centralizar">
-                <h3>Cadastro na Taverna de Valhalla</h3>
-                <form action="" method="post">
-                    <div id="central" class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Nome Completo:</label>
-                        <input name="nome" type="text" class="form-control" id="exampleInputEmail1">
-                    </div>
-                    <div id="central2" class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Data de Nascimento:</label>
-                        <input name="data_de_nascimento" type="date" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div id="central3" class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">CPF:</label>
-                        <input name="cpf" type="text" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div id="central4" class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Endereço:</label>
-                        <input name="endereco" type="text" placeholder="Endereço da sua casa" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div id="central5" class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Endereço de e-mail:</label>
-                        <input name="email" type="email" placeholder="Seu email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div id="central6" class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Senha:</label>
-                        <input name="senha" type="password"placeholder="Sua senha pessoal"  class="form-control" id="exampleInputPassword1">
-                    </div>
-            </form>
-            </div>
-            <a href="" id="centralizar" type="submit" class="btn btn-primary">Cadastrar</a>
-        </div>
-    </body>
+<html>
+<head>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="img/hamburguer-queijo-com-ilustracao-do-icone-do-vetor-dos-desenhos-animados-do-fogo-conceito-de-icone-de-objeto-de-comida-isolado-premium_138676-5539.avif">
+    <title>Página de Cadastro</title>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Cadastro Taverna de Valhalla</h2>
+    <form action="cadastro.php" method="post">
+    <input type="email" name="bt_email" placeholder="Email" required>
+      <input type="password" name="bt_senha" placeholder="Senha" required>
+      <input type="text" name="bt_nome" placeholder="Nome completo" required>
+      <input type="text" name="bt_cpf" placeholder="CPF" required>
+      <input type="text" name="bt_endereco" placeholder="Endereço" required>
+      <input type="submit" value="Cadastrar">
+      <p>Já tem uma conta? <a href="login.php">Entrar</a></p>
+    </form>
+  </div>
+</body>
 </html>
