@@ -583,3 +583,76 @@ pessoal.aniversario();
 var sdc = pessoal.saudar();
 console.log(pessoal.idade); 
 console.log("OLá " + sdc);
+
+// DOM é Document Object Model, que é uma interface de programação para o HTML, permitindo que possamos utilizar métodos para acessar uma árvore de elementos
+// DOM pode fornecer uma cópia do HTML 
+// Pode-se manipular eventos no DOM que afetam consequentemente o HTML
+// Semelhante ao CSS, pode usar tags como ids e classes
+// Veja o exemplo abaixo
+
+// tag 
+
+var titulo = document.getElementsByTagName('h1')[0];
+console.log(titulo);
+var lis = document.getElementsByTagName('li');
+console.log(lis[3]);
+
+// id
+
+var paragrafo = document.getElementById('paragrafo');
+console.log(paragrafo);
+
+// class
+
+var itens = document.getElementsByClassName('item');
+console.log(itens);
+
+// O querySelector e querySelectorAll permite acessar os elementos de forma mais fácil, baseado em regras do CSS. Veja o exemplo abaixo
+
+var itensClasse = document.getElementsByClassName('.item');
+console.log(itens);
+
+// querySelectorAll
+
+var itensQuery = document.querySelectorAll('#lista');
+console.log(itensQuery)
+
+// querySelector
+
+var itensQuery2 = document.querySelector('lista .item');
+console.log(itensQuery2);
+
+var listas = document.querySelector('#lista');
+console.log(listas);
+
+// É possível alterar o texto do JavaScript de forma mais fácil, veja o exemplo abaixo
+
+var title = document.querySelector('#title');
+console.log(title);
+
+// innerHTML
+
+title.innerHTML = "Testando a alteração!!!";  
+
+// textContent -> mais rápido e recomendável
+
+var subtitle = document.querySelector('.subtitle');
+console.log(subtitle);
+subtitle.textContent = "Testando mais uma alteração!!!";
+
+// Podemos criar elementos com o DOM. Veja o exemplo abaixo
+
+var novoElemento = document.createElement("p");
+var segundoElemento = document.createTextNode("Este é um novo texto");
+novoElemento.appendChild(segundoElemento);
+console.log(novoElemento);
+
+var body = document.querySelector("body");
+console.log(body);
+body.appendChild(novoElemento);
+
+// Inserir em container
+
+var container = document.getElementsByClassName("container");
+
+
