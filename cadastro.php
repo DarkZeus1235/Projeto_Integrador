@@ -10,7 +10,7 @@
             $endereco = $_POST['bt_endereco'];
             /*----------------------------------*/
             $mysqli -> query("INSERT INTO cadastro (email, senha, nome, cpf, endereco ) values('$email', '$senha', '$nome', '$cpf', '$endereco')") or
-            die ($mysqli->error);
+            die ($mysqlierrno);
 
             if(isset($_POST['nome']) || isset($_POST['endereco'])) {
 
