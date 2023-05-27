@@ -41,42 +41,31 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Login - Taverna de Valhalla</title>
+<link rel="stylesheet" href="css/login.css">
+<link rel="icon" href="img/hamburguer-queijo-com-ilustracao-do-icone-do-vetor-dos-desenhos-animados-do-fogo-conceito-de-icone-de-objeto-de-comida-isolado-premium_138676-5539.avif">
+  <title>Página de Login</title>
 </head>
 <body>
-   <div class="box">
-    <div class="container">
-        <div class="top">
-            <span>Possui uma conta?</span>
-            <header>Login</header>
-        </div>
-        <div class="input-field">
-            <input type="text" class="input" placeholder="Email" id="">
-            <i class='bx bx-user' ></i>
-        </div>
-        <div class="input-field">
-            <input type="Password" class="input" placeholder="Password" id="">
-            <i class='bx bx-lock-alt'></i>
-        </div>
-        <div class="input-field">
-            <input type="submit" class="submit" value="Login" id="">
-        </div>
-        <div class="two-col">
-            <div class="one">
-               <input type="checkbox" name="" id="check">
-               <label for="check"> Remember Me</label>
-            </div>
-            <div class="two">
-                <label><a href="#">Forgot password?</a></label>
-            </div>
-        </div>
+  <div class="login-container">
+    <h2>Faça login</h2>
+    <form action="login.php" method="post">
+      <div class='inputbox'>
+      <ion-icon name="mail-outline"></ion-icon>
+      <input type="text" name="email" placeholder="Email" required>
+      </div>
+      <div class="inputbox">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <input type="password" name="senha" placeholder="Senha" required>
+      </div>
+      <input type="submit" value="Entrar">
+    </form>
+    <div class='register'>
+    <p>Não tem uma conta? <a href="cadastro.php">Registre-se</a></p>
     </div>
-</div>  
+  </div>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
