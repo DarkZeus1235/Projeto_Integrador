@@ -655,4 +655,94 @@ body.appendChild(novoElemento);
 
 var container = document.getElementsByClassName("container");
 
+var el = document.createElement("span");
 
+el.appendChild(document.createTextNode("Teste de span"));
+
+console.log(el);
+
+// É possível remover elementos com o JavaScript, veja o exemplo abaixo
+
+// Removendo elemento filho 
+
+var bababa = document.querySelector('#bababa');
+var pp = document.querySelector("#bababa p");
+bababa.removeChild(pp);
+
+// Removendo um elemento
+/*
+var subtitle = document.querySelector(".subtitle");
+subtitle.remove();
+*/
+// Podemos adicoinar elementos dentro da div, como se fosse "acrescentar um filho"
+// Veja o exemplo abaixo
+
+var dieiminho = document.createElement("div");
+dieiminho.classList= "div-criada";
+console.log(dieiminho);
+var container = document.querySelector('#container');
+// Inserindo elemento filho
+container.appendChild(dieiminho);
+console.log(container);
+
+// inserBefore - insere antes
+
+/*
+
+var dieiminho2 = document.createElement("div");
+
+dieiminho2.classList = "div-before"
+
+var dieiminho3 = document.querySelector("#container .div-criada");
+console.log(dieiminho3);
+container.insertBefore(dieiminho2, dieiminho3);
+
+*/
+
+// É possível trocar elementos dentro do DOM, veja o exemplo abaixo
+
+var dieiminho4 = document.createElement('h3');
+dieiminho4.classList = "testando-class";
+var textao = document.createTextNode("É um texto para testar");
+dieiminho4.appendChild(textao);
+console.log(dieiminho4);
+
+// Selecionar elemento que deseja trocar
+/*
+var text = document.querySelector('#title');
+console.log(text);
+*/
+
+// Selecionar o pai do elemento
+
+var pai = title.parentNode;
+
+// Trocar elementos
+/*
+pai.replaceChild(dieiminho4, text);
+*/
+
+// Pode-se alterar os atributos via JS e DOM, seja o alt de uma imagem ou o SRC -> setAttribute
+// Qualquer atributo pode ser alterado via JS
+// Veja o exemplo abaixo
+/*
+var textinho = document.querySelector('#title');
+textinho.setAttribute("class", "testando-atributo");
+console.log(textinho);
+
+var btn = document.querySelector('#btn');
+btn.setAttribute("disabled", "disabled");
+
+var subtitulo = document.querySelector(".subtitle");
+subtitulo.setAttribute("id", "titulo-2");
+ 
+// remover atributos
+
+var lista2 = document.querySelector('#lista2');
+lista2.removeAttribute("id");
+*/
+// É possível alterar CSS com o JS, veja o exemplo abaixo
+
+var rodrigo = document.querySelector('#title');
+
+rodrigo.style.color = "red";
