@@ -41,7 +41,11 @@
               </div>
         </li>
         <li><a href="#">Fale Conosco</a>
+<<<<<<< HEAD
         <li><a id="entrar-cadastrar" href="login.php">Entrar |</a><a href="cadastro.php" Cadastrar</a>
+=======
+        <li><a id="entrar-cadastrar" href="#">Entrar</a> | <a id="entrar-cadastrar" href="#">Cadastrar</a>
+>>>>>>> c34338c8a4a81b00922e497617ec8890878cbfba
         </li>
 
       </ul>
