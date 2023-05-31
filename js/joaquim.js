@@ -1,7 +1,7 @@
 // O console.log exibe informações e executa instruções na página.
 // A variável obtém um determinado tipo de valor para ser executado em alguma instrução.
 // Veja o exemplo abaixo
-
+/*
 console.log("Esse é o script do body HAHAHAHAHA");
 var teste = 1;
 nome = "João"; // Não necessariamente precisa do "var"
@@ -308,12 +308,12 @@ for (var f = 0; f < batata.length; f++){
 for(var damasco = 2; damasco < 100; damasco *= 2){
     console.log(damasco);
 }
-
+*/
 // O break pode servir para encerrar uma instrução
 // O continue serve para pular uma instrução
 // Geralmente ambos são usados em loops
 // Veja o exemplo abaixo
-
+/*
 for(var jabuti = 10; jabuti > 0; jabuti--){
     console.log(jabuti);
     if(jabuti === 5){
@@ -332,12 +332,12 @@ while(d < 100){
     }
     console.log("Testando o continue: " + d);
 }
-
+*/
 // O function pode ser reutilizado que evita diversas repetições de lógica em um programa
 // Ela pode ser usada em diversas partes do código
 // A function precisa ser invocada e executada
 // Veja o exemplo abaixo
-
+/*
 function funcaoUm(){
     console.log("Dieimes é legal");
 }
@@ -368,10 +368,10 @@ var somaDois = soma(120, 180);
 console.log(somaDois);
 
 console.log(soma(9, 6));
-
+*/
 // Um escopo no JavaScript possui vários tipos, o global que se inicia em toda a aplicação e locais que existem em várias intruções como funções
 // Veja o exemplo abaixo
-
+/*
 var s = 5;
 var e = 10;
 console.log(s, e);
@@ -385,11 +385,11 @@ if (true){
     var p = 1;
 }
 console.log(p);
-
+*/
 // O let e o const podem criar escopos mais confiáveis em instruções como if
 // Além de separar cada bloco em um escopo
 // Veja um exemplo abaixo
-
+/*
 let framboesa = 5; // var framboesa = 5;
 const arroz = 10;
 framboesa = 12;
@@ -409,144 +409,145 @@ if(20 > 10){
 for(let aaa = 0; aaa < 10; aaa++){
     console.log(aaa);
 }
-
+*/
 // O objeto Number foca especificamente nos números e exerce diversas funções nas instruções
 // Veja o exemplo abaixo
 
 // parseFLoat 10.0
-
+/*
 console.log(parseFloat('12.999'));
 console.log(Number.parseFloat('12.999'));
-
+*/
 // parseInt
-
+/*
 console.log(parseInt('10'));
 console.log(parseInt(16.90));
-
+*/
 // toFixed
-
+/*
 console.log(23.99.toFixed(1));
-
+*/
 // isNan
-
+/*
 console.log(isNaN('teste'));
 console.log(isNaN(12));
 console.log(isNaN("12"));
 console.log(isNaN('Dieimes'));
-
+*/
 // MAX_VALUE e MIN_VALUE
-
+/*
 console.log(Number.MAX_VALUE);
 console.log(Number.MIN_VALUE);
-
+*/
 // O objeto String serve para manusear textos em nossos softwares
 // Veja o exemplo abaixo
 
 // lenght
-
+/*
 var informar = "Dieimes";
 console.log(informar.length);
-
+*/
 // indexOf
-
+/*
 var frase = "O Dieimes é muito legal";
 console.log(frase.indexOf("legal"));
-
+*/
 // slice
-
+/*
 var malu = frase.slice(8, 18);
 console.log(malu);
-
+*/
 // replace
-
+/*
 var novaFrase = frase.replace("muito", "absurdamente");
 
 console.log(novaFrase);
-
+*/
 // toLowerCase e toUpperCase
-
+/*
 var textao = "A frase será manipulada";
 console.log(textao.toLowerCase());
 console.log(textao.toUpperCase());
-
+*/
 // trim
-
+/*
 var pessoa = "           nome        ";
 var pessoaTrim = pessoa.trim();
 console.log(pessoa);
 console.log(pessoaTrim);
-
+*/
 // split
-
+/*
 console.log(frase.split(" "));
 
 var tags = "PHP, Javascript, HTML, CSS";
 console.log(tags.split(","));
-
+*/
 // lastIndexOf
-
+/*
 var fraseDois = "Eu acho que deveria achar alguma coisa"
 console.log(fraseDois.lastIndexOf("coisa"));
-
+*/
 // O array pode adicionar e remover alguns elementos
 // Veja o exemplo abaixo
 
 // length
-
+/*
 var farofa = [1, 2, 3, 4, 5, 6];
 console.log(farofa.length);
-
+*/
 // push
-
+/*
 farofa.push(6);
 farofa.push("Qualquer coisa mesmo");
 console.log(farofa);
-
+*/
 // pop
-
+/*
 farofa.pop();
 console.log(farofa);
-
+*/
 // unshift
+/*
 farofa.unshift(0);
 console.log(farofa);
-
+*/
 // shift
-
+/*
 farofa.shift("teste");
 console.log(farofa);
-
+*/
 // Para acessar o último elemento
-
+/*
 console.log(farofa[farofa.length - 1]);
-
+*/
 // isArray
-
+/*
 console.log(Array.isArray(5));
 console.log(Array.isArray(farofa));
-
+*/
 // splice
-
+/*
 var farofa = [1, 2, 3, 4, 5];
 farofa.splice(2, 0, 99);
 console.log(farofa);
-
+*/
 // indexOf
-
+/*
 console.log(farofa.indexOf(5));
-
+*/
 // join
-
+/*
 var farofa2 = ["O", "rato", "roeu", "a", "roupa", "do", "rei", "de", "Roma"];
 console.log(farofa2.join(","));
-
+*/
 // reverse
-
+/*
 console.log(farofa2.reverse());
-
+*/
 // Os objetos possuem diversas propriedades e podem auxiliar nos programas
 // Veja o exemplo abaixo
-
+/*
 let pessoal = {
     nome: "Dieimes",
     idade: 18,
@@ -570,11 +571,11 @@ console.log(pessoal.nome);
 pessoal.falar();
 var somatoria = pessoal.somar(5, 10);
 console.log(somatoria);
-
+*/
 // O this sempre se refere ao objeto global Window
 // Em objetos o this pode acessar suas propriedades
 // Veja o exemplo abaixo
-
+/*
 fabio = 7;
 console.log(this.fabio);
 pessoal.apresentar();
@@ -583,7 +584,7 @@ pessoal.aniversario();
 var sdc = pessoal.saudar();
 console.log(pessoal.idade); 
 console.log("OLá " + sdc);
-
+*/
 // DOM é Document Object Model, que é uma interface de programação para o HTML, permitindo que possamos utilizar métodos para acessar uma árvore de elementos
 // DOM pode fornecer uma cópia do HTML 
 // Pode-se manipular eventos no DOM que afetam consequentemente o HTML
@@ -591,57 +592,57 @@ console.log("OLá " + sdc);
 // Veja o exemplo abaixo
 
 // tag 
-
+/*
 var titulo = document.getElementsByTagName('h1')[0];
 console.log(titulo);
 var lis = document.getElementsByTagName('li');
 console.log(lis[3]);
-
+*/
 // id
-
+/*
 var paragrafo = document.getElementById('paragrafo');
 console.log(paragrafo);
-
+*/
 // class
-
+/*
 var itens = document.getElementsByClassName('item');
 console.log(itens);
-
+*/
 // O querySelector e querySelectorAll permite acessar os elementos de forma mais fácil, baseado em regras do CSS. Veja o exemplo abaixo
-
+/*
 var itensClasse = document.getElementsByClassName('.item');
 console.log(itens);
-
+*/
 // querySelectorAll
-
+/*
 var itensQuery = document.querySelectorAll('#lista');
 console.log(itensQuery)
-
+*/
 // querySelector
-
+/*
 var itensQuery2 = document.querySelector('lista .item');
 console.log(itensQuery2);
 
 var listas = document.querySelector('#lista');
 console.log(listas);
-
+*/
 // É possível alterar o texto do JavaScript de forma mais fácil, veja o exemplo abaixo
-
+/*
 var title = document.querySelector('#title');
 console.log(title);
 
 // innerHTML
 
 title.innerHTML = "Testando a alteração!!!";  
-
+*/
 // textContent -> mais rápido e recomendável
-
+/*
 var subtitle = document.querySelector('.subtitle');
 console.log(subtitle);
 subtitle.textContent = "Testando mais uma alteração!!!";
-
+*/
 // Podemos criar elementos com o DOM. Veja o exemplo abaixo
-
+/*
 var novoElemento = document.createElement("p");
 var segundoElemento = document.createTextNode("Este é um novo texto");
 novoElemento.appendChild(segundoElemento);
@@ -650,9 +651,9 @@ console.log(novoElemento);
 var body = document.querySelector("body");
 console.log(body);
 body.appendChild(novoElemento);
-
+*/
 // Inserir em container
-
+/*
 var container = document.getElementsByClassName("container");
 
 var el = document.createElement("span");
@@ -660,15 +661,15 @@ var el = document.createElement("span");
 el.appendChild(document.createTextNode("Teste de span"));
 
 console.log(el);
-
+*/
 // É possível remover elementos com o JavaScript, veja o exemplo abaixo
 
 // Removendo elemento filho 
-
+/*
 var bababa = document.querySelector('#bababa');
 var pp = document.querySelector("#bababa p");
 bababa.removeChild(pp);
-
+*/
 // Removendo um elemento
 /*
 var subtitle = document.querySelector(".subtitle");
@@ -676,7 +677,7 @@ subtitle.remove();
 */
 // Podemos adicoinar elementos dentro da div, como se fosse "acrescentar um filho"
 // Veja o exemplo abaixo
-
+/*
 var dieiminho = document.createElement("div");
 dieiminho.classList= "div-criada";
 console.log(dieiminho);
@@ -684,7 +685,7 @@ var container = document.querySelector('#container');
 // Inserindo elemento filho
 container.appendChild(dieiminho);
 console.log(container);
-
+*/
 // inserBefore - insere antes
 
 /*
@@ -700,13 +701,13 @@ container.insertBefore(dieiminho2, dieiminho3);
 */
 
 // É possível trocar elementos dentro do DOM, veja o exemplo abaixo
-
+/*
 var dieiminho4 = document.createElement('h3');
 dieiminho4.classList = "testando-class";
 var textao = document.createTextNode("É um texto para testar");
 dieiminho4.appendChild(textao);
 console.log(dieiminho4);
-
+*/
 // Selecionar elemento que deseja trocar
 /*
 var text = document.querySelector('#title');
@@ -745,4 +746,28 @@ lista2.removeAttribute("id");
 
 var rodrigo = document.querySelector('#title');
 
+// adiciona o estilo
+
 rodrigo.style.color = "red";
+
+
+// background-color
+
+rodrigo.style.backgroundColor = "yellow";
+
+// selecionar o elemento
+
+var sub = document.querySelector('.subtitle');
+
+// adicionar diversos estilos
+
+subtitle.style.cssText = "color: blue; backgroundcolor: cyan; font-size: 50px;"
+
+// Podemos retirar informações importantes com o document, veja o exemplo abaixo
+
+// Propriedades de document
+
+console.log(document.body);
+console.log(document.head);
+console.log(document.links[0]);
+document.links[0].textContent = "Twitter";
