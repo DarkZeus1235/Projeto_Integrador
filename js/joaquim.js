@@ -748,7 +748,7 @@ var rodrigo = document.querySelector('#title');
 
 // adiciona o estilo
 
-rodrigo.style.color = "red";
+rodrigo.style.color = "blue";
 
 
 // background-color
@@ -761,7 +761,7 @@ var sub = document.querySelector('.subtitle');
 
 // adicionar diversos estilos
 
-subtitle.style.cssText = "color: blue; backgroundcolor: cyan; font-size: 50px;"
+sub.style.cssText = "color: red; background-color: cyan; font-size: 50px;"
 
 // Podemos retirar informações importantes com o document, veja o exemplo abaixo
 
@@ -771,3 +771,43 @@ console.log(document.body);
 console.log(document.head);
 console.log(document.links[0]);
 document.links[0].textContent = "Twitter";
+console.log(document.URL);
+console.log(document.title);
+document.title = "Mudando o TITLE";
+console.log(document.title);
+
+// callback function é um comando que executa uma função após uma ação, veja o exemplo abaixo
+
+function exibindo(num){
+    console.log("A operação resultou em: " + num);
+}
+
+function somar(a, b, callback){
+    var somando = a + b;
+    callback(somando);
+}
+function multiplicar(a, b, cb){
+    var multiplicando = a * b;
+    cb(multiplicando);
+}
+somar(2, 2, exibindo);
+multiplicar(4, 5, exibindo);
+
+// Podemos criar funções que criam ações no software após um determinado tempo, tendo como um de seus argumentos o callback function
+// Veja o exemplo abaixo
+
+// setTimeout
+
+console.log("Antes do setTimeout");
+
+setTimeout(function(){
+    console.log("Testando o setTimeout");
+}, 2000);
+
+console.log("Depois do setTimeout");
+
+// setInterval
+/*
+setInterval(function(){
+    console.log("Testando setInterval");
+}, 1000);*/
