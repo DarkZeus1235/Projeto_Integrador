@@ -9,7 +9,7 @@
     <title>Login - Taverna de Valhalla</title>
 </head>
 <body>
-    
+  
 <header class="header"> 
     <nav class="navbar">
         <a href="">Início</a>
@@ -23,6 +23,7 @@
         <button class="submit"><i class="bx bx-search"></i></button>
     </form>
 </header>
+<div class="teste">
 <div class="container">
 <div class="login-container">
     <h2>Faça login</h2>
@@ -38,13 +39,10 @@
       <input type="submit" value="Entrar">
     </form>
     <div class='register'>
-<<<<<<< HEAD
     <p>Não tem uma conta?</p> 
     <p><a href="cadastro.php">Registre-se</a></p>
-=======
-    <p>Não tem uma conta? <a href="cadastro.php">Registre-se</a></p>
->>>>>>> 65ee603092b1f8f4885b433f2ea48a407575c021
     </div>
+  </div>
   </div>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

@@ -6,9 +6,6 @@
     box-sizing: border-box;
     font-family: 'Poppins', 'sans-serif';
 }
-body{
-    
-}
 .header{
     position: fixed;
     top: 0;
@@ -95,22 +92,7 @@ body{
 
 }
 
-.container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1900px;
-    height: 1000px;
-    background-image: url(https://img.freepik.com/fotos-premium/lago-ao-nascer-do-sol-com-uma-arvore-em-primeiro-plano_210632-3631.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    margin-top: 20px;
-    
-}
-
-body {
+body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -118,16 +100,25 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://img.freepik.com/fotos-premium/lago-ao-nascer-do-sol-com-uma-arvore-em-primeiro-plano_210632-3631.jpg);
+    
+
+}
   
   .login-container {
-    background-color: transparent;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     padding: 20px;
     width: 300px;
-    margin-left: 600px;
-    margin-bottom: 600px;
   }
   
   .login-container h2 {
@@ -217,4 +208,4 @@ body {
   
   .combo1{
     height: 300px;
-  } 
+  }
