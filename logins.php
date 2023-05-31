@@ -38,8 +38,12 @@
       <input type="submit" value="Entrar">
     </form>
     <div class='register'>
+<<<<<<< HEAD
     <p>Não tem uma conta?</p> 
     <p><a href="cadastro.php">Registre-se</a></p>
+=======
+    <p>Não tem uma conta? <a href="cadastro.php">Registre-se</a></p>
+>>>>>>> 65ee603092b1f8f4885b433f2ea48a407575c021
     </div>
   </div>
 </body>
