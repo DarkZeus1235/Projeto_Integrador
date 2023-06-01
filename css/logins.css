@@ -8,6 +8,7 @@
 }
 body{
     background: #020410;
+    background-position: cover;
 }
 .header{
     position: fixed;
