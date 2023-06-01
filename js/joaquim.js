@@ -743,7 +743,7 @@ var lista2 = document.querySelector('#lista2');
 lista2.removeAttribute("id");
 */
 // É possível alterar CSS com o JS, veja o exemplo abaixo
-
+/*
 var rodrigo = document.querySelector('#title');
 
 // adiciona o estilo
@@ -762,7 +762,7 @@ var sub = document.querySelector('.subtitle');
 // adicionar diversos estilos
 
 sub.style.cssText = "color: red; background-color: cyan; font-size: 50px;"
-
+*/
 // Podemos retirar informações importantes com o document, veja o exemplo abaixo
 
 // Propriedades de document
@@ -811,3 +811,121 @@ console.log("Depois do setTimeout");
 setInterval(function(){
     console.log("Testando setInterval");
 }, 1000);*/
+
+// É possível encerrar um setTimeout e setInterval a partir de dois métodos, que são o clearTimeout e clearInterval, veja os exemplos abaixo
+// clearTimeout na prática
+var jraffis = 0;
+
+var myTimer = setTimeout(function(){
+    console.log("O jraffis é 0");
+}, 1500);
+
+jraffis = 5;
+
+if(jraffis > 0){
+    clearTimeout(myTimer);
+    console.log("O jraffis passou de 0");
+}
+
+// clearInterval na prática
+
+var myInterval = setInterval(function(){
+    console.log("Imprimindo Interval");
+}, 500);
+
+setTimeout(function(){
+    console.log("Não precisamos mais repetir!!!");
+    clearInterval(myInterval);
+}, 1500);
+
+// Podemos mapear ações dos usuários no Javascript que são chamados de eventos, como movimento do mouse, click, mouse entrando e saindo de um elemento, carregamento de páginal etc;
+// Conseguinte pode-se criar um comportamento interessante, como o carregamento de menu abrindo e fechando;
+// O primeiro exemplo é o evento onload que se ativa ao carregar a página;
+// Após esse evento é possível realizar alguma ação;
+// Veja o exemplo abaixo
+
+window.onload = function(){
+     console.log("O DOM foi carregado!!");
+     var meutitulo2 = document.querySelector("#title");
+     console.log(meutitulo2);
+}
+
+console.log("Carregou o JS!!");
+
+var meutitulo = document.querySelector("#title");
+console.log(meutitulo);
+
+// O evento click se ativa quando o usuário clica em um elemento atrelado ao mesmo;
+// Após a ação, as modificações do HTML e CSS que quisermos podem ser realizadas;
+// Veja o exemplo abaixo
+
+var botao = document.querySelector("#botao");
+console.log(botao);
+
+botao.addEventListener("click", function(){
+    console.log("Clicou no botão!!!");
+    console.log(this);
+    this.style.color = "red";
+})
+
+var titulobonito = document.querySelector("#title");
+
+titulobonito.addEventListener("click", function(){
+    var subbonito = document.querySelector(".subtitle");
+    subbonito.style.display = "none";
+})
+
+// double click
+
+var subbonito = document.querySelector(".subtitle");
+subbonito.addEventListener("dblclick", function(){
+    console.log("Evento duploooooo!");
+});
+
+// O mouseover é um evento que se ativa quando o mouse passa por cima do elemento
+// O mouseout é um evento que se ativa quando o mouse sai do elemento
+// Veja o exemplo abaixo
+
+// mouseover
+
+var galinha = document.querySelector("#title");
+galinha.addEventListener("mouseover", function(){
+    this.style.backgroundColor = "red";
+})
+
+// mouseout
+
+var galinha = document.querySelector("#title");
+galinha.addEventListener("mouseout", function(){
+    this.style.backgroundColor = "white";
+})
+
+// Afetar elemento com mouseover
+
+var subbonito = document.querySelector(".subtitle");
+subbonito.addEventListener("mouseover", function(){
+    var legenda = document.querySelector("#legenda");
+    legenda.classList.remove("hide");
+});
+var subbonito = document.querySelector(".subtitle");
+subbonito.addEventListener("mouseout", function(){
+    var legenda = document.querySelector("#legenda");
+    legenda.classList.add("hide");
+})
+
+// O evento keydown se ativa quando uma tecla é pressionada, pode-se atrelar o evento quando uma tecla volta a sua posição normal
+// Veja o exemplo abaixo
+
+// keydown
+
+document.addEventListener("keydown", function(event){
+    if (event.key === "Enter"){
+        console.log("Bom dia Dieimes!!!");
+    }
+})
+
+document.addEventListener("keyup", function(e){
+    if(event.key === "Enter"){
+        console.log("Boa tarde Dieimes!");
+    }
+});
