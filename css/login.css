@@ -164,3 +164,28 @@ body {
     display: flex;
     align-items: center;    
   }
+  .search-bar input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #e4e4e4;
+    padding-left: 10px;
+  }
+  .search-bar input::placeholder{
+    color: #e4e4e4;
+  }
+  .search-bar button{
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-bar button i{
+    font-size: 22px;
+    color: #e4e4e4; 
+  }

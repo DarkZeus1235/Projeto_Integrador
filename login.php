@@ -59,7 +59,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         </nav>
 
         <form action="#" class="search-bar">
-            <input type="text" placeholder="Search...">
+            <input type="text" placeholder="Pesquisar...">
             <button type="submit"><i class='bx bx-search'></i></button>
         </form>
     </header>
