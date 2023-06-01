@@ -105,9 +105,9 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 75%;
+    width: 755%;
     height: 550px;
-    background-size: cover;
+    background-size: 100px;
     background-position: center;
     background-image: url(https://img.freepik.com/fotos-premium/lago-ao-nascer-do-sol-com-uma-arvore-em-primeiro-plano_210632-3631.jpg);
     
