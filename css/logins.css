@@ -8,7 +8,6 @@
 }
 body{
     background: #020410;
-    background-position: cover;
 }
 .header{
     position: fixed;
@@ -96,16 +95,7 @@ body{
 
 }
 
-.container{
-    position: absolute;
-    width: 75%;
-    height: 550px;
-    background: url('Imagens/background.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-body {
+body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -113,10 +103,21 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 755%;
+    height: 550px;
+    background-size: 100px;
+    background-position: center;
+    background-image: url(https://img.freepik.com/fotos-premium/lago-ao-nascer-do-sol-com-uma-arvore-em-primeiro-plano_210632-3631.jpg);
+    
+
+}
   
   .login-container {
-    background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     padding: 20px;
