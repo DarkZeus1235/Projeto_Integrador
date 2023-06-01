@@ -1,9 +1,14 @@
 <?php
 include("conexao.php");
 
-if (isset($_SESSION)) {
+if (!isset($_SESSION)) {
   session_start();
 }
+
+$consultar_banco = "SELECT * FROM cadastro";
+
+$retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
+$quantidade_pedidos = $retorno_consulta->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -50,27 +55,43 @@ if (isset($_SESSION)) {
         </div>
       </li>
       <li><a href="#">Fale Conosco</a></li>
-      <li><a href="login.php">Entrar | </a><a href="cadastro.php">Cadastrar</a></li>
-      <div class="sair">
-          <?php
-          if (isset($_SESSION['nome'])) {
-          ?>
-
-        <li><a id="logout" href="logout.php">Sair</a></li>
       <?php
+    if (!isset($_SESSION['nome'])) {
+    ?>
 
-          }
-      ?>
+      <li><a href="login.php">Entrar | </a><a href="cadastro.php">Cadastrar</a></li>
+    <?php
+
+    }
+    ?>
+      <div class="sair">
+        <?php
+        if (isset($_SESSION['nome'])) {
+        ?>
+
+          <li><a id="logout" href="logout.php">Sair</a></li>
+        <?php
+
+        }
+        ?>
       </div>
       </li>
 
     </ul>
   </div>
   <div class="container">
-    <h1>Bem vindo à Taverna de Valhalla <?php echo $_SESSION['nome'];?></h1>
+    <?php
+    if (isset($_SESSION['nome'])) {
+    ?>
+
+      <h1>Bem Vindo à Taverna de Valhalla <?php echo $_SESSION['nome']; ?></h1>
+    <?php
+
+    }
+    ?>
   </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
-j</html>
+</html>
