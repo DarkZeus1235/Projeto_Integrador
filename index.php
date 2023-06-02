@@ -33,6 +33,10 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
       <li><a href="#">Novidades</a>
       <li><a href="#">+ Vendidos <i class="bi bi-caret-down"></i></a>
 
+      <?php
+          /* Aqui precisa colocar uma condição (Tela de adm) */
+      ?>
+
 
         <div class="dropdown-menu">
           <ul>
