@@ -51,7 +51,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <body>
 
     <header class="header">
-        <nav class="nav">
+        <nav id="navi" class="nav">
             <a href="#">Início</a>
             <a href="#">Contato</a>
             <a href="#">Sobre nós</a>
