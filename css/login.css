@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: burlywood;
+  background-color: #FFFFF0;
 }
 
 .login-container {
@@ -18,13 +18,19 @@ body {
   width: 300px;
 }
 
-#plv{
+.plv{
   margin-top: 7px;
   margin-bottom: 5px;
+  text-align: center;
 }
 #registro{
-  color: #000000;
-  text-decoration: underline;
+  color: #E25822;
+  text-decoration: none;
+}
+#entrar{
+  color: #E25822;
+  text-decoration: none;
+  margin-left: 109px;
 }
 
 .login-container h2 {
@@ -201,6 +207,6 @@ h1{
 
 /*CSS Imagem*/
 
-#viking{
+.viking{
   margin-left: 86px;
 }

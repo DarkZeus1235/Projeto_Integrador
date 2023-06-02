@@ -65,7 +65,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
     </header>
 
   <div class="login-container">
-  <img id="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
+  <img class="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
     <h2>Faça login</h2>
     <form action="login.php" method="post">
       <div class='inputbox'>
@@ -79,7 +79,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       <input type="submit" value="Entrar">
     </form>
     <div class='register'>
-    <p id="plv">Não tem uma conta?</p>
+    <p class="plv">Não tem uma conta?</p>
     <p><a id="registro" href="cadastro.php">Registre-se</a></p>
     </div>
   </div>
