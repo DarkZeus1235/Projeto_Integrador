@@ -10,8 +10,12 @@ if (isset($_POST['bt_nome'])) {
     $quantidade = $_POST['bt_quantidade'];
     $valor = $_POST['bt_valor'];
     /*----------------------------------*/
-    $mysqli->query("INSERT INTO lanches (Nome da Bebida, Quantidade , Valor) values('$nome', '$quantidade', '$valor')") or
+    $mysqli->query("INSERT INTO cadastro_bebidas (nome_bebida, quantidade , valor) values('$nome', '$quantidade', '$valor')") or
         die($mysqli->error);
+
+    $_SESSION['Sucesso'] = '<div class="alert alert-success" role="alert">
+                                        Cadastro realizado com sucesso. :)
+                                    </div>';
 
     if (isset($_POST['nome']) || isset($_POST['endereco'])) {
 
@@ -109,13 +113,23 @@ if (isset($_POST['bt_nome'])) {
                 <label for="exampleInputPassword1" class="form-label">Valor da Bebida:</label>
                 <input name="bt_valor" type="text" class="form-control" id="exampleInputPassword1">
             </div>
+            <?php
+            if (isset($_SESSION['Sucesso'])) {
+                echo $_SESSION['Sucesso'];
+                unset($_SESSION['Sucesso']);
+            }
+            ?>
             <input class="btn btn-success" type="submit" value="Cadastrar Bebida">
             <a class="btn btn-danger" href="index.php">Cancelar</a>
             <a class="btn btn-primary" href="lista_bebidas.php">Bebidas</a>
+
         </form>
     </div>
     </form>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </html>
