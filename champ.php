@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>ZERE DELAS</title>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>ZERE DELAS</title>
+
 </head>
+
 <body>
-<div class="menu-bar">
+  <div class="menu-bar">
     <img src="vikingpinguço.png" alt="" width="90px">
     <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
     <ul>
@@ -58,30 +60,39 @@
   <div class="hero">
     &nbsp;
   </div>
-    <div class="card" style="width: 18rem;">
-        <img id="image"  src="vin/vinhocompenhage.jpg" class="card-img-top" alt="" width="90">
-        <div class="card-body">
-          <h5 class="card-title">Champagne Moët Impérial Brut 750ml</h5>
-          <p class="card-text">430,00$</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    <div class="card" style="width: 18rem;">
-        <img id="image"  src="vin/vinhocompenhagedom.jpg" class="card-img-top" alt="" width="90">
-        <div class="card-body">
-          <h5 class="card-title">Champagne Dom Pérignon Brut 750ml</h5>
-          <p class="card-text">2.153,99$</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    <div class="card" style="width: 18rem;">
-        <img id="image"  src="vin/champagneimperiobrut.jpg" class="card-img-top" alt="" width="90">
-        <div class="card-body">
-          <h5 class="card-title">Champagne Moët Impérial Brut 750ml</h5>
-          <p class="card-text">399,99$</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+  <div class="card" style="width: 18rem;">
+    <img id="image" src="vin/vinhocompenhage.jpg" class="card-img-top" alt="" width="90">
+    <div class="card-body">
+      <h5 class="card-title">Champagne Moët Impérial Brut 750ml</h5>
+      <p class="card-text">430,00$</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img id="image" src="vin/vinhocompenhagedom.jpg" class="card-img-top" alt="" width="90">
+    <div class="card-body">
+      <h5 class="card-title">Champagne Dom Pérignon Brut 750ml</h5>
+      <p class="card-text">2.153,99$</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img id="image" src="vin/champagneimperiobrut.jpg" class="card-img-top" alt="" width="10">
+    <div class="card-body">
+      <h5 class="card-title">Champagne Moët Impérial Brut 750ml</h5>
+      <p class="card-text">399,99$</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img id="image" src="vin/champgnelaurent-perrier.jpg" class="card-img-top" alt="" width="90">
+    <div class="card-body">
+      <h5 class="card-title">Champagne Laurent-Perrier Brut 750ml</h5>
+      <p class="card-text">550,00$</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
 </html>

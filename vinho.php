@@ -83,22 +83,6 @@
         </div>
       </div>
     <div class="card" style="width: 18rem;">
-        <img id="image"  src="vin/vinhocompenhage.jpg" class="card-img-top" alt="" width="90">
-        <div class="card-body">
-          <h5 class="card-title">Champagne Moët Impérial Brut 750ml</h5>
-          <p class="card-text">430,00$</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    <div class="card" style="width: 18rem;">
-        <img id="image"  src="vin/vinhocompenhagedom.jpg" class="card-img-top" alt="" width="90">
-        <div class="card-body">
-          <h5 class="card-title">Champagne Dom Pérignon Brut 750ml</h5>
-          <p class="card-text">2.153,99$</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    <div class="card" style="width: 18rem;">
         <img id="image"  src="vin/Vinhozuccardi.webp" class="card-img-top" alt="" width="90">
         <div class="card-body">
           <h5 class="card-title">Vinho Zuccardi Concreto Malbec 750 ml</h5>
