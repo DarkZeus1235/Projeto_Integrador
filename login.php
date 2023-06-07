@@ -17,6 +17,20 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
         $quantidade = $sql_query->num_rows;
 
+        $usuario = $sql_exec->fetch_assoc();
+
+        if(password_verify($senha, $usuario['senha'])){
+
+            if(!isset($_SESSION)){
+                session_start();
+
+
+                $_SESSION['user_ativo'] = $usuario['id_senha'];
+
+                header("location:cadastro.php");
+
+
+            }
         if($quantidade == 1){
 
             $usuario = $sql_query->fetch_assoc();
@@ -38,6 +52,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         }
     }
 }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -45,10 +60,27 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <head>
 <link rel="stylesheet" href="css/login.css">
 <link rel="icon" href="img/hamburguer-queijo-com-ilustracao-do-icone-do-vetor-dos-desenhos-animados-do-fogo-conceito-de-icone-de-objeto-de-comida-isolado-premium_138676-5539.avif">
-  <title>Página de Login</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<title>Página de Login</title>
 </head>
 <body>
+
+    <header class="header">
+        <nav id="navi" class="nav">
+            <a href="#">Início</a>
+            <a href="#">Contato</a>
+            <a href="#">Sobre nós</a>
+            <a href="#">Promoções</a>
+        </nav>
+
+        <form action="#" class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button type="submit"><i class='bx bx-search'></i></button>
+        </form>
+    </header>
+
   <div class="login-container">
+  <img class="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
     <h2>Faça login</h2>
     <form action="login.php" method="post">
       <div class='inputbox'>
@@ -62,7 +94,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       <input type="submit" value="Entrar">
     </form>
     <div class='register'>
-    <p>Não tem uma conta? <a href="cadastro.php">Registre-se</a></p>
+    <p class="plv">Não tem uma conta?</p>
+    <p><a id="registro" href="cadastro.php">Registre-se</a></p>
     </div>
   </div>
 </body>
