@@ -90,7 +90,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     if (isset($_SESSION['nome'])) {
     ?>
 
-      <h1>Bem Vindo à Taverna de Valhalla <?php echo $_SESSION['nome']; ?></h1>
+      <h1>Bem-Vindo à Taverna de Valhalla <?php echo $_SESSION['nome']; ?></h1>
     <?php
 
     }
