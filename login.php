@@ -52,7 +52,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
     <header class="header">
         <nav id="navi" class="nav">
-            <a href="#">Início</a>
+            <a href="index.php">Início</a>
             <a href="#">Contato</a>
             <a href="#">Sobre nós</a>
             <a href="#">Promoções</a>
