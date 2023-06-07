@@ -1,33 +1,41 @@
 <?php
-
-include('conexao.php');
-
-session_start();
-
-if (isset($_POST['bt_nome'])) {
-    /*----------------------------------*/
-    $nome = $_POST['bt_nome'];
-    $quantidade = $_POST['bt_quantidade'];
-    $valor = $_POST['bt_valor'];
-    /*----------------------------------*/
-    $mysqli->query("INSERT INTO cadastro_bebidas (nome_bebida, quantidade , valor) values('$nome', '$quantidade', '$valor')") or
-        die($mysqli->error);
-
-    $_SESSION['Sucesso'] = '<div class="alert alert-success" role="alert">
-                                        Cadastro realizado com sucesso. :)
-                                    </div>';
-
-    if (isset($_POST['nome']) || isset($_POST['endereco'])) {
-
-        if (($_POST['nome']) == 1) {
-            echo ("Parabéns você está logado");
-
-            if (($_POST['endereco']) == 1) {
-                echo ("Parabéns você está logado");
+if(isset($_POST['bt_nome'])){
+        if(isset($_FILES['bt_arquivo'])){
+            $arquivo = $_FILES['bt_arquivo'];
+            if($arquivo['size']>15000000){
+                die("Arquivo muito grande!! Max: 15MB");
+            }
+            if ($arquivo['error']){
+                die("Falha ao enviar arquivo");
             }
         }
+        
+        $nome = $_POST['bt_nome'];
+
+        $pasta ="recebidos/";
+        $nome_arquivo=$arquivo['name'];
+        $novo_nome_arquivo = uniqid();
+        $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
+
+        
+
+        $caminho = $pasta . $novo_nome_arquivo . "."  . $extensao;
+
+        
+        /*
+        if($extensao != "jpg" and "png"){
+            die("Tipo de arquivo não aceito");
+        }
+        */
+
+        $deucerto = move_uploaded_file($arquivo["tmp_name"], $caminho);
+
+        if($deucerto){
+            $mysqli -> query("INSERT INTO cadastro_bebidas (nome_bebida, quantidade, arquivo, valor) 
+            values ('$nome', '$quantidade','$caminho', '$valor')") or die ($mysqli->error);
+        }
+
     }
-}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -99,7 +107,7 @@ if (isset($_POST['bt_nome'])) {
     </div>
     <div class="container">
         <h1>Cadastro de Bebidas - Taverna de Valhalla</h1>
-        <form action="" method="post">
+        <form action="" method="post" enctype="">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nome da Bebida:</label>
                 <input name="bt_nome" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -112,6 +120,10 @@ if (isset($_POST['bt_nome'])) {
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Valor da Bebida:</label>
                 <input name="bt_valor" type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Imagem da Bebida:</label>
+                <input type="file" name="bt_arquivo" class="form-control" id="exampleInputPassword1">
             </div>
             <?php
             if (isset($_SESSION['Sucesso'])) {

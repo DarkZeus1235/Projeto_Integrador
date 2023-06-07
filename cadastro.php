@@ -12,6 +12,8 @@
             $mysqli -> query("INSERT INTO cadastro (email, senha, nome, cpf, endereco ) values('$email', '$senha', '$nome', '$cpf', '$endereco')") or
             die ($mysqlierrno);
 
+            $senha_nova = password_hash($_POST['bt_senha'], PASSWORD_DEFAULT);
+
             if(isset($_POST['nome']) || isset($_POST['endereco'])) {
 
             if(($_POST['nome']) == 1){
