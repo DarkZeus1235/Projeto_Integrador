@@ -6,10 +6,11 @@
             $email = $_POST['bt_email'];
             $senha = $_POST['bt_senha'];
             $nome = $_POST['bt_nome'];
+            $username = $_POST['bt_username'];
             $cpf = $_POST['bt_cpf'];
             $endereco = $_POST['bt_endereco'];
             /*----------------------------------*/
-            $mysqli -> query("INSERT INTO cadastro (email, senha, nome, cpf, endereco ) values('$email', '$senha', '$nome', '$cpf', '$endereco')") or
+            $mysqli -> query("INSERT INTO cadastro (email, senha, nome, username, cpf, endereco ) values('$email', '$senha', '$nome','$username' ,'$cpf', '$endereco')") or
             die ($mysqlierrno);
 
             $senha_nova = password_hash($_POST['bt_senha'], PASSWORD_DEFAULT);
@@ -56,6 +57,7 @@
     <input type="email" name="bt_email" placeholder="Email" required>
       <input type="password" name="bt_senha" placeholder="Senha" required>
       <input type="text" name="bt_nome" placeholder="Nome completo" required>
+      <input type="text" name="bt_username" placeholder="Crie um nome de Usuário" required>
       <input type="text" name="bt_cpf" placeholder="CPF" required>
       <input type="text" name="bt_endereco" placeholder="Endereço" required>
       <input type="submit" value="Cadastrar">

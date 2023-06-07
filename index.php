@@ -95,6 +95,34 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
     }
     ?>
+    <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
+    <div class="row">
+    <?php
+    
+    while ($bebidas = $retorno_consulta->fetch_assoc()) {
+      //var_dump($bebidas);
+    ?>
+     
+        <!-- Card -->
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
+            <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <!-- Fim do card -->
+      
+    <?php
+    } 
+
+
+    ?>
+    </div> <!-- Fim do row -->
+
+
+
   </div>
 
 </body>
