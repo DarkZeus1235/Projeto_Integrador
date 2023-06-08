@@ -41,6 +41,35 @@ if (isset($_POST['bt_nome'])) {
     }
 }
 ?>
+    $nome = $_POST['bt_nome'];
+    $quantidade = $_POST['bt_quantidade'];
+    $valor = $_POST['bt_valor'];
+    $descricao = $_POST['bt_descricao'];
+
+    $pasta = "recebidos/";
+    $nome_arquivo = $arquivo['name'];
+    $novo_nome_arquivo = uniqid();
+    $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
+
+
+
+    $caminho = $pasta . $novo_nome_arquivo . "."  . $extensao;
+
+
+    /*
+            if($extensao != "jpg" and "png"){
+            die("Tipo de arquivo não aceito");
+        }
+        */
+
+    $deucerto = move_uploaded_file($arquivo["tmp_name"], $caminho);
+
+    if ($deucerto) {
+        $mysqli->query("INSERT INTO cadastro_bebidas (nome_bebida, quantidade, descricao,arquivo_caminho, valor) 
+            values ('$nome', '$quantidade', '$descricao','$caminho', '$valor')") or die($mysqli->error);
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -110,7 +139,7 @@ if (isset($_POST['bt_nome'])) {
         </ul>
     </div>
     <div class="container">
-        <h1>Cadastro de Bebidas - Taverna de Valhalla</h1>
+    <h1>Cadastro de Bebidas - Taverna de Valhalla</h1>
         <form action="" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nome da Bebida:</label>
