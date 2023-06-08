@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 26-Maio-2023 às 11:51
+-- Tempo de geração: 01-Jun-2023 às 17:34
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -38,14 +38,53 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `cpf` varchar(100) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   PRIMARY KEY (`id_login`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro`
 --
 
 INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `cpf`, `endereco`) VALUES
-(1, 'joaquim@sagionetti', 'joaquim', 'Joaquim Pedro Klima Sagionetti', '11213131', 'Avenida Brasil');
+(1, 'joaquim@sagionetti', 'joaquim', 'Joaquim Pedro Klima Sagionetti', '11213131', 'Avenida Brasil'),
+(2, 'dieimes@teste.com', 'dieimes', 'Dieimes Nunes', '11123131', 'Rua Rio'),
+(3, 'admin@hotmail.com', 'admin123', 'administrador', 'ADM', 'ADM');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cadastro_bebidas`
+--
+
+DROP TABLE IF EXISTS `cadastro_bebidas`;
+CREATE TABLE IF NOT EXISTS `cadastro_bebidas` (
+  `id_bebida` int(100) NOT NULL AUTO_INCREMENT,
+  `Nome da bebida` varchar(100) NOT NULL,
+  `Quantidade` varchar(100) NOT NULL,
+  `Valor` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_bebida`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `funcioarios`
+--
+
+DROP TABLE IF EXISTS `funcioarios`;
+CREATE TABLE IF NOT EXISTS `funcioarios` (
+  `id_func` int(100) NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) NOT NULL,
+  `senha` varchar(100) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_func`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `funcioarios`
+--
+
+INSERT INTO `funcioarios` (`id_func`, `email`, `senha`, `nome`) VALUES
+(1, 'administrador@hotmail.com', 'adm123', 'administrador');
 
 -- --------------------------------------------------------
 
