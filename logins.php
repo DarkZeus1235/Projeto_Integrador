@@ -23,6 +23,9 @@
         <button class="submit"><i class="bx bx-search"></i></button>
     </form>
 </header>
-<div class="container"></div>
+<div class="container">
+</div>
+    </div>
+</div>
 </body>
 </html>

@@ -102,4 +102,13 @@ body{
     background: url('Imagens/background.jpg');
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.container .logreg-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
 }
