@@ -7,11 +7,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js"></script>
   <title>Taverna de Valhalla</title>
 </head>
 
 <body>
-
+  
   <div class="menu-bar">
     <img src="vikingpinguço.png" alt="" width="90px">
     <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
@@ -19,8 +20,9 @@
       <li><a href="#">Início</a></li>
       <li><a href="#">Promoções</a></li>
       <li><a href="#">Novidades</a>
+      <li><a href="carrinho.php"><i class="bi bi-basket"></i></a></li>
       <li><a href="#">+ Vendidos <i class="bi bi-caret-down"></i></a>
-
+      
 
         <div class="dropdown-menu">
           <ul>
@@ -57,10 +59,26 @@
 
     </ul>
   </div>
+  <script src="script.js"></script>
   <div class="hero">
     &nbsp;
   </div>
-
+  <div class="card" style="width: 18rem;">
+        <img id="image"  src="vin/vinho1.jpg" class="card-img-top" alt="" width="90">
+        <div class="card-body">
+          <h5 class="card-title">VINHO CHIANTI</h5>
+          <p class="card-text">200,00$</p>
+          <button type='button' class="btn btn-primary">Adicionar ao carrinho</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img id="image"  src="vin/vinhoamarone.webp" class="card-img-top" alt="" width="90">
+        <div class="card-body">
+          <h5 class="card-title">Vinho Amarone Montresor Capitel della Crosara</h5>
+          <p class="card-text">540,00$</p>
+          <button type="button" class="btn btn-primary">Adicionar ao carrinho</a>
+        </div>
+      </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 <script src="script.js"></script>
