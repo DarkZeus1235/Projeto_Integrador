@@ -18,6 +18,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="Imagens/vikingpinguço.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taverna de Valhalla</title>
 </head>
@@ -105,11 +106,11 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
      
         <!-- Card -->
         <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
+          <?php echo "<img src='recebidos/6480636390bdf'>" ?>
           <div class="card-body">
             <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
             <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-primary">Comprar</a>
           </div>
         </div>
         <!-- Fim do card -->

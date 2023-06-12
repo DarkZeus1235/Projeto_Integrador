@@ -12,10 +12,9 @@ if (isset($_POST['bt_nome'])) {
         }
     }
 
+    var_dump($arquivo);
+
     $nome = $_POST['bt_nome'];
-    $quantidade = $_POST['bt_quantidade'];
-    $valor = $_POST['bt_valor'];
-    $descricao = $_POST['bt_descricao'];
 
     $pasta = "recebidos/";
     $nome_arquivo = $arquivo['name'];
@@ -28,45 +27,21 @@ if (isset($_POST['bt_nome'])) {
 
 
     /*
-            if($extensao != "jpg" and "png"){
+        if($extensao != "jpg"){
             die("Tipo de arquivo não aceito");
         }
         */
 
-    $deucerto = move_uploaded_file($arquivo["tmp_name"], $caminho);
-
-    if ($deucerto) {
-        $mysqli->query("INSERT INTO cadastro_bebidas (nome_bebida, quantidade, descricao,arquivo_caminho, valor) 
-            values ('$nome', '$quantidade', '$descricao','$caminho', '$valor')") or die($mysqli->error);
-    }
-}
-?>
     $nome = $_POST['bt_nome'];
     $quantidade = $_POST['bt_quantidade'];
     $valor = $_POST['bt_valor'];
     $descricao = $_POST['bt_descricao'];
 
-    $pasta = "recebidos/";
-    $nome_arquivo = $arquivo['name'];
-    $novo_nome_arquivo = uniqid();
-    $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
-
-
-
-    $caminho = $pasta . $novo_nome_arquivo . "."  . $extensao;
-
-
-    /*
-            if($extensao != "jpg" and "png"){
-            die("Tipo de arquivo não aceito");
-        }
-        */
-
     $deucerto = move_uploaded_file($arquivo["tmp_name"], $caminho);
 
     if ($deucerto) {
         $mysqli->query("INSERT INTO cadastro_bebidas (nome_bebida, quantidade, descricao,arquivo_caminho, valor) 
-            values ('$nome', '$quantidade', '$descricao','$caminho', '$valor')") or die($mysqli->error);
+                values ('$nome', '$quantidade', '$descricao','$caminho', '$valor')") or die($mysqli->error);
     }
 }
 ?>
@@ -87,7 +62,7 @@ if (isset($_POST['bt_nome'])) {
         <img src="Imagens/vikingpinguço.png" alt="" width="90px">
         <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
         <ul>
-            <li><a href="#">Início</a></li>
+            <li><a href="index.php">Início</a></li>
             <li><a href="#">Promoções</a></li>
             <li><a href="#">Novidades</a>
             <li><a href="#">+ Vendidos <i class="bi bi-caret-down"></i></a>
@@ -139,7 +114,7 @@ if (isset($_POST['bt_nome'])) {
         </ul>
     </div>
     <div class="container">
-    <h1>Cadastro de Bebidas - Taverna de Valhalla</h1>
+        <h1>Cadastro de Bebidas - Taverna de Valhalla</h1>
         <form action="" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nome da Bebida:</label>
