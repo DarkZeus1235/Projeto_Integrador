@@ -13,9 +13,15 @@
       width: 175px;
       height: 220px;
     }
-    .container{
+
+    .container {
       margin-top: -400px;
     }
+
+    .card {
+      margin-top: 20px;
+    }
+
   </style>
 </head>
 
