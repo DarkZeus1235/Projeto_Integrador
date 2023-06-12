@@ -36,17 +36,22 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
         <div class="dropdown-menu">
           <ul>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Portfolio</a></li>
+            <li><a href="whisky.php">Whisky</a></li>
+            <li><a href="#">Vinho</a></li>
             <li>
-              <a href="#">Team <i class="fas fa-caret-right"></i></a>
+              <a href="#">Outros <i class="fas fa-caret-right"></i></a>
 
               <div class="dropdown-menu-1">
                 <ul>
-                  <li><a href="#">Team-1</a></li>
-                  <li><a href="#">Team-2</a></li>
-                  <li><a href="#">Team-3</a></li>
-                  <li><a href="#">Team-4</a></li>
+                  <li><a href="#">Vodka</a></li>
+                  <li><a href="#">Conhaque</a></li>
+                  <li><a href="#">Champagne</a></li>
+                  <li><a href="#">Rum</a></li>
+                  <li><a href="#">Gin</a></li>
+                  <li><a href="#">Tequila</a></li>
+                  <li><a href="#">Rum</a></li>
+                  <li><a href="#">Cachaça</a></li>
+                  <li><a href="#">Jagermeister</a></li>
                 </ul>
               </div>
 
