@@ -106,11 +106,12 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
      
         <!-- Card -->
         <div class="card" style="width: 18rem;">
-          <?php echo "<img src='recebidos/6480636390bdf'>" ?>
+          <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
             <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
-            <a href="#" class="btn btn-primary">Comprar</a>
+            <h5 class="card-text"><?php echo $bebidas['valor']; ?></h5>
+            <a href="#" class="btn btn-primary">Comprar Agora</a>
           </div>
         </div>
         <!-- Fim do card -->
