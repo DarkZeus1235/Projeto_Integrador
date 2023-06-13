@@ -22,7 +22,7 @@
 
         <div class="dropdown-menu">
           <ul>
-            <li><a href="#">Pricing</a></li>
+            <li><a href="vinho.php">Vinhos</a></li>
             <li><a href="#">Portfolio</a></li>
             <li>
               <a href="#">Team <i class="fas fa-caret-right"></i></a>
