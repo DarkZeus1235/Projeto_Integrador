@@ -21,7 +21,6 @@
     .card {
       margin-top: 20px;
     }
-
   </style>
 </head>
 
