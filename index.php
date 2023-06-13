@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>ZERE DELAS</title>
     
 </head>
 <body>
 <div class="menu-bar">
-    <img src="vikingpinguço.png" alt="" width="90px">
+    <img src="Imagens/vikingpinguço.png" alt="" width="90px">
     <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
     <ul>
       <li><a href="#">Início</a></li>
@@ -22,7 +22,7 @@
 
         <div class="dropdown-menu">
           <ul>
-            <li><a href="#">Pricing</a></li>
+            <li><a href="vinho.php">Vinhos</a></li>
             <li><a href="#">Portfolio</a></li>
             <li>
               <a href="#">Team <i class="fas fa-caret-right"></i></a>

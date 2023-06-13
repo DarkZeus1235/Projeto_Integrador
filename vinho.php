@@ -1,3 +1,15 @@
+<?php
+include("conexao.php");
+
+if(!isset($_SESSION)) {
+  session_start();
+}
+
+$consultar_banco = "SELECT * FROM cadastro_vinhos";
+
+$retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
+$quantidade_pedidos = $retorno_consulta->num_rows;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,7 +18,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>ZERE DELAS</title>
   <style>
     .vin {
@@ -74,6 +86,32 @@
     &nbsp;
   </div>
   <div class="container">
+      <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
+      <div class="row">
+    <?php
+    
+    while ($bebidas = $retorno_consulta->fetch_assoc()) {
+      //var_dump($bebidas);
+    ?>
+     
+        <!-- Card -->
+        <div class="card" style="width: 18rem;">
+          <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
+            <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
+            <h5 class="card-text"><?php echo $bebidas['valor']; ?></h5>
+            <a href="#" class="btn btn-primary">Comprar Agora</a>
+          </div>
+        </div>
+        <!-- Fim do card -->
+      
+    <?php
+    } 
+
+
+    ?>
+    </div> <!-- Fim do row -->
     <div class="row row-cols-1 row-cols-md-4 g-4"> <!-- 1º Linha -->
       <div class="col">
         <div class="card" style="width: 18rem;">
