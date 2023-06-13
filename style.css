@@ -107,9 +107,10 @@
     top: 0;
     background-color: var(--color-black);
   }
-  
+  /*
   .hero {
     height: calc(100vh - 80px);
     background-image: url(./bg.jpg);
     background-position: center;
   }
+  */

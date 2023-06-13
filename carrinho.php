@@ -75,7 +75,7 @@
           <tbody>
             <tr class="cart-product">
               <td class="product-identification">
-                <img src="vikingpinguço.png" alt="Miniatura" class="cart-product-image">
+                <img src="cao.jpg" alt="Miniatura" class="cart-product-image">
                 <strong class="cart-product-title">Vinho Chianti</strong>
               </td>
               <td>
@@ -88,7 +88,7 @@
             </tr>
             <tr class="cart-product">
               <td class="product-identification">
-                <img src="vikingpinguço.png" alt="Poster 3" class="cart-product-image">
+                <img src="cao.jpg" alt="Poster 3" class="cart-product-image">
                 <strong class="cart-product-title">Vinho Amarone Montresor Capitel della Crosara</strong>
               </td>
               <td>
