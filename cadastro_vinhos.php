@@ -40,7 +40,7 @@ if (isset($_POST['bt_nome'])) {
     $deucerto = move_uploaded_file($arquivo["tmp_name"], $caminho);
 
     if ($deucerto) {
-        $mysqli->query("INSERT INTO cadastro_bebidas (nome_bebida, quantidade, descricao,arquivo_caminho, valor) 
+        $mysqli->query("INSERT INTO cadastro_vinhos (nome_bebida, quantidade, descricao,arquivo_caminho, valor) 
                 values ('$nome', '$quantidade', '$descricao','$caminho', '$valor')") or die($mysqli->error);
     }
 }
