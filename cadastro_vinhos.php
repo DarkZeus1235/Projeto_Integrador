@@ -145,7 +145,7 @@ if (isset($_POST['bt_nome'])) {
             ?>
             <input class="btn btn-success" type="submit" value="Cadastrar Bebida">
             <a class="btn btn-danger" href="index.php">Cancelar</a>
-            <a class="btn btn-primary" href="lista_bebidas.php">Bebidas</a>
+            <a class="btn btn-primary" href="lista_vinhos.php">Bebidas</a>
 
         </form>
     </div>
