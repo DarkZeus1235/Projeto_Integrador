@@ -122,7 +122,6 @@ body {
   background-position: center;
 }
 
-<<<<<<< HEAD
 /*CSS 2*/
 
 .login-container {
@@ -306,11 +305,10 @@ body {
 
 .viking{
   margin-left: 86px;
-=======
+}
 .container{
   /* Centralizar na vertical e na horizontal */
   position:absolute;
   top: 50%;
   left: 20%;
->>>>>>> 89c5c36f17be8f19618ebefc5ff35e786a50df6e
 }
