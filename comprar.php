@@ -1,15 +1,3 @@
-<?php
-include("conexao.php");
-
-if (!isset($_SESSION)) {
-  session_start();
-}
-
-$consultar_banco = "SELECT * FROM cadastro_bebidas";
-
-$retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
-$quantidade_pedidos = $retorno_consulta->num_rows;
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -96,38 +84,3 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
     }
     ?>
-    <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
-    <div class="row">
-    <?php
-    
-    while ($bebidas = $retorno_consulta->fetch_assoc()) {
-      //var_dump($bebidas);
-    ?>
-     
-        <!-- Card -->
-        <div class="card" id="testec" style="width: 18rem;">
-          <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
-            <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
-            <h5 id="card-text" class="card-text"><?php echo $bebidas['valor']; ?></h5>
-            <a href="comprar.php" id="textc" class="btn btn-success">Comprar Agora</a>
-          </div>
-        </div>
-        <!-- Fim do card -->
-      
-    <?php
-    } 
-
-
-    ?>
-    </div> <!-- Fim do row -->
-
-
-
-  </div>
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-
-</html>
