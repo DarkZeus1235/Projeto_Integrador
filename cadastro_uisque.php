@@ -40,7 +40,7 @@ if (isset($_POST['bt_nome'])) {
     $deucerto = move_uploaded_file($arquivo["tmp_name"], $caminho);
 
     if ($deucerto) {
-        $mysqli->query("INSERT INTO cadastro_conhaque (nome_bebida, quantidade, descricao,arquivo_caminho, valor) 
+        $mysqli->query("INSERT INTO cadastro_uisque  (nome_bebida, quantidade, descricao,arquivo_caminho, valor) 
                 values ('$nome', '$quantidade', '$descricao','$caminho', '$valor')") or die($mysqli->error);
     }
 }
@@ -145,7 +145,7 @@ if (isset($_POST['bt_nome'])) {
             ?>
             <input class="btn btn-success" type="submit" value="Cadastrar Bebida">
             <a class="btn btn-danger" href="index.php">Cancelar</a>
-            <a class="btn btn-primary" href="lista_conhaque.php">Bebidas</a>
+            <a class="btn btn-primary" href="lista_uisque.php">Bebidas</a>
 
         </form>
     </div>
