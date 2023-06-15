@@ -7,7 +7,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="script.js"></script>
   <title>Taverna de Valhalla</title>
 </head>
 
@@ -64,21 +63,75 @@
     &nbsp;
   </div>
   <div class="card" style="width: 18rem;">
-        <img id="image"  src="vin/vinho1.jpg" class="card-img-top" alt="" width="90">
+        <img id="image" src="cao.jpg" class="card-img-top" alt="" width="90">
         <div class="card-body">
-          <h5 class="card-title">VINHO CHIANTI</h5>
-          <p class="card-text">200,00$</p>
+          <h5 class="card-title-product-title">VINHO CHIANTI</h5>
+          <p class="card-text-product-price">200,00$</p>
           <button type='button' class="btn btn-primary">Adicionar ao carrinho</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
-        <img id="image"  src="vin/vinhoamarone.webp" class="card-img-top" alt="" width="90">
+        <img id="image"  src="cao.jpg" class="card-img-top" alt="" width="90">
         <div class="card-body">
           <h5 class="card-title">Vinho Amarone Montresor Capitel della Crosara</h5>
           <p class="card-text">540,00$</p>
           <button type="button" class="btn btn-primary">Adicionar ao carrinho</a>
         </div>
       </div>
+      <section class="container normal-section">
+        <h2 class="section-title">Carrinho</h2>
+
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th class="table-head-item first-col">Item</th>
+              <th class="table-head-item second-col">Preço</th>
+              <th class="table-head-item third-col">Quantidade</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="cart-product">
+              <td class="product-identification">
+                <img src="cao.jpg" alt="Miniatura" class="cart-product-image">
+                <strong class="cart-product-title">Vinho Chianti</strong>
+              </td>
+              <td>
+                <span class="cart-product-price">R$199,99</span>
+              </td>
+              <td>
+                <input type="number" value="2" min="0" class="product-qtd-input">
+                <button type="button" class="remove-product-button">Remover</button>
+              </td>
+            </tr>
+            <tr class="cart-product">
+              <td class="product-identification">
+                <img src="cao.jpg" alt="Poster 3" class="cart-product-image">
+                <strong class="cart-product-title">Vinho Amarone Montresor Capitel della Crosara</strong>
+              </td>
+              <td>
+                <span class="cart-product-price">R$539,99</span>
+              </td>
+              <td>
+                <input type="number" value="1" min="0" class="product-qtd-input">
+                <button type="button" class="remove-product-button">Remover</button>
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="3" class="cart-total-container">
+                <strong>Total</strong>
+                <span>R$739,98</span>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <button type="button" class="purchase-button">Finalizar Compra</button>
+      </section>
+    </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 <script src="script.js"></script>
