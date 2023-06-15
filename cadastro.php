@@ -42,7 +42,7 @@ if (isset($_POST['bt_nome'])) {
 
     <header class="header">
         <nav class="nav">
-            <a href="#">Início</a>
+            <a href="index.php">Início</a>
             <a href="#">Contato</a>
             <a href="#">Sobre nós</a>
             <a href="#">Promoções</a>
