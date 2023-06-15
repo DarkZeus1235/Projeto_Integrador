@@ -1,41 +1,49 @@
 <?php
-if(isset($_POST['bt_nome'])){
-        if(isset($_FILES['bt_arquivo'])){
-            $arquivo = $_FILES['bt_arquivo'];
-            if($arquivo['size']>15000000){
-                die("Arquivo muito grande!! Max: 15MB");
-            }
-            if ($arquivo['error']){
-                die("Falha ao enviar arquivo");
-            }
+include("conexao.php");
+
+if (isset($_POST['bt_nome'])) {
+    if (isset($_FILES['bt_arquivo'])) {
+        $arquivo = $_FILES['bt_arquivo'];
+        if ($arquivo['size'] > 15000000) {
+            die("Arquivo muito grande!! Max: 15MB");
         }
-        
-        $nome = $_POST['bt_nome'];
+        if ($arquivo['error']) {
+            die("Falha ao enviar arquivo");
+        }
+    }
 
-        $pasta ="recebidos/";
-        $nome_arquivo=$arquivo['name'];
-        $novo_nome_arquivo = uniqid();
-        $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
+    var_dump($arquivo);
 
-        
+    $nome = $_POST['bt_nome'];
 
-        $caminho = $pasta . $novo_nome_arquivo . "."  . $extensao;
+    $pasta = "recebidos/";
+    $nome_arquivo = $arquivo['name'];
+    $novo_nome_arquivo = uniqid();
+    $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
 
-        
-        /*
-        if($extensao != "jpg" and "png"){
+
+
+    $caminho = $pasta . $novo_nome_arquivo . "."  . $extensao;
+
+
+    /*
+        if($extensao != "jpg"){
             die("Tipo de arquivo não aceito");
         }
         */
 
-        $deucerto = move_uploaded_file($arquivo["tmp_name"], $caminho);
+    $nome = $_POST['bt_nome'];
+    $quantidade = $_POST['bt_quantidade'];
+    $valor = $_POST['bt_valor'];
+    $descricao = $_POST['bt_descricao'];
 
-        if($deucerto){
-            $mysqli -> query("INSERT INTO cadastro_bebidas (nome_bebida, quantidade, arquivo, valor) 
-            values ('$nome', '$quantidade','$caminho', '$valor')") or die ($mysqli->error);
-        }
+    $deucerto = move_uploaded_file($arquivo["tmp_name"], $caminho);
 
+    if ($deucerto) {
+        $mysqli->query("INSERT INTO cadastro_bebidas (nome_bebida, quantidade, descricao,arquivo_caminho, valor) 
+                values ('$nome', '$quantidade', '$descricao','$caminho', '$valor')") or die($mysqli->error);
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -54,7 +62,7 @@ if(isset($_POST['bt_nome'])){
         <img src="Imagens/vikingpinguço.png" alt="" width="90px">
         <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
         <ul>
-            <li><a href="#">Início</a></li>
+            <li><a href="index.php">Início</a></li>
             <li><a href="#">Promoções</a></li>
             <li><a href="#">Novidades</a>
             <li><a href="#">+ Vendidos <i class="bi bi-caret-down"></i></a>
@@ -107,7 +115,7 @@ if(isset($_POST['bt_nome'])){
     </div>
     <div class="container">
         <h1>Cadastro de Bebidas - Taverna de Valhalla</h1>
-        <form action="" method="post" enctype="">
+        <form action="" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nome da Bebida:</label>
                 <input name="bt_nome" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -120,6 +128,10 @@ if(isset($_POST['bt_nome'])){
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Valor da Bebida:</label>
                 <input name="bt_valor" type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Descrição da Bebida:</label>
+                <input name="bt_descricao" type="text" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Imagem da Bebida:</label>

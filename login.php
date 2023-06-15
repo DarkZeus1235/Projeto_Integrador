@@ -17,20 +17,6 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
         $quantidade = $sql_query->num_rows;
 
-        $usuario = $sql_exec->fetch_assoc();
-
-        if(password_verify($senha, $usuario['senha'])){
-
-            if(!isset($_SESSION)){
-                session_start();
-
-
-                $_SESSION['user_ativo'] = $usuario['id_senha'];
-
-                header("location:cadastro.php");
-
-
-            }
         if($quantidade == 1){
 
             $usuario = $sql_query->fetch_assoc();
@@ -41,6 +27,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
             $_SESSION['id_login'] = $usuario['id_login'];
             $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['username'] = $usuario['username'];
             $_SESSION['email'] = $usuario['email'];
             $_SESSION['senha'] = $usuario['senha'];
 
@@ -51,7 +38,6 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             echo "Falha ao logar!Email ou senha incorretos";
         }
     }
-}
 }
 ?>
 <!DOCTYPE html>
