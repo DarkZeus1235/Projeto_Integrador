@@ -96,6 +96,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
     }
     ?>
+    <h1 id="destaque">Produtos em Destaque</h1>
     <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
     <div class="row">
     <?php
