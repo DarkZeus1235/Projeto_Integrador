@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 15-Jun-2023 às 13:50
+-- Tempo de geração: 19-Jun-2023 às 11:55
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -76,6 +76,23 @@ INSERT INTO `cadastro_bebidas` (`id_bebida`, `nome_bebida`, `quantidade`, `descr
 (26, 'Conhaque SÃ£o JoÃ£o da Barra', '45', 'Uma bebida muito forte e estimulante.', 'recebidos/64870973f4052.webp', 'R$200,00'),
 (27, 'UÃ­suqe', 'dada', 'dada', 'recebidos/64886385eb962.png', 'dada'),
 (25, 'Vodka', '5', 'Uma bebida forte e intensa, bem alcoolizada.', 'recebidos/648708aa75bf0.jpg', 'R$120');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cadastro_champ`
+--
+
+DROP TABLE IF EXISTS `cadastro_champ`;
+CREATE TABLE IF NOT EXISTS `cadastro_champ` (
+  `id_champ` int(200) NOT NULL AUTO_INCREMENT,
+  `nome_bebida` varchar(200) NOT NULL,
+  `quantidade` varchar(200) NOT NULL,
+  `descricao` varchar(200) NOT NULL,
+  `arquivo_caminho` varchar(200) NOT NULL,
+  `valor` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_champ`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
