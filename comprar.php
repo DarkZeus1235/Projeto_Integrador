@@ -12,7 +12,7 @@
     <body>
 
     <div class="menu-bar">
-    <img src="Imagens/vikingpinguço.png" alt="" width="90px">
+    <img src="img/vikingpinguço.png" alt="" width="90px">
     <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
     <ul>
       <li><a href="#">Início</a></li>
@@ -80,7 +80,16 @@
         <div id="quad2"></div>
         <h2 class="pedi">Formas de Pagamento</h2>
         <img src="img/iconepix.png" alt="" width="100">
-        <h3 class="text-pedi"> PIX</h3>
+        <h3 class="text-pedi">PIX</h3>
+        <div id="boleto-icon">
+          <img src="img/boletoicon.png" alt="" width="100">
+          <h3 class="text-pedi">Boleto</h3>
+        </div>
+        <img src="img/mastercardicon.png" alt="" width="100">
+        <h3 class="text-pedi">Débito</h3>
+        <img src="img/visaicon.png" alt="" width="100">
+        <h3 class="text-pedi">Crédito</h3>
+
         
     </div>
         
