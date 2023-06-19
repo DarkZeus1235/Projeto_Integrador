@@ -4,6 +4,7 @@ if (document.readyState = "loading"){
     ready()
 }
 
+//  Início do Script para remover produtos do carrinho
 var TotalAmount = "0,00"
 function ready (){
 const RemoveProductButtons = document.getElementsByClassName(".remove-product-button");
@@ -18,23 +19,33 @@ function removeProduct(event){
     event.target.parentElement.parentElement.remove();
     updateTotal();
 }
+// fim do Script para remover produtos do carrinho
+
+// Início do script para ver a quantidade de produtos
 const quantityInputs = document.getElementsByClassName("product-qtd-input")
     for (var i = 0; i < quantityInputs.length; i++){
         quantityInputs[i].addEventListener("change", updateTotal)
     }
+// Fim do script para ver a quantidade de produtos
+
+// Início do script para adicionar produtos ao carrinho
 const addToCartButtons = document.getElementsByClassName("button-hover-background")
 for (var i = 0; addToCartButtons.length; i++){
     addToCartButtons[i].addEventListener("click", addProductToCart)
+// Fim do script para adicionar produtos ao carrinho
 
+// Início do script para realizar a compra
     const purchaseButton = document.getElementsByClassName(".purchase-button")
     purchaseButton.addEventListener("click", makePurchase)
 } 
+// Fim do script para realizar a compra
 
-/* Esse scrit é para o carrinho vazio */
+/* Esse script é para o carrinho vazio */
 function makePurchase(){
     if(TotalAmount === "0,00"){
         alert("Seu carrinho está vazio!!")
     }else{
+        // O script abaixo é para realizar a compra com o carrinho cheio!
     alert(`
     Obrigado pela sua compra! 
     Valor do pedido: ${TotalAmount}
@@ -43,7 +54,7 @@ function makePurchase(){
     }
 }
 
-/*  FIM - Esse scrit é para o carrinho vazio */
+
 /*
 document.querySelector(".cart-table tbody").innerHTML = ""
 updateTotal()
@@ -55,6 +66,8 @@ function checkIfInputisNull(event){
     updateTotal()
 }
 */
+
+// Início do script de adicionar produtos ao carrinho
 function addProductToCart(event){
     const button = event.target
     const ProductInfos = button.parentElement.parentElement
@@ -91,6 +104,9 @@ function addProductToCart(event){
     newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfInputisNull)
     newCartProduct.getElementsByClassName("remove-product-button")[0].addEventListener("click", removeProduct)
 }
+// fim do script de adicionar produtos ao carrinho
+
+// Início do update das informações do produto
 function updateTotal(){
 TotalAmount = 0;
 const cartProducts = document.getElementsByClassName("cart-product");
@@ -105,3 +121,4 @@ TotalAmount = TotalAmount.toFixed(2);
 TotalAmount.replace(".", ",");
 document.querySelector('.cart-total-container span').innerText = "R$" + TotalAmount;
 }
+// Fim do update
