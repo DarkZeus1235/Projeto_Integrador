@@ -1,3 +1,15 @@
+<?php
+include("conexao.php");
+
+if (!isset($_SESSION)) {
+  session_start();
+}
+
+$consultar_banco = "SELECT * FROM tabela";
+
+$retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
+$quantidade_pedidos = $retorno_consulta->num_rows;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -70,77 +82,30 @@
     &nbsp;
   </div>  
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-4 g-4"> <!-- 1º Linha -->
-      <div class="col">
-      <div class="card" style="width: 18rem;">
-    <img class="champ" src="champ/champgnelaurent-perrier.jpg"  >
-    <div class="card-body">
-      <h5 class="card-title">Champagne Laurent-Perrier Brut 750ml</h5>
-      <p class="card-text">550,00$</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-      </div>
-      <div class="col">
-      <div class="card" style="width: 18rem;">
-    <img class="champ" src="champ/champcompenhage.jpg">
-    <div class="card-body">
-      <h5 class="card-title">Champagne Moët Impérial Brut 750ml</h5>
-      <p class="card-text">399,99$</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-      </div>
-      <div class="col">
-      <div class="card" style="width: 18rem;">
-    <img class="champ" src="champ/Dom pérignon.jpg" >
-    <div class="card-body">
-      <h5 class="card-title">Champagne Dom Pérignon Brut 750ml</h5>
-      <p class="card-text">2.153,99$</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-      </div>
-      <div class="col">
-      <div class="card" style="width: 18rem;">
-    <img class="champ" src="vin/vinhocompenhage.jpg" >
-    <div class="card-body">
-      <h5 class="card-title">Champagne Moët Impérial Brut 750ml</h5>
-      <p class="card-text">430,00$</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-      </div>
-    </div>
-    <div class="row row-cols-1 row-cols-md-4 g-4"> <!-- 2º Linha -->
-      <div class="col">
-        
-      </div>
-      <div class="col">
-       
-      </div>
-      <div class="col">
-        
-      </div>
-      <div class="col">
-        
-      </div>
-    </div>
-    <div class="row row-cols-1 row-cols-md-4 g-4"> <!-- 3º Linha -->
-      <div class="col">
-       
-      </div>
-      <div class="col">
-        
-      </div>
-      <div class="col">
-        
+    <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
+    <div class="row">
+      <?php
+
+      while ($bebidas = $retorno_consulta->fetch_assoc()) {
+        //var_dump($bebidas);
+      ?>
+
+        <!-- Card -->
+        <div class="card" style="width: 18rem;">
+          <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
+            <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
+            <h5 class="card-text"><?php echo $bebidas['valor']; ?></h5>
+            <a href="#" class="btn btn-primary">Comprar Agora</a>
+          </div>
         </div>
-      </div>
-      <div class="col">
-        
-      </div>
-    </div>
+        <!-- Fim do card -->
+
+      <?php
+      }
+      ?>
+    </div> <!-- Fim do row -->
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
