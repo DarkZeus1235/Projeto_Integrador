@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
   session_start();
 }
 
-$consultar_banco = "SELECT * FROM cadastro_bebidas";
+$consultar_banco = "SELECT * FROM cadastro_conhaque";
 
 $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
 $quantidade_pedidos = $retorno_consulta->num_rows;
@@ -16,16 +16,15 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="Imagens/vikingpinguço.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taverna de Valhalla</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Taverna de Valhala</title>
 </head>
 
 <body>
-
-  <div class="menu-bar">
+<div class="menu-bar">
     <img src="Imagens/vikingpinguço.png" alt="" width="90px">
     <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
     <ul>
@@ -39,7 +38,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
         ?>
 
 
-        <div class="dropdown-menu">
+<div class="dropdown-menu">
           <ul>
             <li><a href="vinhos.php">Vinhos</a></li>
             <li><a href="whisky.php">Uísque</a></li>
@@ -87,48 +86,43 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     </ul>
   </div>
   <div class="container">
-    <?php
-    if (isset($_SESSION['nome'])) {
-    ?>
-
-      <h1>Bem-Vindo à Taverna de Valhalla <?php echo $_SESSION['nome']; ?></h1>
-    <?php
-
-    }
-    ?>
-    <h1 id="destaque">Produtos em Destaque</h1>
     <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
     <div class="row">
-    <?php
-    
-    while ($bebidas = $retorno_consulta->fetch_assoc()) {
-      //var_dump($bebidas);
-    ?>
-     
+      <?php
+
+      while ($bebidas = $retorno_consulta->fetch_assoc()) {
+        //var_dump($bebidas);
+        ?>
+
         <!-- Card -->
-        <div class="card" id="testec" style="width: 18rem;">
+        <div class="card" style="width: 18rem;">
           <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
-            <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
-            <h5 id="card-text" class="card-text"><?php echo $bebidas['valor']; ?></h5>
-            <a href="comprar.php" id="textc" class="btn btn-success">Comprar Agora</a>
+            <h5 class="card-title">
+              <?php echo $bebidas['nome_bebida'] ?>
+            </h5>
+            <p class="card-text">
+              <?php echo $bebidas['descricao'] ?>
+            </p>
+            <h5 class="card-text">
+              <?php echo $bebidas['valor']; ?>
+            </h5>
+            <a href="#" class="btn btn-primary">Comprar Agora</a>
           </div>
         </div>
         <!-- Fim do card -->
-      
-    <?php
-    } 
+
+        <?php
+      }
 
 
-    ?>
+      ?>
     </div> <!-- Fim do row -->
-
-
-
-  </div>
-
+     </div>
+  
+ 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </html>
