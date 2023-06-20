@@ -75,7 +75,7 @@
           <tbody>
             <tr class="cart-product">
               <td class="product-identification">
-                <img src="cao.jpg" alt="Miniatura" class="cart-product-image">
+                <img src="cao.jpg" alt="" class="cart-product-image">
                 <strong class="cart-product-title">Vinho Chianti</strong>
               </td>
               <td>
