@@ -32,6 +32,30 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
     .card {
       margin-top: 20px;
+      
+
+      img {
+  max-width: 100%;
+  height: auto;
+}
+      /* Estilos para telas pequenas */
+      
+@media (max-width: 600px) {
+  /* Regras de estilo para telas menores ou iguais a 600px */
+}
+@media (max-width: 600px) {
+  /* Regras de estilo para telas menores ou iguais a 600px */
+}
+
+/* Estilos para telas médias */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Regras de estilo para telas entre 601px e 1024px */
+}
+
+/* Estilos para telas grandes */
+@media (min-width: 1025px) {
+  /* Regras de estilo para telas maiores que 1024px */
+}
     }
   </style>
 </head>
