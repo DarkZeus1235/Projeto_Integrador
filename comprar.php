@@ -1,3 +1,11 @@
+<?php
+  include("conexao.php");
+
+  $consultar_banco = "SELECT * FROM cadastro_bebidas WHERE id_bebida = 26";
+
+  $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
+  $quantidade_pedidos = $retorno_consulta->num_rows;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -74,13 +82,16 @@
 
     </ul>
   </div>
+  <?php
+    while($bebidas = $retorno_consulta -> fetch_assoc()){
+   ?>
   <div class="container">
-    <?php
-    if (isset($_SESSION['nome'])) {
-    ?>
-
-      <h1>Bem-Vindo à Taverna de Valhalla <?php echo $_SESSION['nome']; ?></h1>
-    <?php
-
-    }
-    ?>
+    <h1><?php echo $bebidas['nome_bebida']; ?></h1>
+        <img src=<?php echo $bebidas['arquivo_caminho'];?>>
+  </div>
+  <?php
+      }
+  ?>
+      </body>
+  </html>
+    
