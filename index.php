@@ -55,7 +55,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
                 <ul>
                   <li><a href="conhaque.php">Conhaque</a></li>
                   <li><a href="rum.php">Rum</a></li>
-                  <li><a href="#">Team-3</a></li>
+                  <li><a href="champ.php">Champanhe</a></li>
                   <li><a href="#">Team-4</a></li>
                 </ul>
               </div>
