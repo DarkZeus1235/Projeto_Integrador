@@ -1,3 +1,11 @@
+<?php
+  include("conexao.php");
+
+  $consultar_banco = "SELECT * FROM cadastro_bebidas WHERE id_bebida = 26";
+
+        $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
+        $quantidade_pedidos = $retorno_consulta->num_rows;
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -72,11 +80,19 @@
 
     </ul>
   </div>
+        <?php
+        while($bebidas = $retorno_consulta -> fetch_assoc()){
 
+        ?>
     <div id="quad">
         <h2 class="pedi">Informações do seu pedido</h2>
-        <img id="img-pedi" src="img/vikingpinguço.png" alt="">
-        <h3 class="text-pedi">Aqui aparecerá as informações do pedido do cliente.</h3>
+        <img id="img-pedi" src="<?php echo $bebidas['arquivo_caminho'];?>" alt="">
+        <h3 class="text-pedi"><?php echo $bebidas['nome_bebida'];?></h3>
+        <h4><?php echo $bebidas['descricao']; ?></h4>
+        <h4><?php echo $bebidas['quantidade'];?></h4>
+        <h4><?php echo $bebidas['valor'];?></h4>
+        <button type="button" id="botao-comp" class="btn btn-success">Comprar</button>
+        <button type="button" id="botao-car" class="btn btn-primary">Adicionar ao carrinho</button>
         <div id="quad2"></div>
         <h2 class="pedi">Formas de Pagamento</h2>
         <img src="img/iconepix.png" alt="" width="100">
@@ -85,13 +101,23 @@
           <img src="img/boletoicon.png" alt="" width="100">
           <h3 class="text-pedi">Boleto</h3>
         </div>
-        <img src="img/mastercardicon.png" alt="" width="100">
-        <h3 class="text-pedi">Débito</h3>
-        <img src="img/visaicon.png" alt="" width="100">
-        <h3 class="text-pedi">Crédito</h3>
-
-        
+        <div id="mastericon">
+          <img src="img/mastercardicon.png" alt="" width="100">
+          <h3 class="text-pedi">Débito</h3>
+        </div>
+        <div id="visaicon">
+          <img src="img/visaicon.png" alt="" width="100">
+          <h3 class="text-pedi">Crédito</h3>
+        </div>
     </div>
-        
+<?php
+  }
+?>
+
+    <!--
+      <h3 class="aviso-compra">A compra só será realizada quando o pagamento for confirmado.</h3>
+    -->
+    
+  
     </body>
 </html>
