@@ -1,7 +1,7 @@
 <?php
         include("conexao.php");
 
-        $consultar_banco = "SELECT * FROM cadastro_vinhos";
+        $consultar_banco = "SELECT * FROM cadastro_gin";
 
         $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
         $quantidade_pedidos = $retorno_consulta->num_rows;
@@ -102,7 +102,7 @@
                         <td><?php echo $bebidas['descricao'];?> </td>
                         <td><?php echo $bebidas['arquivo_caminho'];?> </td>
                         <td><?php echo $bebidas ['valor'];?></td>
-                        <td><a class="btn btn-danger" href="deletar_vinhos.php?codigo_bebida=<?php echo $bebidas['id_vinho']; ?>">Deletar</a></td>
+                        <td><a class="btn btn-danger" href="deletar_gin.php?codigo_bebida=<?php echo $bebidas['id_gin']; ?>">Deletar</a></td>
                     </tr>
                     <?php
                     }
@@ -111,7 +111,7 @@
                     ?>
                 </tr>
             </table>
-            <a class="btn btn-warning" href="cadastro_vinhos.php">Voltar para Cadastro de Vinhos</a>
+            <a class="btn btn-warning" href="cadastro_gin.php">Voltar para Cadastro de Gin</a>
         </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

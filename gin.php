@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
   session_start();
 }
 
-$consultar_banco = "SELECT * FROM cadastro_vinhos";
+$consultar_banco = "SELECT * FROM cadastro_gin";
 
 $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
 $quantidade_pedidos = $retorno_consulta->num_rows;

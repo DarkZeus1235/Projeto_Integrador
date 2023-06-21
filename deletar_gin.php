@@ -2,18 +2,18 @@
     include("conexao.php");  // Arquivo php referente ao banco de dados   
     
     if(isset($_GET['codigo_bebida'])){
-        $id_vinho = $_GET['codigo_bebida'];
-        $sql_consultar = "SELECT * FROM cadastro_vinhos WHERE id_vinho = '$id_vinho'";
+        $id_gin = $_GET['codigo_bebida'];
+        $sql_consultar = "SELECT * FROM cadastro_gin WHERE id_gin = '$id_gin'";
         $comando_sql = $mysqli->query($sql_consultar) or die($mysqli->error);
         $bebidas = $comando_sql->fetch_assoc();
 
         if(isset($_POST['btn_deletar'])){ 
     
-            $sql_deletar = "DELETE FROM cadastro_vinhos WHERE id_vinho = '$id_vinho'";
+            $sql_deletar = "DELETE FROM cadastro_gin WHERE id_gin = '$id_gin'";
     
             $deu_certo = $mysqli->query($sql_deletar) or die ($mysqli->error);
 
-            header("location:lista_vinhos.php");
+            header("location:lista_gin.php");
             
            // var_dump($mysqli);
         }
@@ -41,7 +41,7 @@
     <body>
         <div class="container">
             <h1>Tela de Exclusão - Taverna de Valhalla</h1>
-            <h1>ID da Bebida: <?php echo $bebidas['id_vinho']?></h1>
+            <h1>ID da Bebida: <?php echo $bebidas['id_gin']?></h1>
             <p>Nome da Bebida: <?php echo $bebidas['nome_bebida'] ?></p>
             <p>Quantidade: <?php echo $bebidas['quantidade']?></p>
             <p>Descrição: <?php echo $bebidas['descricao']?></p>
@@ -50,7 +50,7 @@
         
             <form action="" method="post">
                 <input name="btn_deletar" class="btn btn-danger" type="submit" value="DELETAR">
-                <a class="btn btn-warning" href="lista_vinhos.php">Voltar</a>
+                <a class="btn btn-warning" href="lista_gin.php">Voltar</a>
             </form>
             
         </div>
