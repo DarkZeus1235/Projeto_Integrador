@@ -344,9 +344,9 @@ body {
   border: 25px solid burlywood;
   background-color: #FFFFF0;
   width: 1100px;
-  height: 825px;
+  height: 1000px;
   margin-left: 420px;
-  margin-top: 90px;
+  margin-top: 70px;
 }
 .pedi{
   text-align: center;
@@ -357,10 +357,12 @@ body {
 }
 #img-pedi{
   width: 250px;
+  margin-left: 10px;
 }
 .text-pedi{
   margin-left: 15px;
   display: inline-block;
+  font-weight: bold;
 }
 #quad2{
   border: 5px solid burlywood;
@@ -374,11 +376,18 @@ body {
 }
 #botao-comp{
   color: white;
-  margin-top: 160px;
-  margin-left: 5px;
+  margin-left: 940px;
 }
 #botao-car{
   color: white;
   margin-left: 830px;
+  margin-top: 5px;
   margin-bottom: 20px;
+}
+.span-comp{
+  font-weight: bold;
+  margin-left: 10px;
+}
+a{
+  color: #000000;
 }

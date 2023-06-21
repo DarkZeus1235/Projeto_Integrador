@@ -1,5 +1,14 @@
 <?php
   include("conexao.php");
+
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+  
+  $consultar_banco = "SELECT * FROM cadastro_rum";
+  
+  $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
+  $quantidade_pedidos = $retorno_consulta->num_rows;    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,6 +21,34 @@
     <title>Taverna de Valhala</title>
 </head>
 <body>
+  <div class="container">
+    <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
+    <div class="row">
+      <?php
+
+      while ($bebidas = $retorno_consulta->fetch_assoc()) {
+        //var_dump($bebidas);
+      ?>
+
+        <!-- Card -->
+        <div class="card" style="width: 18rem;">
+          <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
+            <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
+            <h5 class="card-text"><?php echo $bebidas['valor']; ?></h5>
+            <a href="comprar_gin.php?id=<?php echo $bebidas['id_gin'];?>" class="btn btn-primary">Comprar Agora</a>
+          </div>
+        </div>
+        <!-- Fim do card -->
+
+      <?php
+      }
+
+
+      ?>
+    </div> <!-- Fim do row -->
+  </div>
 <div class="card" style="width: 18rem;">
   <img src="img/rum/zacapa.webp" class="card-img-top" alt="...">
   <div class="card-body">
