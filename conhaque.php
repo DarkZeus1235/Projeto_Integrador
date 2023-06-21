@@ -109,7 +109,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
                         <h5 class="card-text">
                             <?php echo $bebidas['valor']; ?>
                         </h5>
-                        <a href="#" class="btn btn-primary">Comprar Agora</a>
+                        <a href="comprar.php?id=<?php echo $bebidas['id_conhaque']?>" class="btn btn-primary">Comprar Agora</a>
                     </div>
                 </div>
                 <!-- Fim do card -->
