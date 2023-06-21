@@ -11,9 +11,10 @@ function ProductsBuying(){
     console.log(TotalPrice);
     updateTotal();
 }
+/*
 function updateTotal(){
     TotalPrice = 0;
-    const purchaseProducts = document.querySelector(".product-purchase");
+    const purchaseProducts = document.getElementsByClassName("product-purchase");
     for(var i = 0; i < purchaseProducts.length; i++){
         console.log(purchaseProducts[i]);
         const productPrice = purchaseProducts[i].getElementsByClassName("purchase-product-price")[0].innerText.replace("R$", "").replace(",", ".");
@@ -23,4 +24,6 @@ function updateTotal(){
         TotalPrice  = TotalPrice + (productPrice * productQuantity + 9,99);
     }
 }
+(APRESENTA UM ERRO NA LÓGICA QUE PRECISA SER REVISADO)*/
+
 // Fim do script para adicionar os produtos
