@@ -5,7 +5,13 @@ if(!isset($_SESSION)){
   session_start();
 }
 
-$consultar_banco = "SELECT * FROM cadastro_bebidas WHERE id_bebida = 26";
+if(isset($_GET["id"])){
+  $id_bebida = $_GET["id"];
+
+  $consultar_banco = "SELECT * FROM cadastro_bebidas WHERE id_bebida = $id_bebida";
+}
+
+
 
 $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
 $quantidade_pedidos = $retorno_consulta->num_rows;
