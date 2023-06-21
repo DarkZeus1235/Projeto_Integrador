@@ -13,7 +13,7 @@
 <body>
   
   <div class="menu-bar">
-    <img src="vikingpinguço.png" alt="" width="90px">
+    <img src="img/vikingpinguço.png" alt="" width="90px">
     <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
     <ul>
       <li><a href="#">Início</a></li>
@@ -95,7 +95,7 @@
               <td class="product-identification">
                 <img src="cao.jpg" alt="Miniatura" class="cart-product-image">
                 <strong class="cart-product-title">Vinho Chianti</strong>
-              </td>
+              </td>a
               <td>
                 <span class="cart-product-price">R$199,99</span>
               </td>
@@ -134,6 +134,6 @@
     </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+<script src="script_compra.js"></script>
 
 </html>

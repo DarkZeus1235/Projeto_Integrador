@@ -1,29 +1,34 @@
 if (document.readyState = "loading"){
-    document.addEventListener("DOMContentLoaded",ProductsBuying);
+    document.addEventListener("DOMContentLoaded",ready);
 }else{
-    ProductsBuying()
+    ready()
 }
-// Início do script para adicionar os produtos comprados
+// Início do script para escolher o método de pagamento
 
 var TotalPrice = "0,00"
-function ProductsBuying(){
-    const totalProducts = document.querySelector(".table-purchase-head");
-    console.log(TotalPrice);
-    updateTotal();
-}
-/*
-function updateTotal(){
-    TotalPrice = 0;
-    const purchaseProducts = document.getElementsByClassName("product-purchase");
-    for(var i = 0; i < purchaseProducts.length; i++){
-        console.log(purchaseProducts[i]);
-        const productPrice = purchaseProducts[i].getElementsByClassName("purchase-product-price")[0].innerText.replace("R$", "").replace(",", ".");
-        const productQuantity = purchaseProducts[i].getElementsByClassName("purchase-qtd-product")[0].value;
-        const productPayment = purchaseProducts[i].getElementsByClassName("purchase-payment-type")[0].innerText;
-    
-        TotalPrice  = TotalPrice + (productPrice * productQuantity + 9,99);
+function ready(){
+    const choosePixPayment = document.getElementsByClassName("text-pedi-pix");
+    for(var i = 0; i < choosePixPayment.length; i++){
+        choosePixPayment[i].addEventListener("click", function(event){
+           alert("Pagamento realizado com PIX!")
+        })
+    }
+    const chooseVisaPayment = document.getElementsByClassName("text-pedi-visa");
+    for(var i = 0; i < chooseVisaPayment.length; i++){
+        chooseVisaPayment[i].addEventListener("click", function(event){
+            alert("Pagamento realizado com VISA!")
+        })
+    }
+    const chooseMasterPayment = document.getElementsByClassName("text-pedi-master");
+    for(var i = 0; i < chooseMasterPayment.length; i++){
+        chooseMasterPayment[i].addEventListener("click", function(event){
+            alert("Pagamento realizado com MasterCard!")
+        })
+    }
+    const chooseTicketPayment = document.getElementsByClassName("text-pedi-boleto");
+    for(var i = 0; i < chooseTicketPayment.length; i++){
+        chooseTicketPayment[i].addEventListener("click", function(event){
+            alert("Pagamento realizado com boleto!")
+        })
     }
 }
-(APRESENTA UM ERRO NA LÓGICA QUE PRECISA SER REVISADO)*/
-
-// Fim do script para adicionar os produtos
