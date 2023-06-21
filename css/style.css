@@ -342,11 +342,12 @@ body {
 
 #quad{
   border: 25px solid burlywood;
-  background-color: #FFFFF0;
+  background-color: white;
   width: 1100px;
   height: 1000px;
   margin-left: 420px;
   margin-top: 70px;
+  border-radius: 25px;
 }
 .pedi{
   text-align: center;
