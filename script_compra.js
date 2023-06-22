@@ -4,7 +4,7 @@ if (document.readyState = "loading"){
     ready()
 }
 // Início do script para escolher o método de pagamento
-
+/*
 var TotalPrice = "0,00";
 function ready(){
     const choosePixPayment = document.getElementsByClassName("text-pedi-pix");
@@ -42,3 +42,4 @@ function PaymentVisa(){
     })
     
 }
+*/

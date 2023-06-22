@@ -90,24 +90,24 @@
         <h3 class="text-pedi"><?php echo $bebidas['nome_bebida'];?></h3>
         <h4><span class="span-comp">Descrição:</span> <?php echo $bebidas['descricao']; ?></h4>
         <h4><span class="span-comp">Estoque Disponível:</span> <?php echo $bebidas['quantidade'];?></h4>
-        <h4><span class="span-comp-price">Valor:</span> <?php echo $bebidas['valor'];?></h4>
+        <h4><span class="span-comp">Valor:</span> <?php echo $bebidas['valor'];?></h4>
         <button type="button" id="botao-comp" class="btn btn-success">Comprar</button>
         <button type="button" id="botao-car" class="btn btn-primary">Adicionar ao carrinho</button>
         <div id="quad2"></div>
         <h2 class="pedi">Formas de Pagamento</h2>
         <a href="#"><img src="img/iconepix.png" alt="" width="100"></a>
-        <a class="text-pedi-pix" href="#"><h3 class="text-pedi">PIX</h3></a>
+        <a class="text-pedi" href="#"><h3 class="text-pedi">PIX</h3></a>
         <div id="boleto-icon">
           <a href="#"><img src="img/boletoicon.png" alt="" width="100"></a>
-          <a class="text-pedi-boleto" href="#"><h3 class="text-pedi">Boleto</h3></a>
+          <a class="text-pedi" href="#"><h3 class="text-pedi">Boleto</h3></a>
         </div>
         <div id="mastericon">
           <a href="#"><img src="img/mastercardicon.png" alt="" width="100"></a>
-          <a class="text-pedi-master" href="#"><h3 class="text-pedi">Débito</h3></a>
+          <a class="text-pedi" href="#"><h3 class="text-pedi">Débito</h3></a>
         </div>
         <div id="visaicon">
           <a href="#"><img src="img/visaicon.png" alt="" width="100"></a>
-          <a class="text-pedi-visa" href="#"><h3 class="text-pedi">Crédito</h3></a>
+          <a class="text-pedi" href="#"><h3 class="text-pedi">Crédito</h3></a>
         </div>
     </div>
 <?php
