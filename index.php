@@ -103,35 +103,6 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     }
     ?>
     <h1 id="destaque">Produtos em Destaque</h1>
-    <div class="row">
-    <div class="card" id="testec" style="width: 18rem;">
-  <img src="recebidos/64919ed2167ae.webp" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Champagne Louis Roederer Cristal Rose 750 ml 2006</h5>
-    <h4 class="card-text">R$5.700,00</h4>
-    <a href="comprar.php" class="btn btn-primary">Comprar agora</a>
-  </div>
-  </div>
-  <div class="card" id="testec" style="width: 18rem;">
-  <img src="recebidos/648b23a63513b.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Champagne Louis Roederer Cristal Rose 750 ml 2006</h5>
-    <h4 class="card-text">R$5.700,00</h4>
-    <a href="comprar.php" class="btn btn-primary">Comprar agora</a>
-  </div>
-  </div>
-  <div class="card" id="testec" style="width: 18rem;">
-  <img src="recebidos/64899be2395bb.webp" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Conhaque Courvoisier Cognac VS 700 ml</h5>
-    <h7 class="card-text">O elegente conhaque referido como "O Cognac de Napoleão".</h7>
-    <h4 class='card-text'>R$846,29</h4>
-    <a href="comprar.php" class="btn btn-primary">Comprar agora</a>
-  </div>
-  </div>
-    </div>
-    <!-- Três cards manuais -->
-    <h1>Mais Vendidos</h1>
     <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
     <div class="row">
       <?php

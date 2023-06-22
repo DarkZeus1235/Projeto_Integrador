@@ -31,13 +31,13 @@
       ?>
 
         <!-- Card -->
-        <div class="card" style="width: 18rem;">
+        <div id="testec" class="card" style="width: 18rem;">
           <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
             <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
             <h5 class="card-text"><?php echo $bebidas['valor']; ?></h5>
-            <a href="comprar_gin.php?id=<?php echo $bebidas['id_gin'];?>" class="btn btn-primary">Comprar Agora</a>
+            <a id="textc" href="comprar_gin.php?id=<?php echo $bebidas['id_gin'];?>" class="btn btn-success">Comprar Agora</a>
           </div>
         </div>
         <!-- Fim do card -->

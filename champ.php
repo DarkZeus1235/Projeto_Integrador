@@ -98,7 +98,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
                 ?>
 
                 <!-- Card -->
-                <div class="card" style="width: 18rem;">
+                <div id="testec" class="card" style="width: 18rem;">
                     <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -110,7 +110,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
                         <h5 class="card-text">
                             <?php echo $bebidas['valor']; ?>
                         </h5>
-                        <a href="comprar_champ.php?id=<?php echo $bebidas['id_champ'];?>" class="btn btn-primary">Comprar Agora</a>
+                        <a id="textc" href="comprar_champ.php?id=<?php echo $bebidas['id_champ'];?>" class="btn btn-success">Comprar Agora</a>
                     </div>
                 </div>
                 <!-- Fim do card -->

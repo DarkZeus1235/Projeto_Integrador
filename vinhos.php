@@ -107,7 +107,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
                 ?>
 
                 <!-- Card -->
-                <div class="card" style="width: 18rem;">
+                <div id="testec" class="card" style="width: 18rem;">
                     <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">
