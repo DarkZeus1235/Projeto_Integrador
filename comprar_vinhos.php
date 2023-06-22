@@ -88,7 +88,7 @@
         while($bebidas = $retorno_consulta -> fetch_assoc()){
 
         ?>
-    <div id="quad">
+    <div id="quad"> 
         <h2 class="pedi">Informações do Produto</h2>
         <img id="img-pedi" src="<?php echo $bebidas['arquivo_caminho'];?>" alt="">
         <h3 class="text-pedi"><?php echo $bebidas['nome_bebida'];?></h3>
