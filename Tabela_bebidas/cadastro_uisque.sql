@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 21-Jun-2023 às 15:13
+-- Tempo de geração: 22-Jun-2023 às 13:55
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `cadastro_uisque` (
   `arquivo_caminho` varchar(200) NOT NULL,
   `valor` varchar(200) NOT NULL,
   PRIMARY KEY (`id_uisque`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro_uisque`
@@ -49,7 +49,12 @@ INSERT INTO `cadastro_uisque` (`id_uisque`, `nome_bebida`, `quantidade`, `descri
 (4, 'Whisky Buchanan\'s Finest Blended', '14', 'Um Ã³timo Whisky escocÃªs, para os melhores apreciadores!', 'recebidos/64930da78a594.webp', 'R$ 214,90'),
 (5, ' Whisky Glenfiddich 18 Anos', '14', 'Ã‰ um whisky escocÃªs com um toque adocicado e frutado da madeira espanhola Oloroso.', 'recebidos/6493106a0e251.webp', 'R$ 748,90'),
 (6, 'Whisky Buchanan\'s Red Seal', '21', ' Um whisky excepcionalmente rico, liso foi requerido para a coroaÃ§Ã£o do rei Edward VII.', 'recebidos/649311624fec8.webp', 'R$ 1.650,90'),
-(7, 'Whisky Dalmore 18 anos', '14', 'Ã‰ um whisky bem equilibrado, com uma boa combinaÃ§Ã£o de doÃ§ura e especiarias.', 'recebidos/649312aa635ca.webp', 'R$ 575,90');
+(7, 'Whisky Dalmore 18 anos', '14', 'Ã‰ um whisky bem equilibrado, com uma boa combinaÃ§Ã£o de doÃ§ura e especiarias.', 'recebidos/649312aa635ca.webp', 'R$ 575,90'),
+(8, 'Whisky Buffalo Trace', '14', 'O envelhecimento em Barris de Carvalho novos, lhe confere um sabor suave e marcante.', 'recebidos/6494505b45efa.webp', 'R$ 374,68'),
+(9, 'Whisky Jack Daniel\'s', '259', ' Um sabor verdadeiramente delicado e distinto, inspirado nos sabores tropicais do prÃ³prio carvalho americano.', 'recebidos/649450fe19e48.webp', 'R$ 1.278,90'),
+(10, 'Whisky Bastille Single Malt ', '59', 'Ã‰ produzido a partir de cevada de primavera cultivada no nordeste da FranÃ§a.', 'recebidos/649451c107faf.webp', 'R$ 585,90'),
+(11, 'Whisky The Macallan Enigma ', '609', 'O intenso malte oferece carvalho maduro com sutilezas de canela, baunilha e frutas secas.', 'recebidos/649452279430f.jpg', 'R$ 3.286,90'),
+(12, 'Whisky Ballantines 17 Anos ', '999999', ' Envelhecido por 17 anos com uma textura frutada e aveludada vindo de frutas frescas.', 'recebidos/6494528c7b621.webp', 'R$495,90');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
