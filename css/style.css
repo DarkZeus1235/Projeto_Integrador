@@ -416,3 +416,49 @@ a{
 #min-conta{
   margin-left: 500px;
 }
+/*CSS Faixa Contato*/
+
+.faixa-contact{
+  height: 10px;
+  width: 1900px;
+  background-color: burlywood;
+  margin-top: 40px;
+  margin-left: -390px;
+}
+#insta{
+  margin-left: 500px;
+}
+.insta{
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.space{
+  margin-top: 30px;
+}
+#face{
+  margin-left: 500px;
+}
+.face{
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+#zap{
+  margin-left: 500px;
+}
+.zap{
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+#mail{
+  margin-left: 500px;
+}
+.mail{
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/**/
