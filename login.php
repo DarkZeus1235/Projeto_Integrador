@@ -47,23 +47,14 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <link rel="stylesheet" href="css/login.css">
 <link rel="icon" href="img/hamburguer-queijo-com-ilustracao-do-icone-do-vetor-dos-desenhos-animados-do-fogo-conceito-de-icone-de-objeto-de-comida-isolado-premium_138676-5539.avif">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="css/style.css">
 <title>Página de Login</title>
 </head>
 <body>
 
-    <header class="header">
-        <nav id="navi" class="nav">
-            <a href="index.php">Início</a>
-            <a href="#">Contato</a>
-            <a href="#">Sobre nós</a>
-            <a href="#">Promoções</a>
-        </nav>
-
-        <form action="#" class="search-bar">
-            <input type="text" placeholder="Pesquisar...">
-            <button type="submit"><i class='bx bx-search'></i></button>
-        </form>
-    </header>
+<?php
+        include("menu.php");
+    ?>
 
   <div class="login-container">
   <img class="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
