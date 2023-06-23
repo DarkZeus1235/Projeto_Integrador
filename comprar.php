@@ -11,7 +11,7 @@ $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
 $quantidade_pedidos = $retorno_consulta->num_rows;
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
