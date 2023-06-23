@@ -20,6 +20,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="Imagens/vikingpinguço.png">
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PWJ7GD"></script>
     <title>Vinhos - Taverna de Valhalla</title>
 </head>
 
@@ -60,9 +61,9 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
                 <?php
                 if (isset($_SESSION['nome'])) {
                 ?>
-                <a href="#" class="log__Conta"> <i class="fa fa-user"></i>LUCAS </a>
+                <a href="#" class="log__Conta"> <i class="fa fa-user"></i><?php echo $_SESSION['nome'];?> </a>
                 <ul class="dropdown-menu">
-                    <li><a href="/Central.obj" class=""><i class="fa fa-user"></i>Minha Conta</a></li>
+                    <li><a href="conta.php" class=""><i class="fa fa-user"></i>Minha Conta</a></li>
                     <li><a href="logout.php">Sair</a></li>
                 <?php
 
