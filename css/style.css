@@ -392,3 +392,27 @@ body {
 a{
   color: #000000;
 }
+
+/*CSS Cards Informação Conta Cliente*/
+
+.col-lg-3{
+  display: inline-block;
+}
+#cardi1{
+  margin-left: 150px;
+}
+#cardi2{
+  margin-left: 30px;
+}
+#cardi3{
+  margin-left: 30px;
+}
+#cardi4{
+  margin-left: 30px;
+}
+#cardi5{
+  margin-left: 30px;
+}
+#min-conta{
+  margin-left: 500px;
+}
