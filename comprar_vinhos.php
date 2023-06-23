@@ -4,7 +4,7 @@
   if(isset($_GET["id"])){
     $id_bebida = $_GET["id"];
   
-    $consultar_banco = "SELECT * FROM cadastro_bebidas WHERE id_bebida = $id_bebida";
+    $consultar_banco = "SELECT * FROM cadastro_vinhos WHERE id_vinho = $id_bebida";
   }
 
   $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);

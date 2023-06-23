@@ -4,7 +4,7 @@
   if(isset($_GET["id"])){
     $id_bebida = $_GET["id"];
   
-    $consultar_banco = "SELECT * FROM cadastro_bebidas WHERE id_bebida = $id_bebida";
+    $consultar_banco = "SELECT * FROM cadastro_conhaque WHERE id_conhaque = $id_bebida";
   }
 
   $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
@@ -37,23 +37,24 @@
         ?>
 
 
-        <div class="dropdown-menu">
-          <ul>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li>
-              <a href="#">Outros <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-                </svg></a>
+<div class="dropdown-menu">
+                    <ul>
+                        <li><a href="vinhos.php">Vinhos</a></li>
+                        <li><a href="whisky.php">Uísque</a></li>
+                        <li><a href="vodka.php">Vodka</a></li>
+                        <li>
+                            <a href="#">Outros <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                                </svg></a>
 
-              <div class="dropdown-menu-1">
-                <ul>
-                  <li><a href="#">Team-1</a></li>
-                  <li><a href="#">Team-2</a></li>
-                  <li><a href="#">Team-3</a></li>
-                  <li><a href="#">Team-4</a></li>
-                </ul>
-              </div>
+                            <div class="dropdown-menu-1">
+                                <ul>
+                                    <li><a href="conhaque.php">Conhaque</a></li>
+                                    <li><a href="rum.php">Rum</a></li>
+                                    <li><a href="champ.php">Champanhe</a></li>
+                                    <li><a href="gin.php">Gin</a></li>
+                                </ul>
+                            </div>
 
             </li>
           </ul>
@@ -88,7 +89,7 @@
         while($bebidas = $retorno_consulta -> fetch_assoc()){
 
         ?>
-    <div id="quad"> 
+    <div id="quad">
         <h2 class="pedi">Informações do Produto</h2>
         <img id="img-pedi" src="<?php echo $bebidas['arquivo_caminho'];?>" alt="">
         <h3 class="text-pedi"><?php echo $bebidas['nome_bebida'];?></h3>
@@ -99,18 +100,18 @@
         <button type="button" id="botao-car" class="btn btn-primary">Adicionar ao carrinho</button>
         <div id="quad2"></div>
         <h2 class="pedi">Formas de Pagamento</h2>
-        <a href="#"><img src="Imagens/iconepix.png" alt="" width="100"></a>
+        <a href="#"><img src="img/iconepix.png" alt="" width="100"></a>
         <a class="text-pedi" href="#"><h3 class="text-pedi">PIX</h3></a>
         <div id="boleto-icon">
-          <a href="#"><img src="Imagens/boletoicon.png" alt="" width="100"></a>
+          <a href="#"><img src="img/boletoicon.png" alt="" width="100"></a>
           <a class="text-pedi" href="#"><h3 class="text-pedi">Boleto</h3></a>
         </div>
         <div id="mastericon">
-          <a href="#"><img src="Imagens/mastercardicon.png" alt="" width="100"></a>
+          <a href="#"><img src="img/mastercardicon.png" alt="" width="100"></a>
           <a class="text-pedi" href="#"><h3 class="text-pedi">Débito</h3></a>
         </div>
         <div id="visaicon">
-          <a href="#"><img src="Imagens/visaicon.png" alt="" width="100"></a>
+          <a href="#"><img src="img/visaicon.png" alt="" width="100"></a>
           <a class="text-pedi" href="#"><h3 class="text-pedi">Crédito</h3></a>
         </div>
     </div>

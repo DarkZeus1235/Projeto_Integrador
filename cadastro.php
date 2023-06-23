@@ -17,15 +17,9 @@ if (isset($_POST['bt_nome'])) {
 
     if (isset($_POST['nome']) || isset($_POST['endereco'])) {
 
-        if (($_POST['nome']) == 1) {
-            echo ("Parabéns você está logado");
-
-            if (($_POST['endereco']) == 1) {
-                echo ("Parabéns você está logado");
-            }
+        
         }
     }
-}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -57,17 +51,18 @@ if (isset($_POST['bt_nome'])) {
         <img class="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
         <h2>Cadastro Taverna de Valhalla</h2>
         <form action="cadastro.php" method="post">
-            <input type="email" name="bt_email" placeholder="Email" required>
-            <input type="password" name="bt_senha" placeholder="Senha" required>
-            <input type="text" name="bt_nome" placeholder="Nome completo" required>
-            <input type="text" name="bt_username" placeholder="Crie um nome de Usuário" required>
-            <input type="text" name="bt_cpf" placeholder="CPF" required>
-            <input type="text" name="bt_endereco" placeholder="Endereço" required>
-            <input type="submit" value="Cadastrar">
+            <input class="input-register-email" type="email" name="bt_email" placeholder="Email" required>
+            <input class="input-register-password" type="password" name="bt_senha" placeholder="Senha" required>
+            <input class="input-register-name" type="text" name="bt_nome" placeholder="Nome completo" required>
+            <input class="input-register-username" type="text" name="bt_username" placeholder="Crie um nome de Usuário" required>
+            <input class="input-register-cpf" type="text" name="bt_cpf" placeholder="CPF" required>
+            <input class="input-type-address" type="text" name="bt_endereco" placeholder="Endereço" required>
+            <input class="input-register-confirm" type="submit" value="Cadastrar">
             <p class="plv">Já tem uma conta?</p>
             <p><a id="entrar" href="login.php">Entrar</a></p>
         </form>
     </div>
 </body>
+<script src="script/script_cadastro.js"></script>
 
 </html>
