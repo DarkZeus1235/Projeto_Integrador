@@ -21,27 +21,12 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="Imagens/vikingpinguço.png">
-  <title>Vinhos - Taverna de Valhalla</title>
-    <style>
-        .vin {
-            width: 175px;
-            height: 220px;
-        }
-
-        .container {
-            margin-top: -400px;
-        }
-
-        .card {
-            margin-top: 20px;
-
-        }
-    </style>
+  <title>Rum - Taverna de Valhalla</title>
 </head>
 
 <body>
     <div class="menu-bar">
-        <img src="vikingpinguço.png" alt="" width="90px">
+        <img src="Imagens/vikingpinguço.png" alt="" width="90px">
         <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
         <ul>
             <li><a href="index.php">Início</a></li>

@@ -22,26 +22,11 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="Imagens/vikingpinguço.png">
   <title>Vinhos - Taverna de Valhalla</title>
-    <style>
-        .vin {
-            width: 175px;
-            height: 220px;
-        }
-
-        .container {
-            margin-top: -400px;
-        }
-
-        .card {
-            margin-top: 20px;
-
-        }
-    </style>
 </head>
 
 <body>
     <div class="menu-bar">
-        <img src="vikingpinguço.png" alt="" width="90px">
+        <img src="Imagens/vikingpinguço.png" alt="" width="90px">
         <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
         <ul>
             <li><a href="index.php">Início</a></li>
