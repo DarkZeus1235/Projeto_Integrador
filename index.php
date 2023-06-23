@@ -96,12 +96,16 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
                 <div id="testec" class="card" style="width: 18rem;">
                     <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">
-                            <?php echo $bebidas['nome_bebida'] ?>
-                        </h5>
-                        <p class="card-text">
-                            <?php echo $bebidas['descricao'] ?>
-                        </p>
+                        <div class="texto_produto1">
+                            <h5 class="card-title">
+                                <?php echo $bebidas['nome_bebida'] ?>
+                            </h5>
+                        </div>
+                        
+                            <p class="card-text">
+                                <?php echo $bebidas['descricao'] ?>
+                            </p>
+                                               
                         <h5 class="card-text">
                             <?php echo $bebidas['valor']; ?>
                         </h5>
