@@ -30,31 +30,31 @@
             </div>
         </li>
         <li><a href="#">Fale Conosco</a></li>
-        <?php
-        if (isset($_SESSION['nome'])) {
-        ?>
-            <li><a href="#" class="log__Conta"> <i class="fa fa-user"></i><?php echo $_SESSION['nome']; ?> </a>
+            <?php
+            if (isset($_SESSION['nome'])) {
+            ?>
+        <li><a href="#" class="log__Conta"> <i class="fa fa-user"></i><?php echo $_SESSION['nome']; ?> </a>
                 <div class="dropdown-menu">
-                    <ul>
-                        <li><a href="conta.php" class=""><i class="fa fa-user"></i>Minha Conta</a></li>
-                        <li><a href="logout.php">Sair</a></li>
+                <ul>
+                    <li><a href="conta.php" class=""><i class="fa fa-user"></i>Minha Conta</a></li>
+                    <li><a href="logout.php">Sair</a></li>
+            
+                <?php
 
-                    <?php
+            }
+                ?>
+                <?php
+                if (!isset($_SESSION['nome'])) {
 
+                ?>
+                    <li><a id="entrar-cadastrar" href="login.php">Entrar |</a> <a href="cadastro.php">Cadastrar</a></li>
+                <?php
                 }
-                    ?>
-                    <?php
-                    if (!isset($_SESSION['nome'])) {
-
-                    ?>
-                        <li><a id="entrar-cadastrar" href="login.php">Entrar |</a> <a href="cadastro.php">Cadastrar</a></li>
-                    <?php
-                    }
-                    ?>
-                    </ul>
+                ?>
+                </ul>
                 </div>
-            </li>
-
-
-
+        </li>
+                
+                
+              
 </div>
