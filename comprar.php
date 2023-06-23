@@ -1,11 +1,15 @@
 <?php
   include("conexao.php");
 
-  $consultar_banco = "SELECT * FROM cadastro_bebidas WHERE id_bebida = 26";
+  if(isset($_GET["id"])){
+    $id_bebida = $_GET["id"];
+  
+    $consultar_banco = "SELECT * FROM cadastro_champ WHERE id_champ = $id_bebida";
+  }
 
-        $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
-        $quantidade_pedidos = $retorno_consulta->num_rows;
-?>
+  $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
+  $quantidade_pedidos = $retorno_consulta->num_rows;
+  ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
