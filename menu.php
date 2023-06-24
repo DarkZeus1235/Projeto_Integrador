@@ -1,12 +1,14 @@
 <div class="menu-bar">
-    <img src="Imagens/vikingpinguço.png" alt="" width="90px">
-    <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
+    <img src="Imagens/vikingpinguço.png" alt="">
+    <div class="container">
+        <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
+    </div>
+
     <ul>
         <li><a href="index.php">Início</a></li>
         <li><a href="#">Promoções</a></li> <!-- Sem link -->
         <li><a href="#">Novidades</a> <!-- Sem link -->
         <li><a href="#">+ Vendidos <i class="bi bi-caret-down"></i></a> <!-- Sem link -->
-
             <div class="dropdown-menu">
                 <ul>
                     <li><a href="vinhos.php">Vinhos</a></li>
@@ -31,30 +33,27 @@
         </li>
         <li><a href="#">Fale Conosco</a></li>
         <?php
-        if (isset($_SESSION['nome'])) {
+            if (isset($_SESSION['nome'])) {
         ?>
-            <li><a href="#" class="log__Conta"> <i class="fa fa-user"></i><?php echo $_SESSION['nome']; ?> </a>
-                <div class="dropdown-menu">
-                    <ul>
-                        <li><a href="conta.php" class=""><i class="fa fa-user"></i>Minha Conta</a></li>
-                        <li><a href="logout.php">Sair</a></li>
-
+        <li><a href="#" class="log__Conta"> <i class="fa fa-user"></i><?php echo $_SESSION['nome']; ?> </a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="conta.php" class=""><i class="fa fa-user"></i>Minha Conta</a></li>
+                    <li><a href="logout.php">Sair</a></li>
                     <?php
 
-                }
+                        }
                     ?>
                     <?php
-                    if (!isset($_SESSION['nome'])) {
+                         if (!isset($_SESSION['nome'])) {
 
                     ?>
-                        <li><a id="entrar-cadastrar" href="login.php">Entrar |</a> <a href="cadastro.php">Cadastrar</a></li>
+                    <li><a id="entrar-cadastrar" href="login.php">Entrar |</a> <a href="cadastro.php">Cadastrar</a></li>
                     <?php
-                    }
+                        }
                     ?>
-                    </ul>
-                </div>
-            </li>
-
-
-
+                </ul>
+            </div>
+        </li>
+    </ul>
 </div>

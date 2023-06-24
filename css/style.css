@@ -38,6 +38,7 @@ body {
   color: var(--color-primary);
 }
 
+/* Menu CSS */
 .menu-bar {
   background-color: var(--color-black);
   height: 80px;
@@ -46,8 +47,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 5%;
-
   position: relative;
+}
+
+.menu-bar img{
+  height: 90px;
 }
 
 .menu-bar ul {
@@ -75,6 +79,8 @@ body {
   color: var(--color-primary);
 }
 
+
+/* Fim Menu CSS */
 .fas {
   float: right;
   margin-left: 10px;
