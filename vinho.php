@@ -33,7 +33,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     .card {
       margin-top: 20px;
       
-    }
+}
   </style>
 </head>
 
