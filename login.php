@@ -51,6 +51,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <title>Página de Login</title>
 </head>
 <body>
+  <div class="container">
+
 
 <?php
         include("menu.php");
@@ -74,6 +76,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
     <p class="plv">Não tem uma conta?</p>
     <p><a id="registro" href="cadastro.php">Registre-se</a></p>
     </div>
+  </div>
   </div>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
