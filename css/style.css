@@ -463,7 +463,22 @@ a{
   font-size: 20px;
 }
 
+/*CSS Deixar Butão Ageitado*/
+
 .texto_produto1{
-  height: 200px;
-  margin-bottom: 100px;
+  height: 30px;
+  margin-bottom: 50px
+}
+
+/*CSS Quadrado Página Método do Pagamento*/
+
+.quadr{
+  border: 25px solid burlywood;
+  background-color: white;
+  width: 1100px;
+  height: 750px;
+  margin-left: 420px;
+  margin-top: 70px;
+  border-radius: 25px;
+  display: S;
 }
