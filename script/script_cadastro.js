@@ -23,8 +23,14 @@ function validateFields(){
     }
 }
 function showAlert(){
-    if(result.isConfirmed){
-        alert("Cadastro realizado com sucesso!")
-    }
+    showAlert.fire({
+        text: 'Sucesso ao cadastrar',
+        icon: 'success',
+        title: 'Sucesso',
+    }).then((result) => {
+        if(result.isConfirmed){
+            window.location.href = "login.php"
+        }
+    })   
    
 }
