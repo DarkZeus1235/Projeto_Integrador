@@ -187,7 +187,8 @@ if (isset($_POST['bt_nome'])) {
         </div>
     </div>
     <div class="bot">
-        <button type="button" class="btn btn-primary">continuar</button>
+        <button type="button" class="btn btn-primary">Continuar</button>
+        <button type="button" class="btn btn-danger">Cancelar</button>
         </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
