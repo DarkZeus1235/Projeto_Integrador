@@ -29,7 +29,7 @@
                 </ul>
             </div>
         </li>
-        <li><a href="#">Fale Conosco</a></li>
+        <li><a href="contato.php">Fale Conosco</a></li>
         <?php
         if (isset($_SESSION['nome'])) {
         ?>
