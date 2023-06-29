@@ -1,29 +1,19 @@
 <?php
-include("conexao.php");
+    include("conexao.php");
 
-if (!isset($_SESSION)) {
-    session_start();
-}
-
-$consultar_banco = "SELECT * FROM cadastro_conhaque";
-
-$retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
-$quantidade_pedidos = $retorno_consulta->num_rows;
+    include("protect.php");
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="Imagens/vikingpinguço.png">
-  <title>Conhaque - Taverna de Valhalla</title>
+    <title>Minha Conta - Taverna de Valhalla</title>
 </head>
-
 <body>
-    <div class="menu-bar">
+<div class="menu-bar">
         <img src="Imagens/vikingpinguço.png" alt="" width="90px">
         <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
         <ul>
@@ -82,43 +72,45 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
         </ul>
     </div>
-    <div class="container">
-        <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
-        <div class="row">
-            <?php
+<div class="container">
+<div>
+<h2 id="min-conta" class="text-center titMinhaConta">MINHA CONTA</h2>
+</div>
+<div class="wrap-page">
+<div class="col-xs-12 col-sm-12 col-md-12">
+<div class="wrap-central">
+<div class="row">
+<ul class="list-unstyled ctrl_opc row ctrl_opc_fade">
+<li id="cardi1" class="col-lg-3 col-sm-4 col-xs-3">
+<a href="/Central/MeuCadastro.obj" class="boxItensCentral">
+<img src="https://img.terabyteshop.com.br/central/meu_cadastro.png" alt="Meu cadastro">
+</a>
+<p>Meu cadastro</p>
+</li>
+<li id="cardi2" class="col-lg-3 col-sm-4 col-xs-3">
+<a data-toggle="modal" data-target="#trocarsenha" class="boxItensCentral" id="triggerTrocaSenha">
+<img src="https://img.terabyteshop.com.br/central/trocar_senha.png" alt="Trocar senha">
+</a>
+<p>Trocar senha</p>
+</li>
+<li id="cardi3" class="col-lg-3 col-sm-4 col-xs-3">
+<a href="/Central/MeusPedidos.obj" class="boxItensCentral">
+ <img src="https://img.terabyteshop.com.br/central/meus_pedidos.png" alt="Meus pedidos">
+</a>
+<p>Meus pedidos</p>
 
-            while ($bebidas = $retorno_consulta->fetch_assoc()) {
-                //var_dump($bebidas);
-            ?>
-
-                <!-- Card -->
-                <div id="testec" class="card" style="width: 18rem;">
-                    <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <?php echo $bebidas['nome_bebida'] ?>
-                        </h5>
-                        <p class="card-text">
-                            <?php echo $bebidas['descricao'] ?>
-                        </p>
-                        <h5 class="card-text">
-                            <?php echo $bebidas['valor']; ?>
-                        </h5>
-                        <a id="textc" href="comprar_conhaque.php?id=<?php echo $bebidas['id_conhaque'] ?>" class="btn btn-success''">Comprar Agora</a>
-                    </div>
-                </div>
-                <!-- Fim do card -->
-
-            <?php
-            }
-
-
-            ?>
-        </div> <!-- Fim do row -->
-    </div>
-
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
+<li class="col-lg-3 col-sm-4 col-xs-3">
+<a id="cardi4" href="/Central/MeusEnderecos.obj">
+<img src="https://img.terabyteshop.com.br/central/meus-enderecos.png" alt="Meus Endereços">
+</a>
+<p>Meus Endereços</p>
+</li>
+<li cardi5 class="col-lg-3 col-sm-4 col-xs-3">
+<a href="logout.php" id="logout">
+<img src="https://img.terabyteshop.com.br/central/sair.png" alt="Sair">
+</a>
+<p>Sair</p>
+</li>
+</ul>
+</div>
 </html>
