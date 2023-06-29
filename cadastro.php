@@ -62,5 +62,6 @@ if (isset($_POST['bt_nome'])) {
             </form>
         </div>
     </div>
+</div>
 </body>
 </html>
