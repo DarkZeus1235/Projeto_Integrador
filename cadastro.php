@@ -33,6 +33,8 @@ if (isset($_POST['bt_nome'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
     <title>Cadastro</title>
 </head>
@@ -41,23 +43,24 @@ if (isset($_POST['bt_nome'])) {
     <?php
     include('menu.php');
     ?>
-    <div class="signup-container">
-        <img class="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
-        <h2>Cadastro Taverna de Valhalla</h2>
-        <form action="cadastro.php" method="post">
-            <input type="email" name="bt_email" placeholder="Email" required>
-            <input type="password" name="bt_senha" placeholder="Senha" required>
-            <input type="text" name="bt_nome" placeholder="Nome completo" required>
-            <input type="text" name="bt_username" placeholder="Crie um nome de Usuário" required>
-            <input type="text" name="bt_cpf" placeholder="CPF" required>
-            <input type="text" name="bt_endereco" placeholder="Endereço" required>
-            <input type="submit" value="Cadastrar" onclick="return validateFields()">
-            <p class="plv">Já tem uma conta?</p>
-            <p><a id="entrar" href="login.php">Entrar</a></p>
-            <div>
-            </div>
-        </form>
+    <div class="container">
+        <div class="signup-container">
+            <img class="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
+            <h2>Cadastro Taverna de Valhalla</h2>
+            <form action="cadastro.php" method="post">
+                <input type="email" name="bt_email" placeholder="Email" required>
+                <input type="password" name="bt_senha" placeholder="Senha" required>
+                <input type="text" name="bt_nome" placeholder="Nome completo" required>
+                <input type="text" name="bt_username" placeholder="Crie um nome de Usuário" required>
+                <input type="text" name="bt_cpf" placeholder="CPF" required>
+                <input type="text" name="bt_endereco" placeholder="Endereço" required>
+                <input type="submit" value="Cadastrar" onclick="return validateFields()">
+                <p class="plv">Já tem uma conta?</p>
+                <p><a id="entrar" href="login.php">Entrar</a></p>
+                <div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
-
 </html>

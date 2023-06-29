@@ -38,6 +38,7 @@ body {
   color: var(--color-primary);
 }
 
+/* Menu CSS */
 .menu-bar {
   background-color: var(--color-black);
   height: 80px;
@@ -46,8 +47,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 5%;
-
   position: relative;
+}
+
+.menu-bar img{
+  height: 90px;
 }
 
 .menu-bar ul {
@@ -75,6 +79,8 @@ body {
   color: var(--color-primary);
 }
 
+
+/* Fim Menu CSS */
 .fas {
   float: right;
   margin-left: 10px;
@@ -181,9 +187,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
   width: 300px;
-  margin-top: 240px;
-  margin-left: 800px;
-}
+  }
 
 .signup-container h2 {
   text-align: center;
