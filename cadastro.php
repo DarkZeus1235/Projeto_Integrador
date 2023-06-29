@@ -34,9 +34,6 @@ if (isset($_POST['bt_nome'])) {
 
 <body>
 
-<?php
-    include("menu.php");
-?>
     <div class="signup-container">
         <img class="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
         <h2>Cadastro Taverna de Valhalla</h2>
