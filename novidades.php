@@ -58,15 +58,15 @@
         <h1>Confira as nossas atualizações! ! !</h1>
     <div class="card w-75 mb-3">
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Novas marcas de vinho, whisky e vodka disponíveis!!</h5>
+        <p class="card-text">Adicionados novos lotes de vinho Caballo Loco e Zuccardi, whisky Johnny Walker e Buffalo Trace, e vodka Absolute e Smirnoff</p>
     </div>
     </div>
 
     <div class="card w-75 mb-3">
     <div class="card-body">
-        <h5 class="card-title">Novas marcas de vinho, whisky e vodka disponíveis!!</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Nova página de novidades!!</h5>
+        <p class="card-text">Adicionada uma página para informar de novas informações de possíveis promoções e novos produtos!!(Necessita adicionar as seguintes coisas no banco de dados: ID atualização, título, conteúdo)</p>
     </div>
     </div>
   </div>
