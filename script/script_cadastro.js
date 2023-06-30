@@ -1,12 +1,14 @@
 const ConfirmRegister = document.getElementsByClassName("input-register-confirm");
-for (var i = 0; i < ConfirmRegister.length; i++)
+for (var i = 0; i < ConfirmRegister.length; i++){
+    ConfirmRegister[i].addEventListener("click", validateFields)
+}
 
 
-function validateFiels(){
+function validateFields(){
     var inputs = document.getElementsByClassName("input-register-password");
     var controle = false;
     for (var i = 0; i < inputs.length; i++){
-        if(inputs[i].ariaValueMax.trim() !== ''){
+        if(inputs[i].value.trim() !== ''){
             controle = true;
             break;
         }
@@ -21,13 +23,14 @@ function validateFiels(){
     }
 }
 function showAlert(){
-    Swal.fire({
-        text: 'Você conseguiu se cadastrar!',
+    showAlert.fire({
+        text: 'Sucesso ao cadastrar',
         icon: 'success',
         title: 'Sucesso',
-    }) .then((result) => {
+    }).then((result) => {
         if(result.isConfirmed){
-            window.location.href = "login.php";
+            window.location.href = "login.php"
         }
-    })
+    })   
+   
 }
