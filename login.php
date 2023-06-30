@@ -51,19 +51,9 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 </head>
 <body>
 
-    <header class="header">
-        <nav id="navi" class="nav">
-            <a href="index.php">Início</a>
-            <a href="#">Contato</a>
-            <a href="#">Sobre nós</a>
-            <a href="#">Promoções</a>
-        </nav>
-
-        <form action="#" class="search-bar">
-            <input type="text" placeholder="Pesquisar...">
-            <button type="submit"><i class='bx bx-search'></i></button>
-        </form>
-    </header>
+   <?php
+    include('menu.php');
+   ?>
 
   <div class="login-container">
   <img class="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
