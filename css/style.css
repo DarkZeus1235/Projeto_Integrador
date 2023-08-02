@@ -130,6 +130,8 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
   width: 300px;
+  margin-top: 250px;
+  margin-left: 800px;
 }
 
 .plv{
@@ -478,4 +480,19 @@ a{
   width: 300px;
   height: 200px;
   margin-top: 30px;
+}
+
+
+
+/*Responsive*/
+
+@media screen and (max-width: 580px) {
+  .container {
+    padding: 20px;
+  }
+
+  .login-container {
+    width: 100%;
+    margin-right: 150px;
+  }
 }
