@@ -421,7 +421,7 @@ a{
 .faixa-contact{
   height: 10px;
   width: 1900px;
-  background-color: burlywood;
+  background-color: black;
   margin-top: 40px;
   margin-left: -390px;
 }
@@ -471,15 +471,17 @@ a{
 
 
 
-/*Responsive*/
+/*Navbar responsiva celular*/
 
 @media screen and (max-width: 580px) {
-  .container {
-    padding: 20px;
-  }
+  
+}
 
-  .login-container {
-    width: 100%;
-    margin-right: 150px;
-  }
+/*CSS Teste Navbar*/
+
+.collapse{
+  background-color: transparent;
+}
+#textnab{
+  color: blue;
 }
