@@ -23,9 +23,13 @@ if (isset($_POST['bt_nome'])) {
 <html>
 <head>
     <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <?php
+        include('menu.php');
+    ?>
     <div id="container" class="container">
         <div class="signup-container">
             <h2>Cadastro</h2>

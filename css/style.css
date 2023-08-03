@@ -130,8 +130,6 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
   width: 300px;
-  margin-top: 250px;
-  margin-left: 800px;
 }
 
 .plv{
@@ -196,6 +194,8 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
   width: 300px;
+  margin-top: -850px;
+  margin-left: -200px;
 }
 
 .signup-container h2 {
@@ -229,9 +229,11 @@ body {
   background-color: #45a049;
 }
 
-@media screen and (max-width: 480px) {
-  .signup-container {
+@media screen and (max-width: 700px) {
+  .container {
       width: 100%;
+      margin-top: auto  ;
+      
   }
 }
 
@@ -434,7 +436,7 @@ a{
 .faixa-contact{
   height: 10px;
   width: 1900px;
-  background-color: black;
+  background-color: burlywood;
   margin-top: 40px;
   margin-left: -390px;
 }
@@ -480,21 +482,4 @@ a{
   width: 300px;
   height: 200px;
   margin-top: 30px;
-}
-
-
-
-/*Navbar responsiva celular*/
-
-@media screen and (max-width: 580px) {
-  
-}
-
-/*CSS Teste Navbar*/
-
-.collapse{
-  background-color: transparent;
-}
-#textnab{
-  color: blue;
 }
