@@ -1,13 +1,7 @@
-<head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-</head>
-<?php
-    include('conexao.php');
-?>
-<header class="header">
-    <nav class="nav">
+<header>
+    <nav>
         <a href="index.php">Início</a>
-        <a href="#">Contato</a>
+        <a href="contato.php">Contato</a>
         <a href="#">Sobre nós</a>
         <a href="#">Promoções</a>
         <?php
@@ -19,21 +13,22 @@
 
         }
         ?>
-        <div class="sair">
-            <?php
-            if (isset($_SESSION['nome'])) {
-            ?>
 
-                <a id="logout" href="logout.php">Sair</a>
-            <?php
+        <?php
+        if (isset($_SESSION['nome'])) {
+        ?>
 
-            }
-            ?>
+            <a id="logout" href="logout.php">Sair</a>
+        <?php
+
+        }
+        ?>
     </nav>
 
-    <form action="#" class="search-bar">
+    <!-- A barra de pesquisa está funcionando ? -->
+    <form action="#">
         <input type="text" placeholder="Pesquisar...">
-        <button type="submit"><i class='bx bx-search'></i></button>
+        <input type="submit" value="Pesquisar">
+        
     </form>
 </header>
-</div>

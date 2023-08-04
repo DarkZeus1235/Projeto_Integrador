@@ -1,32 +1,29 @@
 <?php
-include("conexao.php");
+  include("conexao.php");
 
-if (!isset($_SESSION)) {
-  session_start();
-}
+  if (!isset($_SESSION)) {
+    session_start();
+  }
 
-$consultar_banco = "SELECT * FROM cadastro_bebidas";
+  $consultar_banco = "SELECT * FROM cadastro_bebidas";
 
-$retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
-$quantidade_pedidos = $retorno_consulta->num_rows;
+  $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
+  $quantidade_pedidos = $retorno_consulta->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="icon" href="Imagens/vikingpinguço.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">  
+  <link rel="icon" href="Imagens/vikingpinguço.png">  
   <title>Taverna de Valhalla</title>
 </head>
-
 <body>
-<?php
-    include('menu.php');
+  <?php
+    include('menu_dieimes.php');
   ?>
   <div class="container">
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
