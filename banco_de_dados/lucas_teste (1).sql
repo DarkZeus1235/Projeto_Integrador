@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 23-Jun-2023 às 10:39
+-- Tempo de geração: 29-Jun-2023 às 14:33
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `cpf` varchar(100) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   PRIMARY KEY (`id_login`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro`
@@ -49,7 +49,11 @@ INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `username`, `cpf`,
 (1, 'joaquim@sagionetti', 'joaquim', 'Joaquim Pedro Klima Sagionetti', '', '11213131', 'Avenida Brasil'),
 (2, 'dieimes@teste.com', 'dieimes', 'Dieimes Nunes', '', '11123131', 'Rua Rio'),
 (3, 'admin@hotmail.com', 'admin123', 'administrador', '', 'ADM', 'ADM'),
-(4, 'dieimes@dieimes', 'dieimes123', 'Dieimes Nunes', 'KungFu', '11213131', 'Avenida Brasil');
+(4, 'dieimes@dieimes', 'dieimes123', 'Dieimes Nunes', 'KungFu', '11213131', 'Avenida Brasil'),
+(15, 'ddada@dada', 'dad', 'adada', 'dad', 'adad', 'adada'),
+(14, 'ddada@dada', 'dad', 'adada', 'dad', 'adad', 'adada'),
+(13, 'dieimes@dieimes', 'dadad', 'adad', 'adadada', 'dad', 'adad'),
+(12, 'dieimes@dieimes', 'dadad', 'adad', 'adadada', 'dad', 'adad');
 
 -- --------------------------------------------------------
 

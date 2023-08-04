@@ -44,7 +44,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <html lang="pt-br">
 <html>
 <head>
-<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="img/hamburguer-queijo-com-ilustracao-do-icone-do-vetor-dos-desenhos-animados-do-fogo-conceito-de-icone-de-objeto-de-comida-isolado-premium_138676-5539.avif">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="css/style.css">
@@ -53,10 +53,9 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <body>
   <div class="container">
 
-
-<?php
-        include("menu.php");
-    ?>
+   <?php
+    include('menu.php');
+   ?>
 
   <div class="login-container">
   <img class="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
