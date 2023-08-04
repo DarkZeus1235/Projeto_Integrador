@@ -25,7 +25,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
 <body>
   <?php
-  include('menu_dieimes.php');
+  include('menu.php');
   ?>
   <div class="container">
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">

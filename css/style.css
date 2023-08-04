@@ -178,15 +178,7 @@ body {
   box-sizing: border-box;
 }
 
-.login-container input[type="submit"] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
+
 
 .login-container input[type="submit"]:hover {
   background-color: #6B4B21;
@@ -422,4 +414,9 @@ a{
   width: 300px;
   height: 200px;
   margin-top: 30px;
+}
+
+.logo-img {
+  width: 50px; /* Defina o tamanho desejado para a largura */
+  height: auto; /* A altura será ajustada proporcionalmente com base na largura */
 }
