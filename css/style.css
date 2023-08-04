@@ -29,6 +29,21 @@ body {
   font-size: 20px;
 }
 
+.custom-btn {
+    background-color: #6B4B21;
+    color: #fff;
+    /* Outros estilos do botão (opcional) */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.custom-btn:hover {
+    background-color: #543814; /* Cor mais escura ao passar o mouse (opcional) */
+}
+
 .logo {
   color: var(--color-white);
   font-size: 30px;
@@ -174,7 +189,7 @@ body {
 }
 
 .login-container input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #6B4B21;
 }
 
 .login-container p {
@@ -217,7 +232,7 @@ body {
 
 .signup-container input[type="submit"] {
   width: 100%;
-    background-color: #4CAF50;
+    background-color: #6B4B21;
     color: white;
     padding: 10px;
     border: none;
@@ -226,7 +241,7 @@ body {
 }
 
 .signup-container input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #6B4B21;
 }
 
 @media screen and (max-width: 700px) {
