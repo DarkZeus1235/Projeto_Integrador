@@ -417,6 +417,9 @@ a{
 }
 
 .logo-img {
-  width: 50px; /* Defina o tamanho desejado para a largura */
+  width: 70px; /* Defina o tamanho desejado para a largura */
   height: auto; /* A altura será ajustada proporcionalmente com base na largura */
+}
+#h1-index{
+  text-align: center;
 }
