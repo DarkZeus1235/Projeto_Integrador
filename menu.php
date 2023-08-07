@@ -26,7 +26,7 @@
                 <?php
                 if (!isset($_SESSION['nome'])) {
                 ?>
-                    <!-- <a class="nav-link" href="login.php">Entrar</a> --> 
+                        <!-- <a class="nav-link" href="login.php">Entrar</a> --> 
                     <!-- <a class="nav-link" href="cadastro.php">Cadastrar</a> -->
                 <?php
                 } else {
