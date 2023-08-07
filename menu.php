@@ -10,6 +10,11 @@
         <a href="#">Contato</a>
         <a href="#">Sobre nós</a>
         <a href="#">Promoções</a>
+        <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         <?php
         if (!isset($_SESSION['nome'])) {
         ?>

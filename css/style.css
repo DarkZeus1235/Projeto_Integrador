@@ -486,8 +486,30 @@ a{
 
 /*Navbar responsiva celular*/
 
-@media screen and (max-width: 580px) {
-  
+@media screen and (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
 }
 
 /*CSS Teste Navbar*/

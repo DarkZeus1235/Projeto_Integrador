@@ -109,11 +109,11 @@ body {
         background-color: #333;
     }
 
-    .nav-links.active {
+    .nav {
         display: flex;
     }
 
-    .nav-links li {
+    .nav a {
         margin-right: 0;
         margin-bottom: 10px;
     }
