@@ -312,3 +312,32 @@ a{
 #h1-index{
   text-align: center;
 } 
+
+/* Efeito texto Navbar*/
+.nav-link{
+  position: relative;
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.nav-link::before{
+  content: '';
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 0 ;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+}
+.nav-link:hover::before{
+  width: 95%;
+}
+#nav-link:hover::before{
+  width: 90%;
+}
+#nav-link2:hover::before{
+  width: 72%;
+}
