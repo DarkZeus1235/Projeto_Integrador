@@ -41,43 +41,26 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
 <html>
 <head>
-<link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="img/hamburguer-queijo-com-ilustracao-do-icone-do-vetor-dos-desenhos-animados-do-fogo-conceito-de-icone-de-objeto-de-comida-isolado-premium_138676-5539.avif">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link rel="stylesheet" href="css/style.css">
-<title>Página de Login</title>
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-
-   <?php
-    include('menu.php');
-   ?>
-
-  <div class="login-container">
-  <img class="viking" src="Imagens/vikingpinguço.png" alt="" width="100">
-    <h2>Faça login</h2>
-    <form action="login.php" method="post">
-      <div class='inputbox'>
-      <ion-icon name="mail-outline"></ion-icon>
-      <input type="text" name="email" placeholder="Email" required>
-      </div>
-      <div class="inputbox">
-        <ion-icon name="lock-closed-outline"></ion-icon>
-        <input type="password" name="senha" placeholder="Senha" required>
-      </div>
-      <input type="submit" value="Entrar">
-    </form>
-    <div class='register'>
-    <p class="plv">Não tem uma conta?</p>
-    <p><a id="registro" href="cadastro.php">Registre-se</a></p>
+    <?php
+        include('menu.php');
+    ?>
+    <div id="container" class="container">
+        <div class="signup-container">
+            <h2>Cadastro</h2>
+            <form action="index.php" method="post">
+                <input type="email" name="bt_email" placeholder="Email" required>
+                <input type="password" name="bt_senha" placeholder="Senha" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
     </div>
-  </div>
-  </div>
+</div>
 </body>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

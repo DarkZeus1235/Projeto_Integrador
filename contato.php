@@ -12,7 +12,9 @@
       <title>Página de Contato</title>
   </head>
   <body>
-      
+  <?php
+            include('menu.php');
+        ?>
       <div class="container">
           <h2>ENTRE EM CONTATO CONOSCO</h2>
           <h4>Horário de Atendimento:</h1>
@@ -30,10 +32,6 @@
               Integrador (PI) de seu Curso Técnico em Informática Para Internet do Serviço Nacional de Aprendizagem
               Comercial (Senac).</p>
         </div>
-
-        <?php
-            include('menu.php');
-        ?>
       <div class="container">
 
 
