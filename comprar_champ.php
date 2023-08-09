@@ -1,10 +1,10 @@
-<?php
+  <?php
   include("conexao.php");
 
   if(isset($_GET["id"])){
     $id_bebida = $_GET["id"];
   
-    $consultar_banco = "SELECT * FROM cadastro_vinhos WHERE id_vinho = $id_bebida";
+    $consultar_banco = "SELECT * FROM cadastro_champ WHERE id_champ = $id_bebida";
   }
 
   $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
@@ -30,7 +30,7 @@
         while($bebidas = $retorno_consulta -> fetch_assoc()){
 
         ?>
-    <div id="quad"> 
+    <div id="quad">
         <h2 class="pedi">Informações do Produto</h2>
         <img id="img-pedi" src="<?php echo $bebidas['arquivo_caminho'];?>" alt="">
         <h3 class="text-pedi"><?php echo $bebidas['nome_bebida'];?></h3>

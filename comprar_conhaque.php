@@ -4,7 +4,7 @@
   if(isset($_GET["id"])){
     $id_bebida = $_GET["id"];
   
-    $consultar_banco = "SELECT * FROM cadastro_vinhos WHERE id_vinho = $id_bebida";
+    $consultar_banco = "SELECT * FROM cadastro_conhaque WHERE id_conhaque = $id_bebida";
   }
 
   $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
@@ -30,7 +30,7 @@
         while($bebidas = $retorno_consulta -> fetch_assoc()){
 
         ?>
-    <div id="quad"> 
+    <div id="quad">
         <h2 class="pedi">Informações do Produto</h2>
         <img id="img-pedi" src="<?php echo $bebidas['arquivo_caminho'];?>" alt="">
         <h3 class="text-pedi"><?php echo $bebidas['nome_bebida'];?></h3>
@@ -41,18 +41,18 @@
         <button type="button" id="botao-car" class="btn btn-primary">Adicionar ao carrinho</button>
         <div id="quad2"></div>
         <h2 class="pedi">Formas de Pagamento</h2>
-        <a href="#"><img src="Imagens/iconepix.png" alt="" width="100"></a>
+        <a href="#"><img src="img/iconepix.png" alt="" width="100"></a>
         <a class="text-pedi" href="#"><h3 class="text-pedi">PIX</h3></a>
         <div id="boleto-icon">
-          <a href="#"><img src="Imagens/boletoicon.png" alt="" width="100"></a>
+          <a href="#"><img src="img/boletoicon.png" alt="" width="100"></a>
           <a class="text-pedi" href="#"><h3 class="text-pedi">Boleto</h3></a>
         </div>
         <div id="mastericon">
-          <a href="#"><img src="Imagens/mastercardicon.png" alt="" width="100"></a>
+          <a href="#"><img src="img/mastercardicon.png" alt="" width="100"></a>
           <a class="text-pedi" href="#"><h3 class="text-pedi">Débito</h3></a>
         </div>
         <div id="visaicon">
-          <a href="#"><img src="Imagens/visaicon.png" alt="" width="100"></a>
+          <a href="#"><img src="img/visaicon.png" alt="" width="100"></a>
           <a class="text-pedi" href="#"><h3 class="text-pedi">Crédito</h3></a>
         </div>
     </div>

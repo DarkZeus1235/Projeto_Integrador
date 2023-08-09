@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-$consultar_banco = "SELECT * FROM cadastro_champ";
+$consultar_banco = "SELECT * FROM cadastro_vodka";
 
 $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
 $quantidade_pedidos = $retorno_consulta->num_rows;
@@ -17,18 +17,17 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="icon" href="Imagens/vikingpinguço.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="Imagens/vikingpinguço.png">
-    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PWJ7GD"></script>
-    <title>Vinhos - Taverna de Valhalla</title>
+  <title>Vodka - Taverna de Valhalla</title>
 </head>
 
 <body>
-    <?php
+<?php
         include("menu.php");
     ?>
-    
     <div class="container">
         <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
         <div class="row">
@@ -36,10 +35,10 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
             while ($bebidas = $retorno_consulta->fetch_assoc()) {
                 //var_dump($bebidas);
-            ?>
+                ?>
 
                 <!-- Card -->
-                <div id="testec" class="card" style="width: 18rem;">
+                <div class="card" id="testec" style="width: 18rem;">
                     <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -48,22 +47,25 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
                         <p class="card-text">
                             <?php echo $bebidas['descricao'] ?>
                         </p>
-                        <h5 class="card-text">
+                        <h5 id="card-text" class="card-text">
                             <?php echo $bebidas['valor']; ?>
                         </h5>
-                        <a href="comprar_champ.php?id=<?php echo $bebidas['id_champ'] ?>" id="textc" class="btn btn-success">Comprar Agora</a>
+                        <a href="comprar_vodka.php?id=<?php echo $bebidas['id_vodka'];?>" id="textc" class="btn btn-success">Comprar Agora</a>
                     </div>
                 </div>
                 <!-- Fim do card -->
 
-            <?php
+                <?php
             }
 
 
             ?>
         </div> <!-- Fim do row -->
     </div>
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 
 </html>

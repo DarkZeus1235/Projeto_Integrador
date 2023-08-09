@@ -1,4 +1,4 @@
-<?php
+    <?php
         
         $hostname = "localhost";
         $bancodedados = "lucas_teste";
