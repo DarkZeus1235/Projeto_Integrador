@@ -31,13 +31,13 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
-          <img src="Imagens/" class="d-block w-100" alt="...">
+          <img src="Imagens/banner/wine.jpg" width="600px" height="800px" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="Imagens/" class="d-block w-100" alt="...">
+          <img src="Imagens/banner/win2.jpg" width="600px" height="800px"class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="Imagens/" class="d-block w-100" alt="...">
+          <img src="Imagens/banner/win33.jpg" width="600px" height="800px" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
