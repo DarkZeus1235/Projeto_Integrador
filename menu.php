@@ -17,10 +17,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Promoções</a>
-                    </li>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
-                        <input type="submit" value="Pesquisar" class="btn custom-btn">
+</li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -33,10 +30,10 @@
                             if (!isset($_SESSION['nome'])) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="login.php">Entrar</a>
+                                    <a id="nav-link2" class="nav-link" href="login.php">Entrar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="cadastro.php">Cadastrar</a>
+                                    <a id="nav-link" class="nav-link" href="cadastro.php">Cadastrar</a>
                                 </li>
                             <?php
                             } else {
