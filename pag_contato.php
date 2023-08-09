@@ -10,8 +10,66 @@
       <title>Página de Contato</title>
   </head>
   <body>
-      
-      <div class="container">
+  <div class="menu-bar">
+    <img src="Imagens/vikingpinguço.png" alt="" width="90px">
+    <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Promoções</a></li>
+      <li><a href="#">Novidades</a>
+      <li><a href="#">+ Vendidos <i class="bi bi-caret-down"></i></a>
+
+
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="whisky.php">Whisky</a></li>
+            <li><a href="#">Vinho</a></li>
+            <li>
+              <a href="#">Outros <i class="fas fa-caret-right"></i></a>
+
+              <div class="dropdown-menu-1">
+                <ul>
+                  <li><a href="#">Vodka</a></li>
+                  <li><a href="#">Conhaque</a></li>
+                  <li><a href="#">Champagne</a></li>
+                  <li><a href="#">Rum</a></li>
+                  <li><a href="#">Gin</a></li>
+                  <li><a href="#">Tequila</a></li>
+                  <li><a href="#">Rum</a></li>
+                  <li><a href="#">Cachaça</a></li>
+                  <li><a href="#">Jagermeister</a></li>
+                </ul>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#">Fale Conosco</a></li>
+      <?php
+    if (!isset($_SESSION['nome'])) {
+    ?>
+
+      <li><a href="login.php">Entrar | </a><a href="cadastro.php">Cadastrar</a></li>
+    <?php
+
+    }
+    ?>
+      <div class="sair">
+        <?php
+        if (isset($_SESSION['nome'])) {
+        ?>
+
+          <li><a id="logout" href="logout.php">Sair</a></li>
+        <?php
+
+        }
+        ?>
+      </div>
+      </li>
+
+    </ul>
+  </div>
           <h2>ENTRE EM CONTATO CONOSCO</h2>
           <h4>Horário de Atendimento:</h1>
           <p>R-Segunda à Sexta-Feira das 08h às 12h e 13:30h às 19h</p>
@@ -28,7 +86,6 @@
               Integrador (PI) de seu Curso Técnico em Informática Para Internet do Serviço Nacional de Aprendizagem
               Comercial (Senac).</p>
         </div>
-      <div class="container">
           <div class="row">
 
             <div class="col"> 
