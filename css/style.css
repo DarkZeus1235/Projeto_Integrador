@@ -31,6 +31,11 @@ body {
     background-color: #543814; /* Cor mais escura ao passar o mouse (opcional) */
 }
 
+/* Espaco botão contato */
+#esp{
+  margin-top: 10px;
+}
+
 
 
 
@@ -256,13 +261,13 @@ a{
 
 .faixa-contact{
   height: 10px;
-  width: 1900px;
+  width: 1987px;
   background-color: burlywood;
   margin-top: 40px;
   margin-left: -390px;
 }
 #insta{
-  margin-left: 500px;
+  margin-left: 530px;
 }
 .insta{
   display: inline-block;
@@ -273,7 +278,7 @@ a{
   margin-top: 30px;
 }
 #face{
-  margin-left: 500px;
+  margin-left: 530px;
 }
 .face{
   display: inline-block;
@@ -281,7 +286,7 @@ a{
   font-size: 20px;
 }
 #zap{
-  margin-left: 500px;
+  margin-left: 530px;
 }
 .zap{
   display: inline-block;
@@ -289,7 +294,7 @@ a{
   font-size: 20px;
 }
 #mail{
-  margin-left: 500px;
+  margin-left: 530px;
 }
 .mail{
   display: inline-block;
