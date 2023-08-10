@@ -2,8 +2,11 @@
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <img src="Imagens/banner/3D_Animation_Style_create_a_viking_with_a_beer_on_hand_animate_2.webp" alt="" class="logo-img">
+                <img src="Imagens/viking.png.png" alt="" class="logo-img"> 
             </a>
+            <span id="Texto_da_logo">
+            <h1>Taverna de Valhalla</h1>
+            </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

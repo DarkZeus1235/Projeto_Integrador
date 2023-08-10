@@ -346,3 +346,8 @@ a{
 #nav-link2:hover::before{
   width: 72%;
 }
+
+/* TEXTO DA LOGO */
+#Texto_da_logo{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
+}
