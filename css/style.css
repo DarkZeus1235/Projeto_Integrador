@@ -322,7 +322,7 @@ a{
   #zap{
     margin-right: 4px;
   }
-  #email{
+  #mail{
     margin-right: 4px;
   }
 }
@@ -337,7 +337,7 @@ a{
   #zap{
     margin-right: 2px;
   }
-  #email{
+  #mail{
     margin-right: 2px;
   }
 }
@@ -352,7 +352,7 @@ a{
   #zap{
     margin-right: 4px;
   }
-  #email{
+  #mail{
     margin-right: 4px;
   }
 }
@@ -367,7 +367,7 @@ a{
   #zap{
     margin-right: 4px;
   }
-  #email{
+  #mail{
     margin-right: 4px;
   }
 }
@@ -415,4 +415,10 @@ a{
   #email{
     margin-right: 4px;
   }
+}
+
+/* Imagem Vikings Bebendo */
+#img-vikbebendo{
+  width: 1903px;
+  height: 700px;
 }
