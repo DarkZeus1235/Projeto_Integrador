@@ -322,7 +322,7 @@ a{
 .nav-link{
   position: relative;
   font-size: 20px;
-  color: #000;
+  color: #6B4B21;
   font-weight: 500;
   text-decoration: none;
   margin-left: 40px;
@@ -349,5 +349,11 @@ a{
 
 /* TEXTO DA LOGO */
 #Texto_da_logo{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #6B4B21;
+  font-size: 34px;
+  text-decoration: none;
+}
+#Texto_da_logo:hover{
+  color: white;
 }

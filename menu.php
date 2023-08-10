@@ -5,7 +5,7 @@
                 <img src="Imagens/viking.png.png" alt="" class="logo-img"> 
             </a>
             <span id="Texto_da_logo">
-            <h1>Taverna de Valhalla</h1>
+            <a id="Texto_da_logo" href="index.php">Taverna de Valhalla</a>
             </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
