@@ -305,13 +305,13 @@ a{
 /*IMAGEM DO VIKING DA NAVBAR*/
 
 #viking{
-  width: 300px;
-  height: 200px;
+  width: 600px;
+  height: 700px;
   margin-top: 30px;
 }
 
 .logo-img {
-  width: 70px; /* Defina o tamanho desejado para a largura */
+  width: 78px; /* Defina o tamanho desejado para a largura */
   height: auto; /* A altura será ajustada proporcionalmente com base na largura */
 }
 #h1-index{
