@@ -133,13 +133,7 @@ body {
   background-color: #6B4B21;
 }
 
-@media screen and (max-width: 700px) {
-  .container {
-      width: 100%;
-      margin-top: auto  ;
-      
-  }
-}
+
 
 /*CSS Navbar*/
 /* CSS personalizado para o navbar */
@@ -312,3 +306,113 @@ a{
 #h1-index{
   text-align: center;
 } 
+
+
+
+
+
+/* Tag para tornar responsivel no celular */
+@media screen and (max-width: 1000px) {
+  #insta{
+    margin-right: 4px;
+  }
+  #face{
+    margin-right: 4px;
+  }
+  #zap{
+    margin-right: 4px;
+  }
+  #email{
+    margin-right: 4px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #insta{
+    margin-right: 2px;
+  }
+  #face{
+    margin-right: 2px;
+  }
+  #zap{
+    margin-right: 2px;
+  }
+  #email{
+    margin-right: 2px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #insta{
+    margin-right: 4px;
+  }
+  #face{
+    margin-right: 4px;
+  }
+  #zap{
+    margin-right: 4px;
+  }
+  #email{
+    margin-right: 4px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #insta{
+    margin-right: 4px;
+  }
+  #face{
+    margin-right: 4px;
+  }
+  #zap{
+    margin-right: 4px;
+  }
+  #email{
+    margin-right: 4px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #insta{
+    margin-right: 4px;
+  }
+  #face{
+    margin-right: 4px;
+  }
+  #zap{
+    margin-right: 4px;
+  }
+  #email{
+    margin-right: 4px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #insta{
+    margin-right: 4px;
+  }
+  #face{
+    margin-right: 4px;
+  }
+  #zap{
+    margin-right: 4px;
+  }
+  #email{
+    margin-right: 4px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #insta{
+    margin-right: 10px;
+  }
+  #face{
+    margin-right: 4px;
+  }
+  #zap{
+    margin-right: 4px;
+  }
+  #email{
+    margin-right: 4px;
+  }
+}
