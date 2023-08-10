@@ -117,10 +117,11 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     <div class="space"></div>
     <svg id="mail" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
       <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+      <h3 class="mail">tavernaV@gmail.com</h3>
     </svg>
-    <h3 class="mail">tavernaV@gmail.com</h3>
+    <img id="bárbaro" src="Imagens/banner/viking.png" alt="">
     <img id="princesa" src="Imagens/banner/Default_Create_a_viking_princess_drinking_a_beer_2_e1071012-b596-4431-a516-d836e63f959c_0.png" alt="">
-    <div class="faixa-contacto"><img id="bárbaro" src="Imagens/banner/viking.png" alt=""> </div>
+    <div class="faixa-contacto"></div>
   </div>
   </div> <!-- Fim do row -->
   </div>

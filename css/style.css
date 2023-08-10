@@ -260,7 +260,7 @@ a{
 }
 .faixa-contacto{
   height: 110px;
-  width: 1987px;
+  width: 1900px;
   background-color: #6B4B21;
   margin-top: -90px;
   margin-left: -300px;
@@ -294,10 +294,11 @@ a{
 }
 #mail{
   margin-left: 530px;
+  margin-top: 180px;
 }
 .mail{
   display: inline-block;
-  margin-top: 10px;
+  margin-top: -250px;
   font-size: 20px;
 }
 
@@ -358,12 +359,12 @@ a{
 }
 #princesa{
   width: 240px;
-  margin-top: -270px;
+  margin-top: -350px;
   margin-left: 860px;
 }
 #bárbaro{
   width: 240px;
-  margin-top: -250px;
+  margin-top: -90px;
   margin-left: -550px;
 }
 
@@ -379,19 +380,36 @@ a{
     width: 458px;
   }
   #insta{
-    margin-left: 80px;
+    margin-left:  140px;
   }
   #face{
-    margin-left: 80px;
+    margin-left:  140px;
   }
   #zap{
-    margin-left: 80px;
+    margin-left:  140px;
   }
   #mail{
-    margin-left: 80px;
+    margin-left: 140px;
   }
   #testec{
     margin-left: 130px; 
+  }
+  #bárbaro{
+    width: 150px;
+    margin-top: -250px;
+    margin-left: -100px;
+  }
+  .faixa-contact{
+    width: 1012px;
+  }
+  #princesa{
+    margin-left: 325px;
+  }
+  .faixa-contacto{
+    width: 920px;
+  }
+  #testee_mobile{
+    width: 730px;
   }
 }
 @media screen and (max-width: 500px) {
