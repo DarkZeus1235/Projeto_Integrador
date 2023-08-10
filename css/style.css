@@ -357,3 +357,91 @@ a{
 #Texto_da_logo:hover{
   color: white;
 }
+@media screen and (max-width: 1000px) {
+  #insta{
+    margin-left: 80px;
+  }
+  #face{
+    margin-left: 80px;
+  }
+  #zap{
+    margin-left: 80px;
+  }
+  #mail{
+    margin-left: 80px;
+  }
+  #testec{
+    margin-left: 130px; 
+  }
+}
+@media screen and (max-width: 500px) {
+  #insta{
+    margin-left:  150px;
+  }
+  #face{
+    margin-left: 100px;
+  }
+  #zap{
+    margin-left: 100px;
+  }
+  #mail{
+    margin-left: 100px;
+  }
+  #testec{
+    margin-left: 100px; 
+  }
+}
+@media screen and (max-width: 400px) {
+  #insta{
+    margin-left:  100px;
+  }
+  #face{
+    margin-left: 100px;
+  }
+  #zap{
+    margin-left: 100px;
+  }
+  #mail{
+    margin-left: 100px;
+  }
+  #testec{
+    margin-left: 100px; 
+  }
+}
+@media screen and (max-width: 375px) {
+  #insta{
+    margin-left: 60px;
+  }
+  #face{
+    margin-left: 60px;
+  }
+  #zap{
+    margin-left: 60px;
+  }
+  #mail{
+    margin-left: 60px;
+  }
+  #testec{
+    margin-left: 45px; 
+  }
+}
+@media screen and (max-width: 280px) {
+  #insta{
+    margin-left:  0px;
+  }
+  #face{
+    margin-left: 100px;
+  }
+  #zap{
+    margin-left: 100px;
+  }
+  #mail{
+    margin-left: 100px;
+  }
+  #testec{
+    margin-left: 100px; 
+  }
+  .faixa-contact{
+    width: 700px;
+  }
+}
