@@ -138,14 +138,6 @@ body {
   background-color: #6B4B21;
 }
 
-/* Tag para tornar responsivel no celular */
-@media screen and (max-width: 1000px) {
-  .signup-container{
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-}
-
 /*CSS Navbar*/
 /* CSS personalizado para o navbar */
 .custom-navbar {
@@ -266,6 +258,13 @@ a{
   margin-top: 40px;
   margin-left: -390px;
 }
+.faixa-contacto{
+  height: 110px;
+  width: 1987px;
+  background-color: #6B4B21;
+  margin-top: -90px;
+  margin-left: -300px;
+}
 #insta{
   margin-left: 530px;
 }
@@ -357,7 +356,28 @@ a{
 #Texto_da_logo:hover{
   color: white;
 }
+#princesa{
+  width: 240px;
+  margin-top: -270px;
+  margin-left: 860px;
+}
+#bárbaro{
+  width: 240px;
+  margin-top: -250px;
+  margin-left: -550px;
+}
+
+/* Atributo para tornar responsivel no celular */
 @media screen and (max-width: 1000px) {
+  .signup-container{
+    margin-top: -200px;
+    margin-left: 10px;
+    height: 615px;
+    width: 500px;
+  }
+  #cadatro{
+    width: 458px;
+  }
   #insta{
     margin-left: 80px;
   }
@@ -425,7 +445,7 @@ a{
     margin-left: 45px; 
   }
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 300px) {
   #insta{
     margin-left:  0px;
   }
