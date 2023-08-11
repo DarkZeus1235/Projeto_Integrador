@@ -47,6 +47,8 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
   width: 300px;
+  margin-left: 500px;
+  margin-top: 180px;
 }
 
 .plv{
@@ -62,7 +64,7 @@ body {
 #entrar{
   color: #E25822;
   text-decoration: none;
-  margin-left: 109px;
+  margin-left: 98px;
 }
 
 .login-container h2 {
@@ -381,16 +383,16 @@ a{
     width: 458px;
   }
   #insta{
-    margin-left:  140px;
+    margin-left:  390px;
   }
   #face{
-    margin-left:  140px;
+    margin-left:  390px;
   }
   #zap{
-    margin-left:  140px;
+    margin-left:  390px;
   }
   #mail{
-    margin-left: 140px;
+    margin-left: 390px;
   }
   #testec{
     margin-left: 130px; 
@@ -401,16 +403,20 @@ a{
     margin-left: -100px;
   }
   .faixa-contact{
-    width: 1012px;
+    width: 1358px;
   }
   #princesa{
     margin-left: 325px;
   }
   .faixa-contacto{
-    width: 920px;
+    width: 1268px;
+    margin-top: 10px;
   }
   #testee_mobile{
     width: 730px;
+  }
+  .login-container{
+    margin-left: 320px;
   }
 }
 @media screen and (max-width: 500px) {
