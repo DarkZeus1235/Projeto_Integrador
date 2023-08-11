@@ -31,6 +31,11 @@ body {
     background-color: #543814; /* Cor mais escura ao passar o mouse (opcional) */
 }
 
+/* Espaco botão contato */
+#esp{
+  margin-top: 10px;
+}
+
 
 
 
@@ -98,8 +103,8 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
   width: 300px;
-  margin-top: -850px;
-  margin-left: -200px;
+  margin-top: 0px;
+  margin-left: 0px;
 }
 
 .signup-container h2 {
@@ -132,8 +137,6 @@ body {
 .signup-container input[type="submit"]:hover {
   background-color: #6B4B21;
 }
-
-
 
 /*CSS Navbar*/
 /* CSS personalizado para o navbar */
@@ -250,13 +253,20 @@ a{
 
 .faixa-contact{
   height: 10px;
-  width: 1900px;
+  width: 1987px;
   background-color: burlywood;
   margin-top: 40px;
   margin-left: -390px;
 }
+.faixa-contacto{
+  height: 110px;
+  width: 1899px;
+  background-color: #6B4B21;
+  margin-top: -90px;
+  margin-left: -300px;
+}
 #insta{
-  margin-left: 500px;
+  margin-left: 530px;
 }
 .insta{
   display: inline-block;
@@ -267,7 +277,7 @@ a{
   margin-top: 30px;
 }
 #face{
-  margin-left: 500px;
+  margin-left: 530px;
 }
 .face{
   display: inline-block;
@@ -275,7 +285,7 @@ a{
   font-size: 20px;
 }
 #zap{
-  margin-left: 500px;
+  margin-left: 530px;
 }
 .zap{
   display: inline-block;
@@ -283,142 +293,200 @@ a{
   font-size: 20px;
 }
 #mail{
-  margin-left: 500px;
+  margin-left: 530px;
+  margin-top: -250px;
 }
 .mail{
   display: inline-block;
-  margin-top: 10px;
+  margin-top: -700px;
   font-size: 20px;
 }
 
 /*IMAGEM DO VIKING DA NAVBAR*/
 
 #viking{
-  width: 300px;
-  height: 200px;
+  width: 600px;
+  height: 700px;
   margin-top: 30px;
 }
 
 .logo-img {
-  width: 70px; /* Defina o tamanho desejado para a largura */
+  width: 78px; /* Defina o tamanho desejado para a largura */
   height: auto; /* A altura será ajustada proporcionalmente com base na largura */
 }
 #h1-index{
   text-align: center;
 } 
 
+/* Efeito texto Navbar*/
+.nav-link{
+  position: relative;
+  font-size: 20px;
+  color: #6B4B21;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.nav-link::before{
+  content: '';
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 0 ;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+}
+.nav-link:hover::before{
+  width: 95%;
+}
+#nav-link:hover::before{
+  width: 90%;
+}
+#nav-link2:hover::before{
+  width: 72%;
+}
 
+/* TEXTO DA LOGO */
+#Texto_da_logo{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #6B4B21;
+  font-size: 34px;
+  text-decoration: none;
+}
+#Texto_da_logo:hover{
+  color: white;
+}
+#princesa{
+  width: 240px;
+  margin-top: -350px;
+  margin-left: 860px;
+}
+#bárbaro{
+  width: 240px;
+  margin-top: -90px;
+  margin-left: -550px;
+  margin-bottom: -13px;
+}
 
-
-
-/* Tag para tornar responsivel no celular */
+/* Atributo para tornar responsivel no celular */
 @media screen and (max-width: 1000px) {
+  .signup-container{
+    margin-top: -200px;
+    margin-left: 10px;
+    height: 615px;
+    width: 500px;
+  }
+  #cadatro{
+    width: 458px;
+  }
   #insta{
-    margin-right: 4px;
+    margin-left:  140px;
   }
   #face{
-    margin-right: 4px;
+    margin-left:  140px;
   }
   #zap{
-    margin-right: 4px;
+    margin-left:  140px;
   }
   #mail{
-    margin-right: 4px;
+    margin-left: 140px;
+  }
+  #testec{
+    margin-left: 130px; 
+  }
+  #bárbaro{
+    width: 150px;
+    margin-top: -250px;
+    margin-left: -100px;
+  }
+  .faixa-contact{
+    width: 1012px;
+  }
+  #princesa{
+    margin-left: 325px;
+  }
+  .faixa-contacto{
+    width: 920px;
+  }
+  #testee_mobile{
+    width: 730px;
   }
 }
-
-@media screen and (max-width: 900px) {
-  #insta{
-    margin-right: 2px;
-  }
-  #face{
-    margin-right: 2px;
-  }
-  #zap{
-    margin-right: 2px;
-  }
-  #mail{
-    margin-right: 2px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #insta{
-    margin-right: 4px;
-  }
-  #face{
-    margin-right: 4px;
-  }
-  #zap{
-    margin-right: 4px;
-  }
-  #mail{
-    margin-right: 4px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  #insta{
-    margin-right: 4px;
-  }
-  #face{
-    margin-right: 4px;
-  }
-  #zap{
-    margin-right: 4px;
-  }
-  #mail{
-    margin-right: 4px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #insta{
-    margin-right: 4px;
-  }
-  #face{
-    margin-right: 4px;
-  }
-  #zap{
-    margin-right: 4px;
-  }
-  #email{
-    margin-right: 4px;
-  }
-}
-
 @media screen and (max-width: 500px) {
   #insta{
-    margin-right: 4px;
+    margin-left:  150px;
   }
   #face{
-    margin-right: 4px;
+    margin-left: 100px;
   }
   #zap{
-    margin-right: 4px;
+    margin-left: 100px;
   }
-  #email{
-    margin-right: 4px;
+  #mail{
+    margin-left: 100px;
+  }
+  #testec{
+    margin-left: 100px; 
   }
 }
-
 @media screen and (max-width: 400px) {
   #insta{
-    margin-right: 10px;
+    margin-left:  100px;
   }
   #face{
-    margin-right: 4px;
+    margin-left: 100px;
   }
   #zap{
-    margin-right: 4px;
+    margin-left: 100px;
   }
-  #email{
-    margin-right: 4px;
+  #mail{
+    margin-left: 100px;
+  }
+  #testec{
+    margin-left: 100px; 
+  }
+}
+@media screen and (max-width: 375px) {
+  #insta{
+    margin-left: 60px;
+  }
+  #face{
+    margin-left: 60px;
+  }
+  #zap{
+    margin-left: 60px;
+  }
+  #mail{
+    margin-left: 60px;
+  }
+  #testec{
+    margin-left: 45px; 
+  }
+}
+@media screen and (max-width: 300px) {
+  #insta{
+    margin-left:  0px;
+  }
+  #face{
+    margin-left: 100px;
+  }
+  #zap{
+    margin-left: 100px;
+  }
+  #mail{
+    margin-left: 100px;
+  }
+  #testec{
+    margin-left: 100px; 
+  }
+  .faixa-contact{
+    width: 700px;
   }
 }
 
 /* Imagem Vikings Bebendo */
 #img-vikbebendo{
   width: 1903px;
-  height: 700px;
+  height: 650px;
 }
