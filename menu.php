@@ -1,9 +1,12 @@
-<header>
+<header id="testee_mobile">
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <img src="Imagens/vikingpinguço.png" alt="" class="logo-img">
+                <img src="Imagens/viking.png.png" alt="" class="logo-img"> 
             </a>
+            <span id="Texto_da_logo">
+            <a id="Texto_da_logo" href="index.php">Taverna de Valhalla</a>
+            </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

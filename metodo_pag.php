@@ -56,7 +56,6 @@ if (isset($_POST['bt_nome'])) {
     <link rel="stylesheet" href="css/style.css">
     <title>Cadastro de Champagne</title>
     <style>
-
         .continer {
             width: 90%;
             max-width: 600px;
@@ -143,17 +142,17 @@ if (isset($_POST['bt_nome'])) {
     <div class="continer">
         <h2>Selecione um Meio de Pagamento</h2>
         <div class="divo">
+            <form method="post" action="opcao_esc.php">
+                <div class="payment-option">
+                    <input type="radio" id="credit-card" name="metodo" value="cartao">
+                    <img src="https://i.ibb.co/vdbBkgT/mastercard.jpg" alt="">
+                    <label for="credit-card">Débito</label>
 
-            <div class="payment-option">
-                <input type="radio" id="credit-card" name="payment" value="credit-card">
-                <img src="https://i.ibb.co/vdbBkgT/mastercard.jpg" alt="">
-                <label for="credit-card">Débito</label>
-
-            </div>
+                </div>
         </div>
         <div class="divo">
             <div class="payment-option">
-                <input type="radio" id="pix" name="payment" value="paypal">
+                <input type="radio" id="pix" name="metodo" value="pix">
                 <img src="imagens/logo-pix-png-icone-520x520.png" alt="" width="25px">
                 <label for="Pix">Pix</label>
 
@@ -161,13 +160,14 @@ if (isset($_POST['bt_nome'])) {
         </div>
         <div class="divo">
             <div class="payment-option">
-                <input type="radio" id="bolet" name="payment" value="bank-transfer">
+                <input type="radio" id="bolet" name="metodo" value="boleto">
                 <img src="imagens/boleto.png" alt="">
                 <label for="bank-transfer">Boleto</label>
 
             </div>
         </div>
-
+        <button class="btn btn-success"  type="submit">Continuar</button>
+        </form>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
