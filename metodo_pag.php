@@ -56,88 +56,119 @@ if (isset($_POST['bt_nome'])) {
     <link rel="stylesheet" href="css/style.css">
     <title>Cadastro de Champagne</title>
     <style>
-        .card {
-            background-color: rgba(255, 255, 255, 0.9);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 5px;
-            color: white;
 
-        }
-
-        .lis {
-            border: 1px solid silver;
+        .continer {
+            width: 90%;
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
             padding: 20px;
 
+
         }
 
-        .lis:hover {
-            background-color: silver;
-            color: silver;
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            cursor: pointer;
+            border: color;
+
+
         }
 
-        h7 {
-            color: black;
+        .payment-option input[type="radio"] {
+            padding: 10px;
+            margin-right: 0px;
+
         }
-        .container {
-            margin-left: -760px;
-            margin-top: -220px;
-           display: flex;
-           width: 100%;
-           justify-content: space-around;
+
+        .payment-option label {
+            font-size: 20px;
         }
-        @media screen and(max-widht:728px){
-            .container{
-                width: 100%;
-                flex-direction: column;
+
+        .payment-option img {
+            max-width: 50px;
+            margin-left: 10px;
+        }
+
+        .divo {
+
+            padding: 20px;
+            margin-top: 3px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            border-radius: 2px;
+            border: 1px solid rgb(0, 0, 0);
+
+            /* Borda sólida de 2px na cor azul */
+
+            width: 90%;
+            /* Largura em relação ao elemento pai */
+            max-width: 600px;
+            /* Largura máxima */
+            margin: 0 auto;
+            /* Centralizar horizontalmente */
+
+            background-color: #f2f2f2;
+
+            /* Inclui preenchimento e borda na largura total */
+        }
+
+        @media (max-width: 600px) {
+            .divo {
+                width: 90%;
+                /* Reduz a largura em telas menores */
+                font-size: 16px;
+                /* Ajusta o tamanho da fonte */
+                position: relative;
+                /* Posicionamento relativo */
+                top: 20px;
+                /* Move 20px para baixo */
             }
-            
         }
-        .tit {
-            margin-top: -2px;
-            margin-left: 50px;
-        }
-        .bot {
-            margin-top: 300px;
-            margin-left: 60px;
+
+        .divo:hover {
+
+            background-color: rgb(226, 221, 221);
         }
     </style>
 </head>
 
 <body>
     <?php
-        include("menu.php");
+    include('menu.php');
     ?>
-    <div class="tit">
-        <h1>Como você deseja pagar?</h1>
-    </div>
-    <div class="container">
-        <div class="card" style="width: 30rem;">
-            <ul class="list-group list-group-flush">
-                <label class="lis"><input type="radio" data-js="payment-type" name="paymentType" class="ui-radio__input" value="CONSUMER_CREDITS" required="" aria-invalid="false">
-                    <img src="imagens/credit-card.svg" width="20px">
-                    <h7>Crédito</h7>
-                </label>
-                <label class="lis"><input type="radio" data-js="payment-type" name="paymentType" class="ui-radio__input" value="CONSUMER_CREDITS" required="" aria-invalid="false">
-                    <img src="imagens/logo-pix-png-icone-520x520.png" width="20px">
-                    <h7>Pix</h7>
-                </label>
-                <label class="lis"><input type="radio" data-js="payment-type" name="paymentType" class="ui-radio__input" value="CONSUMER_CREDITS" required="" aria-invalid="false">
-                    <img src="imagens/credit-card.svg" width="20px">
-                    <h7>Débito</h7>
-                </label>
-                <label class="lis"><input type="radio" data-js="payment-type" name="paymentType" class="ui-radio__input" value="CONSUMER_CREDITS" required="" aria-invalid="false">
-                    <img src="imagens/boleto.png" width="20px">
-                    <h7>Boleto</h7>
-                </label>
+    <div class="continer">
+        <h2>Selecione um Meio de Pagamento</h2>
+        <div class="divo">
+
+            <div class="payment-option">
+                <input type="radio" id="credit-card" name="payment" value="credit-card">
+                <img src="https://i.ibb.co/vdbBkgT/mastercard.jpg" alt="">
+                <label for="credit-card">Débito</label>
+
+            </div>
         </div>
-    </div>
-    <div class="bot">
-        <button type="button" class="btn btn-primary">Continuar</button>
-        <button type="button" class="btn btn-danger">Cancelar</button>
+        <div class="divo">
+            <div class="payment-option">
+                <input type="radio" id="pix" name="payment" value="paypal">
+                <img src="imagens/logo-pix-png-icone-520x520.png" alt="" width="25px">
+                <label for="Pix">Pix</label>
+
+            </div>
         </div>
+        <div class="divo">
+            <div class="payment-option">
+                <input type="radio" id="bolet" name="payment" value="bank-transfer">
+                <img src="imagens/boleto.png" alt="">
+                <label for="bank-transfer">Boleto</label>
+
+            </div>
+        </div>
+
+    </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
