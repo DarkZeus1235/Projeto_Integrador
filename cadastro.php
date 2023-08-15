@@ -25,6 +25,7 @@ if (isset($_POST['bt_nome'])) {
     <title>Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="Imagens/icon.png">
 </head>
 <body>
     <?php
@@ -32,7 +33,7 @@ if (isset($_POST['bt_nome'])) {
     ?>
     <div id="container" class="container">
         <div class="signup-container">
-            <h2>Cadastro</h2>
+            <h2>Cadastro de Clientes</h2>
             <form id="cadatro"action="cadastro.php" method="post">
                 <input type="text" name="bt_nome" placeholder="Nome Completo" required>
                 <input type="text" name="bt_username" placeholder="Nome de Usuário" required>
