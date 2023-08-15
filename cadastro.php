@@ -32,7 +32,7 @@ if (isset($_POST['bt_nome'])) {
     ?>
     <div id="container" class="container">
         <div class="signup-container">
-            <h2>Cadastro</h2>
+            <h2>Cadastro de Clientes</h2>
             <form action="cadastro.php" method="post">
                 <input type="text" name="bt_nome" placeholder="Nome Completo" required>
                 <input type="text" name="bt_username" placeholder="Nome de Usuário" required>
