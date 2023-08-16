@@ -249,58 +249,10 @@ a{
 #min-conta{
   margin-left: 500px;
 }
-/*CSS Faixa Contato*/
 
-.faixa-contact{
-  height: 10px;
-  width: 1987px;
-  background-color: burlywood;
-  margin-top: 40px;
-  margin-left: -390px;
-}
-.faixa-contacto{
-  height: 110px;
-  width: 1900px;
-  background-color: #6B4B21;
-  margin-top: -90px;
-  margin-left: -300px;
-}
-#insta{
-  margin-left: 530px;
-}
-.insta{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-.space{
-  margin-top: 30px;
-}
-#face{
-  margin-left: 530px;
-}
-.face{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-#zap{
-  margin-left: 530px;
-}
-.zap{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-#mail{
-  margin-left: 530px;
-  margin-top: 180px;
-}
-.mail{
-  display: inline-block;
-  margin-top: -250px;
-  font-size: 20px;
-}
+
+
+
 
 /*IMAGEM DO VIKING DA NAVBAR*/
 
@@ -357,16 +309,7 @@ a{
 #Texto_da_logo:hover{
   color: white;
 }
-#princesa{
-  width: 240px;
-  margin-top: -350px;
-  margin-left: 860px;
-}
-#bárbaro{
-  width: 240px;
-  margin-top: -90px;
-  margin-left: -550px;
-}
+
 
 /* Atributo para tornar responsivel no celular */
 @media screen and (max-width: 1000px) {
@@ -394,11 +337,7 @@ a{
   #testec{
     margin-left: 130px; 
   }
-  #bárbaro{
-    width: 150px;
-    margin-top: -250px;
-    margin-left: -100px;
-  }
+ 
   .faixa-contact{
     width: 1012px;
   }
@@ -483,3 +422,74 @@ a{
     width: 700px;
   }
 }
+/* #################################################################### */
+                  /*CSS do rodapé by Mestre Jedi*/
+/* #################################################################### */
+.faixa-contact{
+  height: 10px;
+  background-color: burlywood;
+  margin-top: 40px;
+  width: 100%; /* Use 100% para se adaptar ao contêiner pai */
+}
+
+.faixa-contacto{
+  height: 110px;
+  background-color: #6B4B21;
+  margin-top: 40px; /* Ajuste esta margem conforme necessário */
+  width: 100%; /* Use 100% para se adaptar ao contêiner pai */
+}
+
+.space{
+  margin-top: 30px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centralizar os itens horizontalmente */
+}
+
+.footer-image {
+  max-width: 10%; /* Ajuste para definir a largura desejada das imagens */
+  height: auto;
+  margin: 0 2%;    /* Mantém a proporção da imagem ao redimensionar. */
+}
+
+.footer-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Use 100% para se adaptar ao contêiner pai */
+  max-width: 1200px; /* Você pode ajustar isso conforme necessário */
+  padding: 20px; /* Espaço ao redor das imagens e ícones */
+  flex-wrap: wrap;
+}
+
+.contact-icons-between-images {
+  flex: 1; /* Isso faz com que o contêiner dos ícones ocupe todo o espaço restante entre as imagens */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Dá um espaço à esquerda e à direita. Ajuste conforme sua necessidade. */
+}
+
+.contact-icons-between-images .social-icon {
+  margin: 5px 0; /* Dá um espaço entre cada ícone. Ajuste conforme sua necessidade. */
+  display: flex;
+  align-items: center; /* Centraliza o ícone e o texto verticalmente. */
+  gap: 10px; /* Espaço entre o ícone e o texto. Ajuste conforme sua necessidade. */
+}
+
+
+@media (max-width: 768px) { /* Um breakpoint comum para tablets e dispositivos menores */
+  .footer-images {
+    flex-direction: column; /* Empilha os itens verticalmente em dispositivos menores */
+  }
+  .footer-image {
+    max-width: 100%; /* Permite que a imagem ocupe toda a largura em dispositivos menores */
+    margin: 10px 0; /* Ajusta a margem para dispositivos menores */
+  }
+}
+
+/* #################################################################### */
+                  /* FIM -- CSS do rodapé by Mestre Jedi -- FIM*/
+/* #################################################################### */
