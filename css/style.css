@@ -492,3 +492,8 @@ a{
 .bem-vindo{
   text-align: center;
 }
+/* IMAGENS DA PÁGINA "MINHA CONTA" */
+#cadastro_imagem{
+  margin-top: 150px;
+  margin-left: 80px;
+}
