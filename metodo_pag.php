@@ -57,6 +57,8 @@ if (isset($_POST['bt_nome'])) {
     <title>Cadastro de Champagne</title>
     <style>
         .continer {
+            margin: 0 auto;
+            margin-top: 100px;
             width: 90%;
             max-width: 600px;
             background-color: #fff;
@@ -132,6 +134,30 @@ if (isset($_POST['bt_nome'])) {
 
             background-color: rgb(226, 221, 221);
         }
+
+        .but {
+            color: #f2f2f2;
+            padding: 7px;
+            background-color: green;
+            border-radius: 5px;
+
+            position: relative;
+                top: 5px;
+                left: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .but {
+                color: #f2f2f2;
+                padding: 7px;
+                background-color: green;
+                border-radius: 5px;
+                /* Ajuste a posição conforme necessário */
+                position: relative;
+                top: 25px;
+                left: 25px;
+            }
+        }
     </style>
 </head>
 
@@ -166,7 +192,7 @@ if (isset($_POST['bt_nome'])) {
 
             </div>
         </div>
-        <button class="btn btn-success"  type="submit">Continuar</button>
+        <button class="but" type="submit">Continuar</button>
         </form>
     </div>
 </body>

@@ -1,4 +1,7 @@
+
 <?php
+  if (empty($opcaoSelecionada)) 
+    echo "Nenhuma opção selecionada.";
 if(isset($_POST['metodo'])){
     $metodo = $_POST['metodo'];
     
@@ -13,9 +16,10 @@ if(isset($_POST['metodo'])){
             header("Location: boleto.php");
             break;
         default:
-            header("Location: metodo_pagamento.php");
+            header("Location: metodo_pag.php");
             break;
     }
     exit();
 }
 ?>
+ 
