@@ -14,6 +14,7 @@
     <?php
         include('menu.php');
     ?>
+    <h1 id="central">Central do Cliente</h1>
     <div class="container">
     <li class="col-lg-3 col-sm-4 col-xs-3">
 <a href="meu_cadastro.php" class="boxItensCentral">
@@ -22,13 +23,19 @@
 </div>
 </a>
 <p class="texto_cadastro">Meu Cadastro</p>
-</li>
-<li class="col-lg-3 col-sm-4 col-xs-3">
-    <a href="meus_pedidos.php">Meus Pedidos</a>
-    <div class="borda_imagem1">
-        <img id="pedidos_imagem" src="Imagens/meuspedidos.png" alt="">
-    </div>
-</li>
+        <a href="meus_pedidos.php" class="boxItensCentral">
+            <div class="borda_imagem1">
+                <img id="pedidos_imagem"src="Imagens/meuspedidos.png" alt="">
+            </div>
+        </a>
+        <p class="texto_pedidos">Pedidos</p>
+        <a href="deletar_conta.php" class="boxItensCentral">
+            <div class="borda_imagem2">
+                <img id="deletar_imagem" src="Imagens/deletar_conta.png" alt="">
+            </div>
+        </a>
+        <p class="texto_deletar">Deletar conta</p>
+    </li>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
