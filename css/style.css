@@ -49,6 +49,10 @@ body {
   width: 300px;
 }
 
+#botao_login{ 
+  color: white;
+  background-color: #6B4B21;
+}
 .plv{
   margin-top: 7px;
   margin-bottom: 5px;
@@ -483,4 +487,8 @@ a{
   .faixa-contact{
     width: 700px;
   }
+}
+/* ATRIBUTO PARA ALINHAR A MENSAGEM DE BEM-VINDO */
+.bem-vindo{
+  text-align: center;
 }

@@ -39,43 +39,24 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
 <html>
-
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="Imagens/icon.png">
-  <title>Página de Login</title>
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="Imagens/icon.png">
 </head>
-
 <body>
-  <?php
-  include('menu.php');
-  ?>
-  <div id="container" class="container">
-    <div class="signup-container">
-      <h2>Faça Login</h2>
-      <form id="cadatro" action="cadastro.php" method="post">
-        <div class='inputbox'>
-          <ion-icon name="mail-outline"></ion-icon>
-          <input type="text" name="email" placeholder="Email" required>
-        </div>
-        <div class="inputbox">
-          <ion-icon name="lock-closed-outline"></ion-icon>
-          <input type="password" name="senha" placeholder="Senha" required>
-        </div>
-        <input type="submit" value="Cadastrar" onclick="return validateFields()">
-      </form>
-      <div class='register'>
-        <p class="plv">Não tem uma conta?</p>
-        <p><a id="registro" href="cadastro.php">Registre-se</a></p>
-      </div>
-    </div>
-  </div>
+    <?php
+        include('menu.php');
+    ?>
+    <div id="container" class="container">
+        <div class="signup-container">
+            <h2>Login</h2>
+            <form id="cadatro"action="login.php" method="post">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <input type="submit" value="Entrar" onclick="return validateFields()">
+            </form>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
 </html>
