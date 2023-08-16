@@ -15,12 +15,21 @@
         include('menu.php');
     ?>
     <div class="container">
-        <img id="cadastro_imagem" src="Imagens/cadastro.pnh.png" width="100px" height="100px">
-        <h4>Cadastro</h4>
+    <li class="col-lg-3 col-sm-4 col-xs-3">
+<a href="meu_cadastro.php" class="boxItensCentral">
+<div class="borda_imagem">
+<img id="cadastro_imagem" src="Imagens/cadastro.pnh.png" alt="Meu cadastro">
+</div>
+</a>
+<p class="texto_cadastro">Meu Cadastro</p>
+</li>
+<li class="col-lg-3 col-sm-4 col-xs-3">
+    <a href="meus_pedidos.php">Meus Pedidos</a>
+    <div class="borda_imagem1">
+        <img id="pedidos_imagem" src="Imagens/meuspedidos.png" alt="">
     </div>
-    <?php
-              include('rodape.php');
-            ?>
+</li>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </html>

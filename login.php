@@ -52,6 +52,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     ?>
     <div id="container" class="container">
         <div class="signup-container">
+          <img id="icon_login" src="Imagens/icon.png" width="220px" height="250px" alt="">
             <h2>Login</h2>
             <form id="cadatro"action="login.php" method="post">
                 <input type="email" name="email" placeholder="Email" required>
