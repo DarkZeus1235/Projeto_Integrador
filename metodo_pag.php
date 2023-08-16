@@ -68,7 +68,20 @@ if (isset($_POST['bt_nome'])) {
 
 
         }
-
+        @media (max-width: 600px) {
+            .continer {
+                
+                margin: 0 auto;
+            margin-top: 100px;
+            width: 90%;
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            padding: 30px; 
+                
+            }
+        }
 
         .payment-option {
             display: flex;
@@ -125,7 +138,7 @@ if (isset($_POST['bt_nome'])) {
                 /* Ajusta o tamanho da fonte */
                 position: relative;
                 /* Posicionamento relativo */
-                top: 20px;
+                top: 25px;
                 /* Move 20px para baixo */
             }
         }
@@ -149,12 +162,12 @@ if (isset($_POST['bt_nome'])) {
         @media (max-width: 600px) {
             .but {
                 color: #f2f2f2;
-                padding: 7px;
+                padding: 5px;
                 background-color: green;
                 border-radius: 5px;
                 /* Ajuste a posição conforme necessário */
                 position: relative;
-                top: 25px;
+                top: 26px;
                 left: 25px;
             }
         }
