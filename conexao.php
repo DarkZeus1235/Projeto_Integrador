@@ -2,8 +2,8 @@
         
         $hostname = "localhost";
         $bancodedados = "lucas_teste";
-        $usuario = "JP";
-        $senha = "julianacarla1";
+        $usuario = "PI";
+        $senha = "projeto_integrador";
 
         $mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
         if ($mysqli->connect_errno){
