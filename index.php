@@ -19,6 +19,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="icon" href="Imagens/vikingpinguço.png">
   <title>Taverna de Valhalla</title>
 </head>
@@ -28,77 +29,61 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   include('menu.php');
   ?>
   <div class="container">
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+  <h1 id="h1-index">Produtos em Destaque</h1>
+  </div>
     <?php
     if (isset($_SESSION['nome'])) {
     ?>
-
-      <h1>Bem-Vindo à Taverna de Valhalla
-        <?php echo $_SESSION['nome']; ?>
-      </h1>
-    <?php
+      <div class="bem-vindo">
+        <h1>Bem-Vindo à Taverna de Valhalla
+          <?php echo $_SESSION['nome']; ?>
+        </h1>
+      <?php
 
     }
-    ?>
-
-
-
-    <h1 id="h1-index">Produtos em Destaque</h1>
-
-    <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
-    <div class="row">
-      <?php
-
-      while ($bebidas = $retorno_consulta->fetch_assoc()) {
-        //var_dump($bebidas);
       ?>
 
-        <!-- Card -->
-        <div class="card" id="testec" style="width: 18rem;">
-          <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">
-              <?php echo $bebidas['nome_bebida'] ?>
-            </h5>
-            <p class="card-text">
-              <?php echo $bebidas['descricao'] ?>
-            </p>
-            <h5 id="card-text" class="card-text">
-              <?php echo $bebidas['valor']; ?>
-            </h5>
-            <a href="comprar.php?id=<?php echo $bebidas['id_bebida'] ?>" id="textc" class="btn custom-btn"> Comprar Agora</a>
+      </div>
+
+      <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
+      <div class="row">
+        <?php
+
+        while ($bebidas = $retorno_consulta->fetch_assoc()) {
+          //var_dump($bebidas);
+        ?>
+
+          <!-- Card -->
+          <div class="card" id="testec" style="width: 18rem;">
+            <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                <?php echo $bebidas['nome_bebida'] ?>
+              </h5>
+              <p class="card-text">
+                <?php echo $bebidas['descricao'] ?>
+              </p>
+              <h5 id="card-text" class="card-text">
+                <?php echo $bebidas['valor']; ?>
+              </h5>
+              <a href="comprar.php?id=<?php echo $bebidas['id_bebida'] ?>" id="textc" class="btn custom-btn"> Comprar Agora</a>
+            </div>
           </div>
-        </div>
 
-        <!-- Fim do card -->
+          <!-- Fim do card -->
 
+        <?php
+        }
+
+
+        ?>
+
+      </div>
       <?php
-      }
-
-
+        include('rodape.php');
       ?>
-
-    </div>
+  </div> <!-- Fim do row -->
+  </div>
 
     <?php include("rodape.php") ?>
   </div> <!-- Fim do Container -->

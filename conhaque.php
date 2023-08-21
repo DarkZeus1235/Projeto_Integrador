@@ -116,6 +116,9 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
             ?>
         </div> <!-- Fim do row -->
     </div>
+    <?php
+              include('rodape.php');
+            ?>
 
 
 </body>
