@@ -561,3 +561,30 @@ a{
 #icon_login{
   margin-left: 23px;
 }
+
+/* CSS DO MEU CADASTRO*/
+#conta{
+  width: 40px;
+  height: 40px;
+}
+#menuzinho{
+  margin-left: 100px;
+  width: 240px;
+  margin-top: -180px;
+}
+#pedidos{
+  width: 40px;
+  height: 40px;
+}
+#minhas_info{
+  text-align: center;
+}
+.infos{
+  margin-left: 100px;
+}
+.text_info{
+  font-size: 24px;
+}
+#botão{
+  color:white;
+}
