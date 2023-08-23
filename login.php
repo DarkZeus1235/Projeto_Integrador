@@ -29,6 +29,9 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
       $_SESSION['username'] = $usuario['username'];
       $_SESSION['email'] = $usuario['email'];
       $_SESSION['senha'] = $usuario['senha'];
+      $_SESSION['endereco'] = $usuario['endereco'];
+      $_SESSION['telefone'] = $usuario['telefone'];
+      $_SESSION['cpf'] = $usuario['cpf'];
 
 
       header("Location: index.php");

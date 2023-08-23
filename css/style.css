@@ -570,7 +570,7 @@ a{
 #menuzinho{
   margin-left: 100px;
   width: 240px;
-  margin-top: -180px;
+  margin-top: -400px;
 }
 #pedidos{
   width: 40px;
@@ -584,7 +584,12 @@ a{
 }
 .text_info{
   font-size: 24px;
+  padding: 10px;
 }
 #botão{
   color:white;
+}
+#botão2{
+  color: white;
+  text-decoration: none;
 }
