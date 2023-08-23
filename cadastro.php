@@ -4,7 +4,6 @@ include('conexao.php');
 if (isset($_POST['bt_nome'])) {
   /*----------------------------------*/
   $email = $_POST['bt_email'];
-  //$senha = $_POST['bt_senha'];
   $senha = password_hash ($_POST['bt_senha'], PASSWORD_DEFAULT);
   $nome = $_POST['bt_nome'];
   $username = $_POST['bt_username'];
