@@ -1,6 +1,6 @@
-<header id="testee_mobile">
-    <nav class="navbar navbar-expand-lg custom-navbar">
-        <div class="container">
+<header>
+    <nav id="testee_mobile" class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
             <a class="navbar-brand" href="index.php">
                 <img src="Imagens/viking.png.png" alt="" class="logo-img"> 
             </a>

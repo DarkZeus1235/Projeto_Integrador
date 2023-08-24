@@ -384,103 +384,35 @@ a{
   #cadatro{
     width: 458px;
   }
-  #insta{
-    margin-left:  140px;
-  }
-  #face{
-    margin-left:  140px;
-  }
-  #zap{
-    margin-left:  140px;
-  }
-  #mail{
-    margin-left: 140px;
-  }
-  #testec{
+  #testc{
     margin-left: 130px; 
-  }
-  #bárbaro{
-    width: 150px;
-    margin-top: -250px;
-    margin-left: -100px;
   }
   .faixa-contact{
     width: 1012px;
-  }
-  #princesa{
-    margin-left: 325px;
   }
   .faixa-contacto{
     width: 920px;
   }
   #testee_mobile{
-    width: 730px;
+    width: 1000px;
   }
 }
 @media screen and (max-width: 500px) {
-  #insta{
-    margin-left:  150px;
-  }
-  #face{
-    margin-left: 100px;
-  }
-  #zap{
-    margin-left: 100px;
-  }
-  #mail{
-    margin-left: 100px;
-  }
   #testec{
     margin-left: 100px; 
   }
 }
 @media screen and (max-width: 400px) {
-  #insta{
-    margin-left:  100px;
-  }
-  #face{
-    margin-left: 100px;
-  }
-  #zap{
-    margin-left: 100px;
-  }
-  #mail{
-    margin-left: 100px;
-  }
   #testec{
     margin-left: 100px; 
   }
 }
 @media screen and (max-width: 375px) {
-  #insta{
-    margin-left: 60px;
-  }
-  #face{
-    margin-left: 60px;
-  }
-  #zap{
-    margin-left: 60px;
-  }
-  #mail{
-    margin-left: 60px;
-  }
   #testec{
     margin-left: 45px; 
   }
 }
 @media screen and (max-width: 300px) {
-  #insta{
-    margin-left:  0px;
-  }
-  #face{
-    margin-left: 100px;
-  }
-  #zap{
-    margin-left: 100px;
-  }
-  #mail{
-    margin-left: 100px;
-  }
   #testec{
     margin-left: 100px; 
   }
