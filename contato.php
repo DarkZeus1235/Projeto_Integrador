@@ -53,13 +53,16 @@
                           <label for="email"> Dúvida: </label>
                           <textarea class="form-control" type="mensagem" name="mensagem" id="mensagem" placeholder="Digite sua mensagem..."></textarea> 
                       </div>
-                      <div class="form-group">
-                          <button id="duvida" type="submit" class="btn btn-primary"> Enviar </button>
+                      <div id="esp" class="form-group">
+                          <button id="duvida" type="submit" class="btn custom-btn"> Enviar </button>
                       </div>
                   </form>
               </div>
           </div>
         </div>
+        <?php
+              include('rodape.php');
+            ?>
     
   </body>
 
