@@ -57,7 +57,7 @@ if (isset($_POST['bt_nome'])) {
     <title>Cadastro de Champagne</title>
     <style>
         .continer {
-            margin: 0 auto;
+            margin:  auto;
             margin-top: 100px;
             width: 90%;
             max-width: 600px;
@@ -78,11 +78,37 @@ if (isset($_POST['bt_nome'])) {
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-            padding: 30px; 
+            padding: 40px; 
                 
             }
         }
+  
+        .but {
+            color: #f2f2f2;
+            padding: 7px;
+            background-color: green;
+            border-radius: 5px;
 
+            position: relative;
+                top: 10px;
+                left: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .but {
+                color: #f2f2f2;
+                padding: 5px;
+                background-color: green;
+                border-radius: 5px;
+                /* Ajuste a posição conforme necessário */
+                position: relative;
+                top: 35px;
+                left: 25px;
+            }
+        }
+/*
+as divs 
+*/ 
         .payment-option {
             display: flex;
             align-items: center;
@@ -148,29 +174,7 @@ if (isset($_POST['bt_nome'])) {
             background-color: rgb(226, 221, 221);
         }
 
-        .but {
-            color: #f2f2f2;
-            padding: 7px;
-            background-color: green;
-            border-radius: 5px;
-
-            position: relative;
-                top: 5px;
-                left: 25px;
-        }
-
-        @media (max-width: 600px) {
-            .but {
-                color: #f2f2f2;
-                padding: 5px;
-                background-color: green;
-                border-radius: 5px;
-                /* Ajuste a posição conforme necessário */
-                position: relative;
-                top: 26px;
-                left: 25px;
-            }
-        }
+       
     </style>
 </head>
 
