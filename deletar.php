@@ -1,8 +1,10 @@
 <?php
 include("conexao.php"); // Arquivo php referente ao banco de dados   
-
-if (isset($_GET['codigo_cadastro'])) {
-    $id_login = $_GET['codigo_cadastro'];
+if(!isset($_SESSION['nome'])){
+    session_start();
+}
+if (isset($_GET['codigo_login'])) {
+    $id_login = $_GET['codigo_login'];
     $sql_consultar = "SELECT * FROM cadastro WHERE id_login = '$id_login'";
     $comando_sql = $mysqli->query($sql_consultar) or die($mysqli->error);
     $logins = $comando_sql->fetch_assoc();
