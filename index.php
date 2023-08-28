@@ -29,7 +29,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <?php
   include('menu.php');
   ?>
-  <div class="container">
+  <div  class="container">
     <h1 id="h1-index">Produtos em Destaque</h1>
     <?php
     if (isset($_SESSION['nome'])) {
@@ -46,7 +46,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     </div>
 
     <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
-    <div class="row">
+    <div id="rowtest" class="row">
       <?php
 
       while ($bebidas = $retorno_consulta->fetch_assoc()) {
@@ -66,11 +66,9 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
             <h5 id="card-text" class="card-text">
               <?php echo $bebidas['valor']; ?>
             </h5>
-            <a href="comprar.php?id=<?php echo $bebidas['id_bebida'] ?>" id="textc" class="btn custom-btn"> Comprar
-              Agora</a>
+            <a href="comprar.php?id=<?php echo $bebidas['id_bebida'] ?>" id="textc" class="btn custom-btn"> Comprar Agora</a>
           </div>
         </div>
-
         <!-- Fim do card -->
 
         <?php
