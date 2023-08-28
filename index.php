@@ -16,84 +16,73 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" href="Imagens/vikingpinguço.png">
   <title>Taverna de Valhalla</title>
 </head>
 
 <body>
-
-  <div class="menu-bar">
-    <img src="Imagens/vikingpinguço.png" alt="" width="90px">
-    <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
-    <ul>
-      <li><a href="#">Início</a></li>
-      <li><a href="#">Promoções</a></li>
-      <li><a href="#">Novidades</a>
-      <li><a href="#">+ Vendidos <i class="bi bi-caret-down"></i></a>
-
-
-        <div class="dropdown-menu">
-          <ul>
-            <li><a href="whisky.php">Whisky</a></li>
-            <li><a href="#">Vinho</a></li>
-            <li>
-              <a href="#">Outros <i class="fas fa-caret-right"></i></a>
-
-              <div class="dropdown-menu-1">
-                <ul>
-                  <li><a href="#">Vodka</a></li>
-                  <li><a href="#">Conhaque</a></li>
-                  <li><a href="#">Champagne</a></li>
-                  <li><a href="#">Rum</a></li>
-                  <li><a href="#">Gin</a></li>
-                  <li><a href="#">Tequila</a></li>
-                  <li><a href="#">Rum</a></li>
-                  <li><a href="#">Cachaça</a></li>
-                  <li><a href="#">Jagermeister</a></li>
-                </ul>
-              </div>
-
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li><a href="#">Fale Conosco</a></li>
-      <?php
-    if (!isset($_SESSION['nome'])) {
-    ?>
-
-      <li><a href="login.php">Entrar | </a><a href="cadastro.php">Cadastrar</a></li>
-    <?php
-
-    }
-    ?>
-      <div class="sair">
-        <?php
-        if (isset($_SESSION['nome'])) {
-        ?>
-
-          <li><a id="logout" href="logout.php">Sair</a></li>
-        <?php
-
-        }
-        ?>
-      </div>
-      </li>
-
-    </ul>
-  </div>
+  <?php
+  include('menu.php');
+  ?>
   <div class="container">
+  <h1 id="h1-index">Produtos em Destaque</h1>
+  </div>
     <?php
     if (isset($_SESSION['nome'])) {
     ?>
-
-      <h1>Bem Vindo à Taverna de Valhalla <?php echo $_SESSION['nome']; ?></h1>
-    <?php
+      <div class="bem-vindo">
+        <h1>Bem-Vindo à Taverna de Valhalla
+          <?php echo $_SESSION['nome']; ?>
+        </h1>
+      <?php
 
     }
-    ?>
+      ?>
+
+      </div>
+
+      <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
+      <div class="row">
+        <?php
+
+        while ($bebidas = $retorno_consulta->fetch_assoc()) {
+          //var_dump($bebidas);
+        ?>
+
+          <!-- Card -->
+          <div class="card" id="testec" style="width: 18rem;">
+            <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                <?php echo $bebidas['nome_bebida'] ?>
+              </h5>
+              <p class="card-text">
+                <?php echo $bebidas['descricao'] ?>
+              </p>
+              <h5 id="card-text" class="card-text">
+                <?php echo $bebidas['valor']; ?>
+              </h5>
+              <a href="comprar.php?id=<?php echo $bebidas['id_bebida'] ?>" id="textc" class="btn custom-btn"> Comprar Agora</a>
+            </div>
+          </div>
+
+          <!-- Fim do card -->
+
+        <?php
+        }
+
+
+        ?>
+
+      </div>
+      <?php
+        include('rodape.php');
+      ?>
+  </div> <!-- Fim do row -->
   </div>
 
 </body>
