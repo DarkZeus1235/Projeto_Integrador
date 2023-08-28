@@ -78,10 +78,11 @@ if (isset($_POST['bt_nome'])) {
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-            padding: 40px; 
+            padding: 60px; 
                 
             }
         }
+        
   
         .but {
             color: #f2f2f2;
@@ -158,7 +159,7 @@ as divs
 
         @media (max-width: 600px) {
             .divo {
-                width: 90%;
+                width: 100%;
                 /* Reduz a largura em telas menores */
                 font-size: 16px;
                 /* Ajusta o tamanho da fonte */

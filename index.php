@@ -43,25 +43,6 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     }
       ?>
 
-<<<<<<< HEAD
-        <!-- Card -->
-        <div class="card" id="testec" style="width: 18rem;">
-          <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">
-              <?php echo $bebidas['nome_bebida'] ?>
-            </h5>
-            <p class="card-text">
-              <?php echo $bebidas['descricao'] ?>
-            </p>
-            <h5 id="card-text" class="card-text">
-              <?php echo $bebidas['valor']; ?>
-            </h5>
-            <div class="container">
-            <a href="comprar.php?id=<?php echo $bebidas['id_bebida'] ?>" id="textc" class="btn custom-btn"> Comprar Agora</a>
-            </div>
-            
-=======
       </div>
 
       <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
@@ -87,7 +68,6 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
               </h5>
               <a href="comprar.php?id=<?php echo $bebidas['id_bebida'] ?>" id="textc" class="btn custom-btn"> Comprar Agora</a>
             </div>
->>>>>>> main
           </div>
 
           <!-- Fim do card -->
