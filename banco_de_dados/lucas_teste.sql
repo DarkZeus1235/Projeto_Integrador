@@ -1,4 +1,5 @@
 -- phpMyAdmin SQL Dump
+<<<<<<< HEAD
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
@@ -6,6 +7,15 @@
 -- Tempo de geração: 21-Jun-2023 às 10:27
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
+=======
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Tempo de geração: 19-Jun-2023 às 11:55
+-- Versão do servidor: 5.7.36
+-- versão do PHP: 7.4.26
+>>>>>>> origin/Juan
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,7 +30,11 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `lucas_teste`
 --
+<<<<<<< HEAD
 CREATE DATABASE IF NOT EXISTS `lucas_teste` DEFAULT CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci;
+=======
+CREATE DATABASE IF NOT EXISTS `lucas_teste` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+>>>>>>> origin/Juan
 USE `lucas_teste`;
 
 -- --------------------------------------------------------
@@ -31,7 +45,11 @@ USE `lucas_teste`;
 
 DROP TABLE IF EXISTS `cadastro`;
 CREATE TABLE IF NOT EXISTS `cadastro` (
+<<<<<<< HEAD
   `id_login` int NOT NULL AUTO_INCREMENT,
+=======
+  `id_login` int(11) NOT NULL AUTO_INCREMENT,
+>>>>>>> origin/Juan
   `email` varchar(100) NOT NULL,
   `senha` varchar(100) NOT NULL,
   `nome` varchar(100) NOT NULL,
@@ -39,7 +57,11 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `cpf` varchar(100) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   PRIMARY KEY (`id_login`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+=======
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+>>>>>>> origin/Juan
 
 --
 -- Extraindo dados da tabela `cadastro`
@@ -59,14 +81,22 @@ INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `username`, `cpf`,
 
 DROP TABLE IF EXISTS `cadastro_bebidas`;
 CREATE TABLE IF NOT EXISTS `cadastro_bebidas` (
+<<<<<<< HEAD
   `id_bebida` int NOT NULL AUTO_INCREMENT,
+=======
+  `id_bebida` int(100) NOT NULL AUTO_INCREMENT,
+>>>>>>> origin/Juan
   `nome_bebida` varchar(100) NOT NULL,
   `quantidade` varchar(100) NOT NULL,
   `descricao` varchar(200) NOT NULL,
   `arquivo_caminho` varchar(200) NOT NULL,
   `valor` varchar(100) NOT NULL,
   PRIMARY KEY (`id_bebida`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb3;
+=======
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+>>>>>>> origin/Juan
 
 --
 -- Extraindo dados da tabela `cadastro_bebidas`
@@ -85,13 +115,18 @@ INSERT INTO `cadastro_bebidas` (`id_bebida`, `nome_bebida`, `quantidade`, `descr
 
 DROP TABLE IF EXISTS `cadastro_champ`;
 CREATE TABLE IF NOT EXISTS `cadastro_champ` (
+<<<<<<< HEAD
   `id_champ` int NOT NULL AUTO_INCREMENT,
+=======
+  `id_champ` int(200) NOT NULL AUTO_INCREMENT,
+>>>>>>> origin/Juan
   `nome_bebida` varchar(200) NOT NULL,
   `quantidade` varchar(200) NOT NULL,
   `descricao` varchar(200) NOT NULL,
   `arquivo_caminho` varchar(200) NOT NULL,
   `valor` varchar(200) NOT NULL,
   PRIMARY KEY (`id_champ`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
 
 --
@@ -111,6 +146,9 @@ INSERT INTO `cadastro_champ` (`id_champ`, `nome_bebida`, `quantidade`, `descrica
 (13, 'Champagne Veuve Clicquot Brut Ice Jacket 750 ml', '27', '', 'recebidos/6491a53f40dc2.jpg', 'R$600,00'),
 (14, 'Champagne Veuve Clicquot Rose Brut 750 ml', '34', '', 'recebidos/6491a5e657807.jpg', 'R$530,00'),
 (15, 'Champagne Perrier Jouet Grand Brut 750 ml', '33', '', 'recebidos/6491a65392921.webp', 'R$455,00');
+=======
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+>>>>>>> origin/Juan
 
 -- --------------------------------------------------------
 
@@ -120,14 +158,22 @@ INSERT INTO `cadastro_champ` (`id_champ`, `nome_bebida`, `quantidade`, `descrica
 
 DROP TABLE IF EXISTS `cadastro_conhaque`;
 CREATE TABLE IF NOT EXISTS `cadastro_conhaque` (
+<<<<<<< HEAD
   `id_conhaque` int NOT NULL AUTO_INCREMENT,
+=======
+  `id_conhaque` int(100) NOT NULL AUTO_INCREMENT,
+>>>>>>> origin/Juan
   `nome_bebida` varchar(100) NOT NULL,
   `quantidade` varchar(200) NOT NULL,
   `descricao` varchar(200) NOT NULL,
   `arquivo_caminho` varchar(200) NOT NULL,
   `valor` varchar(200) NOT NULL,
   PRIMARY KEY (`id_conhaque`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3;
+=======
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+>>>>>>> origin/Juan
 
 --
 -- Extraindo dados da tabela `cadastro_conhaque`
@@ -150,6 +196,7 @@ INSERT INTO `cadastro_conhaque` (`id_conhaque`, `nome_bebida`, `quantidade`, `de
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Estrutura da tabela `cadastro_gin`
 --
 
@@ -167,19 +214,29 @@ CREATE TABLE IF NOT EXISTS `cadastro_gin` (
 -- --------------------------------------------------------
 
 --
+=======
+>>>>>>> origin/Juan
 -- Estrutura da tabela `cadastro_rum`
 --
 
 DROP TABLE IF EXISTS `cadastro_rum`;
 CREATE TABLE IF NOT EXISTS `cadastro_rum` (
+<<<<<<< HEAD
   `id_rum` int NOT NULL AUTO_INCREMENT,
+=======
+  `id_rum` int(200) NOT NULL AUTO_INCREMENT,
+>>>>>>> origin/Juan
   `nome_bebida` varchar(200) NOT NULL,
   `quantidade` varchar(200) NOT NULL,
   `descricao` varchar(200) NOT NULL,
   `arquivo_caminho` varchar(200) NOT NULL,
   `valor` varchar(200) NOT NULL,
   PRIMARY KEY (`id_rum`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+=======
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+>>>>>>> origin/Juan
 
 -- --------------------------------------------------------
 
@@ -189,14 +246,22 @@ CREATE TABLE IF NOT EXISTS `cadastro_rum` (
 
 DROP TABLE IF EXISTS `cadastro_uisque`;
 CREATE TABLE IF NOT EXISTS `cadastro_uisque` (
+<<<<<<< HEAD
   `id_uisque` int NOT NULL AUTO_INCREMENT,
+=======
+  `id_uisque` int(200) NOT NULL AUTO_INCREMENT,
+>>>>>>> origin/Juan
   `nome_bebida` varchar(200) NOT NULL,
   `quantidade` varchar(200) NOT NULL,
   `descricao` varchar(200) NOT NULL,
   `arquivo_caminho` varchar(200) NOT NULL,
   `valor` varchar(200) NOT NULL,
   PRIMARY KEY (`id_uisque`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+=======
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+>>>>>>> origin/Juan
 
 -- --------------------------------------------------------
 
@@ -206,20 +271,29 @@ CREATE TABLE IF NOT EXISTS `cadastro_uisque` (
 
 DROP TABLE IF EXISTS `cadastro_vinhos`;
 CREATE TABLE IF NOT EXISTS `cadastro_vinhos` (
+<<<<<<< HEAD
   `id_vinho` int NOT NULL AUTO_INCREMENT,
+=======
+  `id_vinho` int(11) NOT NULL AUTO_INCREMENT,
+>>>>>>> origin/Juan
   `nome_bebida` varchar(100) NOT NULL,
   `quantidade` varchar(100) NOT NULL,
   `descricao` varchar(100) NOT NULL,
   `arquivo_caminho` varchar(200) NOT NULL,
   `valor` varchar(100) NOT NULL,
   PRIMARY KEY (`id_vinho`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb3;
+=======
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+>>>>>>> origin/Juan
 
 --
 -- Extraindo dados da tabela `cadastro_vinhos`
 --
 
 INSERT INTO `cadastro_vinhos` (`id_vinho`, `nome_bebida`, `quantidade`, `descricao`, `arquivo_caminho`, `valor`) VALUES
+<<<<<<< HEAD
 (3, 'Vinho Caballo Loco Nº 17 750 ml', '4', '', 'recebidos/6488686517e67.jpg', 'R$627,00'),
 (5, 'Vinho Pispi Blend Tinto 750 ml', '4', '', 'recebidos/648869edbf0a3.jpg', 'R$110,00'),
 (7, 'Vinho Mau Criado Malbec 750 ml 2019', '5', '', 'recebidos/64886c0f93cb1.jpg', 'R$486,00'),
@@ -232,6 +306,19 @@ INSERT INTO `cadastro_vinhos` (`id_vinho`, `nome_bebida`, `quantidade`, `descric
 (16, 'Vinho Kaiken Ultra Merlot 750 ml', '5', '', 'recebidos/64899afc922d7.jpg', 'R$159,00'),
 (17, ' Vinho Caballo Loco Grand Cru Apalta 750 ml', '6', '', 'recebidos/64899baa79686.jpg', 'R$320,00'),
 (24, 'Vinho Cechi La Mora Maremma Toscana 750 ml', '38', '', 'recebidos/6491a3039761d.jpg', 'R$198,00');
+=======
+(3, 'Vinho Caballo Loco Nº 17 750 ml', '4', 'e roxo', 'recebidos/6488686517e67.jpg', 'R$627,00'),
+(5, 'Vinho Pispi Blend Tinto 750 ml', '4', 'dadadada', 'recebidos/648869edbf0a3.jpg', 'R$110,00'),
+(7, 'Vinho Mau Criado Malbec 750 ml 2019', '5', 'e roxo', 'recebidos/64886c0f93cb1.jpg', 'R$486,00'),
+(8, 'Vinho Tonel 78 Malbec Bonarda 750 ml', '5', 'e roxo', 'recebidos/64886d8030ca1.webp', 'R$129,00'),
+(9, 'Vinho Caballo Loco Grand Cru Sagrada Familia 750 ml', '8', 'e grande', 'recebidos/64886e5443b4e.jpg', 'R$355,00'),
+(10, 'Vinho Zuccardi Concreto Malbec 750 ml', '6', 'e grande', 'recebidos/64886ea45e0e7.webp', 'R$536,90'),
+(13, 'Vinho Marques De Riscal Reserva Rioja 750 ml', '6', 'e roxo', 'recebidos/64899900647bb.jpg', 'R$192,00'),
+(14, 'Vinho Casillero Del Diablo Reserva Privada', '6', 'dadadada', 'recebidos/6489994ff0b8a.webp', 'R$112,00'),
+(15, 'Vinho Santa Rita Casa Real Cabernet Sauvignon 750 m', '6', 'e roxo', 'recebidos/648999adb6d71.jpg', 'R$112,00'),
+(16, 'Vinho Kaiken Ultra Merlot 750 ml', '5', 'e roxo', 'recebidos/64899afc922d7.jpg', 'R$159,00'),
+(17, ' Vinho Caballo Loco Grand Cru Apalta 750 ml', '6', 'e roxo', 'recebidos/64899baa79686.jpg', 'R$320,00');
+>>>>>>> origin/Juan
 
 -- --------------------------------------------------------
 
@@ -241,14 +328,22 @@ INSERT INTO `cadastro_vinhos` (`id_vinho`, `nome_bebida`, `quantidade`, `descric
 
 DROP TABLE IF EXISTS `cadastro_vodka`;
 CREATE TABLE IF NOT EXISTS `cadastro_vodka` (
+<<<<<<< HEAD
   `id_vodka` int NOT NULL AUTO_INCREMENT,
+=======
+  `id_vodka` int(200) NOT NULL AUTO_INCREMENT,
+>>>>>>> origin/Juan
   `nome_bebida` varchar(200) NOT NULL,
   `quantidade` varchar(200) NOT NULL,
   `descricao` varchar(200) NOT NULL,
   `arquivo_caminho` varchar(200) NOT NULL,
   `valor` varchar(200) NOT NULL,
   PRIMARY KEY (`id_vodka`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+=======
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+>>>>>>> origin/Juan
 
 -- --------------------------------------------------------
 
@@ -258,12 +353,20 @@ CREATE TABLE IF NOT EXISTS `cadastro_vodka` (
 
 DROP TABLE IF EXISTS `funcioarios`;
 CREATE TABLE IF NOT EXISTS `funcioarios` (
+<<<<<<< HEAD
   `id_func` int NOT NULL AUTO_INCREMENT,
+=======
+  `id_func` int(100) NOT NULL AUTO_INCREMENT,
+>>>>>>> origin/Juan
   `email` varchar(100) NOT NULL,
   `senha` varchar(100) NOT NULL,
   `nome` varchar(100) NOT NULL,
   PRIMARY KEY (`id_func`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+=======
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+>>>>>>> origin/Juan
 
 --
 -- Extraindo dados da tabela `funcioarios`
@@ -280,7 +383,11 @@ INSERT INTO `funcioarios` (`id_func`, `email`, `senha`, `nome`) VALUES
 
 DROP TABLE IF EXISTS `teste`;
 CREATE TABLE IF NOT EXISTS `teste` (
+<<<<<<< HEAD
   `id` int NOT NULL AUTO_INCREMENT,
+=======
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+>>>>>>> origin/Juan
   `nome` varchar(100) NOT NULL,
   `data_de_nascimento` varchar(100) NOT NULL,
   `cpf` varchar(100) NOT NULL,
@@ -288,7 +395,11 @@ CREATE TABLE IF NOT EXISTS `teste` (
   `email` varchar(100) NOT NULL,
   `senha` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+=======
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+>>>>>>> origin/Juan
 
 --
 -- Extraindo dados da tabela `teste`

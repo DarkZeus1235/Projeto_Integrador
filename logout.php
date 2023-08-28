@@ -1,4 +1,8 @@
+<<<<<<< HEAD
     <?php
+=======
+<?php
+>>>>>>> origin/Juan
        if(!isset($_SESSION)) {
         session_start();
     }
