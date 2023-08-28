@@ -16,7 +16,7 @@
                         <a class="nav-link" href="contato.php">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Novidades</a>
+                        <a class="nav-link" href="novidades.php">Novidades</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
