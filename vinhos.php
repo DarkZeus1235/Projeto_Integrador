@@ -28,6 +28,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 <?php
         include("menu.php");
     ?>
+    <br>
     <div class="container">
         <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
         <div class="row">
@@ -50,7 +51,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
                         <h5 class="card-text">
                             <?php echo $bebidas['valor']; ?>
                         </h5>
-                        <a href="comprar_vinhos.php?id=<?php echo $bebidas['id_vinho']?>"  id="textc" class="btn btn-success">Comprar Agora</a> 
+                        <a href="comprar_vinhos.php?id=<?php echo $bebidas['id_vinho']?>"  id="textc" class="btn custom-btn">Comprar Agora</a> 
                     </div>
                 </div>
                 <!-- Fim do card -->
