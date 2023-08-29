@@ -50,14 +50,14 @@ if (isset($_POST['bt_nome'])) {
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Cadastro de Champagne</title>
     <style>
         .continer {
-            margin:  auto;
+            margin: auto;
             margin-top: 100px;
             width: 90%;
             max-width: 600px;
@@ -68,22 +68,23 @@ if (isset($_POST['bt_nome'])) {
 
 
         }
+
         @media (max-width: 600px) {
             .continer {
-                
+
                 margin: 0 auto;
-            margin-top: 100px;
-            width: 90%;
-            max-width: 600px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-            padding: 60px; 
-                
+                margin-top: 100px;
+                width: 90%;
+                max-width: 600px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+                padding: 60px;
+
             }
         }
-        
-  
+
+
         .but {
             color: #f2f2f2;
             padding: 7px;
@@ -91,8 +92,8 @@ if (isset($_POST['bt_nome'])) {
             border-radius: 5px;
 
             position: relative;
-                top: 10px;
-                left: 25px;
+            top: 10px;
+            left: 25px;
         }
 
         @media (max-width: 600px) {
@@ -107,9 +108,10 @@ if (isset($_POST['bt_nome'])) {
                 left: 25px;
             }
         }
-/*
+
+        /*
 as divs 
-*/ 
+*/
         .payment-option {
             display: flex;
             align-items: center;
@@ -174,15 +176,14 @@ as divs
 
             background-color: rgb(226, 221, 221);
         }
-
-       
     </style>
 </head>
 
 <body>
     <?php
-    include('menu.php');
+    include("menu.php");
     ?>
+
     <div class="continer">
         <h2>Selecione um Meio de Pagamento</h2>
         <div class="divo">
