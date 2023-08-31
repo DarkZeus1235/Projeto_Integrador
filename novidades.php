@@ -14,22 +14,40 @@
     <?php
         include('menu.php');
     ?>
-    <div class="container">
-        <h1>Confira as nossas atualizações! ! !</h1>
-    <div class="card w-75 mb-3">
-    <div class="card-body">
-        <h5 class="card-title">Novas marcas de vinho, whisky e vodka disponíveis!!</h5>
-        <p class="card-text">Adicionados novos lotes de vinho Caballo Loco e Zuccardi, whisky Johnny Walker e Buffalo Trace, e vodka Absolute e Smirnoff</p>
+     <div class="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        <div id="joaquim1" class="card">
+    <div id="joaquim2" class="card-body">
+        <h1>18/07/2023</h1>
+        <p>Foram adicionados novos lotes de Jagermeister, Buffalo Trace e Johnny Walker. Venha conferir essa maravilha!</p>
+    </div>
+    <div id="joaquim1" class="card">
+    <div id="joaquim2" class="card-body">
+        <h1>22/07/2023</h1>
+        <p>Mudamos o design do site, inserindo uma nova logo da empresa, alterando o menu e adicionando novas bebidas em nosso cardápio: Dalmatore, Rémy Martin e Ballantines. </p>
     </div>
     </div>
+    <div id="joaquim1" class="card">
+    <div id="joaquim2" class="card-body">
+        <h1>13/08/2023</h1>
+        <p>Promoção de Dia dos Pais!!! Insira o nosso cupom "PAIPINGUÇO" para receber 10% de desconto em todas as nossas bebidas! Compre agora!</p>
+    </div>
+    </div>
+    <div id="joaquim1" class="card">
+    <div id="joaquim2" class="card-body">
+        <h1>05/09/2023</h1>
+        <p>A Taverna de Valhalla estará inativa em seus serviços no dia 07/09/2023 por conta dos feriados nacionais. Abriremos novamente na próxima semana!!!</p>
+    </div>
+    </div>
+            
 
-    <div class="card w-75 mb-3">
-    <div class="card-body">
-        <h5 class="card-title">Nova página de novidades!!</h5>
-        <p class="card-text">Adicionada uma página para informar de novas informações de possíveis promoções e novos produtos!!(Necessita adicionar as seguintes coisas no banco de dados: ID atualização, título, conteúdo)</p>
-    </div>
-    </div>
-  </div>
+        </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </html>
