@@ -458,12 +458,12 @@ a{
 }
 @media (min-width: 500px) and (max-width: 525px){
   #rowtest{
-    margin-left: 95px;
+    margin-left: 125px;
   }
 }
 @media (min-width: 526px) and (max-width: 599px){
   #rowtest{
-    margin-left: 120px;
+    margin-left: 150px;
   }
 }
 @media (min-width: 461px) and (max-width: 499px){
