@@ -35,7 +35,7 @@
         color: #f0f0f0;
     }
 </style>
-<footer class="footer">
+<footer id="arrumarodape" class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
