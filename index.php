@@ -87,7 +87,7 @@ while ($bebidas = $retorno_consulta->fetch_assoc()) {
       <h5 id="card-text" class="card-text">
         <?php echo $bebidas['valor']; ?>
       </h5>
-      <a href="comprar.php?id=<?php echo $bebidas['id_bebida']?>"  id="textc" class="btn btn-success">Comprar Agora</a> 
+      <a href="pagamento.php?id=<?php echo $bebidas['id_bebida']?>"  id="textc" class="btn btn-success">Comprar Agora</a> 
     </div>
   </div>
   <!-- Fim do card -->
