@@ -403,7 +403,7 @@ a{
     margin-left: 65px;
   }
 }
-@media (min-width: 900px) and (max-width: 1000px) {
+@media (min-width: 923px) and (max-width: 1000px) {
   .signup-container{
     margin-top: -200px;
     margin-left: 10px;
@@ -420,15 +420,20 @@ a{
     width: 920px;
   }
   #testee_mobile{
-    width: 1000px;
+    width: 986px;
   }
   #rowtest{
     margin-left: 185px;
   }
 }
-@media (min-width: 800px) and (max-width: 900px) {
+@media (min-width: 900px) and (max-width: 922px){
   #rowtest{
-    margin-left:100px;
+    margin-left: 300px;
+  }
+}
+@media (min-width: 800px) and (max-width: 830px) {
+  #rowtest{
+    margin-left: 220px;
   }
   #h1-index{
     margin-left: 30px;
@@ -442,12 +447,12 @@ a{
 }
 @media (min-width: 621px) and (max-width: 699px){
   #rowtest{
-    margin-left: 30px;
+    margin-left: 20px;
   }
   }
 @media (min-width: 600px) and (max-width: 620px) {
   #testec{
-    margin-left: 20px; 
+    margin-left: 120px; 
   }
 }
 @media (min-width: 500px) and (max-width: 525px){
