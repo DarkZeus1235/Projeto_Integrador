@@ -245,58 +245,10 @@ a{
 #min-conta{
   margin-left: 500px;
 }
-/*CSS Faixa Contato*/
 
-.faixa-contact{
-  height: 10px;
-  width: 1987px;
-  background-color: burlywood;
-  margin-top: 40px;
-  margin-left: -390px;
-}
-.faixa-contacto{
-  height: 110px;
-  width: 1900px;
-  background-color: #6B4B21;
-  margin-top: -90px;
-  margin-left: -300px;
-}
-#insta{
-  margin-left: 530px;
-}
-.insta{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-.space{
-  margin-top: 30px;
-}
-#face{
-  margin-left: 530px;
-}
-.face{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-#zap{
-  margin-left: 530px;
-}
-.zap{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-#mail{
-  margin-left: 530px;
-  margin-top: 180px;
-}
-.mail{
-  display: inline-block;
-  margin-top: -250px;
-  font-size: 20px;
-}
+
+
+
 
 /*IMAGEM DO VIKING DA NAVBAR*/
 
@@ -357,16 +309,7 @@ a{
 #Texto_da_logo:hover{
   color: white;
 }
-#princesa{
-  width: 240px;
-  margin-top: -350px;
-  margin-left: 860px;
-}
-#bárbaro{
-  width: 240px;
-  margin-top: -90px;
-  margin-left: -550px;
-}
+
 
 /* Atributo para tornar responsivel no celular */
 @media (min-width: 1701px) and (max-width: 1800px){

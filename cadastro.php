@@ -12,16 +12,20 @@ if (isset($_POST['bt_nome'])) {
   /*----------------------------------*/
   $mysqli->query("INSERT INTO cadastro (email, senha, nome, username, cpf, endereco ) values('$email', '$senha', '$nome','$username' ,'$cpf', '$endereco')") or
     die($mysqlierrno);
+
+    var_dump($mysqli);
 }
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Cadastro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" href="Imagens/icon.png">
+  <title>Cadastro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" href="Imagens/icon.png">
 </head>
+
 <body>
     <?php
         include('menu.php');
@@ -42,7 +46,9 @@ if (isset($_POST['bt_nome'])) {
               </script>
         </div>
     </div>
-</div>
+  </div>
+  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
 </html>
