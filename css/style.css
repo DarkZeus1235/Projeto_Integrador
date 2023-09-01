@@ -112,7 +112,7 @@ body {
   margin-left: 0px;
 }
 
-.signup-container h2 {
+.signup-container {
   text-align: center;
     margin-bottom: 20px;
 }
@@ -312,6 +312,10 @@ a{
 }
 #h1-index{
   text-align: center;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
 } 
 
 /* Efeito texto Navbar*/
@@ -600,4 +604,59 @@ a{
 /*Espaçamento entre botão e rodapé página de contato*/
 #expacin{
   margin-bottom: 10px;
+}
+#h2-contacto{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  margin-left: 350px;
+  margin-bottom: 30px;
+}
+
+/*CSS Página Novidade*/
+#espaconovidad{
+  margin-bottom: 70px;
+}
+#h1-novid{
+  margin-left: 520px;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+.h1-card-novid{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.span-novid{
+  font-weight: bolder;
+}
+
+
+
+
+
+.nav-link{
+  position: relative;
+  font-size: 20px;
+  color: #6B4B21;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.nav-link::before{
+  content: '';
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 0 ;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+}
+.nav-link:hover::before{
+  width: 95%;
+}
+#nav-link:hover::before{
+  width: 90%;
+}
+#nav-link2:hover::before{
+  width: 72%;
 }

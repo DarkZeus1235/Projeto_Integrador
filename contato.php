@@ -16,7 +16,7 @@
             include('menu.php');
         ?>
       <div class="container">
-          <h2>ENTRE EM CONTATO CONOSCO</h2>
+          <h2 id="h2-contacto" >ENTRE EM CONTATO CONOSCO</h2>
           <h4>Horário de Atendimento:</h1>
           <p>R-Segunda à Sexta-Feira das 08h às 12h e 13:30h às 19h</p>
           <h4>Telefone / Celular:</h4>
