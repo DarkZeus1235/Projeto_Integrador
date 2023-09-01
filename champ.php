@@ -31,7 +31,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     
     <div class="container">
         <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
-        <div class="row">
+        <div id="rowtest" id="margintop" class="row">
             <?php
 
             while ($bebidas = $retorno_consulta->fetch_assoc()) {
@@ -51,7 +51,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
                         <h5 class="card-text">
                             <?php echo $bebidas['valor']; ?>
                         </h5>
-                        <a href="comprar_champ.php?id=<?php echo $bebidas['id_champ'] ?>" id="textc" class="btn btn-success">Comprar Agora</a>
+                        <a href="comprar_champ.php?id=<?php echo $bebidas['id_champ'] ?>" id="textc" class="btn custom-btn">Comprar Agora</a>
                     </div>
                 </div>
                 <!-- Fim do card -->
