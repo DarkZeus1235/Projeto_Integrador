@@ -112,7 +112,7 @@ body {
   margin-left: 0px;
 }
 
-.signup-container h2 {
+.signup-container {
   text-align: center;
     margin-bottom: 20px;
 }
@@ -245,58 +245,10 @@ a{
 #min-conta{
   margin-left: 500px;
 }
-/*CSS Faixa Contato*/
 
-.faixa-contact{
-  height: 10px;
-  width: 1987px;
-  background-color: burlywood;
-  margin-top: 40px;
-  margin-left: -390px;
-}
-.faixa-contacto{
-  height: 110px;
-  width: 1900px;
-  background-color: #6B4B21;
-  margin-top: -90px;
-  margin-left: -300px;
-}
-#insta{
-  margin-left: 530px;
-}
-.insta{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-.space{
-  margin-top: 30px;
-}
-#face{
-  margin-left: 530px;
-}
-.face{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-#zap{
-  margin-left: 530px;
-}
-.zap{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-#mail{
-  margin-left: 530px;
-  margin-top: 180px;
-}
-.mail{
-  display: inline-block;
-  margin-top: -250px;
-  font-size: 20px;
-}
+
+
+
 
 /*IMAGEM DO VIKING DA NAVBAR*/
 
@@ -312,6 +264,10 @@ a{
 }
 #h1-index{
   text-align: center;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
 } 
 
 /* Efeito texto Navbar*/
@@ -352,16 +308,6 @@ a{
 }
 #Texto_da_logo:hover{
   color: white;
-}
-#princesa{
-  width: 240px;
-  margin-top: -350px;
-  margin-left: 860px;
-}
-#bárbaro{
-  width: 240px;
-  margin-top: -90px;
-  margin-left: -550px;
 }
 
 /* Atributo para tornar responsivel no celular */
@@ -765,3 +711,58 @@ a{
   }
 }
 /* FIM DO CSS DA PÁGINA DE COMPRA */
+#h2-contacto{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  margin-left: 350px;
+  margin-bottom: 30px;
+}
+
+/*CSS Página Novidade*/
+#espaconovidad{
+  margin-bottom: 70px;
+}
+#h1-novid{
+  margin-left: 520px;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+.h1-card-novid{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.span-novid{
+  font-weight: bolder;
+}
+
+
+
+
+
+.nav-link{
+  position: relative;
+  font-size: 20px;
+  color: #6B4B21;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.nav-link::before{
+  content: '';
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 0 ;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+}
+.nav-link:hover::before{
+  width: 95%;
+}
+#nav-link:hover::before{
+  width: 90%;
+}
+#nav-link2:hover::before{
+  width: 72%;
+}
