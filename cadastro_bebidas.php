@@ -58,61 +58,9 @@ if (isset($_POST['bt_nome'])) {
 </head>
 
 <body>
-    <div class="menu-bar">
-        <img src="Imagens/vikingpinguço.png" alt="" width="90px">
-        <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
-        <ul>
-            <li><a href="index.php">Início</a></li>
-            <li><a href="#">Promoções</a></li>
-            <li><a href="#">Novidades</a>
-            <li><a href="#">+ Vendidos <i class="bi bi-caret-down"></i></a>
-
-
-                <div class="dropdown-menu">
-                    <ul>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li>
-                            <a href="#">Team <i class="fas fa-caret-right"></i></a>
-
-                            <div class="dropdown-menu-1">
-                                <ul>
-                                    <li><a href="#">Team-1</a></li>
-                                    <li><a href="#">Team-2</a></li>
-                                    <li><a href="#">Team-3</a></li>
-                                    <li><a href="#">Team-4</a></li>
-                                </ul>
-                            </div>
-
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="#">Fale Conosco</a></li>
-            <?php
-            if (!isset($_SESSION['nome'])) {
-            ?>
-
-                <li><a href="login.php">Entrar | </a><a href="cadastro.php">Cadastrar</a></li>
-            <?php
-
-            }
-            ?>
-            <div class="sair">
-                <?php
-                if (isset($_SESSION['nome'])) {
-                ?>
-
-                    <li><a id="logout" href="logout.php">Sair</a></li>
-                <?php
-
-                }
-                ?>
-            </div>
-            </li>
-
-        </ul>
-    </div>
+   <?php
+    include('menu.php');
+   ?>
     <div class="container">
         <h1>Cadastro de Bebidas - Taverna de Valhalla</h1>
         <form action="" method="post" enctype="multipart/form-data">
