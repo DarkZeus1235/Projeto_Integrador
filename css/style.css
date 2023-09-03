@@ -112,7 +112,7 @@ body {
   margin-left: 0px;
 }
 
-.signup-container h2 {
+.signup-container {
   text-align: center;
     margin-bottom: 20px;
 }
@@ -178,15 +178,6 @@ body {
 
 /* CSS Página Compra */
 
-#quad{
-  border: 25px solid burlywood;
-  background-color: white;
-  width: 1100px;
-  height: 1000px;
-  margin-left: 420px;
-  margin-top: 70px;
-  border-radius: 25px;
-}
 .pedi{
   text-align: center;
   color: #000000;
@@ -196,18 +187,18 @@ body {
 }
 #img-pedi{
   width: 250px;
-  margin-left: 10px;
+  margin-left: 500px;
+  margin-top: 60px;
+}
+.arrumartextopagcompra{
+  margin-left: 750px;
+  
 }
 .text-pedi{
   margin-left: 15px;
   display: inline-block;
   font-weight: bold;
-}
-#quad2{
-  border: 5px solid burlywood;
-}
-#boleto-icon{
-  margin-left: 10px;
+  margin-top: 10px;
 }
 #aviso-compra{
   margin-left: 100px;
@@ -254,58 +245,10 @@ a{
 #min-conta{
   margin-left: 500px;
 }
-/*CSS Faixa Contato*/
 
-.faixa-contact{
-  height: 10px;
-  width: 1987px;
-  background-color: burlywood;
-  margin-top: 40px;
-  margin-left: -390px;
-}
-.faixa-contacto{
-  height: 110px;
-  width: 1900px;
-  background-color: #6B4B21;
-  margin-top: -90px;
-  margin-left: -300px;
-}
-#insta{
-  margin-left: 530px;
-}
-.insta{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-.space{
-  margin-top: 30px;
-}
-#face{
-  margin-left: 530px;
-}
-.face{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-#zap{
-  margin-left: 530px;
-}
-.zap{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-#mail{
-  margin-left: 530px;
-  margin-top: 180px;
-}
-.mail{
-  display: inline-block;
-  margin-top: -250px;
-  font-size: 20px;
-}
+
+
+
 
 /*IMAGEM DO VIKING DA NAVBAR*/
 
@@ -321,6 +264,10 @@ a{
 }
 #h1-index{
   text-align: center;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
 } 
 
 /* Efeito texto Navbar*/
@@ -362,16 +309,7 @@ a{
 #Texto_da_logo:hover{
   color: white;
 }
-#princesa{
-  width: 240px;
-  margin-top: -350px;
-  margin-left: 860px;
-}
-#bárbaro{
-  width: 240px;
-  margin-top: -90px;
-  margin-left: -550px;
-}
+
 
 /* Atributo para tornar responsivel no celular */
 @media (min-width: 1701px) and (max-width: 1800px){
@@ -398,6 +336,12 @@ a{
   #rowtest{
     margin-left: 56px;
   }
+<<<<<<< HEAD
+=======
+  #margintop{
+    margin-top: 900px;
+  }
+>>>>>>> main
 }
 @media (min-width: 1101px) and (max-width: 1300px){
   #rowtest{
@@ -409,7 +353,11 @@ a{
     margin-left: 65px;
   }
 }
+<<<<<<< HEAD
 @media (min-width: 900px) and (max-width: 1000px) {
+=======
+@media (min-width: 923px) and (max-width: 1000px) {
+>>>>>>> main
   .signup-container{
     margin-top: -200px;
     margin-left: 10px;
@@ -426,12 +374,17 @@ a{
     width: 920px;
   }
   #testee_mobile{
+<<<<<<< HEAD
     width: 1000px;
+=======
+    width: 986px;
+>>>>>>> main
   }
   #rowtest{
     margin-left: 185px;
   }
 }
+<<<<<<< HEAD
 @media (min-width: 800px) and (max-width: 900px) {
   #rowtest{
     margin-left:100px;
@@ -475,6 +428,56 @@ a{
   #rowtest{
     margin-left: 70px;
   }
+=======
+@media (min-width: 900px) and (max-width: 922px){
+  #rowtest{
+    margin-left: 300px;
+  }
+}
+@media (min-width: 800px) and (max-width: 830px) {
+  #rowtest{
+    margin-left: 220px;
+  }
+  #h1-index{
+    margin-left: 30px;
+  }
+}
+@media (min-width: 700px) and (max-width: 799px) {
+  #rowtest{
+    margin-left: 50px;
+  }
+
+}
+@media (min-width: 621px) and (max-width: 699px){
+  #rowtest{
+    margin-left: 20px;
+  }
+  }
+@media (min-width: 600px) and (max-width: 620px) {
+  #testec{
+    margin-left: 120px; 
+  }
+}
+@media (min-width: 500px) and (max-width: 525px){
+  #rowtest{
+    margin-left: 125px;
+  }
+}
+@media (min-width: 526px) and (max-width: 599px){
+  #rowtest{
+    margin-left: 150px;
+  }
+}
+@media (min-width: 461px) and (max-width: 499px){
+  #rowtest{
+    margin-left: 80px;
+  }
+}
+@media (min-width: 421px) and (max-width: 460px){
+  #rowtest{
+    margin-left: 70px;
+  }
+>>>>>>> main
 }
 @media (min-width: 300px) and (max-width: 420px){
   #rowtest{
@@ -596,4 +599,68 @@ a{
 }
 #rowtest{
   margin-left: 40px;
+<<<<<<< HEAD
 }
+=======
+}
+
+/*Espaçamento entre botão e rodapé página de contato*/
+#expacin{
+  margin-bottom: 10px;
+}
+#h2-contacto{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  margin-left: 350px;
+  margin-bottom: 30px;
+}
+
+/*CSS Página Novidade*/
+#espaconovidad{
+  margin-bottom: 70px;
+}
+#h1-novid{
+  margin-left: 520px;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+.h1-card-novid{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.span-novid{
+  font-weight: bolder;
+}
+
+
+
+
+
+.nav-link{
+  position: relative;
+  font-size: 20px;
+  color: #6B4B21;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.nav-link::before{
+  content: '';
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 0 ;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+}
+.nav-link:hover::before{
+  width: 95%;
+}
+#nav-link:hover::before{
+  width: 90%;
+}
+#nav-link2:hover::before{
+  width: 72%;
+}
+>>>>>>> main

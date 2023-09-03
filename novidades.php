@@ -1,74 +1,54 @@
+<?php
+include('conexao.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Novidades de Valhalla</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-    <div class="menu-bar">
-    <img src="img/vikingpinguço.png" alt="" width="90px">
-    <h1 class="logo">𝓣𝓪𝓿𝓮𝓻𝓷𝓪 𝓭𝓮 <span>𝓥𝓪𝓵𝓱𝓪𝓵𝓵𝓪</span></h1>
-    <ul>
-      <li><a href="#">Início</a></li>
-      <li><a href="#">Promoções</a></li>
-      <li><a href="#">Novidades</a>
-      <li><a href="carrinho.php"><i class="bi bi-basket"></i></a></li>
-      <li><a href="#">+ Vendidos <i class="bi bi-caret-down"></i></a>
-      
 
-        <div class="dropdown-menu">
-          <ul>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li>
-              <a href="#">Team <i class="fas fa-caret-right"></i></a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novidades de Valhalla</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-              <div class="dropdown-menu-1">
-                <ul>
-                  <li><a href="#">Team-1</a></li>
-                  <li><a href="#">Team-2</a></li>
-                  <li><a href="#">Team-3</a></li>
-                  <li><a href="#">Team-4</a></li>
-                </ul>
-              </div>
-
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li><a href="#">Fale Conosco</a>
-        <?php
-        if (isset($_SESSION['nome'])) {
-        ?>
-
-      <li><a class="btn btn-danger" href="logout.php">Sair</a></li>
+<body>
     <?php
-
-        }
+    include('menu.php');
     ?>
-    <li><a id="entrar-cadastrar" href="login.php">Entrar |</a> <a href="cadastro.php">Cadastrar</a>
-    </li>
-
-    </ul>
-  </div>
     <div class="container">
-        <h1>Confira as nossas atualizações! ! !</h1>
-    <div class="card w-75 mb-3">
-    <div class="card-body">
-        <h5 class="card-title">Novas marcas de vinho, whisky e vodka disponíveis!!</h5>
-        <p class="card-text">Adicionados novos lotes de vinho Caballo Loco e Zuccardi, whisky Johnny Walker e Buffalo Trace, e vodka Absolute e Smirnoff</p>
-    </div>
-    </div>
+        <h1 id="h1-novid">Novidades</h1>
+        <div id="espaconovidad"></div>
+        <div id="card-novd" class="card">
+            <div id="joaquim2" class="card-body">
+                <h1 class="h1-card-novid"><span class="span-novid">18/07/2023</span></h1>
+                <h5>Foram adicionados novos lotes de Jägermeister, Buffalo Trace e Johnny Walker. Venha conferir essa
+                    maravilha!</h5>
+            </div>
+            <div id="card-novd" class="card">
+                <div id="joaquim2" class="card-body">
+                    <h1 class="h1-card-novid"><span class="span-novid">22/07/2023</span></h1>
+                    <h5>Mudamos o design do site, inserindo uma nova logo da empresa, alterando o menu e adicionando
+                        novas bebidas em nosso cardápio: Dalmatore, Rémy Martin e Ballantines. </h5>
+                </div>
+            </div>
+            <div id="card-novd" class="card">
+                <div id="joaquim2" class="card-body">
+                    <h1 class="h1-card-novid"><span class="span-novid">13/08/2023</span></h1>
+                    <h5>Promoção de Dia dos Pais!!! Insira o nosso cupom <span class="span-novid">"PAIPINGUÇO"</span> para receber 10% de desconto em
+                        todas as nossas bebidas! Compre agora!</h5>
+                </div>
+            </div>
+            <div id="card-novd" class="card">
+                <div id="joaquim2" class="card-body">
+                    <h1 class="h1-card-novid"><span class="span-novid">05/09/2023</span></h1>
+                    <h5>A Taverna de Valhalla estará inativa em seus serviços no dia <span class="span-novid">07/09/2023</span> por conta de feriado
+                        nacional. Rebriremos novamente na próxima semana dia <span class="span-novid">11/09/2023</span>!!!</h5>
+                </div>
+            </div>
 
-    <div class="card w-75 mb-3">
-    <div class="card-body">
-        <h5 class="card-title">Nova página de novidades!!</h5>
-        <p class="card-text">Adicionada uma página para informar de novas informações de possíveis promoções e novos produtos!!(Necessita adicionar as seguintes coisas no banco de dados: ID atualização, título, conteúdo)</p>
-    </div>
-    </div>
-  </div>
-    </body>
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
 </html>

@@ -93,10 +93,7 @@ include('menu.php');
                     </div>
 
                     <input class="btn btn-warning" type="submit" value="Alterar">
-                    <a id="botão" class="btn btn-danger" href="deletar.php?id_deletar=<?php if (isset($_POST['bt_id'])) {
-                                                                                            echo $_POST['bt_id'];
-                                                                                        } ?>">Deletar</a>
-                    <a id="botão" class="btn btn-primary" href="cadastro.php">Voltar</a>
+                    <a id="botão" class="btn btn-primary" href="meu_cadastro.php">Voltar</a>
                 </form>
             </div>
         </div>
