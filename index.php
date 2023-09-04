@@ -21,7 +21,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="css/menu_dieimes.css">
   <link rel="stylesheet" href="css/dieimes.css">
-  
+
   <link rel="icon" href="Imagens/vikingpinguço.png">
   <title>Taverna de Valhalla</title>
 
@@ -60,7 +60,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   </div>
   <?php include 'rodape.php'; ?>
 
-  
+
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

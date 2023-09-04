@@ -19,8 +19,8 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/menu_dieimes.css">
-  <link rel="stylesheet" href="css/dieimes.css">
+    <link rel="stylesheet" href="css/menu_dieimes.css">
+    <link rel="stylesheet" href="css/dieimes.css">
     <link rel="icon" href="Imagens/Icon.png">
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PWJ7GD"></script>
     <title>Vinhos - Taverna de Valhalla</title>
@@ -28,7 +28,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
 <body>
     <?php
-        include("menu.php");
+    include("menu.php");
     ?>
     <br>
     <div class="container my-5">
@@ -66,8 +66,8 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
         </div> <!-- Fim do row -->
     </div>
     <?php
-            include('rodape.php');
-        ?>
+    include('rodape.php');
+    ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
