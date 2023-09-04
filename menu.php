@@ -14,9 +14,6 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="contato.php">Contato</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="novidades.php">Novidades</a>
                     </li>
                     <li class="nav-item dropdown">
@@ -48,6 +45,9 @@
                                 <a id="nav-link" class="nav-link" href="conhaque.php">Conhaque</a>
                             </li>
                         </ul>
+                        <li class="nav-item">
+                        <a class="nav-link" href="contato.php">Contato</a>
+                    </li>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
