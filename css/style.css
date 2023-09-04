@@ -336,12 +336,9 @@ a{
   #rowtest{
     margin-left: 56px;
   }
-<<<<<<< HEAD
-=======
   #margintop{
     margin-top: 900px;
   }
->>>>>>> main
 }
 @media (min-width: 1101px) and (max-width: 1300px){
   #rowtest{
@@ -353,11 +350,7 @@ a{
     margin-left: 65px;
   }
 }
-<<<<<<< HEAD
-@media (min-width: 900px) and (max-width: 1000px) {
-=======
 @media (min-width: 923px) and (max-width: 1000px) {
->>>>>>> main
   .signup-container{
     margin-top: -200px;
     margin-left: 10px;
@@ -374,61 +367,12 @@ a{
     width: 920px;
   }
   #testee_mobile{
-<<<<<<< HEAD
-    width: 1000px;
-=======
     width: 986px;
->>>>>>> main
   }
   #rowtest{
     margin-left: 185px;
   }
 }
-<<<<<<< HEAD
-@media (min-width: 800px) and (max-width: 900px) {
-  #rowtest{
-    margin-left:100px;
-  }
-  #h1-index{
-    margin-left: 30px;
-  }
-}
-@media (min-width: 700px) and (max-width: 799px) {
-  #rowtest{
-    margin-left: 50px;
-  }
-
-}
-@media (min-width: 621px) and (max-width: 699px){
-  #rowtest{
-    margin-left: 30px;
-  }
-  }
-@media (min-width: 600px) and (max-width: 620px) {
-  #testec{
-    margin-left: 20px; 
-  }
-}
-@media (min-width: 500px) and (max-width: 525px){
-  #rowtest{
-    margin-left: 95px;
-  }
-}
-@media (min-width: 526px) and (max-width: 599px){
-  #rowtest{
-    margin-left: 120px;
-  }
-}
-@media (min-width: 461px) and (max-width: 499px){
-  #rowtest{
-    margin-left: 80px;
-  }
-}
-@media (min-width: 421px) and (max-width: 460px){
-  #rowtest{
-    margin-left: 70px;
-  }
-=======
 @media (min-width: 900px) and (max-width: 922px){
   #rowtest{
     margin-left: 300px;
@@ -477,7 +421,6 @@ a{
   #rowtest{
     margin-left: 70px;
   }
->>>>>>> main
 }
 @media (min-width: 300px) and (max-width: 420px){
   #rowtest{
@@ -599,9 +542,6 @@ a{
 }
 #rowtest{
   margin-left: 40px;
-<<<<<<< HEAD
-}
-=======
 }
 
 /*Espaçamento entre botão e rodapé página de contato*/
@@ -663,4 +603,19 @@ a{
 #nav-link2:hover::before{
   width: 72%;
 }
->>>>>>> main
+/*CSS DA PAGINA CARTAO PHP*/
+.login{
+  background-color: burlywood;
+  position: absolute ;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+}
+input{
+  border: none;
+  outline: none;
+}
+/*FIM*/
