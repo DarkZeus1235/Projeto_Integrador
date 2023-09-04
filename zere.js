@@ -25,11 +25,17 @@ function formatarNDC() {
     ndc = ndc.replace(/(\d{4})(\d)/, "$1  $2"); // Insere um espaco antes dos últimos 4 dígitos
     input.value = ndc;
   }
-  function formatarCEP() {
-    var input = document.getElementById("cepInput");
-    var cep = input.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
-    cep = cep.replace(/(\d{5})(\d)/, "$1-$2"); // Insere um traço após os primeiros 5 dígitos
-    input.value = cep;
+  function formatarVAL() {
+    var input = document.getElementById("valInput");
+    var val = input.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+    val = val.replace(/(\d{2})(\d)/, "$1/$2"); // Insere uma barra após os primeiros 2 dígitos
+    input.value = val;
+  }
+  function formatarCVV() {
+    var input = document.getElementById("cvvInput");
+    var cvv = input.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+    cvv = cvv.replace(/(\d{3})(\d)/,); // 
+    input.value = cvv;
   }
   function validarEmail() {
     var input = document.getElementById("emailInput");

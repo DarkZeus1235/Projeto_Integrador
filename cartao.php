@@ -18,15 +18,14 @@ include("conexao.php");
         include("menu.php");
     ?>
     <div class="login">
-        <h1>Cadastrando Cartão</h1>
+        <h1 id="tit-cart">Cadastrando Cartão</h1>
         <form  id="cadastroForm">
-            <input type="text" name="titular" placeholder="Titular" required maxlength="80"><br /><br />
-            <input type="text" name="numero_cartao" id="ndcInput" maxlength="22" oninput="formatarNDC()" placeholder="Numero do Cartão" required> <br><br>
-            <input type="text" name="data_validade" id="cpfInput" maxlength="14" oninput="formatarCPF()" placeholder="Validade" required> <br><br>
-            <input type="password" name="cvv" placeholder="CVV" required maxlength="20"> <br /><br />
-            <input class="btn btn-success" type="submit" name="btn-cadastrar" value="entrar">
-            <input class="btn btn-danger" type="reset" value="limpar">
-            <a class="btn btn-primary" href="index.html" role="button">Voltar</a>
+            <input class="ldc" type="text" name="titular" placeholder="Titular" required maxlength="80"><br /><br />
+            <input class="ldc"  type="text" name="numero_cartao" id="ndcInput" maxlength="22" oninput="formatarNDC()" placeholder="Numero do Cartão" required> <br><br>
+            <input class="ldc" type="text" name="data_validade" id="valInput" maxlength="5" oninput="formatarVAL()" placeholder="Validade" required> <br><br>
+            <input class="ldc"  type="password" name="cvv" placeholder="CVV" id="cvvInput" oninput="formatarCVV()" required maxlength="3"> <br /><br />
+            <input id="confirm" class="btn btn-success" type="submit" name="btn-cadastrar" value="Confirmar">
+            <input id="limpar"  class="btn btn-danger" type="reset" value="limpar">
         </form>
         <div id="resultado"></div>
 

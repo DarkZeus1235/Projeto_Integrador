@@ -605,17 +605,47 @@ a{
 }
 /*CSS DA PAGINA CARTAO PHP*/
 .login{
-  background-color: burlywood;
-  position: absolute ;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 40px;
-  border-radius: 20px;
-  color: white;
+  margin: auto;
+  margin-top: 100px;
+  width: 90%;
+  max-width: 600px;
+  background-color: #6B4B21;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+
 }
-input{
+.ldc{
+  
+  border-radius: 5px;
+ padding: 5px;
   border: none;
   outline: none;
+
+  padding: 10px;
+  margin-top: 3px;
+  border: 1px solid rgb(0, 0, 0);
+
+  /* Borda sólida de 2px na cor azul */
+
+  width: 90%;
+  /* Largura em relação ao elemento pai */
+  max-width: 600px;
+  /* Largura máxima */
+  margin: 0 auto;
+  /* Centralizar horizontalmente */
+
+  background-color: #f2f2f2;
+
+  /* Inclui preenchimento e borda na largura total */
+}
+#tit-cart{
+  color: #fff;
+}
+#limpar{
+  width: 100px;
+}
+#confirm{
+  width: 110px;
 }
 /*FIM*/
