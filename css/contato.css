@@ -1,0 +1,134 @@
+/* INÍCIO DO DESIGN DO CONTATO */
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .text1{
+    text-align: center;
+  }
+  /* Estilos das informações de contato */
+  .contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .info-item {
+    text-align: center;
+  }
+  
+  .info-item img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .info-item h2 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .info-item p {
+    font-size: 16px;
+  }
+  
+  /* Estilos do formulário de contato */
+  .contact-form {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    background-color: #6B4B21;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #6B4B21;
+  }
+  /* Regras de mídia para dispositivos móveis */
+  @media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 24px; /* Reduz o tamanho da fonte do título */
+    }
+  
+    header p {
+        font-size: 16px; /* Reduz o tamanho da fonte do parágrafo */
+    }
+  
+    .contact-info {
+        flex-direction: column; /* Alinha as informações de contato verticalmente */
+        text-align: center;
+    }
+  
+    .info-item {
+        margin-bottom: 20px; /* Espaçamento entre as informações de contato */
+    }
+  
+    .info-item img {
+        width: 40px; /* Reduz o tamanho dos ícones */
+        height: 40px;
+    }
+  
+    .info-item h2 {
+        font-size: 20px; /* Reduz o tamanho da fonte dos títulos das informações de contato */
+    }
+  
+    .info-item p {
+        font-size: 14px; /* Reduz o tamanho da fonte dos parágrafos das informações de contato */
+    }
+  
+    .contact-form {
+        padding: 10px; /* Reduz o preenchimento do formulário */
+    }
+  
+    .contact-form h2 {
+        font-size: 20px; /* Reduz o tamanho da fonte do título do formulário */
+    }
+  
+    .contact-form label {
+        font-size: 16px; /* Reduz o tamanho da fonte das etiquetas do formulário */
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px; /* Reduz o preenchimento dos campos de entrada do formulário */
+    }
+  
+    .contact-form button {
+        font-size: 16px; /* Reduz o tamanho da fonte do botão de envio do formulário */
+    }
+  }
+  /* FIM DO DESIGN DO CONTATO */
