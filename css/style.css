@@ -251,6 +251,12 @@ a{
 
 
 /*IMAGEM DO VIKING DA NAVBAR*/
+
+
+.logo-img {
+  width: 78px; /* Defina o tamanho desejado para a largura */
+  height: auto; /* A altura será ajustada proporcionalmente com base na largura */
+}
 #h1-index{
   text-align: center;
   font-size: 50px;
