@@ -555,8 +555,7 @@ a{
   margin-bottom: 70px;
 }
 #h1-novid{
-  margin-left: 520px;
-  margin-top: 20px;
+  text-align: center;
   font-family: 'Times New Roman', Times, serif;
   font-size: 50px;
 }
@@ -568,33 +567,49 @@ a{
 }
 
 
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Estilos gerais */
 
+#containeer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-.nav-link{
-  position: relative;
-  font-size: 20px;
-  color: #6B4B21;
-  font-weight: 500;
-  text-decoration: none;
-  margin-left: 40px;
+/* Estilos das notícias */
+.news {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.nav-link::before{
-  content: '';
-  position: absolute;
-  top: 80%;
-  left: 0;
-  width: 0 ;
-  height: 2px;
-  background: #000;
-  transition: .3s;
+
+.news-item {
+  flex: 0 0 calc(33.33% - 20px); /* Isso cria um layout de 3 colunas */
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.nav-link:hover::before{
-  width: 95%;
+
+.date {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-#nav-link:hover::before{
-  width: 90%;
+
+.news-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-#nav-link2:hover::before{
-  width: 72%;
+
+.news-item p {
+  font-size: 16px;
 }
