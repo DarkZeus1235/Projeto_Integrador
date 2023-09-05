@@ -1,20 +1,3 @@
-document.getElementById('cadastroForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const formData = new FormData(this);
-    const xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            const resultadoDiv = document.getElementById('resultado');
-            resultadoDiv.innerHTML = xhr.responseText;
-            document.getElementById('cadastroForm').reset();
-        }
-    };
-
-    xhr.open('POST', 'cartao.php', true);
-    xhr.send(formData);
-});
 
 function formatarNDC() {
     var input = document.getElementById("ndcInput");
