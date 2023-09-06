@@ -48,6 +48,8 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
   <title>Login</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/menu_dieimes.css">
+  <link rel="stylesheet" href="css/dieimes.css">
   <link rel="icon" href="Imagens/icon.png">
 </head>
 

@@ -23,7 +23,7 @@
     ?>
 <div class="containeer">
     <br>
-<h1 id="h1-novid">Novidades da Semana</h1>
+    <h1 id="h1-novid">Novidades da Semana</h1>
 <section class="news">
         <div class="news-item">
             <div class="date">Segunda-Feira</div>

@@ -30,7 +30,6 @@ body {
 .navbar-nav .nav-link:hover {
     color: #ecf0f1; /* cor quando o mouse passa por cima */
 }
-
 .navbar-toggler-icon {
     filter: invert(100%); /* inverte as cores do ícone do menu responsivo */
 }
@@ -47,3 +46,30 @@ body {
 .nav-item .dropdown-menu .nav-link:hover {
     background-color: #2c3e50; /* cor de fundo quando o mouse passa por cima */
 }
+.nav-link{
+    position: relative;
+    font-size: 20px;
+    color: #6B4B21;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  .nav-link::before{
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 0 ;
+    height: 2px;
+    background: #000;
+    transition: .3s;
+  }
+  .nav-link:hover::before{
+    width: 95%;
+  }
+  #nav-link:hover::before{
+    width: 90%;
+  }
+  #nav-link2:hover::before{
+    width: 72%;
+  }
