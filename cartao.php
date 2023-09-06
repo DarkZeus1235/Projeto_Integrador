@@ -46,12 +46,15 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/menu_dieimes.css">
+    <link rel="stylesheet" href="css/dieimes.css">
     <title>Adicionar Cartão de Crédito</title>
 </head>
 <body>
 <?php
         include("menu.php");
     ?>
+    <br>
     <div class="cad_cart">
         <h1>Adicionar Cartão de Crédito</h1>
         <form action="" method="POST">
@@ -75,15 +78,18 @@ $conn->close();
 
             <label for="bandeira">Bandeira:</label>
             <select id="bandeira" name="bandeira" required>
-                <option value="visa">Visa</option>
-                <option value="mastercard">MasterCard</option>
-                <option value="amex">American Express</option>
+                <option  class="butao-cor" value="visa">Visa</option>
+                <option  class="butao-cor" value="mastercard">MasterCard</option>
+                <option  class="butao-cor" value="amex">American Express</option>
             </select>
 
-            <button class="but-cart" type="submit">Adicionar Cartão</button>
+            <button id="butão" class="but-cart" type="submit">Adicionar Cartão</button>
         </form>
     </div>
-
+    <br>
+    <?php
+        include('rodape.php');
+    ?>
     <script src="zere.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

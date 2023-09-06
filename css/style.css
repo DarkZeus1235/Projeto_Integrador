@@ -10,29 +10,31 @@ body {
   height: 100vh;
   background-color: #FFFFF0;
 }
+
 /* Botão informações do produto(página comprar)*/
-.btn{
+.btn {
   color: #393c3d;
   font-size: 20px;
 }
 
 .custom-btn {
-    background-color: #6B4B21;
-    color: #fff;
-    /* Outros estilos do botão (opcional) */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
+  background-color: #6B4B21;
+  color: #fff;
+  /* Outros estilos do botão (opcional) */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .custom-btn:hover {
-    background-color: #543814; /* Cor mais escura ao passar o mouse (opcional) */
+  background-color: #543814;
+  /* Cor mais escura ao passar o mouse (opcional) */
 }
 
 /* Espaco botão contato */
-#esp{
+#esp {
   margin-top: 10px;
 }
 
@@ -49,22 +51,24 @@ body {
   width: 300px;
 }
 
-#botao_login{ 
+#botao_login {
   color: white;
   background-color: #6B4B21;
 }
-.plv{
+
+.plv {
   margin-top: 7px;
   margin-bottom: 5px;
   text-align: center;
 }
 
-#registro{
+#registro {
   color: #E25822;
   text-decoration: none;
   margin-left: 90px;
 }
-#entrar{
+
+#entrar {
   color: #E25822;
   text-decoration: none;
   margin-left: 109px;
@@ -114,7 +118,7 @@ body {
 
 .signup-container {
   text-align: center;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .signup-container input[type="text"],
@@ -131,12 +135,12 @@ body {
 
 .signup-container input[type="submit"] {
   width: 100%;
-    background-color: #6B4B21;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+  background-color: #6B4B21;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .signup-container input[type="submit"]:hover {
@@ -146,103 +150,123 @@ body {
 /*CSS Navbar*/
 /* CSS personalizado para o navbar */
 .custom-navbar {
-  background-color: burlywood; 
-  color: #fff; /* Texto branco */
+  background-color: burlywood;
+  color: #fff;
+  /* Texto branco */
 }
 
 
 /* CSS Cards */
 
-#testec{
+#testec {
   margin-left: 10px;
 }
-#textc{
+
+#textc {
   color: white;
   font-size: 18px;
   margin-left: 37px;
 }
-#textc:hover{
+
+#textc:hover {
   color: black;
 }
-.card-text{
+
+.card-text {
   text-align: center;
 }
-#card-text{
+
+#card-text {
   text-align: center;
   font-weight: bold;
 }
-.card-title{
+
+.card-title {
   text-align: center;
   font-weight: bold;
 }
 
 /* CSS Página Compra */
 
-.pedi{
+.pedi {
   text-align: center;
   color: #000000;
   font-family: 'Times New Roman', Times, serif;
   font-size: 35px;
   font-weight: bold;
 }
-#img-pedi{
+
+#img-pedi {
   width: 250px;
   margin-left: 500px;
   margin-top: 60px;
 }
-.arrumartextopagcompra{
+
+.arrumartextopagcompra {
   margin-left: 750px;
-  
+
 }
-.text-pedi{
+
+.text-pedi {
   margin-left: 15px;
   display: inline-block;
   font-weight: bold;
   margin-top: 10px;
 }
-#aviso-compra{
+
+#aviso-compra {
   margin-left: 100px;
   margin-top: 100px;
 }
-#botao-comp{
+
+#botao-comp {
   color: white;
   margin-left: 940px;
 }
-#botao-car{
+
+#botao-car {
   color: white;
   margin-left: 830px;
   margin-top: 5px;
   margin-bottom: 20px;
 }
-.span-comp{
+
+.span-comp {
   font-weight: bold;
   margin-left: 10px;
 }
-a{
+
+a {
   color: #000000;
 }
 
 /*CSS Cards Informação Conta Cliente*/
 
-.col-lg-3{
+.col-lg-3 {
   display: inline-block;
 }
-#cardi1{
+
+#cardi1 {
   margin-left: 150px;
 }
-#cardi2{
+
+#cardi2 {
   margin-left: 30px;
 }
-#cardi3{
+
+#cardi3 {
   margin-left: 30px;
 }
-#cardi4{
+
+#cardi4 {
   margin-left: 30px;
 }
-#cardi5{
+
+#cardi5 {
   margin-left: 30px;
 }
-#min-conta{
+
+#min-conta {
   margin-left: 500px;
 }
 
@@ -254,19 +278,22 @@ a{
 
 
 .logo-img {
-  width: 78px; /* Defina o tamanho desejado para a largura */
-  height: auto; /* A altura será ajustada proporcionalmente com base na largura */
+  width: 78px;
+  /* Defina o tamanho desejado para a largura */
+  height: auto;
+  /* A altura será ajustada proporcionalmente com base na largura */
 }
-#h1-index{
+
+#h1-index {
   text-align: center;
   font-size: 50px;
   font-family: 'Times New Roman', Times, serif;
   margin-top: 20px;
   margin-bottom: 20px;
-} 
+}
 
 /* Efeito texto Navbar*/
-.nav-link{
+.nav-link {
   position: relative;
   font-size: 20px;
   color: #6B4B21;
@@ -274,276 +301,320 @@ a{
   text-decoration: none;
   margin-left: 40px;
 }
-.nav-link::before{
+
+.nav-link::before {
   content: '';
   position: absolute;
   top: 80%;
   left: 0;
-  width: 0 ;
+  width: 0;
   height: 2px;
   background: #000;
   transition: .3s;
 }
-.nav-link:hover::before{
+
+.nav-link:hover::before {
   width: 95%;
 }
-#nav-link:hover::before{
+
+#nav-link:hover::before {
   width: 90%;
 }
-#nav-link2:hover::before{
+
+#nav-link2:hover::before {
   width: 72%;
 }
 
 /* TEXTO DA LOGO */
-#Texto_da_logo{
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+#Texto_da_logo {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #6B4B21;
   font-size: 34px;
   text-decoration: none;
 }
-#Texto_da_logo:hover{
+
+#Texto_da_logo:hover {
   color: white;
 }
 
 
 /* Atributo para tornar responsivel no celular */
-@media (min-width: 1701px) and (max-width: 1800px){
-  #rowtest{
+@media (min-width: 1701px) and (max-width: 1800px) {
+  #rowtest {
     margin-left: 125px;
   }
 }
-@media (min-width: 1601px) and (max-width: 1700px){
-  #rowtest{
+
+@media (min-width: 1601px) and (max-width: 1700px) {
+  #rowtest {
     margin-left: 45px;
   }
 }
-@media (min-width: 1501px) and (max-width: 1600px){
-  #rowtest{
+
+@media (min-width: 1501px) and (max-width: 1600px) {
+  #rowtest {
     margin-left: 6px;
   }
 }
-@media (min-width: 1401px) and (max-width: 1501px){
-  #rowtest{
+
+@media (min-width: 1401px) and (max-width: 1501px) {
+  #rowtest {
     margin-left: 95px;
   }
 }
-@media (min-width: 1301px) and (max-width: 1400px){
-  #rowtest{
+
+@media (min-width: 1301px) and (max-width: 1400px) {
+  #rowtest {
     margin-left: 56px;
   }
-  #margintop{
+
+  #margintop {
     margin-top: 900px;
   }
 }
-@media (min-width: 1101px) and (max-width: 1300px){
-  #rowtest{
+
+@media (min-width: 1101px) and (max-width: 1300px) {
+  #rowtest {
     margin-left: 105px;
   }
 }
-@media (min-width: 1001px) and (max-width: 1100px){
-  #rowtest{
+
+@media (min-width: 1001px) and (max-width: 1100px) {
+  #rowtest {
     margin-left: 65px;
   }
 }
+
 @media (min-width: 923px) and (max-width: 1000px) {
-  .signup-container{
+  .signup-container {
     margin-top: -200px;
     margin-left: 10px;
     height: 615px;
     width: 500px;
   }
-  #cadatro{
+
+  #cadatro {
     width: 458px;
   }
-  .faixa-contact{
+
+  .faixa-contact {
     width: 1012px;
   }
-  .faixa-contacto{
+
+  .faixa-contacto {
     width: 920px;
   }
-  #testee_mobile{
+
+  #testee_mobile {
     width: 986px;
   }
-  #rowtest{
+
+  #rowtest {
     margin-left: 185px;
   }
 }
-@media (min-width: 900px) and (max-width: 922px){
-  #rowtest{
+
+@media (min-width: 900px) and (max-width: 922px) {
+  #rowtest {
     margin-left: 300px;
   }
 }
+
 @media (min-width: 800px) and (max-width: 830px) {
-  #rowtest{
+  #rowtest {
     margin-left: 220px;
   }
-  #h1-index{
+
+  #h1-index {
     margin-left: 30px;
   }
 }
+
 @media (min-width: 700px) and (max-width: 799px) {
-  #rowtest{
+  #rowtest {
     margin-left: 50px;
   }
 
 }
-@media (min-width: 621px) and (max-width: 699px){
-  #rowtest{
+
+@media (min-width: 621px) and (max-width: 699px) {
+  #rowtest {
     margin-left: 20px;
   }
-  }
+}
+
 @media (min-width: 600px) and (max-width: 620px) {
-  #testec{
-    margin-left: 120px; 
+  #testec {
+    margin-left: 120px;
   }
 }
-@media (min-width: 500px) and (max-width: 525px){
-  #rowtest{
+
+@media (min-width: 500px) and (max-width: 525px) {
+  #rowtest {
     margin-left: 125px;
   }
 }
-@media (min-width: 526px) and (max-width: 599px){
-  #rowtest{
+
+@media (min-width: 526px) and (max-width: 599px) {
+  #rowtest {
     margin-left: 150px;
   }
 }
-@media (min-width: 461px) and (max-width: 499px){
-  #rowtest{
+
+@media (min-width: 461px) and (max-width: 499px) {
+  #rowtest {
     margin-left: 80px;
   }
 }
-@media (min-width: 421px) and (max-width: 460px){
-  #rowtest{
+
+@media (min-width: 421px) and (max-width: 460px) {
+  #rowtest {
     margin-left: 70px;
   }
 }
-@media (min-width: 300px) and (max-width: 420px){
-  #rowtest{
+
+@media (min-width: 300px) and (max-width: 420px) {
+  #rowtest {
     margin-left: 50px;
   }
 }
+
 @media screen and (max-width: 300px) {
-  #testec{
-    margin-left: 100px; 
+  #testec {
+    margin-left: 100px;
   }
-  .faixa-contact{
+
+  .faixa-contact {
     width: 700px;
   }
 }
+
 /* ATRIBUTO PARA ALINHAR A MENSAGEM DE BEM-VINDO */
-.bem-vindo{
+.bem-vindo {
   text-align: center;
 }
+
 /* IMAGENS DA PÁGINA "MINHA CONTA" */
-#cadastro_imagem{
+#cadastro_imagem {
   margin-top: 20px;
   margin-left: 60px;
   width: 150px;
   height: 150px;
 }
-.borda_imagem{
+
+.borda_imagem {
   border: 4px solid;
   width: 270px;
   height: 210px;
   margin-top: 100px;
 }
 
-.texto_cadastro{
+.texto_cadastro {
   margin-left: 38px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 34px;
 }
 
-#pedidos_imagem{
+#pedidos_imagem {
   margin-left: 17px;
   margin-top: -20px;
   width: 230px;
   height: 230px;
 }
 
-.borda_imagem1{
+.borda_imagem1 {
   border: 4px solid;
   width: 270px;
   height: 210px;
-  margin-top: -278px;  
+  margin-top: -278px;
   margin-left: 500px;
 }
 
-.texto_pedidos{
+.texto_pedidos {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 34px;
   margin-left: 580px;
 }
-#central{
+
+#central {
   text-align: center;
 }
 
-.borda_imagem2{
+.borda_imagem2 {
   border: 4px solid;
   width: 270px;
   height: 210px;
-  margin-top: -278px;  
+  margin-top: -278px;
   margin-left: 1080px;
 }
 
-#deletar_imagem{
+#deletar_imagem {
   margin-left: 30px;
   margin-top: -10px;
   width: 230px;
   height: 230px;
 }
 
-.texto_deletar{
+.texto_deletar {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 34px;
   margin-left: 1150px;
 }
 
 /* IMAGEM DO LOGIN */
-#icon_login{
+#icon_login {
   margin-left: 23px;
 }
 
 /* CSS DO MEU CADASTRO*/
-#conta{
+#conta {
   width: 40px;
   height: 40px;
 }
-#menuzinho{
+
+#menuzinho {
   margin-left: 100px;
   width: 240px;
   margin-top: -400px;
 }
-#pedidos{
+
+#pedidos {
   width: 40px;
   height: 40px;
 }
-#minhas_info{
+
+#minhas_info {
   text-align: center;
 }
-.infos{
+
+.infos {
   margin-left: 100px;
 }
-.text_info{
+
+.text_info {
   font-size: 24px;
   padding: 10px;
 }
-#botão{
-  color:white;
+
+#botão {
+  color: white;
 }
-#botão2{
+
+#botão2 {
   color: white;
   text-decoration: none;
 }
-#rowtest{
+
+#rowtest {
   margin-left: 40px;
 }
 
 /*Espaçamento entre botão e rodapé página de contato*/
-#expacin{
+#expacin {
   margin-bottom: 10px;
 }
-#h2-contacto{
+
+#h2-contacto {
   font-family: 'Times New Roman', Times, serif;
   font-size: 40px;
   margin-left: 350px;
@@ -551,18 +622,21 @@ a{
 }
 
 /*CSS Página Novidade*/
-#espaconovidad{
+#espaconovidad {
   margin-bottom: 70px;
 }
-#h1-novid{
+
+#h1-novid {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   font-size: 50px;
 }
-.h1-card-novid{
+
+.h1-card-novid {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.span-novid{
+
+.span-novid {
   font-weight: bolder;
 }
 
@@ -577,7 +651,7 @@ a{
 /* Estilos gerais */
 
 
-.nav-link{
+.nav-link {
   position: relative;
   font-size: 20px;
   color: #6B4B21;
@@ -585,23 +659,27 @@ a{
   text-decoration: none;
   margin-left: 40px;
 }
-.nav-link::before{
+
+.nav-link::before {
   content: '';
   position: absolute;
   top: 80%;
   left: 0;
-  width: 0 ;
+  width: 0;
   height: 2px;
   background: #000;
   transition: .3s;
 }
-.nav-link:hover::before{
+
+.nav-link:hover::before {
   width: 95%;
 }
-#nav-link:hover::before{
+
+#nav-link:hover::before {
   width: 90%;
 }
-#nav-link2:hover::before{
+
+#nav-link2:hover::before {
   width: 72%;
 }
 
@@ -638,10 +716,10 @@ select {
   border-radius: 5px;
 }
 
- .but-cart{
+.but-cart {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #6B4B21;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -649,6 +727,142 @@ select {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #6B4B21;
 }
+
+/*FIM*/
+
+/*CSS DA PAGINA METODO_PAG*/
+.continer {
+  margin: auto;
+  margin-top: 100px;
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+
+
+}
+
+@media (max-width: 600px) {
+  .continer {
+
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 60px;
+
+  }
+}
+
+
+.but {
+  color: #f2f2f2;
+  padding: 7px;
+  background-color: #6B4B21;
+  border-radius: 10px;
+  width: 92%;
+  position: relative;
+  top: 10px;
+  left: 25px;
+}
+
+@media (max-width: 600px) {
+  .but {
+
+    padding: 5px;
+    width: 92%;
+
+    /* Ajuste a posição conforme necessário */
+    position: relative;
+    top: 35px;
+    left: 0px;
+
+
+
+    background-color: #6B4B21;
+    color: #fff;
+    /* Outros estilos do botão (opcional) */
+
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+/*
+as divs 
+*/
+.payment-option {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+  border: color;
+
+
+}
+
+.payment-option input[type="radio"] {
+  padding: 10px;
+  margin-right: 0px;
+
+}
+
+.payment-option label {
+  font-size: 20px;
+}
+
+.payment-option img {
+  max-width: 50px;
+  margin-left: 10px;
+}
+
+.divo {
+
+  padding: 20px;
+  margin-top: 3px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border: 1px solid rgb(0, 0, 0);
+
+  /* Borda sólida de 2px na cor azul */
+
+  width: 90%;
+  /* Largura em relação ao elemento pai */
+  max-width: 600px;
+  /* Largura máxima */
+  margin: 0 auto;
+  /* Centralizar horizontalmente */
+
+  background-color: #f2f2f2;
+
+  /* Inclui preenchimento e borda na largura total */
+}
+
+@media (max-width: 600px) {
+  .divo {
+    width: 100%;
+    /* Reduz a largura em telas menores */
+    font-size: 16px;
+    /* Ajusta o tamanho da fonte */
+    position: relative;
+    /* Posicionamento relativo */
+    top: 25px;
+    /* Move 20px para baixo */
+  }
+}
+
+.divo:hover {
+
+  background-color: rgb(226, 221, 221);
+}
+
 /*FIM*/
