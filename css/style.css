@@ -785,5 +785,83 @@ select {
 button:hover {
   background-color: #6B4B21;
 }
+/* INÍCIO DO DESIGN DO ANÚNCIO DOS PRODUTOS */
+#coontainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+/* Estilos do produto */
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.product-image {
+  flex: 0 0 calc(50% - 20px);
+  max-width: 50%;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+.product-info {
+  flex: 0 0 calc(50% - 20px);
+  max-width: 50%;
+}
+
+.product h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.product-description {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-size: 28px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center; /* Alinhar verticalmente os botões e o ícone de favorito */
+}
+
+.add-to-cart,
+.buy-now {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.add-to-cart:hover,
+.buy-now:hover {
+  background-color: black;
+}
+
+.favorite {
+  font-size: 24px; /* Tamanho do ícone de favorito */
+  color: goldenrod; /* Cor do ícone de favorito (vermelho) */
+  cursor: pointer;
+}
 /*FIM*/

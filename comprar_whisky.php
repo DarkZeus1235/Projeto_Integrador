@@ -29,17 +29,42 @@
 <body>
 
 <?php
-        include("menu.php");
+  include('menu.php');
+  ?>
+  <div id="coontainer" class="container">
+    <?php
+    while ($bebidas = $retorno_consulta->fetch_assoc()) {
+
     ?>
-  <?php
-    while($bebidas = $retorno_consulta -> fetch_assoc()){
-   ?>
-  <div class="container">
-    <h1><?php echo $bebidas['nome_bebida']; ?></h1>
-        <img src=<?php echo $bebidas['arquivo_caminho'];?>>
+      <br>
+      <br>
+      <br>
+      <main class="product">
+        <div class="product-image">
+          <img src="<?php echo $bebidas['arquivo_caminho']; ?>" alt="Produto Exemplo">
+        </div>
+        <div class="product-info">
+          <h2><?php echo $bebidas['nome_bebida']; ?></h2>
+          <p class="product-description"><?php echo $bebidas['descricao']; ?></p>
+          <p class="product-price"><?php echo $bebidas['valor']; ?></p>
+          <div class="product-actions">
+            <button class="custom-btn" class="add-to-cart">Adicionar ao Carrinho</button>
+            <button class="custom-btn" class="buy-now">Comprar Agora</button>
+            <span class="favorite">&#9733;</span> <!-- Ícone de estrela para favoritar -->
+          </div>
+        </div>
+      <?php
+    }
+      ?>
+      </main>
   </div>
+  <br>
   <?php
-      }
+  include('espacamento.php');
+  ?>
+  <?php
+  include('rodape.php');
+  ?>
   ?>
       </body>
   </html>
