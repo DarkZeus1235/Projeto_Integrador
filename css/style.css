@@ -607,3 +607,183 @@ a{
 .news-item p {
   font-size: 16px;
 }
+/*CSS DA PAGINA METODO_PAG*/
+.continer {
+  margin: auto;
+  margin-top: 100px;
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+
+
+}
+
+@media (max-width: 600px) {
+  .continer {
+
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 60px;
+
+  }
+}
+
+
+.but {
+  color: #f2f2f2;
+  padding: 7px;
+  background-color: #6B4B21;
+  border-radius: 10px;
+  width: 92%;
+  position: relative;
+  top: 10px;
+  left: 25px;
+}
+
+@media (max-width: 600px) {
+  .but {
+
+    padding: 5px;
+    width: 92%;
+
+    /* Ajuste a posição conforme necessário */
+    position: relative;
+    top: 35px;
+    left: 0px;
+
+
+
+    background-color: #6B4B21;
+    color: #fff;
+    /* Outros estilos do botão (opcional) */
+
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+/*
+as divs 
+*/
+.payment-option {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+  border: color;
+
+
+}
+
+.payment-option input[type="radio"] {
+  padding: 10px;
+  margin-right: 0px;
+
+}
+
+.payment-option label {
+  font-size: 20px;
+}
+
+.payment-option img {
+  max-width: 50px;
+  margin-left: 10px;
+}
+
+.divo {
+
+  padding: 20px;
+  margin-top: 3px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border: 1px solid rgb(0, 0, 0);
+
+  /* Borda sólida de 2px na cor azul */
+
+  width: 90%;
+  /* Largura em relação ao elemento pai */
+  max-width: 600px;
+  /* Largura máxima */
+  margin: 0 auto;
+  /* Centralizar horizontalmente */
+
+  background-color: #f2f2f2;
+
+  /* Inclui preenchimento e borda na largura total */
+}
+
+@media (max-width: 600px) {
+  .divo {
+    width: 100%;
+    /* Reduz a largura em telas menores */
+    font-size: 16px;
+    /* Ajusta o tamanho da fonte */
+    position: relative;
+    /* Posicionamento relativo */
+    top: 25px;
+    /* Move 20px para baixo */
+  }
+}
+
+.divo:hover {
+
+  background-color: rgb(226, 221, 221);
+}
+/*CSS DA PAGINA CARTAO PHP*/
+.cad_cart {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.ldc[type="text"],
+.ldc[type="password"],
+select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.but-cart {
+  width: 100%;
+  padding: 10px;
+  background-color: #6B4B21;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6B4B21;
+}
+
+/*FIM*/

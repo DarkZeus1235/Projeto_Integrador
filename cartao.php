@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "PI";
 $password = "projeto_integrador";
-$dbname = "cadastro_cartao_credito";
+$dbname = "lucas_teste";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $numero_cartao = $_POST['numero_cartao'];
     $data_validade = $_POST['data_validade'];
     $cvv = $_POST['cvv'];
+    $cpf = $_POST['cpf'];
 
     // Inserir os dados na tabela
     $sql = "INSERT INTO cartoes (titular, numero_cartao, data_validade, cvv)
@@ -45,7 +46,7 @@ $conn->close();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu_dieimes.css">
     <link rel="stylesheet" href="css/dieimes.css">
     <title>Adicionar Cartão de Crédito</title>
