@@ -1,8 +1,8 @@
 <?php
 // Conexão com o banco de dados
 $servername = "localhost";
-$username = "zere";
-$password = "1234";
+$username = "PI";
+$password = "projeto_integrador";
 $dbname = "cadastro_cartao_credito";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
