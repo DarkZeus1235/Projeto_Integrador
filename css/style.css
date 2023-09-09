@@ -763,21 +763,26 @@ button:hover {
 
 
 .but {
-  color: #f2f2f2;
-  padding: 7px;
+  
+  margin: 0 auto;
+  padding: 5px;
+  width: 100%;
+
   background-color: #6B4B21;
-  border-radius: 10px;
-  width: 92%;
-  position: relative;
-  top: 10px;
-  left: 25px;
+  color: #fff;
+  /* Outros estilos do botão (opcional) */
+
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
   .but {
 
     padding: 5px;
-    width: 92%;
+    width: 100%;
 
     /* Ajuste a posição conforme necessário */
     position: relative;
@@ -835,7 +840,7 @@ as divs
 
   /* Borda sólida de 2px na cor azul */
 
-  width: 90%;
+  width: 100%;
   /* Largura em relação ao elemento pai */
   max-width: 600px;
   /* Largura máxima */

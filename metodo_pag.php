@@ -92,7 +92,7 @@ if (isset($_POST['bt_nome'])) {
 
             </div>
         </div>
-        <button class="but" type="submit">Continuar</button>
+        <button id="butão"  class="but" type="submit">Continuar</button>
         </form>
     </div>
     <br>
