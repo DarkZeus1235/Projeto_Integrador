@@ -71,8 +71,8 @@ if (isset($_POST['bt_nome'])) {
             <form method="post" action="opcao_esc.php">
                 <div class="payment-option">
                     <input type="radio" id="credit-card" name="metodo" value="cartao">
-                    <img src="https://i.ibb.co/vdbBkgT/mastercard.jpg" alt="">
-                    <label for="credit-card">Débito</label>
+                    <img src="imagens/credit-card.png" alt=""  width="35px">
+                    <label for="credit-card">Cartão de Crédito</label>
 
                 </div>
         </div>
