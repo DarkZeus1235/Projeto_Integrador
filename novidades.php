@@ -45,18 +45,18 @@
 
         <div class="news-item">
             <div class="date">Quinta-feira</div>
-            <h2>Título da Notícia 3</h2>
-            <p>Vestibulum ac dolor at lectus bibendum fermentum. Sed dignissim urna non dolor feugiat, ac tempus libero dapibus.</p>
+            <h2>Atualização para Sistemas Operacionais</h2>
+            <p>Nosso sistema da Taverna de Valhalla foi atualizado para os sistemas operacionais mais recentes, como Windows 11.</p>
         </div>
 
         <div class="news-item">
             <div class="date">Sexta-feira</div>
-            <h2>Título da Notícia 3</h2>
-            <p>Vestibulum ac dolor at lectus bibendum fermentum. Sed dignissim urna non dolor feugiat, ac tempus libero dapibus.</p>
+            <h2>Promoção do Halloween</h2>
+            <p>A partir do mês de Outubro, a Taverna de Valhalla estará fazendo uma mega promoção devido ao halloween, removendo frete de todas as bebidas, haverá diversas promoções de diversas bebidas também.</p>
         </div>
 
         <div class="news-item">
-            <div class="date">Sabádo</div>
+            <div class="date">Sábado</div>
             <h2>Novas Bebidas Adicionadas</h2>
             <p>Foram adicionados novos lotes de Jägermeister, Buffalo Trace e Johnny Walker. Venha conferir essas maravilhas.</p>
         </div>
