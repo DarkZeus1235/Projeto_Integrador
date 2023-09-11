@@ -95,17 +95,9 @@ if (isset($_POST['bt_nome'])) {
         <button class="but" type="submit">Continuar</button>
         </form>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <?php
+        include('espacamento.php')
+    ?>
     <?php
     include("rodape.php");
     ?>

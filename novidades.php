@@ -27,7 +27,7 @@
 <section class="news">
         <div class="news-item">
             <div class="date">Segunda-Feira</div>
-            <h2>Novo Design do Site</h2>
+            <h2>Novo Design do Site.</h2>
             <p>Mudamos o Design do Site, inserindo uma nova logo da empresa, alterando o menu e adicionando novas bebidas em nosso cardápio: Dalmatore, Rémy Martin e Ballantines.</p>
         </div>
 
@@ -45,19 +45,19 @@
 
         <div class="news-item">
             <div class="date">Quinta-feira</div>
-            <h2>Atualização para Sistemas Operacionais</h2>
+            <h2>Atualização para Sistemas Operacionais.</h2>
             <p>Nosso sistema da Taverna de Valhalla foi atualizado para os sistemas operacionais mais recentes, como Windows 11.</p>
         </div>
 
         <div class="news-item">
             <div class="date">Sexta-feira</div>
-            <h2>Promoção do Halloween</h2>
+            <h2>Promoção do Halloween!!</h2>
             <p>A partir do mês de Outubro, a Taverna de Valhalla estará fazendo uma mega promoção devido ao halloween, removendo frete de todas as bebidas, haverá diversas promoções de diversas bebidas também.</p>
         </div>
 
         <div class="news-item">
             <div class="date">Sábado</div>
-            <h2>Novas Bebidas Adicionadas</h2>
+            <h2>Novas Bebidas Adicionadas.</h2>
             <p>Foram adicionados novos lotes de Jägermeister, Buffalo Trace e Johnny Walker. Venha conferir essas maravilhas.</p>
         </div>
 
