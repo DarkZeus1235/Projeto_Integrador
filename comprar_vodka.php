@@ -46,6 +46,7 @@
           <h2><?php echo $bebidas['nome_bebida']; ?></h2>
           <p class="product-description"><?php echo $bebidas['descricao']; ?></p>
           <p class="product-price"><?php echo $bebidas['valor']; ?></p>
+          <p class="product-price">Estoque Disponível: <?php echo $bebidas['quantidade'];?></p>
           <div class="product-actions">
             <button class="custom-btn" class="add-to-cart">Adicionar ao Carrinho</button>
             <button class="custom-btn" class="buy-now">Comprar Agora</button>
@@ -57,7 +58,6 @@
       ?>
       </main>
   </div>
-  <br>
   <?php
   include('espacamento.php');
   ?>

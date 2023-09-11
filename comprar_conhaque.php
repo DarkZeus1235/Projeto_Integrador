@@ -24,46 +24,41 @@
     <body>
 
     <?php
-        include("menu.php");
+  include('menu.php');
+  ?>
+  <div id="coontainer" class="container">
+    <?php
+    while ($bebidas = $retorno_consulta->fetch_assoc()) {
+
     ?>
-        <?php
-        while($bebidas = $retorno_consulta -> fetch_assoc()){
-
-        ?>
-    <div id="quad">
-        <h2 class="pedi">Informações do Produto</h2>
-        <img id="img-pedi" src="<?php echo $bebidas['arquivo_caminho'];?>" alt="">
-        <h3 class="text-pedi"><?php echo $bebidas['nome_bebida'];?></h3>
-        <h4><span class="span-comp">Descrição:</span> <?php echo $bebidas['descricao']; ?></h4>
-        <h4><span class="span-comp">Estoque Disponível:</span> <?php echo $bebidas['quantidade'];?></h4>
-        <h4><span class="span-comp">Valor:</span> <?php echo $bebidas['valor'];?></h4>
-        <button type="button" id="botao-comp" class="btn btn-success">Comprar</button>
-        <button type="button" id="botao-car" class="btn btn-primary">Adicionar ao carrinho</button>
-        <div id="quad2"></div>
-        <h2 class="pedi">Formas de Pagamento</h2>
-        <a href="#"><img src="img/iconepix.png" alt="" width="100"></a>
-        <a class="text-pedi" href="#"><h3 class="text-pedi">PIX</h3></a>
-        <div id="boleto-icon">
-          <a href="#"><img src="img/boletoicon.png" alt="" width="100"></a>
-          <a class="text-pedi" href="#"><h3 class="text-pedi">Boleto</h3></a>
+      <br>
+      <br>
+      <br>
+      <main class="product">
+        <div class="product-image">
+          <img src="<?php echo $bebidas['arquivo_caminho']; ?>" alt="Produto Exemplo">
         </div>
-        <div id="mastericon">
-          <a href="#"><img src="img/mastercardicon.png" alt="" width="100"></a>
-          <a class="text-pedi" href="#"><h3 class="text-pedi">Débito</h3></a>
+        <div class="product-info">
+          <h2><?php echo $bebidas['nome_bebida']; ?></h2>
+          <p class="product-description"><?php echo $bebidas['descricao']; ?></p>
+          <p class="product-price"><?php echo $bebidas['valor']; ?></p>
+          <p class="product-price">Estoque Disponível: <?php echo $bebidas['quantidade'];?></p>
+          <div class="product-actions">
+            <button class="custom-btn" class="add-to-cart">Adicionar ao Carrinho</button>
+            <button class="custom-btn" class="buy-now">Comprar Agora</button>
+            <span class="favorite">&#9733;</span> <!-- Ícone de estrela para favoritar -->
+          </div>
         </div>
-        <div id="visaicon">
-          <a href="#"><img src="img/visaicon.png" alt="" width="100"></a>
-          <a class="text-pedi" href="#"><h3 class="text-pedi">Crédito</h3></a>
-        </div>
-    </div>
-<?php
-  }
-?>
-
-    <!--
-      <h3 class="aviso-compra">A compra só será realizada quando o pagamento for confirmado.</h3>
-    -->
-    
-  
+      <?php
+    }
+      ?>
+      </main>
+  </div>
+  <?php
+  include('espacamento.php');
+  ?>
+  <?php
+  include('rodape.php');
+  ?>
     </body>
 </html>
