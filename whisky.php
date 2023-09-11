@@ -47,7 +47,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
               <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
               <h5 class="card-text"><?php echo $bebidas['valor']; ?></h5>
               <div class="text-center mt-4">
-                <a href="comprar.php?id=<?php echo $bebidas['id_uisque'] ?>" class="btn custom-btn">Comprar Agora</a>
+                <a href="comprar_whisky.php?id=<?php echo $bebidas['id_uisque'] ?>" class="btn custom-btn">Comprar Agora</a>
               </div>
             </div>
           </div>
@@ -56,8 +56,11 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     </div>
 
   </div>
-  <?php 
-      include('rodape.php')
+  <?php
+    include('espacamento.php');
+    ?>
+    <?php
+    include('rodape.php');
     ?>
 
 </body>

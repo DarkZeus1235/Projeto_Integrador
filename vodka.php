@@ -47,7 +47,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
               <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
               <h5 class="card-text"><?php echo $bebidas['valor']; ?></h5>
               <div class="text-center mt-4">
-                <a href="comprar.php?id=<?php echo $bebidas['id_vodka'] ?>" class="btn custom-btn">Comprar Agora</a>
+                <a href="comprar_vodka.php?id=<?php echo $bebidas['id_vodka'] ?>" class="btn custom-btn">Comprar Agora</a>
               </div>
             </div>
           </div>
@@ -56,7 +56,12 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     </div>
 
   </div>
-
+  <?php
+    include('espacamento.php');
+    ?>
+    <?php
+    include('rodape.php');
+    ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

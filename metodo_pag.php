@@ -71,8 +71,8 @@ if (isset($_POST['bt_nome'])) {
             <form method="post" action="opcao_esc.php">
                 <div class="payment-option">
                     <input type="radio" id="credit-card" name="metodo" value="cartao">
-                    <img src="https://i.ibb.co/vdbBkgT/mastercard.jpg" alt="">
-                    <label for="credit-card">Débito</label>
+                    <img src="Imagens/credit-card.png" alt=""  width="35px">
+                    <label for="credit-card">Cartão de Crédito</label>
 
                 </div>
         </div>
@@ -92,14 +92,15 @@ if (isset($_POST['bt_nome'])) {
 
             </div>
         </div>
-        <button class="but" type="submit">Continuar</button>
+        <button id="butão"  class="but" type="submit">Continuar</button>
         </form>
     </div>
+
     <?php
-        include('espacamento.php')
+    include('espacamento.php');
     ?>
     <?php
-    include("rodape.php");
+    include('rodape.php');
     ?>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
