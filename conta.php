@@ -46,19 +46,19 @@ $logins = $retorno_consulta->fetch_assoc();
         <li class="col-lg-3 col-sm-4 col-xs-3">
             <a href="meu_cadastro.php" class="boxItensCentral">
                 <div class="borda_imagem">
-                    <img id="cadastro_imagem" src="Imagens/cadastro.pnh.png" alt="Meu cadastro">
+                    <img class="img-fluid" id="cadastro_imagem" src="Imagens/cadastro.pnh.png" alt="Meu cadastro">
                 </div>
             </a>
             <p class="texto_cadastro">Meu Cadastro</p>
             <a href="meus_pedidos.php" class="boxItensCentral">
                 <div class="borda_imagem1">
-                    <img id="pedidos_imagem" src="Imagens/meuspedidos.png" alt="">
+                    <img class="img-fluid" id="pedidos_imagem" src="Imagens/meuspedidos.png" alt="">
                 </div>
             </a>
             <p class="texto_pedidos">Pedidos</p>
             <a href="deletar.php?codigo_cadastro=<?php echo $logins['id_login']; ?>" class="boxItensCentral">
                 <div class="borda_imagem2">
-                    <img id="deletar_imagem" src="Imagens/deletar_conta.png" alt="">
+                    <img class="img-fluid" id="deletar_imagem" src="Imagens/deletar_conta.png" alt="">
                 </div>
             </a>
             <p class="texto_deletar">Deletar conta</p>
