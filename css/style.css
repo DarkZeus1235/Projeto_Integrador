@@ -492,7 +492,69 @@ a{
   font-size: 34px;
   margin-left: 1150px;
 }
+    /* Page Container Styles */
+    #contaaiiner {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 
+  /* Account Sections */
+  .account-section {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .account-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+
+  /* Profile Section Styles */
+  .profile-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+
+  .profile-info .info-item {
+      flex: 1;
+      min-width: 250px;
+  }
+
+  /* Orders Section Styles */
+  .order-list {
+      list-style: none;
+      padding: 0;
+  }
+
+  .order-item {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+  }
+
+  /* Delete Account Styles */
+  .delete-account {
+      text-align: center;
+      color: #f00;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+      .profile-info .info-item {
+          flex: 1;
+          min-width: 100%;
+      }
+  }
 /* IMAGEM DO LOGIN */
 #icon_login{
   margin-left: 23px;
@@ -881,5 +943,6 @@ button:hover {
   color: goldenrod; /* Cor do ícone de favorito (vermelho) */
   cursor: pointer;
 }
+
 /*FIM*/
 
