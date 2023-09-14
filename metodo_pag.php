@@ -1,6 +1,7 @@
 <?php
 include("conexao.php");
 
+include('protect.php');
 if (isset($_POST['bt_nome'])) {
     if (isset($_FILES['bt_arquivo'])) {
         $arquivo = $_FILES['bt_arquivo'];
@@ -71,7 +72,7 @@ if (isset($_POST['bt_nome'])) {
             <form method="post" action="opcao_esc.php">
                 <div class="payment-option">
                     <input type="radio" id="credit-card" name="metodo" value="cartao">
-                    <img src="Imagens/credit-card.png" alt=""  width="35px">
+                    <img src="Imagens/credit-card.png" alt="" width="35px">
                     <label for="credit-card">Cartão de Crédito</label>
 
                 </div>
@@ -92,7 +93,7 @@ if (isset($_POST['bt_nome'])) {
 
             </div>
         </div>
-        <button id="butão"  class="but" type="submit">Continuar</button>
+        <button id="butão" class="but" type="submit">Continuar</button>
         </form>
     </div>
 

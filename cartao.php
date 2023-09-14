@@ -15,7 +15,8 @@ if ($conn->connect_error) {
 
 
 // Verifique se os dados do formulário foram enviados via POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST["titular"])) {
+
     $titular = $_POST['titular'];
     $numero_cartao = $_POST['numero_cartao'];
     $data_validade = $_POST['data_validade'];
@@ -23,8 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cpf = $_POST['cpf'];
 
     // Inserir os dados na tabela
-    $sql = "INSERT INTO cartoes (titular, numero_cartao, data_validade, cvv)
-            VALUES ('$titular', '$numero_cartao', '$data_validade', '$cvv')";
+    $sql = "INSERT INTO cartoes (titular, numero_cartao, data_validade, cvv, cpf)
+            VALUES ('$titular', '$numero_cartao', '$data_validade', '$cvv', '$cpf')";
 
     if ($conn->query($sql) === TRUE) {
         $mensagem = "Cadastro realizado com sucesso!";
@@ -32,7 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensagem = "Erro ao cadastrar o cartão: " . $conn->error;
     }
 }
-
 $conn->close();
 ?>
 
@@ -58,7 +58,7 @@ $conn->close();
     <br>
     <div class="cad_cart">
         <h1>Adicionar Cartão de Crédito</h1>
-        <form action="" method="POST">
+        <form action="#" method="POST">
             <label for="nome">Nome no Cartão:</label>
             <input class="ldc" type="text" name="titular"  required maxlength="80"><br /><br />
 

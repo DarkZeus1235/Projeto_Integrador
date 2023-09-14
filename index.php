@@ -22,7 +22,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <link rel="stylesheet" href="css/menu_dieimes.css">
   <link rel="stylesheet" href="css/dieimes.css">
   
-  <link rel="icon" href="Imagens/vikingpinguço.png">
+  <link rel="icon" href="Imagens/icon.png">
   <title>Taverna de Valhalla</title>
 
 
