@@ -21,7 +21,6 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="css/menu_dieimes.css">
   <link rel="stylesheet" href="css/dieimes.css">
-  
   <link rel="icon" href="Imagens/icon.png">
   <title>Taverna de Valhalla</title>
 
@@ -32,6 +31,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <?php
   include('menu.php');
   ?>
+  <img id="banner" src="Imagens/Banner2.jpg" class="img-fluid">
   <div class="container my-5">
     <h1 class="text-center mb-5">Produtos em Destaque</h1>
 
