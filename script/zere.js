@@ -28,3 +28,11 @@ function formatarNDC() {
     cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Insere um traço antes dos últimos 2 dígitos
     input.value = cpf;
   }
+
+  function formatarTEL() {
+    var input = document.getElementById("telInput");
+    var tel = input.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+    tel = tel.replace(/(\d{4})(\d)/, "$1.$2"); // Insere um ponto após os primeiros 4 dígitos
+    tel = tel.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Insere um traço antes dos últimos 2 dígitos
+    input.value = tel;
+  }

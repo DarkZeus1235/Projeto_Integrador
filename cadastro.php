@@ -37,11 +37,11 @@ if (isset($_POST['bt_nome'])) {
                 <input type="text" name="bt_nome" placeholder="Nome Completo" required>
                 <input type="text" name="bt_username" placeholder="Nome de Usuário" required>
                 <input  id="cpfInput" type="text"  maxlength="14" name="bt_cpf" placeholder="CPF" oninput="formatarCPF()" required>
-                <input type="tel" name="bt_telefone" placeholder="Telefone" required>
+                <input id="telInput"type="tel" name="bt_telefone" maxlenght="14" placeholder="Telefone" oninput="formatarTEL()" required>
                 <input type="text" name="bt_endereco" placeholder="Endereço" required>
                 <input type="email" name="bt_email" placeholder="Email" required>
                 <input type="password" name="bt_senha" placeholder="Senha" required>
-                <input type="submit" name="cadastrar" value="Cadastrar" onclick="return validateFields()">
+                <input type="submit" name="cadastrar" value="Cadastrar">
             </form>
               </script>
         </div>
