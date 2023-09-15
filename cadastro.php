@@ -17,15 +17,15 @@ if (isset($_POST['bt_nome'])) {
 $email = $_POST['bt_email']; // Suponha que você esteja recebendo o email via POST
 
 $sql = "SELECT * FROM cadastro WHERE email = '$email'";
-//$result = $conn->query($sql);
+$result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
     // Email já existe, exiba um alerta
     echo '<script>alert("O email já está em uso. Por favor, escolha outro.")</script>';
 } else {
     // Email é único, você pode inseri-lo no banco de dados aqui
-    $sql = "INSERT INTO usuarios (email) VALUES ('$email')";
-    if ($conn->query($sql) === TRUE) {
+    $sql = "INSERT INTO cadastro (email) VALUES ('$email')";
+    if ($mysqli->query($sql) === TRUE) {
         echo '<script>alert("Email cadastrado com sucesso!")</script>';
     } else {
         echo "Erro ao cadastrar o email: " . $conn->error;
