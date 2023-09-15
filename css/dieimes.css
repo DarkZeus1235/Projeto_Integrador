@@ -37,4 +37,5 @@ body {
 /* ####################### FIM - Estilo rodapé * ################################################# */
 #banner{
   width: 100%;
+  max-width: 100%; /* Ajuste a largura máxima conforme necessário */
 }

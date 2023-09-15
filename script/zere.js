@@ -28,3 +28,11 @@ function formatarNDC() {
     cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Insere um traço antes dos últimos 2 dígitos
     input.value = cpf;
   }
+
+ function formatarTelefone() {
+    var input = document.getElementById("telefoneInput");
+    var telefone = input.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+    telefone = telefone.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"); // Formata o número com DDD entre parênteses e hífen
+    input.value = telefone;
+}
+
