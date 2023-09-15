@@ -12,6 +12,25 @@ if (isset($_POST['bt_nome'])) {
   /*----------------------------------*/
   $mysqli->query("INSERT INTO cadastro (email, senha, nome, username, cpf, endereco ) values('$email', '$senha', '$nome','$username' ,'$cpf', '$endereco')") or
   die ($mysqlierrno);
+
+  // Verifique se o email já existe
+$email = $_POST['email']; // Suponha que você esteja recebendo o email via POST
+
+$sql = "SELECT * FROM usuarios WHERE email = '$email'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Email já existe, exiba um alerta
+    echo '<script>alert("O email já está em uso. Por favor, escolha outro.")</script>';
+} else {
+    // Email é único, você pode inseri-lo no banco de dados aqui
+    $sql = "INSERT INTO usuarios (email) VALUES ('$email')";
+    if ($conn->query($sql) === TRUE) {
+        echo '<script>alert("Email cadastrado com sucesso!")</script>';
+    } else {
+        echo "Erro ao cadastrar o email: " . $conn->error;
+    }
+}
 }
 ?>
 <!DOCTYPE html>
@@ -37,7 +56,7 @@ if (isset($_POST['bt_nome'])) {
                 <input type="text" name="bt_nome" placeholder="Nome Completo" required>
                 <input type="text" name="bt_username" placeholder="Nome de Usuário" required>
                 <input  id="cpfInput" type="text"  maxlength="14" name="bt_cpf" placeholder="CPF" oninput="formatarCPF()" required>
-                <input id="telefoneInput" type="tel" name="bt_telefone" maxlength="15" placeholder="Telefone" oninput="formatarTelefone()" required>
+                <input id="telefoneInput" type="tel" name="bt_telefone" maxlength="15" placeholder="Telefone" oninput="formatarTelefone()"  required>
                 <input type="text" name="bt_endereco" placeholder="Endereço" required>
                 <input type="email" name="bt_email" placeholder="Email" required>
                 <input type="password" name="bt_senha" placeholder="Senha" required>
