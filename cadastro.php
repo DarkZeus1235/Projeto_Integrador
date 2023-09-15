@@ -19,7 +19,7 @@ $email = $_POST['bt_email']; // Suponha que você esteja recebendo o email via P
 $sql = "SELECT * FROM cadastro WHERE email = '$email'";
 $result = $mysqli->query($sql);
 
-if ($result->num_rows > 0) {
+if ($result->num_rows > 1) {
     // Email já existe, exiba um alerta
     echo '<script>alert("O email já está em uso. Por favor, escolha outro.")</script>';
 } else {
