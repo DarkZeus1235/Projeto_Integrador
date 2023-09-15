@@ -14,10 +14,10 @@ if (isset($_POST['bt_nome'])) {
   die ($mysqlierrno);
 
   // Verifique se o email já existe
-$email = $_POST['email']; // Suponha que você esteja recebendo o email via POST
+$email = $_POST['bt_email']; // Suponha que você esteja recebendo o email via POST
 
-$sql = "SELECT * FROM usuarios WHERE email = '$email'";
-$result = $conn->query($sql);
+$sql = "SELECT * FROM cadastro WHERE email = '$email'";
+//$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Email já existe, exiba um alerta
