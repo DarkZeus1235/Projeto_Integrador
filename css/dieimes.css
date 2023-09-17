@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;   
+    font-family: Arial, sans-serif;
+    background-color: #FFFFF0;
+}
+
+
+/* Estilos customizados */
+.card:hover {
+    transform: scale(1.03);
+    transition: transform .2s;
+  }
+
+  .custom-btn {
+    background-color: #6B4B21;
+    color: white;
+  }
+
+  .custom-btn:hover {
+    background-color: #6B4B21;
+  }
+
+/* ####################### Estilo menu * ################################################# */
+
+
+
+
+
+
+/* ####################### FIM - Estilo menu * ################################################# */
+
+
+
+
+
+
+
+ 
+/* ####################### Estilo rodapé * ################################################# */
+
+.footer {
+    background-color: #6B4B21;  /* Cor de fundo do rodapé */
+    padding: 20px 0;            /* Espaçamento vertical */
+    color: white;               /* Cor do texto */
+}
+
+.footer p {
+    margin: 0;                  /* Remove margens padrão do <p> */
+    font-size: 0.9rem;          /* Tamanho ligeiramente menor para o texto do rodapé */
+}
+
+/* ####################### FIM - Estilo rodapé * ################################################# */
