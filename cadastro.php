@@ -51,8 +51,9 @@ if (isset($_POST['bt_nome'])) {
     ?>
     <div id="container" class="container">
         <div class="signup-container">
-            <h2>Cadastro de Clientes</h2>
+          <img src="Imagens/logo_cadastro.png" class="img-fluid" id="img-cadastro" alt="">
             <form id="cadatro"action="#" method="post">
+            <h2 id="cadastro-text">Cadastro de Clientes</h2>
                 <input type="text" name="bt_nome" placeholder="Nome Completo" required>
                 <input type="text" name="bt_username" placeholder="Nome de Usuário" required>
                 <input type="text" name="bt_cpf" placeholder="CPF" required>
