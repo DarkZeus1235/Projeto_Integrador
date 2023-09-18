@@ -6,14 +6,15 @@ if (isset($_POST['bt_nome'])) {
   $email = $_POST['bt_email'];
   $senha = password_hash ($_POST['bt_senha'], PASSWORD_DEFAULT);
   $nome = $_POST['bt_nome'];
+  $telefone = $_POST['bt_telefone'];
   $username = $_POST['bt_username'];
   $cpf = $_POST['bt_cpf'];
   $endereco = $_POST['bt_endereco'];
   /*----------------------------------*/
-  $mysqli->query("INSERT INTO cadastro (email, senha, nome, username, cpf, endereco ) values('$email', '$senha', '$nome','$username' ,'$cpf', '$endereco')") or
+  $mysqli->query("INSERT INTO cadastro (email, senha, nome, telefone, username, cpf, endereco ) values('$email', '$senha', '$nome', '$telefone', '$username' ,'$cpf', '$endereco')") or
     die($mysqlierrno);
 
-    var_dump($mysqli);
+    //var_dump($mysqli);
 }
 ?>
 <!DOCTYPE html>
