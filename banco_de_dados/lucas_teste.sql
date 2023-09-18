@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 29-Jun-2023 às 14:33
+-- Tempo de geração: 18-Set-2023 às 10:42
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -35,25 +35,32 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `email` varchar(100) NOT NULL,
   `senha` varchar(100) NOT NULL,
   `nome` varchar(100) NOT NULL,
+  `telefone` varchar(16) NOT NULL,
   `username` varchar(100) NOT NULL,
   `cpf` varchar(100) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   PRIMARY KEY (`id_login`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro`
 --
 
-INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `username`, `cpf`, `endereco`) VALUES
-(1, 'joaquim@sagionetti', 'joaquim', 'Joaquim Pedro Klima Sagionetti', '', '11213131', 'Avenida Brasil'),
-(2, 'dieimes@teste.com', 'dieimes', 'Dieimes Nunes', '', '11123131', 'Rua Rio'),
-(3, 'admin@hotmail.com', 'admin123', 'administrador', '', 'ADM', 'ADM'),
-(4, 'dieimes@dieimes', 'dieimes123', 'Dieimes Nunes', 'KungFu', '11213131', 'Avenida Brasil'),
-(15, 'ddada@dada', 'dad', 'adada', 'dad', 'adad', 'adada'),
-(14, 'ddada@dada', 'dad', 'adada', 'dad', 'adad', 'adada'),
-(13, 'dieimes@dieimes', 'dadad', 'adad', 'adadada', 'dad', 'adad'),
-(12, 'dieimes@dieimes', 'dadad', 'adad', 'adadada', 'dad', 'adad');
+INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `telefone`, `username`, `cpf`, `endereco`) VALUES
+(2, 'dieimes@hotmail.com', 'dieimes24', 'Dieimes Nunes', '', '', '11123131', 'Rua Rio'),
+(3, 'admin@hotmail.com', 'admin123', 'administrador', '', 'ADM', 'ADM', 'ADM'),
+(4, 'dieimes@dieimes', 'dieimes123', 'Dieimes Nunes', '', 'KungFu', '11213131', 'Avenida Brasil'),
+(15, 'ddada@dada', 'dad', 'adada', '', 'dad', 'adad', 'adada'),
+(14, 'ddada@dada', 'dad', 'adada', '', 'dad', 'adad', 'adada'),
+(13, 'dieimes@dieimes', 'dadad', 'adad', '', 'adadada', 'dad', 'adad'),
+(12, 'dieimes@dieimes', 'dadad', 'adad', '', 'adadada', 'dad', 'adad'),
+(16, 'zere@gmail.com', 'zere', 'zere', '', 'zere', 'adsadada', 'zere'),
+(17, 'zere@gmail.com', 'zere', 'zere', '', 'zere', 'adsadada', 'zere'),
+(18, 'zere@gmail.com', 'zere', 'zere', '', 'zere', 'adsadada', 'zere'),
+(19, 'zere@gmail.com', 'zere', 'zere', '', 'zere', 'adsadada', 'zere'),
+(20, 'zere@gmail.com', 'zere', 'zere', '', 'zere', 'adsadada', 'zere'),
+(21, 'zere@gmail.com', 'zeeara', 'zere', '', 'zere', 'zere', 'zere'),
+(22, 'zere@gmail.com', 'zeeara', 'zere', '', 'zere', 'zere', 'zere');
 
 -- --------------------------------------------------------
 
@@ -338,6 +345,32 @@ INSERT INTO `cadastro_vodka` (`id_vodka`, `nome_bebida`, `quantidade`, `descrica
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `cartoes`
+--
+
+DROP TABLE IF EXISTS `cartoes`;
+CREATE TABLE IF NOT EXISTS `cartoes` (
+  `id_cartao` int(200) NOT NULL AUTO_INCREMENT,
+  `titular` varchar(50) NOT NULL,
+  `numero_cartao` varchar(100) NOT NULL,
+  `data_validade` varchar(7) NOT NULL,
+  `cvv` varchar(3) NOT NULL,
+  `cpf` varchar(15) NOT NULL,
+  PRIMARY KEY (`id_cartao`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `cartoes`
+--
+
+INSERT INTO `cartoes` (`id_cartao`, `titular`, `numero_cartao`, `data_validade`, `cvv`, `cpf`) VALUES
+(1, 'matheus vital', '4315  435', '24/46', '634', '423.423.434-23'),
+(2, 'matheus vital', '4315  435', '24/46', '634', '423.423.434-23'),
+(3, 'adadadad', '1144  5678  5687  5434', '03/27', '333', '323.549.254-69');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `funcioarios`
 --
 
@@ -360,27 +393,44 @@ INSERT INTO `funcioarios` (`id_func`, `email`, `senha`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `teste`
+-- Estrutura da tabela `mensagem_formulario_contato`
 --
 
-DROP TABLE IF EXISTS `teste`;
-CREATE TABLE IF NOT EXISTS `teste` (
-  `id` int(100) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(100) NOT NULL,
-  `data_de_nascimento` varchar(100) NOT NULL,
-  `cpf` varchar(100) NOT NULL,
-  `endereco` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `senha` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `mensagem_formulario_contato`;
+CREATE TABLE IF NOT EXISTS `mensagem_formulario_contato` (
+  `id_mensagem` int(200) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `mensagem` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_mensagem`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `teste`
+-- Extraindo dados da tabela `mensagem_formulario_contato`
 --
 
-INSERT INTO `teste` (`id`, `nome`, `data_de_nascimento`, `cpf`, `endereco`, `email`, `senha`) VALUES
-(1, 'Usuario 1', '', '', 'Rua Rio', 'teste@gmail.com', 'dieimes2');
+INSERT INTO `mensagem_formulario_contato` (`id_mensagem`, `nome`, `email`, `mensagem`) VALUES
+(1, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?'),
+(2, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?'),
+(3, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?'),
+(4, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?'),
+(5, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?'),
+(6, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `pedidos`
+--
+
+DROP TABLE IF EXISTS `pedidos`;
+CREATE TABLE IF NOT EXISTS `pedidos` (
+  `codigo_pedido` int(200) NOT NULL AUTO_INCREMENT,
+  `nome_pedido` varchar(200) NOT NULL,
+  `data_pedido` varchar(200) NOT NULL,
+  `valor_pedido` varchar(200) NOT NULL,
+  PRIMARY KEY (`codigo_pedido`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
