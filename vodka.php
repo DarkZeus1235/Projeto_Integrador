@@ -56,9 +56,6 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     </div>
 
   </div>
-  <?php
-    include('espacamento.php');
-    ?>
     <?php
     include('rodape.php');
     ?>
