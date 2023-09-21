@@ -505,9 +505,13 @@ a{
   }
 /* IMAGEM DO LOGIN */
 #icon_login{
-  margin-left: 23px;
+  margin-left: auto;
+  padding: 15px;
 }
 
+#login-text{
+    margin-left: 150px;
+}
 /* CSS DO MEU CADASTRO*/
 #conta{
   width: 40px;
