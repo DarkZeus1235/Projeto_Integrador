@@ -17,12 +17,11 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css"> <!-- Arquivo de estilo personalizado -->
-    <link rel="stylesheet" href="css/dieimes.css">
-    <link rel="stylesheet" href="css/menu_dieimes.css">
-
-  <link rel="icon" href="Imagens/vikingpinguço.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/menu_dieimes.css">
+  <link rel="stylesheet" href="css/dieimes.css">
+  <link rel="icon" href="Imagens/icon.png">
   <title>Taverna de Valhalla</title>
 
 
@@ -32,6 +31,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <?php
   include('menu.php');
   ?>
+  <img src="Imagens/Banner_testes" class="img-fluid" id="banner">
   <div class="container my-5">
     <h1 class="text-center mb-5">Produtos em Destaque</h1>
 

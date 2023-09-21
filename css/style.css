@@ -104,17 +104,18 @@ body {
 
 .signup-container {
   background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px #34495e;
   padding: 20px;
-  width: 300px;
+  width: 50%;
   margin-top: 0px;
   margin-left: 0px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .signup-container {
-  text-align: center;
-    margin-bottom: 20px;
+  text-align: left';
 }
 
 .signup-container input[type="text"],
@@ -124,31 +125,35 @@ body {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 2.5px solid #34495e;
   border-radius: 3px;
   box-sizing: border-box;
+  font-size: 20px;
 }
 
 .signup-container input[type="submit"] {
   width: 100%;
     background-color: #6B4B21;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    border-radius: 5px;
+    cursor: pointer;  
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .signup-container input[type="submit"]:hover {
   background-color: #6B4B21;
 }
-
-/*CSS Navbar*/
-/* CSS personalizado para o navbar */
-.custom-navbar {
-  background-color: burlywood; 
-  color: #fff; /* Texto branco */
+#img-cadastro{
+  width: 50%;
+  height: 50%;
+  justify-content: space-around;
+  margin-left: -30px;
+  margin-top: 100px;
 }
+/*CSS Navbar*/
 
 
 /* CSS Cards */
@@ -252,11 +257,6 @@ a{
 
 /*IMAGEM DO VIKING DA NAVBAR*/
 
-#viking{
-  width: 600px;
-  height: 700px;
-  margin-top: 30px;
-}
 
 .logo-img {
   width: 78px; /* Defina o tamanho desejado para a largura */
@@ -438,76 +438,79 @@ a{
 .bem-vindo{
   text-align: center;
 }
-/* IMAGENS DA PÁGINA "MINHA CONTA" */
-#cadastro_imagem{
-  margin-top: 20px;
-  margin-left: 60px;
-  width: 150px;
-  height: 150px;
-}
-.borda_imagem{
-  border: 4px solid;
-  width: 270px;
-  height: 210px;
-  margin-top: 100px;
-}
+/* DESIGN DO  "MINHA CONTA" */
+    /* Page Container Styles */
+    #contaaiiner {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 
-.texto_cadastro{
-  margin-left: 38px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 34px;
-}
+  /* Account Sections */
+  .account-section {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
 
-#pedidos_imagem{
-  margin-left: 17px;
-  margin-top: -20px;
-  width: 230px;
-  height: 230px;
-}
+  .account-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
 
-.borda_imagem1{
-  border: 4px solid;
-  width: 270px;
-  height: 210px;
-  margin-top: -278px;  
-  margin-left: 500px;
-}
+  /* Profile Section Styles */
+  .profile-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
 
-.texto_pedidos{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 34px;
-  margin-left: 580px;
-}
-#central{
-  text-align: center;
-}
+  .profile-info .info-item {
+      flex: 1;
+      min-width: 250px;
+  }
 
-.borda_imagem2{
-  border: 4px solid;
-  width: 270px;
-  height: 210px;
-  margin-top: -278px;  
-  margin-left: 1080px;
-}
+  /* Orders Section Styles */
+  .order-list {
+      list-style: none;
+      padding: 0;
+  }
 
-#deletar_imagem{
-  margin-left: 30px;
-  margin-top: -10px;
-  width: 230px;
-  height: 230px;
-}
+  .order-item {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+  }
 
-.texto_deletar{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 34px;
-  margin-left: 1150px;
-}
+  /* Delete Account Styles */
+  .delete-account {
+      text-align: center;
+      color: #f00;
+  }
 
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+      .profile-info .info-item {
+          flex: 1;
+          min-width: 100%;
+      }
+  }
 /* IMAGEM DO LOGIN */
 #icon_login{
-  margin-left: 23px;
+  margin-left: auto;
+  padding: 15px;
 }
 
+#login-text{
+    margin-left: 150px;
+}
 /* CSS DO MEU CADASTRO*/
 #conta{
   width: 40px;
@@ -723,8 +726,7 @@ a{
   margin-bottom: 70px;
 }
 #h1-novid{
-  margin-left: 520px;
-  margin-top: 20px;
+  text-align: center;
   font-family: 'Times New Roman', Times, serif;
   font-size: 50px;
 }
@@ -736,36 +738,6 @@ a{
 }
 
 
-
-
-
-.nav-link{
-  position: relative;
-  font-size: 20px;
-  color: #6B4B21;
-  font-weight: 500;
-  text-decoration: none;
-  margin-left: 40px;
-}
-.nav-link::before{
-  content: '';
-  position: absolute;
-  top: 80%;
-  left: 0;
-  width: 0 ;
-  height: 2px;
-  background: #000;
-  transition: .3s;
-}
-.nav-link:hover::before{
-  width: 95%;
-}
-#nav-link:hover::before{
-  width: 90%;
-}
-#nav-link2:hover::before{
-  width: 72%;
-}
 /* Reset CSS */
 * {
   margin: 0;
@@ -812,4 +784,343 @@ a{
 .news-item p {
   font-size: 16px;
 }
+/*CSS DA PAGINA METODO_PAG*/
+
+.continer {
+  margin: auto;
+  margin-top: 100px;
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+
+
+}
+
+@media (max-width: 600px) {
+  .continer {
+
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 60px;
+
+  }
+}
+<<<<<<< HEAD
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+
+#containeer {
+=======
+
+
+.but {
+ 
+  margin: 0 auto;
+  padding: 5px;
+  width: 100%;
+
+  background-color: #6B4B21;
+  color: #fff;
+  /* Outros estilos do botão (opcional) */
+
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+
+
+  position: relative;
+    top: 10px;
+    left: 0px;
+}
+
+@media (max-width: 600px) {
+  .but {
+
+    padding: 5px;
+    width: 100%;
+
+    /* Ajuste a posição conforme necessário */
+    position: relative;
+    top: 35px;
+    left: 0px;
+
+
+
+    background-color: #6B4B21;
+    color: #fff;
+    /* Outros estilos do botão (opcional) */
+
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+/*
+as divs 
+*/
+.payment-option {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+  border: color;
+
+
+}
+
+.payment-option input[type="radio"] {
+  padding: 10px;
+  margin-right: 0px;
+
+}
+
+.payment-option label {
+  font-size: 20px;
+}
+
+.payment-option img {
+  max-width: 50px;
+  margin-left: 10px;
+}
+
+.divo {
+
+  padding: 20px;
+  margin-top: 3px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border: 1px solid rgb(0, 0, 0);
+
+  /* Borda sólida de 2px na cor azul */
+
+  width: 100%;
+  /* Largura em relação ao elemento pai */
+  max-width: 600px;
+  /* Largura máxima */
+  margin: 0 auto;
+  /* Centralizar horizontalmente */
+
+  background-color: #f2f2f2;
+
+  /* Inclui preenchimento e borda na largura total */
+}
+
+@media (max-width: 600px) {
+  .divo {
+    width: 100%;
+    /* Reduz a largura em telas menores */
+    font-size: 16px;
+    /* Ajusta o tamanho da fonte */
+    position: relative;
+    /* Posicionamento relativo */
+    top: 25px;
+    /* Move 20px para baixo */
+  }
+}
+
+.divo:hover {
+
+  background-color: rgb(226, 221, 221);
+}
+
+/*FIM*/
+/*CSS DA PAGINA CARTAO PHP*/
+.cad_cart {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.ldc[type="text"],
+.ldc[type="password"],
+select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+.but-cart {
+  width: 100%;
+  padding: 10px;
+  background-color: #6B4B21;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6B4B21;
+}
+
+/*FIM*/
+/* INÍCIO DO DESIGN DO ANÚNCIO DOS PRODUTOS */
+#coontainer {
+>>>>>>> main
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+<<<<<<< HEAD
+/* Estilos das notícias */
+.news {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news-item {
+  flex: 0 0 calc(33.33% - 20px); /* Isso cria um layout de 3 colunas */
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.news-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  font-size: 16px;
+}
+=======
+/* Estilos do produto */
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.product-image {
+  flex: 0 0 calc(50% - 20px);
+  max-width: 50%;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+.product-info {
+  flex: 0 0 calc(50% - 20px);
+  max-width: 50%;
+}
+
+.product h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.product-description {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-size: 28px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center; /* Alinhar verticalmente os botões e o ícone de favorito */
+}
+
+.add-to-cart,
+.buy-now {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.add-to-cart:hover,
+.buy-now:hover {
+  background-color: black;
+}
+
+.favorite {
+  font-size: 24px; /* Tamanho do ícone de favorito */
+  color: goldenrod; /* Cor do ícone de favorito (vermelho) */
+  cursor: pointer;
+}
+
+/* INÍCIO DO DESIGN DO AGRADECIMENTO */
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  main {
+      margin: 10px;
+      padding: 10px;
+  }
+}
+/* FIM DO DESIGN DO AGRADECIMENTO */
+/*FIM*/
+>>>>>>> main
 

@@ -15,7 +15,28 @@ if (isset($_POST['bt_nome'])) {
     die($mysqlierrno);
 
     //var_dump($mysqli);
+<<<<<<< HEAD
 }
+=======
+
+        // Verifique se o email já existe
+        $sql = "SELECT * FROM cadastro WHERE email = '$email'";
+        $result = $mysqli->query($sql);
+    
+        if ($result->num_rows > 0) {
+            // Email já existe, exiba um alerta
+            echo '<script>alert("O email já está em uso. Por favor, escolha outro.")</script>';
+        } else {
+            // Email é único, você pode inseri-lo no banco de dados aqui
+            $sql = "INSERT INTO cadastro (email, senha, nome, username, cpf, endereco) VALUES ('$email', '$senha', '$nome', '$username', '$cpf', '$endereco')";
+            if ($mysqli->query($sql) === TRUE) {
+                echo '<script>alert("Cadastro realizado com sucesso!")</script>';
+            } else {
+                echo "Erro ao cadastrar: " . $mysqli->error;
+            }
+        }
+    }
+>>>>>>> main
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,12 +55,13 @@ if (isset($_POST['bt_nome'])) {
     ?>
     <div id="container" class="container">
         <div class="signup-container">
-            <h2>Cadastro de Clientes</h2>
+          <img src="Imagens/logo_cadastro.png" class="img-fluid" id="img-cadastro" alt="">
             <form id="cadatro"action="#" method="post">
+            <h2 id="cadastro-text">Cadastro de Clientes</h2>
                 <input type="text" name="bt_nome" placeholder="Nome Completo" required>
                 <input type="text" name="bt_username" placeholder="Nome de Usuário" required>
-                <input type="text" name="bt_cpf" placeholder="CPF" required>
-                <input type="tel" name="bt_telefone" placeholder="Telefone" required>
+                <input type="text" id="cpfInput" name="bt_cpf" placeholder="CPF"  maxlength="14" oninput="formatarCPF()" required>
+                <input type="tel" id="telefoneInput" name="bt_telefone" placeholder="Telefone" maxlength="15" oninput="formatarTelefone()" required>
                 <input type="text" name="bt_endereco" placeholder="Endereço" required>
                 <input type="email" name="bt_email" placeholder="Email" required>
                 <input type="password" name="bt_senha" placeholder="Senha" required>
@@ -53,7 +75,10 @@ if (isset($_POST['bt_nome'])) {
   <?php
     include('rodape.php');
   ?>
+<<<<<<< HEAD
+=======
+  <script src="script/zere.js"></script>
+>>>>>>> main
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
 </html>

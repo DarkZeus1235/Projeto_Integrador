@@ -27,7 +27,7 @@ if (isset($_POST['nome'])) {
     <link rel="stylesheet" href="css/dieimes.css">
     <link rel="stylesheet" href="css/contato.css">
     <link rel="icon" href="Imagens/Icon.png">
-    <title>Sobre Nós</title>
+    <title>Contato</title>
 </head>
 
 <body>
