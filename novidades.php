@@ -22,7 +22,7 @@
     <?php
         include('menu.php');
     ?>
-<div class="containeer">
+<div class="container">
     <br>
     <h1 id="h1-novid">Novidades da Semana</h1>
 <section class="news">
