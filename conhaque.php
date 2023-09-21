@@ -16,8 +16,10 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/menu_dieimes.css">
+  <link rel="stylesheet" href="css/dieimes.css">
     <link rel="icon" href="Imagens/vikingpinguço.png">
   <title>Conhaque - Taverna de Valhalla</title>
 </head>
@@ -27,40 +29,32 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
         include('menu.php');
     ?>
     <br>
-    <div class="container">
-        <!-- Onde vai aparecer as pedidas após cadastradas no banco de dados -->
-        <div class="row">
-            <?php
+    <div class="container my-5">
+    <h1 class="text-center mb-5">Produtos em Destaque</h1>
 
-            while ($bebidas = $retorno_consulta->fetch_assoc()) {
-                //var_dump($bebidas);
-            ?>
+    <?php if (isset($_SESSION['nome'])) : ?>
+      <h2 class="text-center mb-4">Bem-Vindo à Taverna de Valhalla <?php echo $_SESSION['nome']; ?></h2>
+    <?php endif; ?>
 
-                <!-- Card -->
-                <div id="testec" class="card" style="width: 18rem;">
-                    <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <?php echo $bebidas['nome_bebida'] ?>
-                        </h5>
-                        <p class="card-text">
-                            <?php echo $bebidas['descricao'] ?>
-                        </p>
-                        <h5 class="card-text">
-                            <?php echo $bebidas['valor']; ?>
-                        </h5>
-                        <a id="textc" href="comprar_conhaque.php?id=<?php echo $bebidas['id_conhaque'] ?>" class="btn btn-success''">Comprar Agora</a>
-                    </div>
-                </div>
-                <!-- Fim do card -->
-
-            <?php
-            }
-
-
-            ?>
-        </div> <!-- Fim do row -->
+    <div class="row">
+      <?php while ($bebidas = $retorno_consulta->fetch_assoc()) : ?>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
+              <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
+              <h5 class="card-text"><?php echo $bebidas['valor']; ?></h5>
+              <div class="text-center mt-4">
+                <a href="comprar_conhaque.php?id=<?php echo $bebidas['id_conhaque'] ?>" class="btn custom-btn">Comprar Agora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endwhile; ?>
     </div>
+
+  </div>
     <?php
               include('rodape.php');
             ?>

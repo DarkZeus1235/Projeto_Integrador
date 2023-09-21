@@ -21,8 +21,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="css/menu_dieimes.css">
   <link rel="stylesheet" href="css/dieimes.css">
-  
-  <link rel="icon" href="Imagens/vikingpinguço.png">
+  <link rel="icon" href="Imagens/icon.png">
   <title>Taverna de Valhalla</title>
 
 
@@ -32,6 +31,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <?php
   include('menu.php');
   ?>
+  <img src="Imagens/Banner_testes" class="img-fluid" id="banner">
   <div class="container my-5">
     <h1 class="text-center mb-5">Produtos em Destaque</h1>
 
@@ -60,7 +60,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   </div>
   <?php include 'rodape.php'; ?>
 
-  
+
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -23,7 +23,7 @@ if (isset($_POST['bt_nome'])) {
 
 
 
-    $caminho = $pasta . $novo_nome_arquivo . "."  . $extensao;
+    $caminho = $pasta . $novo_nome_arquivo . "." . $extensao;
 
 
     /*
@@ -58,9 +58,9 @@ if (isset($_POST['bt_nome'])) {
 </head>
 
 <body>
-   <?php
+    <?php
     include('menu.php');
-   ?>
+    ?>
     <div class="container">
         <h1>Cadastro de Bebidas - Taverna de Valhalla</h1>
         <form action="" method="post" enctype="multipart/form-data">
