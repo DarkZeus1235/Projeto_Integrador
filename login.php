@@ -52,7 +52,6 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
   <link rel="stylesheet" href="css/dieimes.css">
   <link rel="icon" href="Imagens/icon.png">
 </head>
-
 <body>
   <?php
   include('menu.php');

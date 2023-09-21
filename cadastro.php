@@ -56,8 +56,8 @@ if (isset($_POST['bt_nome'])) {
             <h2 id="cadastro-text">Cadastro de Clientes</h2>
                 <input type="text" name="bt_nome" placeholder="Nome Completo" required>
                 <input type="text" name="bt_username" placeholder="Nome de Usuário" required>
-                <input type="text" name="bt_cpf" placeholder="CPF" required>
-                <input type="tel" name="bt_telefone" placeholder="Telefone" required>
+                <input type="text" id="cpfInput" name="bt_cpf" placeholder="CPF"  maxlength="14" oninput="formatarCPF()" required>
+                <input type="tel" id="telefoneInput" name="bt_telefone" placeholder="Telefone" maxlength="15" oninput="formatarTelefone()" required>
                 <input type="text" name="bt_endereco" placeholder="Endereço" required>
                 <input type="email" name="bt_email" placeholder="Email" required>
                 <input type="password" name="bt_senha" placeholder="Senha" required>
@@ -71,7 +71,7 @@ if (isset($_POST['bt_nome'])) {
   <?php
     include('rodape.php');
   ?>
+  <script src="script/zere.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
 </html>
