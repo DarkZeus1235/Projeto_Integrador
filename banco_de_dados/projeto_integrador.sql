@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
-<<<<<<<< HEAD:banco_de_dados/lucas_teste.sql
--- Tempo de geração: 18-Set-2023 às 10:42
-========
--- Tempo de geração: 21-Set-2023 às 11:30
->>>>>>>> main:banco_de_dados/projeto_integrador.sql
+-- Tempo de geração: 22-Set-2023 às 11:43
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -44,35 +40,37 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `cpf` varchar(100) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   PRIMARY KEY (`id_login`)
-<<<<<<<< HEAD:banco_de_dados/lucas_teste.sql
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
-========
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
->>>>>>>> main:banco_de_dados/projeto_integrador.sql
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro`
 --
 
 INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `telefone`, `username`, `cpf`, `endereco`) VALUES
-<<<<<<<< HEAD:banco_de_dados/lucas_teste.sql
-(2, 'dieimes@hotmail.com', 'dieimes24', 'Dieimes Nunes', '', '', '11123131', 'Rua Rio'),
-(3, 'admin@hotmail.com', 'admin123', 'administrador', '', 'ADM', 'ADM', 'ADM'),
-(4, 'dieimes@dieimes', 'dieimes123', 'Dieimes Nunes', '', 'KungFu', '11213131', 'Avenida Brasil'),
-(15, 'ddada@dada', 'dad', 'adada', '', 'dad', 'adad', 'adada'),
-(14, 'ddada@dada', 'dad', 'adada', '', 'dad', 'adad', 'adada'),
-(13, 'dieimes@dieimes', 'dadad', 'adad', '', 'adadada', 'dad', 'adad'),
-(12, 'dieimes@dieimes', 'dadad', 'adad', '', 'adadada', 'dad', 'adad'),
-(16, 'zere@gmail.com', 'zere', 'zere', '', 'zere', 'adsadada', 'zere'),
-(17, 'zere@gmail.com', 'zere', 'zere', '', 'zere', 'adsadada', 'zere'),
-(18, 'zere@gmail.com', 'zere', 'zere', '', 'zere', 'adsadada', 'zere'),
-(19, 'zere@gmail.com', 'zere', 'zere', '', 'zere', 'adsadada', 'zere'),
-(20, 'zere@gmail.com', 'zere', 'zere', '', 'zere', 'adsadada', 'zere'),
-(21, 'zere@gmail.com', 'zeeara', 'zere', '', 'zere', 'zere', 'zere'),
-(22, 'zere@gmail.com', 'zeeara', 'zere', '', 'zere', 'zere', 'zere');
-========
-(1, 'admin@hotmail.com', 'admin1234', 'Administrador', '(43) 99650-6831', 'ADM', '111111111111', 'Rua Rio Grande');
->>>>>>>> main:banco_de_dados/projeto_integrador.sql
+(1, 'zere@gmail.com', 'zere010', 'Matheus Henrique Vital', '(43) 99650-6831', 'Zere_br', '1111111111111111', 'Rua Rio Grande');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cadastro_adm`
+--
+
+DROP TABLE IF EXISTS `cadastro_adm`;
+CREATE TABLE IF NOT EXISTS `cadastro_adm` (
+  `id_login_adm` int(200) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(200) NOT NULL,
+  `funcao` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `senha` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_login_adm`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `cadastro_adm`
+--
+
+INSERT INTO `cadastro_adm` (`id_login_adm`, `nome`, `funcao`, `email`, `senha`) VALUES
+(1, 'Administrador João', 'Administrador Geral', 'admin@hotmail.com', 'admin1234');
 
 -- --------------------------------------------------------
 
@@ -358,35 +356,6 @@ INSERT INTO `cadastro_vodka` (`id_vodka`, `nome_bebida`, `quantidade`, `descrica
 
 --
 -- Estrutura da tabela `cartoes`
-<<<<<<<< HEAD:banco_de_dados/lucas_teste.sql
---
-
-DROP TABLE IF EXISTS `cartoes`;
-CREATE TABLE IF NOT EXISTS `cartoes` (
-  `id_cartao` int(200) NOT NULL AUTO_INCREMENT,
-  `titular` varchar(50) NOT NULL,
-  `numero_cartao` varchar(100) NOT NULL,
-  `data_validade` varchar(7) NOT NULL,
-  `cvv` varchar(3) NOT NULL,
-  `cpf` varchar(15) NOT NULL,
-  PRIMARY KEY (`id_cartao`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `cartoes`
---
-
-INSERT INTO `cartoes` (`id_cartao`, `titular`, `numero_cartao`, `data_validade`, `cvv`, `cpf`) VALUES
-(1, 'matheus vital', '4315  435', '24/46', '634', '423.423.434-23'),
-(2, 'matheus vital', '4315  435', '24/46', '634', '423.423.434-23'),
-(3, 'adadadad', '1144  5678  5687  5434', '03/27', '333', '323.549.254-69');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `funcioarios`
-========
->>>>>>>> main:banco_de_dados/projeto_integrador.sql
 --
 
 DROP TABLE IF EXISTS `cartoes`;
@@ -413,28 +382,6 @@ CREATE TABLE IF NOT EXISTS `mensagem_formulario_contato` (
   `email` varchar(200) NOT NULL,
   `mensagem` varchar(200) NOT NULL,
   PRIMARY KEY (`id_mensagem`)
-<<<<<<<< HEAD:banco_de_dados/lucas_teste.sql
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `mensagem_formulario_contato`
---
-
-INSERT INTO `mensagem_formulario_contato` (`id_mensagem`, `nome`, `email`, `mensagem`) VALUES
-(1, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?'),
-(2, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?'),
-(3, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?'),
-(4, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?'),
-(5, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?'),
-(6, 'JoÃ£o Rafael', ' jraffis@gmail.com', 'Preciso comprar um produto e nÃ£o estou conseguindo, pode me ajudar?');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `pedidos`
---
-
-========
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -443,7 +390,6 @@ INSERT INTO `mensagem_formulario_contato` (`id_mensagem`, `nome`, `email`, `mens
 -- Estrutura da tabela `pedidos`
 --
 
->>>>>>>> main:banco_de_dados/projeto_integrador.sql
 DROP TABLE IF EXISTS `pedidos`;
 CREATE TABLE IF NOT EXISTS `pedidos` (
   `codigo_pedido` int(200) NOT NULL AUTO_INCREMENT,
