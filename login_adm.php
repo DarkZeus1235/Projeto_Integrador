@@ -30,11 +30,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
       $_SESSION['email'] = $adm['email'];
       $_SESSION['senha'] = $adm['senha'];
 
-
-      header("Location: index.php");
-    } else {
-      echo "<script>alert('login ou senha incorreto!!');</script>";
-    }
+  }
   }
 }
 ?>
@@ -57,7 +53,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     <div class="signup-container">
       <img id="icon_login" src="Imagens/icon.png" width="220px" height="250px" alt="">
       <form id="cadatro" action="login.php" method="post">
-      <h2 id="login-text">Login</h2>
+      <h2 id="login_adm-text">Login de Administrador</h2>
         <input type="email" name="email" placeholder="Email de Administrador" required>
         <input type="password" name="senha" placeholder="Senha de Administrador" required>
         <input type="submit" value="Entrar">
