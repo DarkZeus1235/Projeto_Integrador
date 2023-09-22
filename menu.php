@@ -79,9 +79,13 @@
                                 <li class="nav-item">
                                     <a id="nav-link" class="nav-link" href="cadastro.php">Cadastrar</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a id="nav-link2" class="nav-link" href="login_adm.php">Login de Administrador</a>
+                                </li>
                                 <?php
                             } else {
                                 ?>
+
                                 <li class="nav-item">
                                     <a class="nav-link" id="logout" href="logout.php">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -93,6 +97,16 @@
                                         </svg>
                                         Sair</a>
                                 </li>
+                                <?php
+                                if(isset($_SESSION['id_login_adm'])){
+
+                            ?>
+                                <li class="nav-item">
+                                    <a id="nav-link" class="nav-link" href="cadastro_adm.php">Cadastrar Administrador</a>
+                                </li>
+                                <?php
+                                }
+                                ?>
                                 <li class="nav-item">
                                     <a class="nav-link" href="conta.php">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

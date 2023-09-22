@@ -14,29 +14,7 @@ if (isset($_POST['bt_nome'])) {
   $mysqli->query("INSERT INTO cadastro (email, senha, nome, telefone, username, cpf, endereco ) values('$email', '$senha', '$nome', '$telefone', '$username' ,'$cpf', '$endereco')") or
     die($mysqlierrno);
 
-    //var_dump($mysqli);
-<<<<<<< HEAD
-}
-=======
-
-        // Verifique se o email já existe
-        $sql = "SELECT * FROM cadastro WHERE email = '$email'";
-        $result = $mysqli->query($sql);
-    
-        if ($result->num_rows > 0) {
-            // Email já existe, exiba um alerta
-            echo '<script>alert("O email já está em uso. Por favor, escolha outro.")</script>';
-        } else {
-            // Email é único, você pode inseri-lo no banco de dados aqui
-            $sql = "INSERT INTO cadastro (email, senha, nome, username, cpf, endereco) VALUES ('$email', '$senha', '$nome', '$username', '$cpf', '$endereco')";
-            if ($mysqli->query($sql) === TRUE) {
-                echo '<script>alert("Cadastro realizado com sucesso!")</script>';
-            } else {
-                echo "Erro ao cadastrar: " . $mysqli->error;
-            }
-        }
-    }
->>>>>>> main
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -75,10 +53,7 @@ if (isset($_POST['bt_nome'])) {
   <?php
     include('rodape.php');
   ?>
-<<<<<<< HEAD
-=======
   <script src="script/zere.js"></script>
->>>>>>> main
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </html>

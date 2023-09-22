@@ -511,6 +511,12 @@ a{
 #login-text{
     margin-left: 150px;
 }
+/* IMAGEM DO LOGIN_ADM */
+#img-cadastro_adm{
+  margin-top: 10px;
+  width: 380px;
+  height: 450px;
+}
 /* CSS DO MEU CADASTRO*/
 #conta{
   width: 40px;
@@ -518,7 +524,7 @@ a{
 }
 #menuzinho{
   margin-left: 100px;
-  width: 240px;
+  width: 70%;
   margin-top: -400px;
 }
 #pedidos{
@@ -813,18 +819,6 @@ a{
 
   }
 }
-<<<<<<< HEAD
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Estilos gerais */
-
-#containeer {
-=======
 
 
 .but {
@@ -993,45 +987,11 @@ button:hover {
 /*FIM*/
 /* INÍCIO DO DESIGN DO ANÚNCIO DOS PRODUTOS */
 #coontainer {
->>>>>>> main
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-<<<<<<< HEAD
-/* Estilos das notícias */
-.news {
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.news-item {
-  flex: 0 0 calc(33.33% - 20px); /* Isso cria um layout de 3 colunas */
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.date {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.news-item h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.news-item p {
-  font-size: 16px;
-}
-=======
 /* Estilos do produto */
 .product {
   display: flex;
@@ -1122,5 +1082,4 @@ main {
 }
 /* FIM DO DESIGN DO AGRADECIMENTO */
 /*FIM*/
->>>>>>> main
 

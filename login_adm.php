@@ -11,27 +11,24 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     $email = $mysqli->real_escape_string($_POST['email']);
     $senha = $mysqli->real_escape_string($_POST['senha']);
 
-    $sql_code = "SELECT * FROM cadastro WHERE email = '$email' AND senha = '$senha'";
+    $sql_code = "SELECT * FROM cadastro_adm WHERE email = '$email' AND senha = '$senha'";
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
 
     $quantidade = $sql_query->num_rows;
 
     if ($quantidade == 1) {
 
-      $usuario = $sql_query->fetch_assoc();
+      $adm = $sql_query->fetch_assoc();
 
       if (!isset($_SESSION)) {
         session_start();
       }
 
-      $_SESSION['id_login'] = $usuario['id_login'];
-      $_SESSION['nome'] = $usuario['nome'];
-      $_SESSION['username'] = $usuario['username'];
-      $_SESSION['email'] = $usuario['email'];
-      $_SESSION['senha'] = $usuario['senha'];
-      $_SESSION['endereco'] = $usuario['endereco'];
-      $_SESSION['telefone'] = $usuario['telefone'];
-      $_SESSION['cpf'] = $usuario['cpf'];
+      $_SESSION['id_login_adm'] = $adm['id_login_adm'];
+      $_SESSION['nome'] = $adm['nome'];
+      $_SESSION['funcao'] = $adm['funcao'];
+      $_SESSION['email'] = $adm['email'];
+      $_SESSION['senha'] = $adm['senha'];
 
 
       header("Location: index.php");
@@ -61,8 +58,8 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
       <img id="icon_login" src="Imagens/icon.png" width="220px" height="250px" alt="">
       <form id="cadatro" action="login.php" method="post">
       <h2 id="login-text">Login</h2>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="senha" placeholder="Senha" required>
+        <input type="email" name="email" placeholder="Email de Administrador" required>
+        <input type="password" name="senha" placeholder="Senha de Administrador" required>
         <input type="submit" value="Entrar">
       </form>
     </div>
