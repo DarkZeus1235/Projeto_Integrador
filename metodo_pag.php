@@ -73,7 +73,7 @@ if (isset($_POST['bt_nome'])) {
                 <div class="payment-option">
                     <input type="radio" id="credit-card" name="metodo" value="cartao">
                     <img src="Imagens/credit-card.png" alt="" width="35px">
-                    <label for="credit-card">Cartão de Crédito</label>
+                    <label for="credit-card"> Cartão de Crédito</label>
 
                 </div>
         </div>
@@ -81,7 +81,7 @@ if (isset($_POST['bt_nome'])) {
             <div class="payment-option">
                 <input type="radio" id="pix" name="metodo" value="pix">
                 <img src="imagens/logo-pix-png-icone-520x520.png" alt="" width="25px">
-                <label for="Pix">Pix</label>
+                <label for="Pix"> Pix</label>
 
             </div>
         </div>
@@ -89,7 +89,7 @@ if (isset($_POST['bt_nome'])) {
             <div class="payment-option">
                 <input type="radio" id="bolet" name="metodo" value="boleto">
                 <img src="imagens/boleto.png" alt="">
-                <label for="bank-transfer">Boleto</label>
+                <label for="bank-transfer"> Boleto</label>
 
             </div>
         </div>
