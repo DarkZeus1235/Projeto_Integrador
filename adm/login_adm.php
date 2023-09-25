@@ -11,26 +11,33 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     $email = $mysqli->real_escape_string($_POST['email']);
     $senha = $mysqli->real_escape_string($_POST['senha']);
 
-    $sql_code = "SELECT * FROM cadastro_adm WHERE email = '$email' AND senha = '$senha'";
+    $sql_code = "SELECT * FROM cadastro_adm WHERE email = '$email'";
+
+    var_dump($senha);
+    var_dump($sql_code);
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
 
-    $quantidade = $sql_query->num_rows;
+    var_dump($sql_query);
+    $adm = $sql_query->fetch_assoc();
+    var_dump($adm);
+    if (password_verify($senha, $adm['senha'])) { /* Vou comparar a senha do usuário com a senha do banco de dados */
+        /* Se a senha for verdadeira faça: */
 
-    if ($quantidade == 1) {
+        if (!isset($_SESSION)) {
+          session_start();
+        }
 
-      $adm = $sql_query->fetch_assoc();
+        $_SESSION['id_login_adm'] = $adm['id_login_adm'];
+        $_SESSION['nome'] = $adm['nome'];
+        $_SESSION['funcao'] = $adm['funcao'];
+        $_SESSION['email'] = $adm['email'];
+        $_SESSION['senha'] = $adm['senha'];
 
-      if (!isset($_SESSION)) {
-        session_start();
-      }
-
-      $_SESSION['id_login_adm'] = $adm['id_login_adm'];
-      $_SESSION['nome'] = $adm['nome'];
-      $_SESSION['funcao'] = $adm['funcao'];
-      $_SESSION['email'] = $adm['email'];
-      $_SESSION['senha'] = $adm['senha'];
-
-  }
+        header("Location: ../index.php"); /* pag do adm */
+    }else{
+      echo "<script>alert('login ou senha incorreto!!');</script>";
+    }
+   
   }
 }
 ?>
