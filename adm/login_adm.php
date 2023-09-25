@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('../conexao.php');
 
 if (isset($_POST['email']) || isset($_POST['senha'])) {
 
@@ -40,19 +40,19 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 <head>
   <title>Login</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="css/menu_dieimes.css">
-  <link rel="stylesheet" href="css/dieimes.css">
-  <link rel="icon" href="Imagens/icon.png">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" href="../css/menu_dieimes.css">
+  <link rel="stylesheet" href="../css/dieimes.css">
+  <link rel="icon" href="../Imagens/icon.png">
 </head>
 <body>
   <?php
-  include('menu.php');
+  include('../menu.php');
   ?>
   <div id="container" class="container">
     <div class="signup-container">
-      <img id="icon_login" src="Imagens/icon.png" width="220px" height="250px" alt="">
-      <form id="cadatro" action="login.php" method="post">
+      <img id="icon_login" src="../Imagens/icon.png" width="220px" height="250px" alt="">
+      <form id="cadatro" action="login_adm.php" method="post">
       <h2 id="login_adm-text">Login de Administrador</h2>
         <input type="email" name="email" placeholder="Email de Administrador" required>
         <input type="password" name="senha" placeholder="Senha de Administrador" required>
@@ -61,7 +61,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     </div>
   </div>
   <?php
-        include('rodape.php')
+        include('../rodape.php')
       ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

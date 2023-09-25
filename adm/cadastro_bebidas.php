@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("../conexao.php");
 
 if (isset($_POST['bt_nome'])) {
     if (isset($_FILES['bt_arquivo'])) {
@@ -12,7 +12,7 @@ if (isset($_POST['bt_nome'])) {
         }
     }
 
-    var_dump($arquivo);
+   // var_dump($arquivo);
 
     $nome = $_POST['bt_nome'];
 
@@ -59,7 +59,7 @@ if (isset($_POST['bt_nome'])) {
 
 <body>
     <?php
-    include('menu.php');
+    include('../menu.php');
     ?>
     <div class="container">
         <h1>Cadastro de Bebidas - Taverna de Valhalla</h1>
