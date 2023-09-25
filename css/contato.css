@@ -5,6 +5,10 @@
     margin: 0 auto;
     padding: 20px;
   }
+<<<<<<< HEAD
+  
+=======
+>>>>>>> main
   .text1{
     text-align: center;
   }
@@ -75,7 +79,11 @@
   }
   
   .contact-form button:hover {
+<<<<<<< HEAD
+    background-color: #6B4B21;
+=======
     background-color: #6B4B21 ;
+>>>>>>> main
   }
   /* Regras de mídia para dispositivos móveis */
   @media screen and (max-width: 600px) {

@@ -63,7 +63,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
       <h2 id="login-text">Login</h2>
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="senha" placeholder="Senha" required>
-        <input type="submit" value="Entrar" onclick="return validateFields()">
+        <input type="submit" value="Entrar">
       </form>
     </div>
   </div>

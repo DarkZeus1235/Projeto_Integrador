@@ -2,10 +2,10 @@
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <img src="Imagens/viking.png.png" alt="Logo Taverna de Valhalla" class="logo-img">
+                <img src="../Imagens/viking.png.png" alt="Logo Taverna de Valhalla" class="logo-img">
             </a>
             <span class="logo-text">
-                <a href="index.php">Taverna de Valhalla</a>
+                <a href="../index.php">Taverna de Valhalla</a>
             </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,26 +24,26 @@
                             Bebidas</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
-                                <a id="nav-link2" class="nav-link" href="champ.php">Champanhe</a>
+                                <a id="nav-link2" class="nav-link" href="../champ.php">Champanhe</a>
                             </li>
                             <li class="nav-item">
-                                <a id="nav-link" class="nav-link" href="vodka.php">Vodka</a>
+                                <a id="nav-link" class="nav-link" href="../vodka.php">Vodka</a>
                             </li>
                             <li class="nav-item">
-                                <a id="nav-link" class="nav-link" href="whisky.php">Uísque</a>
+                                <a id="nav-link" class="nav-link" href="../whisky.php">Uísque</a>
                             </li>
                             <li class="nav-item">
-                                <a id="nav-link" class="nav-link" href="rum.php">Rum</a>
+                                <a id="nav-link" class="nav-link" href="../rum.php">Rum</a>
                             </li>
                             <li class="nav-item">
-                                <a id="nav-link" class="nav-link" href="vinhos.php">Vinhos</a>
+                                <a id="nav-link" class="nav-link" href="../vinhos.php">Vinhos</a>
                             </li>
                             <li class="nav-item">
-                                <a id="nav-link" class="nav-link" href="conhaque.php">Conhaque</a>
+                                <a id="nav-link" class="nav-link" href="../conhaque.php">Conhaque</a>
                             </li>
                         </ul>
                     <li class="nav-item">
-                        <a class="nav-link" href="novidades.php"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        <a class="nav-link" href="../novidades.php"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                 height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
                                 <path
                                     d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
@@ -52,7 +52,7 @@
                             </svg> Novidades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contato.php"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        <a class="nav-link" href="../contato.php"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                 height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
                                 <path
                                     d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
@@ -87,7 +87,7 @@
                                 ?>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" id="logout" href="logout.php">
+                                    <a class="nav-link" id="logout" href="../logout.php">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                             class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
@@ -108,7 +108,7 @@
                                 }
                                 ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="conta.php">
+                                    <a class="nav-link" href="../conta.php">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                             class="bi bi-person-lock" viewBox="0 0 16 16">
                                             <path
