@@ -52,7 +52,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
   <div id="container" class="container">
     <div class="signup-container">
       <img id="icon_login" src="../Imagens/icon.png" width="220px" height="250px" alt="">
-      <form id="cadatro" action="login_adm.php" method="post">
+      <form id="cadatro" action="#" method="post">
       <h2 id="login_adm-text">Login de Administrador</h2>
         <input type="email" name="email" placeholder="Email de Administrador" required>
         <input type="password" name="senha" placeholder="Senha de Administrador" required>

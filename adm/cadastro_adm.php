@@ -25,18 +25,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Administradores</title> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dieimes.css">
-    <link rel="stylesheet" href="css/menu_dieimes.css">
-    <link rel="icon" href="Imagens/icon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dieimes.css">
+    <link rel="stylesheet" href="../css/menu_dieimes.css">
+    <link rel="icon" href="../Imagens/icon.png">
 </head>
 <body>
 <?php
-        include('menu.php');
+        include('../menu.php');
     ?>
     <div id="container" class="container">
         <div class="signup-container">
-          <img src="Imagens/cadastro_adm_logo.png" class="img-fluid" id="img-cadastro_adm" alt="">
+          <img src="../Imagens/cadastro_adm_logo.png" class="img-fluid" id="img-cadastro_adm" alt="">
             <form id="cadatro"action="#" method="post">
             <h2 id="cadastro-text">Cadastro de Administradores</h2>
                 <input type="text" name="bt_nome" placeholder="Nome Completo" required>
