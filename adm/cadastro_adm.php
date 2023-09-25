@@ -32,7 +32,7 @@
 </head>
 <body>
 <?php
-        include('../menu.php');
+        include('menu_adm.php');
     ?>
     <div id="container" class="container">
         <div class="signup-container">

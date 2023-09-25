@@ -10,19 +10,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Novidades - Minha Empresa</title>
-=======
     <title>Novidades - Taverna de Valhalla</title>
->>>>>>> main
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"> <!-- Arquivo de estilo personalizado -->
     <link rel="stylesheet" href="css/dieimes.css">
     <link rel="stylesheet" href="css/menu_dieimes.css">
-<<<<<<< HEAD
-=======
     <link rel="icon" href="Imagens/icon.png">
->>>>>>> main
 
 </head>
 <body>
@@ -30,14 +23,6 @@
         include('menu.php');
     ?>
 <div class="containeer">
-<<<<<<< HEAD
-<section class="news">
-        <div class="news-item">
-            <div class="date">Domingo</div>
-            <h2>Novas Bebidas Adicionadas</h2>
-            <p>Foram adicionados novos lotes de Jägermeister, Buffalo Trace e Johnny Walker. Venha conferir essas maravilhas.</p>
-        </div>
-=======
     <br>
     <h1 id="h1-novid">Novidades da Semana</h1>
 <section class="news">
@@ -91,7 +76,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
->>>>>>> main
 
         <div class="news-item">
             <div class="date">Segunda-Feira</div>

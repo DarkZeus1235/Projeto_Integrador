@@ -59,7 +59,7 @@ if (isset($_POST['bt_nome'])) {
 
 <body>
     <?php
-    include('../menu.php');
+    include('menu_adm.php');
     ?>
     <div class="container">
         <h1>Cadastro de Bebidas - Taverna de Valhalla</h1>
