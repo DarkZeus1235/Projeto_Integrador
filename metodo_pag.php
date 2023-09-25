@@ -1,7 +1,7 @@
 <?php
 include("conexao.php");
 
-include('protect.php');
+include('protect/protect.php');
 if (isset($_POST['bt_nome'])) {
     if (isset($_FILES['bt_arquivo'])) {
         $arquivo = $_FILES['bt_arquivo'];
