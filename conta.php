@@ -45,8 +45,19 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
                         <p>Senha Cadastrada: <?php echo $_SESSION['senha'];?></p>
                 </div>
                 <div class="info-item">
-                    <h3>Endereço:</h3>
+                    <?php
+                        if(isset($_SESSION['id_login_adm'])){
+                    ?>
+                    <h3>Função do Administrador:</h3>
+                    <?php echo $_SESSION['funcao'];?>
+                    <?php
+                    }else{
+                    ?>
+                     <h3>Endereço:</h3>
                     <p><?php echo $_SESSION['endereco']; ?></p>
+                    <?php
+                    }
+                    ?>
                 </div>
             <?php
                     }
@@ -55,6 +66,27 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
         </div>
 
         <!-- Orders Section -->
+        <?php 
+            if(isset($_SESSION['id_login_adm'])){
+        ?>
+        <div class="account-section">
+            <h2>Solicitações de Ajuda</h2>
+            <ul class="order-list">
+                <li class="order-item">
+                    <strong>Solicitação #68980</strong>
+                    <p>Data da Solicitação: 10/09/2023 </p>
+                    <p>Solicitação: Preciso de Ajuda para cadastrar uma conta, o meu endereço de email está dando erro.</p>
+                </li>
+                <li class="order-item">
+                    <strong>Solicitação #67890</strong>
+                    <p>Data da Solicitação: 18/09/2023</p>
+                    <p>Solicitação: Não consigo efetuar a compra da bebida Whisky Malboro.</p>
+                </li>
+            </ul>
+        </div>
+        <?php
+        }else{
+        ?>
         <div class="account-section">
             <h2>Meus Pedidos</h2>
             <ul class="order-list">
@@ -70,6 +102,9 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
                 </li>
             </ul>
         </div>
+        <?php
+        }
+        ?>
 
         <!-- Delete Account Section -->
         <div class="account-section delete-account">

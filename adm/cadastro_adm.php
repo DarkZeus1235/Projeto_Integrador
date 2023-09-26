@@ -1,10 +1,27 @@
 <?php
+<<<<<<< HEAD:cadastro_adm.php
     include('conexao.php');
     require('protect_adm.php');
+=======
+    include('../conexao.php');
+
+    require('../protect/protect_adm.php');
+>>>>>>> main:adm/cadastro_adm.php
 
     if(!isset($_SESSION)){
         session_start();
     }
+
+    if (isset($_POST['bt_nome'])) {
+      /*----------------------------------*/
+      $email = $_POST['bt_email'];
+      $senha = password_hash ($_POST['bt_senha'], PASSWORD_DEFAULT);
+      $nome = $_POST['bt_nome'];
+      $funcao = $_POST['bt_funcao'];
+      /*----------------------------------*/
+      $mysqli->query("INSERT INTO cadastro_adm (nome, funcao, email, senha) values('$nome', '$funcao', '$email', '$senha')") or
+        die($mysqlierrno);
+      }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,24 +30,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Administradores</title> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dieimes.css">
-    <link rel="stylesheet" href="css/menu_dieimes.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dieimes.css">
+    <link rel="stylesheet" href="../css/menu_dieimes.css">
+    <link rel="icon" href="../Imagens/icon.png">
 </head>
 <body>
 <?php
-        include('menu.php');
+        include('menu_adm.php');
     ?>
     <div id="container" class="container">
         <div class="signup-container">
-          <img src="Imagens/cadastro_adm_logo.png" class="img-fluid" id="img-cadastro" alt="">
+          <img src="../Imagens/cadastro_adm_logo.png" class="img-fluid" id="img-cadastro_adm" alt="">
             <form id="cadatro"action="#" method="post">
             <h2 id="cadastro-text">Cadastro de Administradores</h2>
                 <input type="text" name="bt_nome" placeholder="Nome Completo" required>
-                <input type="text" name="bt_username" placeholder="Nome de Usuário" required>
-                <input type="text" id="cpfInput" name="bt_cpf" placeholder="CPF"  maxlength="14" oninput="formatarCPF()" required>
-                <input type="tel" id="telefoneInput" name="bt_telefone" placeholder="Telefone" maxlength="15" oninput="formatarTelefone()" required>
-                <input type="text" name="bt_endereco" placeholder="Endereço" required>
+                <input type="text" name="bt_funcao" placeholder="Função" required>
                 <input type="email" name="bt_email" placeholder="Email" required>
                 <input type="password" name="bt_senha" placeholder="Senha" required>
                 <input type="submit" name="cadastrar" value="Cadastrar" onclick="return validateFields()">

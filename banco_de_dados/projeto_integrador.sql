@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 21-Set-2023 às 11:30
+-- Tempo de geração: 25-Set-2023 às 10:19
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -40,14 +40,37 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `cpf` varchar(100) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   PRIMARY KEY (`id_login`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro`
 --
 
 INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `telefone`, `username`, `cpf`, `endereco`) VALUES
-(1, 'admin@hotmail.com', 'admin1234', 'Administrador', '(43) 99650-6831', 'ADM', '111111111111', 'Rua Rio Grande');
+(1, 'zere@gmail.com', 'zere010', 'Matheus Henrique Vital', '(43) 99650-6831', 'Zere_br', '1111111111111111', 'Rua Rio Grande');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cadastro_adm`
+--
+
+DROP TABLE IF EXISTS `cadastro_adm`;
+CREATE TABLE IF NOT EXISTS `cadastro_adm` (
+  `id_login_adm` int(200) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(200) NOT NULL,
+  `funcao` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `senha` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_login_adm`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `cadastro_adm`
+--
+
+INSERT INTO `cadastro_adm` (`id_login_adm`, `nome`, `funcao`, `email`, `senha`) VALUES
+(1, 'Administrador João', 'Administrador Geral', 'admin@hotmail.com', 'admin1234');
 
 -- --------------------------------------------------------
 

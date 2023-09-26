@@ -36,8 +36,10 @@ if (isset($_POST['nome'])) {
     ?>
     <div id="container" class="container">
         <header>
+            <center>
             <h1 class="text1">Contato</h1>
             <p class="text1">Entre em contato conosco para mais informações.</p>
+            </center>
         </header>
         <section class="contact-info">
             <div class="info-item">
