@@ -11,17 +11,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dieimes.css">
-    <link rel="stylesheet" href="css/menu_dieimes.css">
+    <link rel="stylesheet" href="css/menu_adm.css">
     <link rel="icon" href="Imagens/icon.png">
 </head>
 <body>
     <?php
-        include('menu.php');
+        include('menu_dashboard.php');
     ?>
+    <br>
+    <br>
+    <div class="container">
     <main>
         <h2>Bem-vindo ao Dashboard de Administradores!</h2>
         <!-- Conteúdo do Dashboard aqui -->
     </main>
+    </div>
     <?php
         include('rodape.php');
     ?>
