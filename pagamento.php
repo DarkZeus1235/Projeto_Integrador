@@ -1,6 +1,12 @@
 <?php
 include('conexao.php');
 
+if(!isset($_SESSION)){
+    session_start();
+}
+
+include('protect/protect.php');
+
 if (isset($_GET["id"])) {
     $id_bebida = $_GET["id"];
 

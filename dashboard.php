@@ -33,10 +33,10 @@
     <br>
     <div class="container">
     <main>
-        <h2>Bem-vindo ao Dashboard de Administradores!</h2>
-</div>
+        <h2>Bem-vindo ao Dashboard de Administradores!</h2>,
+        </div>
         <h2 id="alinhar_dashboard">Contas cadastradas no Sistema: </h2>
-        <table class="table table-striped">
+        <table id="table" class="table table-striped">
             <tr>
                 <th>ID da Conta:</th>
                 <th>Nome:</th>
