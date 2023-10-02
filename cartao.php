@@ -32,6 +32,7 @@ if (isset($_POST["titular"])) {
     } else {
         $mensagem = "Erro ao cadastrar o cartão: " . $conn->error;
     }
+    header("location: agradecimento.php");
 }
 $conn->close();
 ?>

@@ -42,7 +42,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
         </ul>
         <?php endwhile; ?>  
 
-        <p>Os itens do seu pedido serão enviados para o endereço que você forneceu durante o processo de compra. Você receberá um e-mail de confirmação em breve com mais informações sobre o envio.</p>
+        <p>Os itens do seu pedido serão enviados para o endereço que você forneceu durante a criação de sua conta. Você receberá um e-mail de confirmação em breve com mais informações sobre o envio.</p>
     </main>
     <?php
             include('espacamento.php');
