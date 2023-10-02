@@ -1079,6 +1079,12 @@ main {
       padding: 10px;
   }
 }
+#butao-adm{
+  color: white;
+}
+#alinhar_dashboard{
+  text-align: center;
+}
 /* FIM DO DESIGN DO AGRADECIMENTO */
 
 /*Espaçamentos*/
