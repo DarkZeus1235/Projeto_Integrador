@@ -1,7 +1,16 @@
- #menu_cor{
-    background-color: #6B4B21;
+ #botao-adm:hover{
+    background-color: white;
+    display: flex
  }
-
-navbar bg-body{
-    background-color: #6b6b6b;
+ #links-adm{
+    color: black;
+ }
+ #nav-titulo{
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: space-around;
+ }
+#butao-adm{
+    color: white;
 }

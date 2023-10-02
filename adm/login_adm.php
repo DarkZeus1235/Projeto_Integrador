@@ -13,13 +13,10 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
     $sql_code = "SELECT * FROM cadastro_adm WHERE email = '$email'";
 
-    var_dump($senha);
-    var_dump($sql_code);
+  
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
 
-    var_dump($sql_query);
     $adm = $sql_query->fetch_assoc();
-    var_dump($adm);
     if (password_verify($senha, $adm['senha'])) { /* Vou comparar a senha do usuário com a senha do banco de dados */
         /* Se a senha for verdadeira faça: */
 
