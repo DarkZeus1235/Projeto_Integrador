@@ -67,6 +67,8 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
 
         <!-- Orders Section -->
         <?php 
+
+        $logins = $retorno_consulta -> fetch_assoc();
             if(isset($_SESSION['id_login_adm'])){
         ?>
         <div class="account-section">
@@ -107,11 +109,17 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
         ?>
 
         <!-- Delete Account Section -->
+        <?php
+            if(isset($logins)){ 
+            ?>
         <div class="account-section delete-account">
             <h2>Deletar Conta</h2>
             <p>Se você quiser deletar sua conta, clique no botão abaixo:</p>
-            <button class="btn btn-danger">Deletar Minha Conta</button>
+            <button class="btn btn-danger"><a id="botao-aviso" href="deletar.php?codigo_cadastro=<?php echo $logins['id_login'];?>">Deletar Minha Conta</a></button>
         </div>
+        <?php
+        }
+        ?>
     </div>
     <?php
     include('rodape.php');

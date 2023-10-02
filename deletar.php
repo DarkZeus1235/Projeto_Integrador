@@ -64,7 +64,7 @@ if (isset($_GET['codigo_cadastro'])) {
 
         <form action="" method="post">
             <input name="btn_deletar" id="butao-adm" class="btn btn-danger" type="submit" value="DELETAR">
-            <a id="butao-adm" class="btn btn-warning" href="consultar.php">Voltar</a>
+            <a id="butao-adm" class="btn btn-warning" href="conta.php">Voltar</a>
         </form>
 
     </div>

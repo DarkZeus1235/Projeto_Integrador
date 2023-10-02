@@ -35,6 +35,10 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
   <button class="btn btn-warning"><a id="botao-aviso" href="metodo_pag.php">Voltar para metódo de Pagamento</a></button>
   </center>
+  <br>
+  <br>
+  <br>
+  <br>
     <?php
             include('espacamento.php');
         ?>
