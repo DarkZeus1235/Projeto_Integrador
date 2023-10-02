@@ -1085,7 +1085,9 @@ main {
 #alinhar_dashboard{
   text-align: center;
 }
-
+#botao-aviso{
+  text-decoration: none;
+}
 /* FIM DO DESIGN DO AGRADECIMENTO */
 
 /*Espaçamentos*/

@@ -10,10 +10,10 @@ if(isset($_POST['metodo'])){
             header("Location: cartao.php");
             break;
         case 'pix':
-            header("Location: pix.php");
+            header("Location: somente_cartao.php");
             break;
         case 'boleto':
-            header("Location: boleto.php");
+            header("Location: somente_cartao.php");
             break;
         default:
             header("Location: metodo_pag.php");
