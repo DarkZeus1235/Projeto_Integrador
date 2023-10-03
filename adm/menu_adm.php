@@ -80,7 +80,7 @@
                                     <a id="nav-link" class="nav-link" href="../cadastro.php">Cadastrar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="nav-link2" class="nav-link" href="adm/login_adm.php">Login de Administrador</a>
+                                    <a id="nav-link2" class="nav-link" href="login_adm.php">Login de Administrador</a>
                                 </li>
                                 <?php
                             } else {
