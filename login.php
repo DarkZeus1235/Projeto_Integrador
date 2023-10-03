@@ -11,33 +11,30 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     $email = $mysqli->real_escape_string($_POST['email']);
     $senha = $mysqli->real_escape_string($_POST['senha']);
 
-    $sql_code = "SELECT * FROM cadastro WHERE email = '$email' AND senha = '$senha'";
+    $sql_code = "SELECT * FROM cadastro WHERE email = '$email'";
+
+  
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
 
-    $quantidade = $sql_query->num_rows;
+    $usuario = $sql_query->fetch_assoc();
+    if (password_verify($senha, $usuario['senha'])) { /* Vou comparar a senha do usuário com a senha do banco de dados */
+        /* Se a senha for verdadeira faça: */
 
-    if ($quantidade == 1) {
+        if (!isset($_SESSION)) {
+          session_start();
+        }
 
-      $usuario = $sql_query->fetch_assoc();
+        $_SESSION['id_login_adm'] = $usuario['id_login_adm'];
+        $_SESSION['nome'] = $usuario['nome'];
+        $_SESSION['funcao'] = $usuario['funcao'];
+        $_SESSION['email'] = $usuario['email'];
+        $_SESSION['senha'] = $usuario['senha'];
 
-      if (!isset($_SESSION)) {
-        session_start();
-      }
-
-      $_SESSION['id_login'] = $usuario['id_login'];
-      $_SESSION['nome'] = $usuario['nome'];
-      $_SESSION['username'] = $usuario['username'];
-      $_SESSION['email'] = $usuario['email'];
-      $_SESSION['senha'] = $usuario['senha'];
-      $_SESSION['endereco'] = $usuario['endereco'];
-      $_SESSION['telefone'] = $usuario['telefone'];
-      $_SESSION['cpf'] = $usuario['cpf'];
-
-
-      header("Location: index.php");
-    } else {
+        header("Location: index.php");
+    }else{
       echo "<script>alert('login ou senha incorreto!!');</script>";
     }
+   
   }
 }
 ?>
