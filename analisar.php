@@ -1,7 +1,7 @@
 <?php
 include("conexao.php");
 
-require("autenticacao.php");
+require("protect/protect.php");
 
 /* teste do professor */
 
