@@ -74,10 +74,10 @@
                             if (!isset($_SESSION['nome'])) {
                                 ?>
                                 <li class="nav-item">
-                                    <a id="nav-link2" class="nav-link" href="login.php">Entrar</a>
+                                    <a id="nav-link2" class="nav-link" href="../login.php">Entrar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="nav-link" class="nav-link" href="cadastro.php">Cadastrar</a>
+                                    <a id="nav-link" class="nav-link" href="../cadastro.php">Cadastrar</a>
                                 </li>
                                 <li class="nav-item">
                                     <a id="nav-link2" class="nav-link" href="adm/login_adm.php">Login de Administrador</a>
