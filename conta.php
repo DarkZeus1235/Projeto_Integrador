@@ -1,6 +1,6 @@
 <?php
 include("conexao.php");
-require("protect/protect_adm.php");
+require("protect/protect.php");
 
 /* teste do professor */
 
