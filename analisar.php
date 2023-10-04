@@ -61,10 +61,13 @@ if (isset($_FILES["foto"])) {
     if (!$stmt->execute()) {
         die("Erro ao atualizar o caminho da imagem no banco de dados.");
     }
+    
+    
 
     // Atualize a variável de sessão para refletir a mudança feita
     $_SESSION["foto_perfil_caminho"] = $caminhoFinal;
 }
+
 
 
 
@@ -105,9 +108,8 @@ if (isset($_FILES["foto"])) {
             ?>
             <h1 class="mt-3">Olá <?php echo $_SESSION["nome"]; ?></h1>
         </div>
-    </div>
 
-    <form action="" method="post" enctype="multipart/form-data" class="mb-4">
+        <form action="analisar.php" method="post" enctype="multipart/form-data" class="mb-4" id="uploadForm">
         <div class="mb-3">
             <input type="file" name="foto" class="form-control" placeholder="Mudar foto de perfil">
         </div>
@@ -115,6 +117,36 @@ if (isset($_FILES["foto"])) {
             <input type="submit" value="Envie a sua foto" class="btn btn-primary">
         </div>
     </form>
+    <script>
+$(document).ready(function() {
+    $("#uploadForm").submit(function(e) {
+        e.preventDefault();
+        
+        var formData = new FormData(this);
+
+        $.ajax({
+            url: $(this).attr("action"),
+            type: $(this).attr("method"),
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                if (response.success) {
+                    // Atualize a imagem de perfil na página
+                    $(".profile-picture").attr("src", response.image_url);
+                } else {
+                    alert("Erro ao enviar a imagem.");
+                }
+            },
+            error: function() {
+                alert("Erro ao enviar a imagem.");
+            }
+        });
+    });
+});
+</script>
+
+    <main>
 
     <h2 class="mb-3">Minhas informações:</h2>
     <p><span class="info-title">Nome:</span> <?php echo $_SESSION["nome"]; ?>
@@ -125,13 +157,14 @@ if (isset($_FILES["foto"])) {
 
     <div class="text-center mt-5">
         <p><a href="sair.php" class="btn btn-danger">Sair</a></p>
-
+        </main>
+        </div>
 
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 </body>
