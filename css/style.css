@@ -1090,6 +1090,21 @@ main {
 }
 /* FIM DO DESIGN DO AGRADECIMENTO */
 
+/* Adicione estas regras no seu arquivo style.css */
+.contaaiiner{
+  width: 90%;
+  justify-content: center;
+  margin-left: 70px;
+}
+/* Defina um tamanho mínimo para as células da tabela */
+td.text-center {
+  min-width: 100px; /* Ajuste conforme necessário */
+}
+
+/* Estilize os botões para garantir que eles se ajustem bem em telas menores */
+#butao-adm {
+  white-space: nowrap; /* Impede a quebra de texto */
+}
 /*Espaçamentos*/
   #espacamentonovidades{
     margin-top: 124px;
