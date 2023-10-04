@@ -4,7 +4,7 @@ require("protect/protect_adm.php");
 
 /* teste do professor */
 
-if(!isset($_SESSION)){
+if (!isset($_SESSION)) {
     session_start();
 }
 $id = $_SESSION['id_login_adm'];
@@ -46,7 +46,7 @@ if (isset($_FILES["foto"])) {
     }
 
     // Defina o local para salvar a imagem
-    $diretorioUpload = "Imagens/";
+    $diretorioUpload = "Imagens/ftperfil/";
     $novoNomeArquivo = uniqid() . "." . $extensaoArquivo;
     $caminhoFinal = $diretorioUpload . $novoNomeArquivo;
 
@@ -78,12 +78,12 @@ if (isset($_FILES["foto"])) {
     <link rel="icon" href="img/logo2.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="css/menu_dieimes.css">
-  <link rel="stylesheet" href="css/dieimes.css">
-  <link rel="icon" href="Imagens/icon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/menu_dieimes.css">
+    <link rel="stylesheet" href="css/dieimes.css">
+    <link rel="icon" href="Imagens/icon.png">
 
-      <title>Minha Conta</title>
+    <title>Minha Conta</title>
 </head>
 
 <body>
@@ -91,50 +91,49 @@ if (isset($_FILES["foto"])) {
 
     <div class="container profile-container">
         <div class="text-center mb-4">
-        <?php
-            $imgPath = isset($usuario["foto_perfil_caminho"]) && !empty($usuario["foto_perfil_caminho"]) ? $usuario["foto_perfil_caminho"] : 'Imagens/foto_teste.png';
+            <?php
+            $imgPath = isset($usuario["foto_perfil_caminho"]) && !empty($usuario["foto_perfil_caminho"]) ? $usuario["foto_perfil_caminho"] : 'Imagens/Foto_padrao.png';
             //echo "Caminho da imagem: " . $imgPath . "<br>";
             if (file_exists($imgPath)) {
                 echo "<img class='profile-picture' src='$imgPath' alt='Foto de perfil'>";
             } else {
-                echo "<img class='profile-picture' src='Imagens/foto_teste.png' alt='Foto de perfil'>";
+                echo "<img class='profile-picture' src='Imagens/Foto_padrao.png' alt='Foto de perfil'>";
                 echo "O arquivo $imgPath não foi encontrado."; // isso é apenas para depuração
             }
-            
-            
+
+
             ?>
             <h1 class="mt-3">Olá <?php echo $_SESSION["nome"]; ?></h1>
         </div>
-
-        <form action="" method="post" enctype="multipart/form-data" class="mb-4">
-            <div class="mb-3">
-                <input type="file" name="foto" class="form-control" placeholder="Mudar foto de perfil">
-            </div>
-            <div class="text-center">
-                <input type="submit" value="Envie a sua foto" class="btn btn-primary">
-            </div>
-        </form>
-
-        <h2 class="mb-3">Minhas informações:</h2>
-        <p><span class="info-title">Nome:</span> <?php echo $_SESSION["nome"]; ?>
-        
-        <p><span class="info-title">Endereço:</span> <?php echo $_SESSION['funcao']; ?></p>
-        
-        <p><span class="info-title">Email:</span> <?php echo $_SESSION["email"]; ?></p>
-
-        <div class="text-center mt-5">
-            <a href="consulta.php" class="btn btn-success mb-2">Marque sua Consulta</a>
-            <p><a href="sair.php" class="btn btn-danger">Sair</a></p>
-        </div>
     </div>
 
-   
+    <form action="" method="post" enctype="multipart/form-data" class="mb-4">
+        <div class="mb-3">
+            <input type="file" name="foto" class="form-control" placeholder="Mudar foto de perfil">
+        </div>
+        <div class="text-center">
+            <input type="submit" value="Envie a sua foto" class="btn btn-primary">
+        </div>
+    </form>
 
-   
+    <h2 class="mb-3">Minhas informações:</h2>
+    <p><span class="info-title">Nome:</span> <?php echo $_SESSION["nome"]; ?>
+
+    <p><span class="info-title">Endereço:</span> <?php echo $_SESSION['funcao']; ?></p>
+
+    <p><span class="info-title">Email:</span> <?php echo $_SESSION["email"]; ?></p>
+
+    <div class="text-center mt-5">
+        <p><a href="sair.php" class="btn btn-danger">Sair</a></p>
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-    
+
 
 </body>
+
 </html>
