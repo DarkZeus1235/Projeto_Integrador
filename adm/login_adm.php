@@ -24,7 +24,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
           session_start();
         }
 
-        $_SESSION['id_login_adm'] = $adm['id_login_adm'];
+        $_SESSION['id_login_adm'] = $adm['id_login_adm']; /* Logado */
         $_SESSION['nome'] = $adm['nome'];
         $_SESSION['funcao'] = $adm['funcao'];
         $_SESSION['email'] = $adm['email'];

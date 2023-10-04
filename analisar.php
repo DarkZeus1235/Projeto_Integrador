@@ -1,24 +1,21 @@
 <?php
 include("conexao.php");
+require("protect/protect_adm.php");
 
 /* teste do professor */
 
 if(!isset($_SESSION)){
     session_start();
 }
-$id = $_SESSION['nome'];
+$id = $_SESSION['id_login_adm'];
 
-$stmt = $mysqli->prepare("SELECT * FROM cadastro WHERE id_login = ? LIMIT 1");
+$stmt = $mysqli->prepare("SELECT * FROM cadastro_adm WHERE id_login_adm = ? LIMIT 1");
 $stmt->bind_param("s", $id);
 $stmt->execute();
 $result = $stmt->get_result();
 $usuario = $result->fetch_assoc();
 
-//var_dump($usuario);
-/* fim teste do professor */
 
-
-    //* Para MAria */
 
     if (isset($_POST['foto'])) {
         if (isset($_FILES['foto'])) {
@@ -31,7 +28,7 @@ $usuario = $result->fetch_assoc();
             }
         }
 
-        $pasta = "ftperfil/";
+        $pasta = "Imagens/";
         $nome_arquivo = $arquivo['foto'];
         $novo_nome_arquivo = uniqid();
         $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
@@ -116,12 +113,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_FILES["foto"])) {
     <div class="container profile-container">
         <div class="text-center mb-4">
             <?php
-            $imgPath = isset($usuario["camimg"]) && !empty($usuario["camimg"]) ? $usuario["camimg"] : 'ftperfl/foto_teste.png';
+            $imgPath = isset($usuario["camimg"]) && !empty($usuario["camimg"]) ? $usuario["camimg"] : 'Imagens/foto_teste.png';
             //echo "Caminho da imagem: " . $imgPath . "<br>";
             if (file_exists($imgPath)) {
                 echo "<img class='profile-picture' src='$imgPath' alt='Foto de perfil'>";
             } else {
-                echo "<img class='profile-picture' src='ftperfl/foto_teste.png' alt='Foto de perfil'>";
+                echo "<img class='profile-picture' src='Imagens/foto_teste.png' alt='Foto de perfil'>";
                 echo "O arquivo $imgPath não foi encontrado."; // isso é apenas para depuração
             }
             
