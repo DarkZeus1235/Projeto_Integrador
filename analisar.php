@@ -1,13 +1,14 @@
 <?php
 include("conexao.php");
 
-require("protect/protect.php");
-
 /* teste do professor */
 
-$id = $_SESSION['login_nome'];
+if(!isset($_SESSION)){
+    session_start();
+}
+$id = $_SESSION['nome'];
 
-$stmt = $mysqli->prepare("SELECT * FROM pessoas WHERE id_pessoa = ? LIMIT 1");
+$stmt = $mysqli->prepare("SELECT * FROM cadastro WHERE id_login = ? LIMIT 1");
 $stmt->bind_param("s", $id);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -84,6 +85,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_FILES["foto"])) {
     }
 }
 
+  $_SESSION['id_login_adm'] = $usuario['id_login_adm'];
+  $_SESSION['nome'] = $usuario['nome'];
+  $_SESSION['funcao'] = $usuario['funcao'];
+  $_SESSION['email'] = $usuario['email'];
+  $_SESSION['senha'] = $usuario['senha'];
 
 
 ?>
@@ -95,8 +101,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_FILES["foto"])) {
     <meta charset="UTF-8">
     <link rel="icon" href="img/logo2.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/dieimes.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/menu_dieimes.css">
+  <link rel="stylesheet" href="css/dieimes.css">
+  <link rel="icon" href="Imagens/icon.png">
 
       <title>Minha Conta</title>
 </head>
@@ -118,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_FILES["foto"])) {
             
             
             ?>
-            <h1 class="mt-3">Olá <?php echo $usuario["nome"]; ?></h1>
+            <h1 class="mt-3">Olá <?php echo $_SESSION["nome"]; ?></h1>
         </div>
 
         <form action="" method="post" enctype="multipart/form-data" class="mb-4">
@@ -131,12 +140,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_FILES["foto"])) {
         </form>
 
         <h2 class="mb-3">Minhas informações:</h2>
-        <p><span class="info-title">Nome:</span> <?php echo $usuario["nome"]; ?> <?php echo $usuario["sobrenome"]; ?></p>
-        <p><span class="info-title">Telefone:</span> <?php echo $usuario["telefone"]; ?></p>
-        <p><span class="info-title">Endereço:</span> <?php echo $usuario["endereco"]; ?></p>
-        <p><span class="info-title">CPF:</span> <?php echo $usuario["cpf"]; ?></p>
-        <p><span class="info-title">Email:</span> <?php echo $usuario["email"]; ?></p>
-        <p><span class="info-title">Número do Cartão Sus:</span> <?php echo $usuario["numerocartaosus"]; ?></p>
+        <p><span class="info-title">Nome:</span> <?php echo $_SESSION["nome"]; ?>
+        <p><span class="info-title">Telefone:</span> <?php echo $_SESSION['telefone']; ?></p>
+        <p><span class="info-title">Endereço:</span> <?php echo $_SESSION['endereco']; ?></p>
+        <p><span class="info-title">CPF:</span> <?php echo $_SESSION["cpf"]; ?></p>
+        <p><span class="info-title">Email:</span> <?php echo $_SESSION["email"]; ?></p>
 
         <div class="text-center mt-5">
             <a href="consulta.php" class="btn btn-success mb-2">Marque sua Consulta</a>

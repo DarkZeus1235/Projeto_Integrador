@@ -56,7 +56,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
         </div>
       <?php endwhile; ?>
     </div>
-
+          <a href="analisar.php">analsiar</a>
   </div>
   <?php include 'rodape.php'; ?>
 
