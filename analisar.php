@@ -12,81 +12,60 @@ $id = $_SESSION['id_login_adm'];
 $stmt = $mysqli->prepare("SELECT * FROM cadastro_adm WHERE id_login_adm = ? LIMIT 1");
 $stmt->bind_param("s", $id);
 $stmt->execute();
+
+
 $result = $stmt->get_result();
 $usuario = $result->fetch_assoc();
 
 
-
-    if (isset($_POST['foto'])) {
-        if (isset($_FILES['foto'])) {
-            $arquivo = $_FILES['foto'];
-            if ($arquivo['size'] > 15000000) {
-                die("Arquivo muito grande!! Max: 15MB");
-            }
-            if ($arquivo['error']) {
-                die("Falha ao enviar arquivo");
-            }
-        }
-
-        $pasta = "Imagens/";
-        $nome_arquivo = $arquivo['foto'];
-        $novo_nome_arquivo = uniqid();
-        $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
-
-        $camimg = $pasta . $novo_nome_arquivo . "."  . $extensao;
-
-        $deucerto = move_uploaded_file($arquivo["foto"], $camimg);
-
-        if ($deucerto) {
-            $mysqli->query("INSERT INTO pessoas (camimg) 
-                    values ('$camimg')") or die($mysqli->error);
-        }
-    }
-        
+$_SESSION['id_login_adm'] = $usuario['id_login_adm'];
+$_SESSION['nome'] = $usuario['nome'];
+$_SESSION['funcao'] = $usuario['funcao'];
+$_SESSION['email'] = $usuario['email'];
+$_SESSION['senha'] = $usuario['senha'];
 
 
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_FILES["foto"])) {
+if (isset($_FILES["foto"])) {
 
+    // Verifique se o arquivo é uma imagem
     $check = getimagesize($_FILES["foto"]["tmp_name"]);
     if ($check === false) {
-        echo "O arquivo não é uma imagem.";
-        exit;
+        die("O arquivo não é uma imagem.");
     }
-    $arquivoUpload = $diretorioUpload . basename($_FILES["foto"]["name"]);
-    $extensaoArquivo = strtolower(pathinfo($arquivoUpload, PATHINFO_EXTENSION));
+
+    // Verifique a extensão do arquivo
     $extensoesPermitidas = array('jpeg', 'jpg', 'png', 'gif');
-
-    $extensaoArquivo = strtolower(pathinfo($arquivoUpload, PATHINFO_EXTENSION));
-
+    $extensaoArquivo = strtolower(pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION));
     if (!in_array($extensaoArquivo, $extensoesPermitidas)) {
-        echo "Tipo de arquivo não suportado.";
-        exit;
+        die("Tipo de arquivo não suportado.");
     }
 
-
-    $diretorioUpload = $_SERVER['DOCUMENT_ROOT'] . "/imagens/ftperfl/";
-
-    
-   
-
-
-    if (move_uploaded_file($_FILES["foto"]["tmp_name"], $arquivoUpload)) {
-        $stmt = $mysqli->prepare("UPDATE pessoas SET camimg = ? WHERE id_pessoa = ?");
-        $stmt->bind_param("ss", $arquivoUpload, $id);
-        $stmt->execute();
-
-        // Atualize a variável $usuario para refletir a mudança feita
-        $usuario["camimg"] = $arquivoUpload;
-    } else {
-        echo "Ocorreu um erro ao fazer o upload da imagem.";
+    // Verifique o tamanho do arquivo (por exemplo, limite de 5MB aqui)
+    if ($_FILES["foto"]["size"] > 5000000) {
+        die("Arquivo muito grande!! Max: 5MB");
     }
+
+    // Defina o local para salvar a imagem
+    $diretorioUpload = "Imagens/";
+    $novoNomeArquivo = uniqid() . "." . $extensaoArquivo;
+    $caminhoFinal = $diretorioUpload . $novoNomeArquivo;
+
+    // Tente mover o arquivo temporário para o diretório final
+    if (!move_uploaded_file($_FILES["foto"]["tmp_name"], $caminhoFinal)) {
+        die("Ocorreu um erro ao fazer o upload da imagem.");
+    }
+
+    // Atualize o caminho da imagem no banco de dados
+    $stmt = $mysqli->prepare("UPDATE cadastro_adm SET foto_perfil_caminho = ? WHERE id_login_adm = ?");
+    $stmt->bind_param("ss", $caminhoFinal, $id);
+    if (!$stmt->execute()) {
+        die("Erro ao atualizar o caminho da imagem no banco de dados.");
+    }
+
+    // Atualize a variável de sessão para refletir a mudança feita
+    $_SESSION["foto_perfil_caminho"] = $caminhoFinal;
 }
 
-  $_SESSION['id_login_adm'] = $usuario['id_login_adm'];
-  $_SESSION['nome'] = $usuario['nome'];
-  $_SESSION['funcao'] = $usuario['funcao'];
-  $_SESSION['email'] = $usuario['email'];
-  $_SESSION['senha'] = $usuario['senha'];
 
 
 ?>
@@ -112,8 +91,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_FILES["foto"])) {
 
     <div class="container profile-container">
         <div class="text-center mb-4">
-            <?php
-            $imgPath = isset($usuario["camimg"]) && !empty($usuario["camimg"]) ? $usuario["camimg"] : 'Imagens/foto_teste.png';
+        <?php
+            $imgPath = isset($usuario["foto_perfil_caminho"]) && !empty($usuario["foto_perfil_caminho"]) ? $usuario["foto_perfil_caminho"] : 'Imagens/foto_teste.png';
             //echo "Caminho da imagem: " . $imgPath . "<br>";
             if (file_exists($imgPath)) {
                 echo "<img class='profile-picture' src='$imgPath' alt='Foto de perfil'>";
@@ -138,9 +117,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_FILES["foto"])) {
 
         <h2 class="mb-3">Minhas informações:</h2>
         <p><span class="info-title">Nome:</span> <?php echo $_SESSION["nome"]; ?>
-        <p><span class="info-title">Telefone:</span> <?php echo $_SESSION['telefone']; ?></p>
-        <p><span class="info-title">Endereço:</span> <?php echo $_SESSION['endereco']; ?></p>
-        <p><span class="info-title">CPF:</span> <?php echo $_SESSION["cpf"]; ?></p>
+        
+        <p><span class="info-title">Endereço:</span> <?php echo $_SESSION['funcao']; ?></p>
+        
         <p><span class="info-title">Email:</span> <?php echo $_SESSION["email"]; ?></p>
 
         <div class="text-center mt-5">
