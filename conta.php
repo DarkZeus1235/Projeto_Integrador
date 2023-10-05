@@ -8,14 +8,14 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-$consultar_banco = "SELECT * FROM cadastro_adm";
+$consultar_banco = "SELECT * FROM cadastro";
 
 $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
 $quantidade_cadastros = $retorno_consulta->num_rows;
 
 $id = $_SESSION['id_login_adm'];
 
-$stmt = $mysqli->prepare("SELECT * FROM cadastro WHERE id_login_adm = ? LIMIT 1");
+$stmt = $mysqli->prepare("SELECT * FROM cadastro WHERE id_login = ? LIMIT 1");
 $stmt->bind_param("s", $id);
 $stmt->execute();
 
@@ -62,7 +62,7 @@ if (isset($_FILES["foto"])) {
     }
 
     // Atualize o caminho da imagem no banco de dados
-    $stmt = $mysqli->prepare("UPDATE cadastro_adm SET foto_perfil_caminho = ? WHERE id_login_adm = ?");
+    $stmt = $mysqli->prepare("UPDATE cadastro SET foto_perfil_caminho = ? WHERE id_login = ?");
     $stmt->bind_param("ss", $caminhoFinal, $id);
     if (!$stmt->execute()) {
         die("Erro ao atualizar o caminho da imagem no banco de dados.");
@@ -157,7 +157,7 @@ if (isset($_FILES["foto"])) {
             <h2 class="mb-3">Minhas informações:</h2>
             <p><span class="info-title">Nome:</span> <?php echo $_SESSION["nome"]; ?>
 
-            <p><span class="info-title">Endereço:</span> <?php echo $_SESSION['funcao']; ?></p>
+            <p><span class="info-title">Endereço:</span> <?php echo $_SESSION['endereco']; ?></p>
 
             <p><span class="info-title">Email:</span> <?php echo $_SESSION["email"]; ?></p>
 
@@ -214,7 +214,7 @@ $logins = $retorno_consulta -> fetch_assoc();
 <div class="account-section delete-account">
     <h2>Deletar Conta</h2>
     <p>Se você quiser deletar sua conta, clique no botão abaixo:</p>
-    <button class="btn btn-danger"><a id="botao-aviso" href="deletar.php?codigo_cadastro=<?php echo $logins['id_login_adm'];?>">Deletar Minha Conta</a></button>
+    <button class="btn btn-danger"><a id="botao-aviso" href="deletar.php?codigo_cadastro=<?php echo $logins['id_login'];?>">Deletar Minha Conta</a></button>
 </div>
 <?php
 }
