@@ -1,6 +1,6 @@
 <?php
 include("conexao.php");
-require("protect/protect.php");
+require("protect/protect_adm.php");
 
 /* teste do professor */
 
@@ -15,7 +15,7 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
 
 $id = $_SESSION['id_login_adm'];
 
-$stmt = $mysqli->prepare("SELECT * FROM cadastro WHERE id_login_adm = ? LIMIT 1");
+$stmt = $mysqli->prepare("SELECT * FROM cadastro_adm WHERE id_login_adm = ? LIMIT 1");
 $stmt->bind_param("s", $id);
 $stmt->execute();
 
@@ -24,7 +24,7 @@ $result = $stmt->get_result();
 $usuario = $result->fetch_assoc();
 
 
-$_SESSION['id_login'] = $usuario['id_login'];
+$_SESSION['id_login_adm'] = $usuario['id_login_adm'];
 $_SESSION['nome'] = $usuario['nome'];
 $_SESSION['funcao'] = $usuario['funcao'];
 $_SESSION['email'] = $usuario['email'];
