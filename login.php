@@ -1,28 +1,42 @@
 <?php
 include("conexao.php");
 
-if (isset($_POST['email']) && isset($_POST['senha'])) {
+if (isset($_POST['email']) || isset($_POST['senha'])) {
+
+  if (strlen($_POST['email']) == 0) {
+    echo ("Preencha seu email");
+  } elseif (strlen($_POST['senha']) == 0) {
+    echo ("Preencha sua senha");
+  } else {
     $email = $mysqli->real_escape_string($_POST['email']);
     $senha = $mysqli->real_escape_string($_POST['senha']);
 
     $sql_code = "SELECT * FROM cadastro WHERE email = '$email'";
+
   
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
 
     $usuario = $sql_query->fetch_assoc();
     
-    if (password_verify($senha, $usuario['senha'])) {
-        // Login bem-sucedido
-        session_start();
-        $_SESSION['id_login'] = $usuario['id_login'];
+    if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
+        /* Se a senha for verdadeira faça: */
+
+        if (!isset($_SESSION)) {
+          session_start();
+        }
+
+        $_SESSION['id_login_adm'] = $usuario['id_login_adm'];
         $_SESSION['nome'] = $usuario['nome'];
-        $_SESSION['telefone'] = $usuario['telefone'];
-        $_SESSION['endereco'] = $usuario['endereco'];
+        $_SESSION['funcao'] = $usuario['funcao'];
         $_SESSION['email'] = $usuario['email'];
         $_SESSION['senha'] = $usuario['senha'];
+
         header("Location: index.php");
-        exit();
+    } else {
+      echo "<script>alert('Login ou senha incorretos!!');</script>";
     }
+   
+  }
 }
 ?>
 <!DOCTYPE html>
