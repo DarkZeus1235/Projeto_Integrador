@@ -40,7 +40,7 @@ if (isset($_FILES["foto"])) {
     }
 
     // Redirecione de volta à página original
-    header("Location: analisar.php"); // Substitua "pagina_original.php" pelo nome do seu arquivo original
+    header("Location: conta.php"); // Substitua "pagina_original.php" pelo nome do seu arquivo original
     exit;
 }
 ?>
