@@ -64,7 +64,7 @@ if (isset($_POST['bt_nome'])) {
   <div id="container" class="container">
     <div class="signup-container">
       <img src="Imagens/logo_cadastro.png" class="img-fluid" id="img-cadastro" alt="">
-      <form id="cadastro" action="#" method="post">
+      <form id="cadastro" action="processa_cadastro.php" method="post">
         <h2 id="cadastro-text">Cadastro de Clientes</h2>
         <input type="text" name="bt_nome" placeholder="Nome Completo" required>
         <input type="text" name="bt_username" placeholder="Nome de Usuário" required>
@@ -73,7 +73,7 @@ if (isset($_POST['bt_nome'])) {
         <input type="text" name="bt_endereco" placeholder="Endereço" required>
         <input type="email" name="bt_email" placeholder="Email" required>
         <input type="password" name="bt_senha" placeholder="Senha" required>
-        <input type="submit" name="cadastrar" value="Cadastrar" onclick="return validateFields()">
+        <input type="submit" name="cadastrar" value="Cadastrar">
       </form>
       </script>
       
@@ -91,28 +91,23 @@ if (isset($_POST['bt_nome'])) {
                     if (response === 'success') {
                         // Redirecione para a página de login após o cadastro bem-sucedido
                         Swal.fire({
+                            title: 'Erro',
+                            text: 'Erro no Cadastro!!',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        })
+                    } else {
+                        Swal.fire({
                             title: 'Sucesso',
                             text: 'Cadastro criado com sucesso!',
                             icon: 'success',
                             confirmButtonText: 'OK'
-                        }).then((result) => {
+                        })
+                        .then((result) => {
                             if (result.isConfirmed) {
+                                // Redirecione para a página de login após o cadastro bem-sucedido
                                 window.location.href = "login.php";
                             }
-                        });
-                    } else if (response === 'error') {
-                        Swal.fire({
-                            title: 'Erro',
-                            text: 'Ocorreu um erro ao cadastrar. Tente novamente mais tarde.',
-                            icon: 'error',
-                            confirmButtonText: 'OK'
-                        });
-                    } else {
-                        Swal.fire({
-                            title: 'Erro',
-                            text: 'Resposta do servidor desconhecida.',
-                            icon: 'error',
-                            confirmButtonText: 'OK'
                         });
                     }
                 },
