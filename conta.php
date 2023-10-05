@@ -13,7 +13,7 @@ $consultar_banco = "SELECT * FROM cadastro";
 $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
 $quantidade_cadastros = $retorno_consulta->num_rows;
 
-$id = $_SESSION['id_login_adm'];
+$id = $_SESSION['id_login'];
 
 $stmt = $mysqli->prepare("SELECT * FROM cadastro WHERE id_login = ? LIMIT 1");
 $stmt->bind_param("s", $id);
@@ -26,7 +26,8 @@ $usuario = $result->fetch_assoc();
 
 $_SESSION['id_login'] = $usuario['id_login'];
 $_SESSION['nome'] = $usuario['nome'];
-$_SESSION['funcao'] = $usuario['funcao'];
+$_SESSION['telefone'] = $usuario['telefone'];
+$_SESSION['endereco'] = $usuario['endereco'];
 $_SESSION['email'] = $usuario['email'];
 $_SESSION['senha'] = $usuario['senha'];
 
@@ -117,7 +118,7 @@ if (isset($_FILES["foto"])) {
 
         <form action="upload_imagem.php" method="post" enctype="multipart/form-data" class="mb-4" id="uploadForm">
             <div class="mb-3">
-                <input type="file" name="foto" class="form-control" placeholder="Mudar foto de perfil">
+                <input type="file" name="foto" class="form-control" placeholder="Mudar foto de perfil" required>
             </div>
             <div class="text-center">
                 <input type="submit" value="Envie a sua foto" class="btn btn-primary">
