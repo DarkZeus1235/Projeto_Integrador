@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 25-Set-2023 às 10:19
+-- Tempo de geração: 05-Out-2023 às 17:28
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -39,15 +39,41 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `username` varchar(100) NOT NULL,
   `cpf` varchar(100) NOT NULL,
   `endereco` varchar(100) NOT NULL,
+  `foto_perfil_caminho` varchar(300) NOT NULL,
   PRIMARY KEY (`id_login`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro`
 --
 
-INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `telefone`, `username`, `cpf`, `endereco`) VALUES
-(1, 'zere@gmail.com', 'zere010', 'Matheus Henrique Vital', '(43) 99650-6831', 'Zere_br', '1111111111111111', 'Rua Rio Grande');
+INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `telefone`, `username`, `cpf`, `endereco`, `foto_perfil_caminho`) VALUES
+(1, 'zere01011@gmail.com', '$2y$10$eWzu92qCBQ7NMU/BPELAv.LNDVe9ohqvdEU2qN.rI3yrb8qBXW2Mi', 'Matheus Henrique Vital', '(43) 99433-4325', 'Zere_br', '423.527.533-67', 'Monte Castel', ''),
+(2, 'zere01011@gmail.com', '$2y$10$L/G.K5/aYz1w6BLRflHYXea1zulN4xLeJaPT0GnDrmhWK9mqU2afG', 'Matheus Henrique Vital', '(43) 99433-4325', 'Zere_br', '423.527.533-67', 'Monte Castel', ''),
+(3, 'zeres@gmail.com', '$2y$10$E/er/WwCByeuzZVVHpcBsefNXfjQaH.JjY9gjWMV38E/BHrStQtYG', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'zere', ''),
+(4, 'dieimes@dieimes', '$2y$10$Kp3sz0hFL9eLUhzglpauzeFV4FMdxdSAZDvyO1O5CEgcyXx2ELpgq', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '123.123.123-12', 'Monte Castel', ''),
+(5, 'zere01011@gmail.com', '$2y$10$nsqq7..OJD5RjBbhTJWQaur2l5091dMERSHCFG0e0SaWMSh9Tlq6K', 'Matheus Henrique Vital', '(43) 99433-4325', 'clecle', '423.527.533-67', 'Avenida Brasil', ''),
+(6, 'zeres@gmail.com', '$2y$10$0IYKw1TtMlasvTQNq2ya7exxQdMahz00ba6XvVXYhtwBW6V5ecTYK', 'Cleverson ', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'Avenida Brasil', ''),
+(7, 'zere@gmail.com', '$2y$10$9LFqFPxmmsfjtPdEJ4YwtunJqrv8oYKyY6njl45ZZknNiJ75HIwcu', 'Cleverson ', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'Avenida Brasil', ''),
+(8, 'zere@gmail.com', '$2y$10$9LFqFPxmmsfjtPdEJ4YwtunJqrv8oYKyY6njl45ZZknNiJ75HIwcu', 'Cleverson ', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'Avenida Brasil', ''),
+(9, 'cleverson@gmail.com', '$2y$10$ygK6UuxhLnuYThdr3Ngzl.XJrEVAch0NAdPHnTMM1IqfWbH71bccG', 'Cleverson ', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'Avenida Brasil', ''),
+(10, 'cleverson@gmail.com', '$2y$10$ygK6UuxhLnuYThdr3Ngzl.XJrEVAch0NAdPHnTMM1IqfWbH71bccG', 'Cleverson ', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'Avenida Brasil', ''),
+(11, 'dieimes@dieimes', '$2y$10$2jZK2Hmnps63jsslZsQZWeRX1opTmYmhfWAR7QaWCh9KYoqkcvvnu', 'Cleverson ', '(43) 99433-4325', 'zere', '443.122.333-52', 'Monte Castel', ''),
+(12, 'dieimes@dieimes', '$2y$10$Ws8dtHLqhC3biqxoIFJ7uulYnN.xxUWnns9/l6utdfIYNUmCC/CN.', 'Cleverson ', '(43) 99433-4325', 'zere', '443.122.333-52', 'Monte Castel', ''),
+(13, 'zere01011@gmail.com', '$2y$10$5RN7LbJ48l2VILGE8Kscpuu.hKCsk7DQVTl0r0FInWHljYVxQ2FqC', 'Dieimes Nunes de Souza', '(43) 99433-4325', 'clecle', '443.122.333-52', 'Avenida Brasil', ''),
+(14, 'zere@gmail.com', '$2y$10$GeL.6jgSZ/VUFxpH2Jiht.bk9m4qlXEJrEbYK5bdEdHDJ0eO4guLG', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '123.123.123-12', 'Monte Castel', ''),
+(15, 'cleverson@gmail.com', '$2y$10$kgSNCj1NMuGJNLCp8.xe5e4WMJ037.JP1REQRubDWm9jKTJ.oxfnu', 'Matheus Henrique Vital', '(43) 99433-4325', 'zere', '423.527.533-67', 'Monte Castel', ''),
+(16, 'zeres@gmail.com', '$2y$10$fyf1EL7rBOg2uSNL7FYWg.muWPhSDBM7Tphat6yHYWF8Gb8EDMiPi', 'Matheus Henrique Vital', '(43) 99433-4325', 'clecle', '423.527.533-67', 'Avenida Brasil', ''),
+(17, 'zere@gmail.com', '$2y$10$l1YYiTQhmnNwz7UspfyF2OqklqJ2xW.tCwF3L86xoZ/ZlRWgDzxEy', 'Cleverson ', '(43) 99433-4325', 'Zere_br', '443.122.333-52', 'Avenida Brasil', ''),
+(18, 'zere@gmail.com', '$2y$10$MvtVPBi5ghwdmyPQ29vufuT/tA9r2Hc.f4c..a3BF2g97XTqx9Exu', 'Cleverson ', '(43) 99433-4325', 'Zere_br', '443.122.333-52', 'Avenida Brasil', ''),
+(19, 'cleverson@gmail.com', '$2y$10$Yyf2xd3Ge6qyvTacCl6fe.IN1juNaXLXDtAf2QLP5wDceRY1z7FQC', 'Cleverson ', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'Avenida Brasil', ''),
+(20, 'zere01011@gmail.com', '$2y$10$ZRUSwXTjoEb5s8w9PWfc8ujy3E6F9cmRl5Jc46sR4JEQr95kgTR8W', 'Dieimes Nunes de Souza', '(43) 99433-4325', 'Dieimes', '423.527.533-67', 'Avenida Brasil', ''),
+(21, '11111@dadad', '$2y$10$HJ6bLQIXktYTJZDrgOijp.2j7aa1vaYE/MZp8kuzx7xwSyzva.tPO', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'Avenida Brasil', ''),
+(22, 'dieimes@dieimes', '$2y$10$Glj5datQChIzzYmh/ykWUOlavO9gvbaUM4RuZmJ07OwYAt0ZCK2Ua', 'Dieimes Nunes de Souza', '(43) 99433-4325', 'clecle', '443.122.333-52', 'Avenida Brasil', ''),
+(23, 'criscris@dieimes', '$2y$10$X4Q8yoh2D4v37dIquB88POoiw4doPm6kvBIER9G5Vs6spncjmS7ia', 'Matheus Henrique Vital', '(45) 99898-8776', 'Cr7', '443.122.333-52', 'Monte Castel', ''),
+(24, 'dieimes@dieimes', '$2y$10$0jJynhLheT0PYmt1Qu7Sv.J6TNSfUZMcA11lKQWpC8nbrKtk8i6gS', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '523.525.642-34', 'zere', ''),
+(25, 'zere01011@gmail.com', '$2y$10$jORO30a52RPqUe2GkM16h.BKT7EeNF4iK9xLxHaHHsk2lvVItN4Zq', 'zere', '(43) 99433-4325', 'Dieimes', '423.527.533-67', 'Monte Castel', ''),
+(26, 'jpfernandes@gmail.com', '$2y$10$rkBI07uy3bqN6/Dchb9pGeKhq/WSeXG1dUAHaVdwrCC59nelu7IUe', 'JoÃ£o Pedro Fernandes', '(43) 99650-6831', 'Jp', '114.434.889-76', 'Avenida Brasil', '');
 
 -- --------------------------------------------------------
 
@@ -62,15 +88,18 @@ CREATE TABLE IF NOT EXISTS `cadastro_adm` (
   `funcao` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
   `senha` varchar(200) NOT NULL,
+  `foto_perfil_caminho` varchar(300) NOT NULL,
   PRIMARY KEY (`id_login_adm`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro_adm`
 --
 
-INSERT INTO `cadastro_adm` (`id_login_adm`, `nome`, `funcao`, `email`, `senha`) VALUES
-(1, 'Administrador João', 'Administrador Geral', 'admin@hotmail.com', 'admin1234');
+INSERT INTO `cadastro_adm` (`id_login_adm`, `nome`, `funcao`, `email`, `senha`, `foto_perfil_caminho`) VALUES
+(4, 'Administrador JoÃ£o', 'Administrador Geral', 'admin@hotmail.com', '$2y$10$yJWty84YANLS8qAdcEhBwO7mti/YGhQ5Ny8tYze/VCmrBTUfbGcQq', 'Imagens/ftperfil/651ef08cab981.png'),
+(2, 'Matheus Henrique Vital', 'Administrador Vice', 'zere@gmail.com', '$2y$10$2DExTYMdWNh5rcjkyC/5AOewBGdwkKG9bmEUm1qjpgkegDEYEi2ju', ''),
+(3, 'JoÃ£o Rafael de Carvalho Bissoloti (Jraffis)', 'Vice - LÃ­der e Vice - Administrador', 'jraffis@gmail.com', '$2y$10$fi44MPPKeoQplD3o6DCKKu1mpJwHdyLUnneSMikWEzLvcv6CTUHRO', '');
 
 -- --------------------------------------------------------
 
@@ -367,7 +396,18 @@ CREATE TABLE IF NOT EXISTS `cartoes` (
   `cvv` varchar(200) NOT NULL,
   `cpf` varchar(200) NOT NULL,
   PRIMARY KEY (`id_cartao`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `cartoes`
+--
+
+INSERT INTO `cartoes` (`id_cartao`, `titular`, `numero_cartao`, `data_validade`, `cvv`, `cpf`) VALUES
+(1, 'matheus vital', '3436  5476  4756  8756', '17/09', '233', '131.313.123-21'),
+(2, 'matheus vital', '3436  5476  4756  8756', '17/09', '233', '131.313.123-21'),
+(3, 'matheus vital', '3436  5476  4756  8756', '17/09', '111', '131.313.123-21'),
+(4, 'Indoali', '1431  4134  3252  3524', '56/57', '542', '323.549.254-69'),
+(5, 'Indoali', '1431  4134  3252  3524', '56/57', '542', '323.549.254-69');
 
 -- --------------------------------------------------------
 
