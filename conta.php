@@ -6,15 +6,18 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
+
+
+
 /* Verificar se a chave 'id_login' está definida na sessão */
 if (isset($_SESSION['id_login'])) {
     $id = $_SESSION['id_login'];
 
 
-$consultar_banco = "SELECT * FROM cadastro";
 
-$retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
-$quantidade_cadastros = $retorno_consulta->num_rows;
+
+
+
 
 
     /* Consultar o banco de dados para obter informações do usuário */
@@ -24,6 +27,8 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
 
     $result = $stmt->get_result();
     $usuario = $result->fetch_assoc();
+
+    
 
     if ($usuario !== null) { // Verificar se $usuario não é null
         $_SESSION['id_login'] = $usuario['id_login'];
@@ -39,7 +44,7 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
             $_SESSION['endereco'] = ""; // Defina como uma string vazia ou outro valor padrão
         }
     }
-    }
+}
 
 if (isset($_FILES["foto"])) {
 
