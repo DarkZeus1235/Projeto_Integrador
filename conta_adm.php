@@ -115,7 +115,7 @@ if (isset($_FILES["foto"])) {
             <h1 class="mt-3">Olá <?php echo $_SESSION["nome"]; ?></h1>
         </div>
 
-        <form action="upload_imagem.php" method="post" enctype="multipart/form-data" class="mb-4" id="uploadForm">
+        <form action="upload_imagem_adm.php" method="post" enctype="multipart/form-data" class="mb-4" id="uploadForm">
             <div class="mb-3">
                 <input type="file" name="foto" class="form-control" placeholder="Mudar foto de perfil">
             </div>
@@ -157,7 +157,7 @@ if (isset($_FILES["foto"])) {
             <h2 class="mb-3">Minhas informações:</h2>
             <p><span class="info-title">Nome:</span> <?php echo $_SESSION["nome"]; ?>
 
-            <p><span class="info-title">Endereço:</span> <?php echo $_SESSION['funcao']; ?></p>
+            <p><span class="info-title">Função:</span> <?php echo $_SESSION['funcao']; ?></p>
 
             <p><span class="info-title">Email:</span> <?php echo $_SESSION["email"]; ?></p>
 

@@ -6,20 +6,10 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-
-
-
 /* Verificar se a chave 'id_login' está definida na sessão */
 if (isset($_SESSION['id_login'])) {
     $id = $_SESSION['id_login'];
-
-
-
-
-
-
-
-
+    
     /* Consultar o banco de dados para obter informações do usuário */
     $stmt = $mysqli->prepare("SELECT * FROM cadastro WHERE id_login = ? LIMIT 1");
     $stmt->bind_param("s", $id);
@@ -28,8 +18,6 @@ if (isset($_SESSION['id_login'])) {
     $result = $stmt->get_result();
     $usuario = $result->fetch_assoc();
 
-    
-
     if ($usuario !== null) { // Verificar se $usuario não é null
         $_SESSION['id_login'] = $usuario['id_login'];
         $_SESSION['nome'] = $usuario['nome'];
@@ -37,14 +25,8 @@ if (isset($_SESSION['id_login'])) {
         $_SESSION['endereco'] = $usuario['endereco'];
         $_SESSION['email'] = $usuario['email'];
         $_SESSION['senha'] = $usuario['senha'];
-        // Verificar se 'endereco' está definido no resultado antes de atribuir à variável de sessão
-        if (isset($usuario['endereco'])) {
-            $_SESSION['endereco'] = $usuario['endereco'];
-        } else {
-            $_SESSION['endereco'] = ""; // Defina como uma string vazia ou outro valor padrão
-        }
     }
-}
+    }
 
 if (isset($_FILES["foto"])) {
 
@@ -171,29 +153,6 @@ if (isset($_FILES["foto"])) {
                 <p><a href="logout.php" class="btn btn-danger">Sair</a></p>
         </main>
 
-        <!-- Orders Section -->
-        <?php
-        $logins = $retorno_consulta->fetch_assoc();
-        if (isset($_SESSION['id_login_adm'])) {
-        ?>
-            <div class="account-section">
-                <h2>Solicitações de Ajuda</h2>
-                <ul class="order-list">
-                    <li class="order-item">
-                        <strong>Solicitação #68980</strong>
-                        <p>Data da Solicitação: 10/09/2023 </p>
-                        <p>Solicitação: Preciso de Ajuda para cadastrar uma conta, o meu endereço de email está dando erro.</p>
-                    </li>
-                    <li class="order-item">
-                        <strong>Solicitação #67890</strong>
-                        <p>Data da Solicitação: 18/09/2023</p>
-                        <p>Solicitação: Não consigo efetuar a compra da bebida Whisky Malboro.</p>
-                    </li>
-                </ul>
-            </div>
-        <?php
-        } else {
-        ?>
             <div class="account-section">
                 <h2>Meus Pedidos</h2>
                 <ul class="order-list">
@@ -208,19 +167,16 @@ if (isset($_FILES["foto"])) {
                         <p>Valor: R$750.50</p>
                     </li>
                 </ul>
-            </div>
-        <?php
-        }
-        ?>
+        </div>
 
         <!-- Delete Account Section -->
         <?php
-        if (isset($logins)) {
+        if (isset($usuario)) {
         ?>
             <div class="account-section delete-account">
                 <h2>Deletar Conta</h2>
                 <p>Se você quiser deletar sua conta, clique no botão abaixo:</p>
-                <button class="btn btn-danger"><a id="botao-aviso" href="deletar.php?codigo_cadastro=<?php echo $logins['id_login']; ?>">Deletar Minha Conta</a></button>
+                <button class="btn btn-danger"><a id="botao-aviso" href="deletar.php?codigo_cadastro=<?php echo $usuario['id_login']; ?>">Deletar Minha Conta</a></button>
             </div>
         <?php
         }

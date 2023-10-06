@@ -28,6 +28,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         $_SESSION['id_login'] = $usuario['id_login'];
         $_SESSION['nome'] = $usuario['nome'];
         $_SESSION['endereco'] = $usuario['endereco'];
+        $_SESSION['telefone'] = $usuario['telefone'];
         $_SESSION['email'] = $usuario['email'];
         $_SESSION['senha'] = $usuario['senha'];
 

@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-$id = $_SESSION['id_login'];
+$id = $_SESSION['id_login_adm'];
 
 if (isset($_FILES["foto"])) {
     // Verifique se o arquivo é uma imagem
@@ -32,21 +32,14 @@ if (isset($_FILES["foto"])) {
     }
 
     // Atualize o caminho da imagem no banco de dados
-    $stmt = $mysqli->prepare("UPDATE cadastro SET foto_perfil_caminho = ? WHERE id_login = ?");
-    if ($stmt === false) {
-        die("Erro na preparação da consulta: " . $mysqli->error);
-    }
-    
-    if (!$stmt->bind_param("ss", $caminhoFinal, $id)) {
-        die("Erro ao vincular os parâmetros: " . $stmt->error);
-    }
-    
+    $stmt = $mysqli->prepare("UPDATE cadastro_adm SET foto_perfil_caminho = ? WHERE id_login_adm = ?");
+    $stmt->bind_param("ss", $caminhoFinal, $id);
     if (!$stmt->execute()) {
-        die("Erro ao executar a consulta: " . $stmt->error);
+        die("Erro ao atualizar o caminho da imagem no banco de dados.");
     }
 
     // Redirecione de volta à página original
-    header("Location: conta.php");
+    header("Location: conta_adm.php"); // Substitua "pagina_original.php" pelo nome do seu arquivo original
     exit;
 }
 ?>
