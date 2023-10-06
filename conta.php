@@ -1,6 +1,6 @@
 <?php
 include("conexao.php");
-
+require("protect/protect.php");
 /* Iniciar a sessão se não estiver iniciada */
 if (!isset($_SESSION)) {
     session_start();
@@ -9,7 +9,7 @@ if (!isset($_SESSION)) {
 /* Verificar se a chave 'id_login' está definida na sessão */
 if (isset($_SESSION['id_login'])) {
     $id = $_SESSION['id_login'];
-    
+
     /* Consultar o banco de dados para obter informações do usuário */
     $stmt = $mysqli->prepare("SELECT * FROM cadastro WHERE id_login = ? LIMIT 1");
     $stmt->bind_param("s", $id);
