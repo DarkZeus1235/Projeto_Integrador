@@ -1,6 +1,9 @@
 <?php
 include('conexao.php');
 
+
+$mensagem = ''; // Inicializa a variável de mensagem
+
 if (isset($_POST['bt_nome'])) {
     $email = $_POST['bt_email'];
     $senha = password_hash($_POST['bt_senha'], PASSWORD_DEFAULT);
@@ -9,7 +12,7 @@ if (isset($_POST['bt_nome'])) {
     $username = $_POST['bt_username'];
     $cpf = $_POST['bt_cpf'];
     $endereco = $_POST['bt_endereco'];
-    $caminho_imagem= "teste";
+    $caminho_imagem= "Imagens/foto_padrao.png";
 
     // Verifique se o email já está cadastrado
     $verificar_email = "SELECT * FROM cadastro WHERE email = ?";
@@ -27,16 +30,11 @@ if (isset($_POST['bt_nome'])) {
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param("ssssssss", $email, $senha, $nome, $telefone, $username, $cpf, $endereco,$caminho_imagem);
 
-        var_dump($stmt);
 
         if ($stmt->execute()) {
-            // Cadastro bem-sucedido
-            echo "success"; // Resposta correta para sucesso
-        } else {
-            // Erro no cadastro
-            echo "error"; // Resposta correta para erro
-        }
-    }
+          // Cadastro bem-sucedido
+      }
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -89,6 +87,53 @@ if (isset($_POST['bt_nome'])) {
                 <input type="password" name="bt_senha" placeholder="Senha" required>
                 <input type="submit" name="cadastrar" value="Cadastrar">
             </form>
+            <script>
+        // Manipule o evento de envio do formulário
+        $('#cadastro').on('submit', function (e) {
+            e.preventDefault(); // Impede o envio padrão do formulário
+
+            // Coleta os dados do formulário
+            var formData = $(this).serialize();
+
+            // Faça uma solicitação AJAX para enviar os dados ao servidor
+            $.ajax({
+                type: 'POST',
+                url: 'cadastro.php', // Substitua 'processa_cadastro.php' pelo nome do arquivo de processamento real
+                data: formData,
+                success: function (response) {
+                    if (response === 'success') {
+                        // Redirecione para a página de login após o cadastro bem-sucedido
+                        Swal.fire({
+                            title: 'Erro',
+                            text: 'Erro no cadastro!',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        })
+                    } else {
+                            Swal.fire({
+                            title: 'Sucesso',
+                            text: 'Cadastro criado com sucesso!',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // Redirecione para a página de login após o cadastro bem-sucedido
+                                window.location.href = 'login.php'; // Substitua 'login.php' pela página desejada
+                            }
+                        });
+                    }
+                },
+                error: function () {
+                    Swal.fire({
+                        title: 'Erro',
+                        text: 'Erro na comunicação com o servidor.',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            });
+        });
+    </script>
             <!-- Adicione a div para exibir a notificação -->
             <div id="notification" class="notification">
                 <?php echo $mensagem; ?>
