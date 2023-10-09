@@ -29,7 +29,7 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
 
 <body>
     <?php
-    include('menu_dashboard.php');
+    include('menu.php');
     ?>
     <br>
     <br>
