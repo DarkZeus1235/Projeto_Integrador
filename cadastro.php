@@ -9,6 +9,7 @@ if (isset($_POST['bt_nome'])) {
     $username = $_POST['bt_username'];
     $cpf = $_POST['bt_cpf'];
     $endereco = $_POST['bt_endereco'];
+    $caminho_imagem= "teste";
 
     // Verifique se o email já está cadastrado
     $verificar_email = "SELECT * FROM cadastro WHERE email = ?";
@@ -22,9 +23,11 @@ if (isset($_POST['bt_nome'])) {
         echo "error_email_exists"; // Ou outra mensagem de erro adequada
     } else {
         // Insira os dados no banco de dados
-        $query = "INSERT INTO cadastro (email, senha, nome, telefone, username, cpf, endereco) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO cadastro (email, senha, nome, telefone, username, cpf, endereco, foto_perfil_caminho) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $mysqli->prepare($query);
-        $stmt->bind_param("sssssss", $email, $senha, $nome, $telefone, $username, $cpf, $endereco);
+        $stmt->bind_param("ssssssss", $email, $senha, $nome, $telefone, $username, $cpf, $endereco,$caminho_imagem);
+
+        var_dump($stmt);
 
         if ($stmt->execute()) {
             // Cadastro bem-sucedido
@@ -75,7 +78,7 @@ if (isset($_POST['bt_nome'])) {
     <div id="container" class="container">
         <div class="signup-container">
             <img src="Imagens/logo_cadastro.png" class="img-fluid" id="img-cadastro" alt="">
-            <form id="cadastro" action="processa_cadastro.php" method="post">
+            <form id="cadastro" action="" method="post">
                 <h2 id="cadastro-text">Cadastro de Clientes</h2>
                 <input type="text" name="bt_nome" placeholder="Nome Completo" required>
                 <input type="text" name="bt_username" placeholder="Nome de Usuário" required>
