@@ -1,11 +1,11 @@
 <header>
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="../index.php">
                 <img src="../Imagens/viking.png.png" alt="Logo Taverna de Valhalla" class="logo-img">
             </a>
             <span class="logo-text">
-                <a href="index.php">Taverna de Valhalla</a>
+                <a href="../index.php">Taverna de Valhalla</a>
             </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

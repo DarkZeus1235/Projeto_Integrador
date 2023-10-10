@@ -13,8 +13,9 @@
       $senha = password_hash ($_POST['bt_senha'], PASSWORD_DEFAULT);
       $nome = $_POST['bt_nome'];
       $funcao = $_POST['bt_funcao'];
+      $caminho_imagem = "Imagens/foto_padrao.png";
       /*----------------------------------*/
-      $mysqli->query("INSERT INTO cadastro_adm (nome, funcao, email, senha) values('$nome', '$funcao', '$email', '$senha')") or
+      $mysqli->query("INSERT INTO cadastro_adm (nome, funcao, email, senha, foto_perfil_caminho) values('$nome', '$funcao', '$email', '$senha', '$caminho_imagem')") or
         die($mysqlierrno);
       }
 ?>
