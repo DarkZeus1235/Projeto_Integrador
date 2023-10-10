@@ -214,7 +214,7 @@ $logins = $retorno_consulta -> fetch_assoc();
 <div class="account-section delete-account">
     <h2>Deletar Conta</h2>
     <p>Se você quiser deletar sua conta, clique no botão abaixo:</p>
-    <button class="btn btn-danger"><a id="botao-aviso" href="deletar.php?codigo_cadastro=<?php echo $logins['id_login_adm'];?>">Deletar Minha Conta</a></button>
+    <button class="btn btn-danger"><a id="botao-aviso" href="deletar_adm.php?codigo_cadastro=<?php echo $_SESSION['id_login_adm'];?>">Deletar Minha Conta</a></button>
 </div>
 <?php
 }
