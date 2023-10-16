@@ -1,5 +1,5 @@
 <?php
-include('../conexao.php');
+include("../conexao.php");
 
 if (isset($_POST['email']) || isset($_POST['senha'])) {
 
@@ -16,23 +16,26 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
   
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
 
-    $adm = $sql_query->fetch_assoc();
-    if (password_verify($senha, $adm['senha'])) { /* Vou comparar a senha do usuário com a senha do banco de dados */
+    $usuario = $sql_query->fetch_assoc();
+    
+    if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
         /* Se a senha for verdadeira faça: */
 
         if (!isset($_SESSION)) {
           session_start();
         }
 
-        $_SESSION['id_login_adm'] = $adm['id_login_adm']; /* Logado */
-        $_SESSION['nome'] = $adm['nome'];
-        $_SESSION['funcao'] = $adm['funcao'];
-        $_SESSION['email'] = $adm['email'];
-        $_SESSION['senha'] = $adm['senha'];
+        var_dump($usuario);
 
-        header("Location: ../index.php"); /* pag do adm */
-    }else{
-      echo "<script>alert('login ou senha incorreto!!');</script>";
+        $_SESSION['id_login_adm'] = $usuario['id_login_adm'];
+        $_SESSION['nome'] = $usuario['nome'];
+        $_SESSION['funcao'] = $usuario['funcao'];
+        $_SESSION['email'] = $usuario['email'];
+        $_SESSION['senha'] = $usuario['senha'];
+
+        header("Location: ../index.php");
+    } else {
+      echo "<script>alert('Login ou senha incorretos!!');</script>";
     }
    
   }
@@ -50,23 +53,6 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     <link rel="stylesheet" href="../css/menu_dieimes.css">
     <link rel="stylesheet" href="../css/dieimes.css">
     <link rel="icon" href="../Imagens/icon.png">
-    <style>
-        /* Estilo para a notificação */
-        .notification {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            width: 300px;
-            border-radius: 5px;
-            z-index: 1000;
-        }
-    </style>
 </head>
 <body>
   <?php
@@ -77,6 +63,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
       <img id="icon_login" src="../Imagens/icon.png" width="220px" height="250px" alt="">
      <!-- Formulário -->
 <form id="cadastro" action="#" method="post">
+    <h1>Login de Administrador</h1>
     <!-- Campos do formulário aqui -->
     <input type="email" name="email" placeholder="Email de Administrador" required>
     <input type="password" name="senha" placeholder="Senha de Administrador" required>
@@ -99,7 +86,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         // Faça uma solicitação AJAX para enviar os dados ao servidor
         $.ajax({
             type: 'POST',
-            url: 'login.php', // Substitua 'login.php' pelo nome do arquivo de processamento real
+            url: 'login_adm.php', // Substitua 'login.php' pelo nome do arquivo de processamento real
             data: formData,
             success: function (response) {
                 if (response === 'success') {
@@ -120,7 +107,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                     }).then((result) => {
                         if (result.isConfirmed) {
                             // Redirecione para a página desejada após o login bem-sucedido
-                            window.location.href = 'index.php'; // Substitua 'index.php' pela página desejada
+                            window.location.href = '../index.php'; // Substitua 'index.php' pela página desejada
                         }
                     });
                 }

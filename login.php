@@ -52,45 +52,6 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
   <link rel="stylesheet" href="css/dieimes.css">
   <link rel="icon" href="Imagens/icon.png">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script>
-$(document).ready(function() {
-    $("#cadatro").submit(function(e) {
-        e.preventDefault();
-
-        var formData = new FormData(this);
-
-        $.ajax({
-            url: $(this).attr("action"),
-            type: $(this).attr("method"),
-            data: formData,
-            contentType: false,
-            processData: false,
-            success: function(response) {
-                if (response.status === "error") {
-                    // Mostrar notificação de erro com SweetAlert
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Erro de login',
-                        text: response.message,
-                        showConfirmButton: true, // Mostra o botão de confirmação
-                        confirmButtonText: 'OK', // Texto do botão de confirmação
-                        confirmButtonColor: '#d33', // Cor do botão de confirmação
-                        customClass: {
-                            confirmButton: 'btn btn-danger' // Classe CSS personalizada para o botão
-                        }
-                    });
-                } else {
-                    // Redirecionar para a página de sucesso (ou outra ação)
-                    window.location.href = "index.php";
-                }
-            },
-            error: function() {
-                alert("Erro ao enviar o formulário.");
-            }
-        });
-    });
-});
-</script>
 </head>
 
 <body>
@@ -106,7 +67,60 @@ $(document).ready(function() {
         <input type="password" name="senha" placeholder="Senha" required>
         <input type="submit" value="Entrar">
       </form>
-      <!-- Script para notificação de erro -->
+     <!-- Alerta -->
+<div id="alert-container" style="display: none;"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
+<script>
+    // Manipule o evento de envio do formulário
+    $('#cadastro').on('submit', function (e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        // Coleta os dados do formulário
+        var formData = $(this).serialize();
+
+        // Faça uma solicitação AJAX para enviar os dados ao servidor
+        $.ajax({
+            type: 'POST',
+            url: 'login.php', // Substitua 'login.php' pelo nome do arquivo de processamento real
+            data: formData,
+            success: function (response) {
+                if (response === 'success') {
+                    // Exiba um alerta de erro
+                    Swal.fire({
+                        title: 'Erro',
+                        text: 'Erro no login!',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                } else {
+                    // Exiba um alerta de sucesso
+                    Swal.fire({
+                        title: 'Sucesso',
+                        text: 'Logado com sucesso!',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Redirecione para a página desejada após o login bem-sucedido
+                            window.location.href = 'index.php'; // Substitua 'index.php' pela página desejada
+                        }
+                    });
+                }
+            },
+            error: function () {
+                // Exiba um alerta de erro de comunicação com o servidor
+                Swal.fire({
+                    title: 'Erro',
+                    text: 'Erro na comunicação com o servidor.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+    });
+</script>
     </div>
   </div>
   <?php
