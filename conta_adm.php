@@ -162,7 +162,7 @@ if (isset($_FILES["foto"])) {
             <p><span class="info-title">Email:</span> <?php echo $_SESSION["email"]; ?></p>
 
             <div class="text-center mt-5">
-                <p><a href="logout'.php" class="btn btn-danger">Sair</a></p>
+                <p><a href="logout.php" class="btn btn-danger">Sair</a></p>
         </main>
          <!-- Orders Section -->
          <?php 
