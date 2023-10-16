@@ -13,30 +13,29 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
     $sql_code = "SELECT * FROM cadastro WHERE email = '$email'";
 
-  
+
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
 
     $usuario = $sql_query->fetch_assoc();
-    
+
     if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
-        /* Se a senha for verdadeira faça: */
+      /* Se a senha for verdadeira faça: */
 
-        if (!isset($_SESSION)) {
-          session_start();
-        }
+      if (!isset($_SESSION)) {
+        session_start();
+      }
 
-        $_SESSION['id_login'] = $usuario['id_login'];
-        $_SESSION['nome'] = $usuario['nome'];
-        $_SESSION['endereco'] = $usuario['endereco'];
-        $_SESSION['telefone'] = $usuario['telefone'];
-        $_SESSION['email'] = $usuario['email'];
-        $_SESSION['senha'] = $usuario['senha'];
+      $_SESSION['id_login'] = $usuario['id_login'];
+      $_SESSION['nome'] = $usuario['nome'];
+      $_SESSION['endereco'] = $usuario['endereco'];
+      $_SESSION['telefone'] = $usuario['telefone'];
+      $_SESSION['email'] = $usuario['email'];
+      $_SESSION['senha'] = $usuario['senha'];
 
-        header("Location: index.php");
+      header("Location: index.php");
     } else {
       echo "<script>alert('Login ou senha incorretos!!');</script>";
     }
-   
   }
 }
 ?>
@@ -52,6 +51,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
   <link rel="stylesheet" href="css/dieimes.css">
   <link rel="icon" href="Imagens/icon.png">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </head>
 
 <body>
@@ -67,60 +67,59 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         <input type="password" name="senha" placeholder="Senha" required>
         <input type="submit" value="Entrar">
       </form>
-     <!-- Alerta -->
-<div id="alert-container" style="display: none;"></div>
+      <!-- Alerta -->
+      <div id="alert-container" style="display: none;"></div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
+      <script>
+        // Manipule o evento de envio do formulário
+        $('#cadastro').on('submit', function(e) {
+          e.preventDefault(); // Impede o envio padrão do formulário
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
-<script>
-    // Manipule o evento de envio do formulário
-    $('#cadastro').on('submit', function (e) {
-        e.preventDefault(); // Impede o envio padrão do formulário
+          // Coleta os dados do formulário
+          var formData = $(this).serialize();
 
-        // Coleta os dados do formulário
-        var formData = $(this).serialize();
-
-        // Faça uma solicitação AJAX para enviar os dados ao servidor
-        $.ajax({
+          // Faça uma solicitação AJAX para enviar os dados ao servidor
+          $.ajax({
             type: 'POST',
             url: 'login.php', // Substitua 'login.php' pelo nome do arquivo de processamento real
             data: formData,
-            success: function (response) {
-                if (response === 'success') {
-                    // Exiba um alerta de erro
-                    Swal.fire({
-                        title: 'Erro',
-                        text: 'Erro no login!',
-                        icon: 'error',
-                        confirmButtonText: 'OK'
-                    });
-                } else {
-                    // Exiba um alerta de sucesso
-                    Swal.fire({
-                        title: 'Sucesso',
-                        text: 'Logado com sucesso!',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            // Redirecione para a página desejada após o login bem-sucedido
-                            window.location.href = 'index.php'; // Substitua 'index.php' pela página desejada
-                        }
-                    });
-                }
-            },
-            error: function () {
-                // Exiba um alerta de erro de comunicação com o servidor
+            success: function(response) {
+              if (response === 'success') {
+                // Exiba um alerta de erro
                 Swal.fire({
-                    title: 'Erro',
-                    text: 'Erro na comunicação com o servidor.',
-                    icon: 'error',
-                    confirmButtonText: 'OK'
+                  title: 'Erro',
+                  text: 'Erro no login!',
+                  icon: 'error',
+                  confirmButtonText: 'OK'
                 });
+              } else {
+                // Exiba um alerta de sucesso
+                Swal.fire({
+                  title: 'Sucesso',
+                  text: 'Logado com sucesso!',
+                  icon: 'success',
+                  confirmButtonText: 'OK'
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    // Redirecione para a página desejada após o login bem-sucedido
+                    window.location.href = 'index.php'; // Substitua 'index.php' pela página desejada
+                  }
+                });
+              }
+            },
+            error: function() {
+              // Exiba um alerta de erro de comunicação com o servidor
+              Swal.fire({
+                title: 'Erro',
+                text: 'Erro na comunicação com o servidor.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              });
             }
+          });
         });
-    });
-</script>
+      </script>
     </div>
   </div>
   <?php

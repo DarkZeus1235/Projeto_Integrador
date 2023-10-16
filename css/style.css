@@ -1151,6 +1151,7 @@ button:hover {
 
 .product-actions {
   display: flex;
+  margin-left: 95px;
   gap: 15px;
   align-items: center;
   /* Alinhar verticalmente os botões e o ícone de favorito */

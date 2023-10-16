@@ -72,7 +72,6 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
 <!-- Alerta -->
 <div id="alert-container" style="display: none;"></div>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
 <script>

@@ -131,3 +131,18 @@
     }
   }
   /* FIM DO DESIGN DO CONTATO */
+  /* Estilize o alerta SweetAlert */
+  .swal2-popup {
+      display: none;
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      width: 300px;
+      border-radius: 15px;
+      z-index: 1000;
+  }
