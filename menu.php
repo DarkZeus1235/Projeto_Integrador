@@ -72,7 +72,7 @@
                 }
                 ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button"
                             aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-person-circle" viewBox="0 0 16 16">

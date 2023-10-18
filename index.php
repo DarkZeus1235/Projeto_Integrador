@@ -58,6 +58,49 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
       </div>
   </div>
   <?php include 'rodape.php'; ?>
+  <script>
+    $(document).ready(function () {
+      $('#cadastro').on('submit', function (e) {
+        e.preventDefault();
+        var formData = $(this).serialize();
+
+        $.ajax({
+          type: 'POST',
+          url: 'login.php',
+          data: formData,
+          success: function (response) {
+            if (response === 'success') {
+              Swal.fire({
+                title: 'Success',
+                text: 'Logado com Sucesso!!',
+                icon: 'success',
+                confirmButtonText: 'OK'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = 'index.php';
+                }
+              });
+            } else {
+              Swal.fire({
+                title: 'Error',
+                text: 'Erro no Login! Verifique as informações',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              });
+            }
+          },
+          error: function () {
+            Swal.fire({
+              title: 'Erro',
+              text: 'Erro na comunicação com o servidor.',
+              icon: 'error',
+              confirmButtonText: 'OK'
+            });
+          }
+        });
+      });
+    });
+  </script>
 
 
 
