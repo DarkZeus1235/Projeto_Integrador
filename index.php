@@ -3,6 +3,9 @@ include("conexao.php");
 
 if (!isset($_SESSION)) {
   session_start();
+  if(isset($_SESSION['nome'])){
+    echo "<script>alert('Bem-vindo, " . $_SESSION['nome'] . "');</script>";
+  }
 }
 
 $consultar_banco = "SELECT * FROM cadastro_bebidas";
@@ -56,50 +59,22 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
         </div>
       <?php endwhile; ?>
       </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
   </div>
   <?php include 'rodape.php'; ?>
   <script>
-    $(document).ready(function () {
-      $('#cadastro').on('submit', function (e) {
-        e.preventDefault();
-        var formData = $(this).serialize();
-
-        $.ajax({
-          type: 'POST',
-          url: 'login.php',
-          data: formData,
-          success: function (response) {
-            if (response === 'success') {
-              Swal.fire({
-                title: 'Success',
-                text: 'Logado com Sucesso!!',
-                icon: 'success',
-                confirmButtonText: 'OK'
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = 'index.php';
-                }
-              });
-            } else {
-              Swal.fire({
-                title: 'Error',
-                text: 'Erro no Login! Verifique as informações',
-                icon: 'error',
-                confirmButtonText: 'OK'
-              });
-            }
-          },
-          error: function () {
-            Swal.fire({
-              title: 'Erro',
-              text: 'Erro na comunicação com o servidor.',
-              icon: 'error',
-              confirmButtonText: 'OK'
-            });
-          }
-        });
+    // Verifique se a URL contém um parâmetro chamado "login" com o valor "success"
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('login') && urlParams.get('login') === 'success') {
+      // Se o parâmetro "login" for "success", exiba o alerta de boas-vindas
+      Swal.fire({
+        title: 'Bem-vindo!',
+        text: 'Você fez login com sucesso! Bem-vindo á Taverna de Valhalla <?php echo $_SESSION['nome'];?>',
+        icon: 'success',
+        confirmButtonText: 'OK'
       });
-    });
+    }
   </script>
 
 
