@@ -2,32 +2,32 @@
 include("../conexao.php");
 
 if (isset($_POST['email']) && isset($_POST['senha'])) {
-    $email = $mysqli->real_escape_string($_POST['email']);
-    $senha = $_mysqli->real_escape_string($_POST['senha']);
+  $email = $mysqli->real_escape_string($_POST['email']);
+  $senha = $mysqli->real_escape_string($_POST['senha']);
 
-    if (empty($email) || empty($senha)) {
-        echo 'Preencha todos os campos.';
+  if (empty($email) || empty($senha)) {
+    echo 'Preencha todos os campos.';
+  } else {
+    $sql_code = "SELECT * FROM cadastro_adm WHERE email = '$email'";
+    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
+    $usuario = $sql_query->fetch_assoc();
+
+    if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
+      if (!isset($_SESSION)) {
+        session_start();
+      }
+
+      $_SESSION['id_login_adm'] = $usuario['id_login_adm'];
+      $_SESSION['nome'] = $usuario['nome'];
+      $_SESSION['funcao'] = $usuario['funcao'];
+      $_SESSION['email'] = $usuario['email'];
+      $_SESSION['senha'] = $usuario['senha'];
+
+      echo 'success'; // Somente agora retorna 'success' se o login for bem-sucedido.
     } else {
-        $sql_code = "SELECT * FROM cadastro_adm WHERE email = '$email'";
-        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
-        $usuario = $sql_query->fetch_assoc();
-
-        if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
-            // Se as informações estiverem corretas, você pode prosseguir para o login
-            if (!isset($_SESSION)) {
-                session_start();
-            }
-
-            $_SESSION['id_login_adm'] = $usuario['id_login_adm'];
-            $_SESSION['nome'] = $usuario['nome'];
-            $_SESSION['funcao'] = $usuario['funcao'];
-            $_SESSION['email'] = $usuario['email'];
-            $_SESSION['senha'] = $usuario['senha'];
-            echo 'success'; // Isso indica um login bem-sucedido
-        } else {
-            echo 'Login ou senha incorretos.';
-        }
+      echo 'error'; // Retorna 'error' se o login falhar.
     }
+  }
 }
 ?>
 
@@ -36,12 +36,11 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" href="../css/menu_dieimes.css">
   <link rel="stylesheet" href="../css/dieimes.css">
@@ -65,6 +64,59 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
       </form>
       <!-- Alerta -->
       <div id="alert-container" style="display: none;"></div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
+      <script>
+        // Manipule o evento de envio do formulário
+        $('#cadastro').on('submit', function(e) {
+          e.preventDefault(); // Impede o envio padrão do formulário
+
+          // Coleta os dados do formulário
+          var formData = $(this).serialize();
+
+          // Faça uma solicitação AJAX para enviar os dados ao servidor
+          $.ajax({
+            type: 'POST',
+            url: 'login_adm.php',
+            data: formData,
+            success: function(response) {
+              // Vamos verificar se a resposta contém "success" (pode haver espaços em branco extras)
+              if (response.trim().indexOf('success') === 0) {
+                // Exiba um alerta de sucesso
+                Swal.fire({
+                  title: 'Sucesso',
+                  text: 'Logado com sucesso!',
+                  icon: 'success',
+                  confirmButtonText: 'OK'
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    // Redirecione para a página desejada após o login bem-sucedido
+                    window.location.href = '../index.php';
+                  }
+                });
+              } else {
+                // Exiba um alerta de erro
+                Swal.fire({
+                  title: 'Erro',
+                  text: 'Erro no login! Informações incorretas!!',
+                  icon: 'error',
+                  confirmButtonText: 'OK'
+                });
+              }
+            },
+            error: function() {
+              // Exiba um alerta de erro de comunicação com o servidor
+              Swal.fire({
+                title: 'Erro',
+                text: 'Erro na comunicação com o servidor.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              });
+            }
+          });
+        });
+      </script>
+
     </div>
   </div>
   <?php
@@ -72,59 +124,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
   ?>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
 </script>
-<script>
-  // Uma vez que a página esteja totalmente carregada, execute este código
-  $(document).ready(function () {
-    // Manipule o evento de envio do formulário
-    $('#cadastro').on('submit', function (e) {
-      e.preventDefault(); // Impede o envio padrão do formulário
 
-      // Coleta os dados do formulário
-      var formData = $(this).serialize();
-
-      // Faça uma solicitação AJAX para verificar as informações no servidor
-      $.ajax({
-        type: 'POST',
-        url: 'login_adm.php', // Substitua 'login.php' pelo nome do arquivo de processamento real
-        data: formData,
-        success: function (response) {
-          if (response === 'success') {
-            // Exiba um alerta de sucesso e redirecione
-            Swal.fire({
-              title: 'Sucesso',
-              text: 'Logado com sucesso!',
-              icon: 'success',
-              confirmButtonText: 'OK'
-            }).then((result) => {
-              if (result.isConfirmed) {
-                // Redirecione para a página desejada após o login bem-sucedido
-                window.location.href = '../index.php'; // Substitua 'index.php' pela página desejada
-              }
-            });
-          } else {
-            // Exiba um alerta de erro
-            Swal.fire({
-              title: 'Erro',
-              text: 'Erro no Login!! Verifique as informações inseridas no formulário!!', // Exibe a mensagem de erro do PHP
-              icon: 'error',
-              confirmButtonText: 'OK'
-            });
-          }
-        },
-        error: function () {
-          // Exiba um alerta de erro de comunicação com o servidor
-          Swal.fire({
-            title: 'Erro',
-            text: 'Erro na comunicação com o servidor.',
-            icon: 'error',
-            confirmButtonText: 'OK'
-          });
-        }
-      });
-    });
-  });
-</script>
 </html>

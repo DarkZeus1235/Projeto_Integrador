@@ -4,7 +4,10 @@ include("conexao.php");
 if (!isset($_SESSION)) {
   session_start();
   if(isset($_SESSION['nome'])){
-    echo "<script>alert('Bem-vindo, " . $_SESSION['nome'] . "');</script>";
+    if (!isset($_SESSION['boas-vindas_exibida'])) {
+      echo "<script>alert('Bem-vindo, " . $_SESSION['nome'] . "');</script>";
+      $_SESSION['boas-vindas_exibida'] = true;
+    }
   }
 }
 
@@ -12,6 +15,7 @@ $consultar_banco = "SELECT * FROM cadastro_bebidas";
 $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
 $quantidade_pedidos = $retorno_consulta->num_rows;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

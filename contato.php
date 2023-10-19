@@ -1,6 +1,10 @@
 <?php
 include('conexao.php');
 
+if (!isset($_SESSION)) {
+    session_start();
+}
+
 // Inicialize a variável para armazenar o status da mensagem
 $status = '';
 
@@ -92,19 +96,19 @@ if (isset($_POST['nome'])) {
         <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
         <button type="submit">Enviar</button>
     </form>
-
     <!-- Alerta -->
-    <div id="alert-container" style="display: none;"></div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
-    <script>
-        // Verifique o status e exiba o alerta apropriado
+<div id="alert-container" style="display: none;"></div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Verifique o status e exiba o alerta no centro da tela
         <?php if ($status === 'success') : ?>
             Swal.fire({
                 title: 'Sucesso',
                 text: 'Mensagem enviada com Sucesso!',
                 icon: 'success',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'OK',
+                position: 'center' // Defina a posição como 'center'
             }).then((result) => {
                 if (result.isConfirmed) {
                     // Redirecione para a página desejada após o envio bem-sucedido
@@ -116,10 +120,13 @@ if (isset($_POST['nome'])) {
                 title: 'Erro',
                 text: 'Erro ao enviar a mensagem!',
                 icon: 'error',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'OK',
+                position: 'center' // Defina a posição como 'center'
             });
         <?php endif; ?>
-    </script>
+    });
+</script>
+
 
         </section>
     </div>

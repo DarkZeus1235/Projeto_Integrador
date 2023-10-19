@@ -2,36 +2,36 @@
 include("conexao.php");
 
 if (isset($_POST['email']) && isset($_POST['senha'])) {
-    $email = $mysqli->real_escape_string($_POST['email']);
-    $senha = $mysqli->real_escape_string($_POST['senha']);
+  $email = $mysqli->real_escape_string($_POST['email']);
+  $senha = $mysqli->real_escape_string($_POST['senha']);
 
-    if (empty($email) || empty($senha)) {
-        echo 'Preencha todos os campos.';
+  if (empty($email) || empty($senha)) {
+    echo 'Preencha todos os campos.';
+  } else {
+    $sql_code = "SELECT * FROM cadastro WHERE email = '$email'";
+    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
+    $usuario = $sql_query->fetch_assoc();
+
+    if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
+      if (!isset($_SESSION)) {
+        session_start();
+      }
+
+      $_SESSION['id_login'] = $usuario['id_login'];
+      $_SESSION['nome'] = $usuario['nome'];
+      $_SESSION['endereco'] = $usuario['endereco'];
+      $_SESSION['telefone'] = $usuario['telefone'];
+      $_SESSION['email'] = $usuario['email'];
+      $_SESSION['senha'] = $usuario['senha'];
+
+      echo 'success'; // Somente agora retorna 'success' se o login for bem-sucedido.
     } else {
-        $sql_code = "SELECT * FROM cadastro WHERE email = '$email'";
-        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
-        $usuario = $sql_query->fetch_assoc();
-
-            if (!isset($_SESSION)) {
-                session_start();
-            }
-
-            $_SESSION['id_login'] = $usuario['id_login'];
-            $_SESSION['nome'] = $usuario['nome'];
-            $_SESSION['endereco'] = $usuario['endereco'];
-            $_SESSION['telefone'] = $usuario['telefone'];
-            $_SESSION['email'] = $usuario['email'];
-            $_SESSION['senha'] = $usuario['senha'];
-
-            if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
-
-            echo 'success';
-        } else {
-            echo 'error';
-        }
+      echo 'error'; // Retorna 'error' se o login falhar.
     }
+  }
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -77,18 +77,11 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
           // Faça uma solicitação AJAX para enviar os dados ao servidor
           $.ajax({
             type: 'POST',
-            url: 'login.php', // Substitua 'login.php' pelo nome do arquivo de processamento real
+            url: 'login.php',
             data: formData,
             success: function(response) {
-              if (response === 'success') {
-                // Exiba um alerta de erro
-                Swal.fire({
-                  title: 'Erro',
-                  text: 'Erro no login!',
-                  icon: 'error',
-                  confirmButtonText: 'OK'
-                });
-              } else {
+              // Vamos verificar se a resposta contém "success" (pode haver espaços em branco extras)
+              if (response.trim().indexOf('success') === 0) {
                 // Exiba um alerta de sucesso
                 Swal.fire({
                   title: 'Sucesso',
@@ -98,8 +91,16 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
                 }).then((result) => {
                   if (result.isConfirmed) {
                     // Redirecione para a página desejada após o login bem-sucedido
-                    window.location.href = 'index.php'; // Substitua 'index.php' pela página desejada
+                    window.location.href = 'index.php';
                   }
+                });
+              } else {
+                // Exiba um alerta de erro
+                Swal.fire({
+                  title: 'Erro',
+                  text: 'Erro no login! Informações incorretas!!',
+                  icon: 'error',
+                  confirmButtonText: 'OK'
                 });
               }
             },
@@ -115,6 +116,8 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
           });
         });
       </script>
+
+
     </div>
   </div>
   <?php
