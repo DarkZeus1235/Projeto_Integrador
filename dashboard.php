@@ -36,7 +36,8 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
     <main>
         <h2>Bem-vindo ao Dashboard de Administradores!</h2>
     </main>
-    <div class="contaaiiner">
+    <div id="contaaiiner" class="container-fluid">
+    <div class="row-fluid">
         <div id="alinhar_dashboard" class="table-responsive"> <!-- Adicione a classe 'table-responsive' para tornar a tabela responsiva -->
             <h2>Contas cadastradas no Sistema:</h2>
             <div class="table-responsive">
@@ -46,7 +47,6 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
                         <th>ID da Conta:</th>
                         <th>Nome:</th>
                         <th>Email:</th>
-                        <th>Senha:</th>
                         <th>Usuário:</th>
                         <th>Funcionalidades:</th>
                         <th>Funcionalidades:</th>
@@ -60,7 +60,6 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
                             <td><?php echo $logins['id_login']; ?></td>
                             <td><?php echo $logins['nome']; ?> </td>
                             <td><?php echo $logins['email']; ?> </td>
-                            <td><?php echo $logins['senha']; ?> </td>
                             <td><?php echo $logins['username']; ?></td>
                             <td class="text-center">
                                 <a id="butao-adm" class="btn btn-danger" href="deletar.php?codigo_cadastro=<?php echo $logins['id_login']; ?>">Deletar</a>
@@ -75,6 +74,7 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
                 </tbody>
             </table>
             </div>
+        </div>
         </div>
     </div>
     <?php
