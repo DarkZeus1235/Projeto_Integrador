@@ -36,47 +36,42 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
     <main>
         <h2>Bem-vindo ao Dashboard de Administradores!</h2>
     </main>
-    <div id="contaaiiner" class="container-fluid">
-    <div class="row-fluid">
-        <div id="alinhar_dashboard" class="table-responsive"> <!-- Adicione a classe 'table-responsive' para tornar a tabela responsiva -->
-            <h2>Contas cadastradas no Sistema:</h2>
-            <div class="table-responsive">
-            <table id="table" class="table table-striped">
-                <thead> <!-- Adicione um cabeçalho de tabela -->
-                    <tr>
-                        <th>ID da Conta:</th>
-                        <th>Nome:</th>
-                        <th>Email:</th>
-                        <th>Usuário:</th>
-                        <th>Funcionalidades:</th>
-                        <th>Funcionalidades:</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    while ($logins = $retorno_consulta->fetch_assoc()) {
-                    ?>
-                        <tr>
-                            <td><?php echo $logins['id_login']; ?></td>
-                            <td><?php echo $logins['nome']; ?> </td>
-                            <td><?php echo $logins['email']; ?> </td>
-                            <td><?php echo $logins['username']; ?></td>
-                            <td class="text-center">
-                                <a id="butao-adm" class="btn btn-danger" href="deletar.php?codigo_cadastro=<?php echo $logins['id_login']; ?>">Deletar</a>
-                            </td>
-                            <td class="text-center">
-                                <a id="butao-adm" class="btn btn-primary" href="alterar.php">Alterar</a>
-                            </td>
-                        </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
-            </table>
-            </div>
-        </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+        <div class="card-group">
+  <div class="card">
+    <img src="Imagens/Viking_conta_resized.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Contas Cadastradas no Sistema.</h5>
+      <p class="card-text">Verificar todas as contas cadastradas no sistema.</p>
+      <button id="butao" class="custom-btn"><a id="contas" href="contas_sistema.php">Contas no Sistema</a></button>
+    </div>
+    
+  </div>
+  <div class="card">
+    <img src="Imagens/Viking_contato.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Mensagens de Contato</h5>
+      <p class="card-text">Verificar todas as mensagens de contato enviadas pelo formulário.</p>
+      <button id="butao" class="custom-btn"><a id="contas" href="mensagens_sistema.php">Mensagens de Contato</a></button>
+    </div>
+    
+  </div>
+  <div class="card">
+    <img src="Imagens/Viking_compra.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Pedidos</h5>
+      <p class="card-text">Ver todos os pedidos realizados.</p>
+      <button id="butao2" class="custom-btn"><a id="contas" href="pedidos_sistema.php">Pedidos</a></button>
+    </div>
+   
+  </div>
+</div>
         </div>
     </div>
+    <?php 
+        include('espacamento.php');
+    ?>
     <?php
     include('rodape.php');
     ?>

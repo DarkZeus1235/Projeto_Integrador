@@ -1257,3 +1257,37 @@ td.text-center {
 .info-title {
   font-weight: bold;
 }
+#registre{
+  font-size: 19px;
+}
+#registre2{
+  font: 20px;
+  color: #6B4B21;
+}
+#contas{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+}
+#butao{
+  font-size: 18px;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+  margin-left: 30%;
+  border-radius: 15px;
+}
+#butao2{
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+  margin-left: 35%;
+  width: 30%;
+  border-radius: 15px;
+}

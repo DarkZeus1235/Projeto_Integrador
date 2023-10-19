@@ -60,6 +60,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
         <h2 id="login-text">Login</h2>
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="senha" placeholder="Senha" required>
+        <p id="registre">Não possui uma conta ainda? <a id="registre2" href="cadastro.php">Registre-se</a></p>
         <input type="submit" value="Entrar">
       </form>
       <!-- Alerta -->

@@ -85,6 +85,7 @@ if (isset($_POST['bt_nome'])) {
                 <input type="text" name="bt_endereco" placeholder="Endereço" required>
                 <input type="email" name="bt_email" placeholder="Email" required>
                 <input type="password" name="bt_senha" placeholder="Senha" required>
+                <p id="registre">Já possui uma conta? <a id="registre2" href="login.php">Entrar</a></p>
                 <input type="submit" name="cadastrar" value="Cadastrar">
             </form>
             <script>
