@@ -1,0 +1,16 @@
+#botao-adm:hover{
+    background-color: white;
+    display: flex
+ }
+ #links-adm{
+    color: black;
+ }
+ #nav-titulo{
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: space-around;
+ }
+#butao-adm{
+    color: white;
+}
