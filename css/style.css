@@ -1278,7 +1278,7 @@ td.text-center {
   justify-content: center;
   justify-items: center;
   display: flex;
-  margin-left: 30%;
+  margin-left: 25%;
   border-radius: 15px;
 }
 #butao2{
@@ -1290,4 +1290,7 @@ td.text-center {
   margin-left: 35%;
   width: 30%;
   border-radius: 15px;
+}
+#text-align{
+  text-align: center;
 }

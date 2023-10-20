@@ -35,12 +35,13 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
     <br>
     <main>
         <h2>Bem-vindo ao Dashboard de Administradores!</h2>
+        <h2 id="text-align"><?php echo $_SESSION['nome'];?></h2>
     </main>
     <div class="container-fluid">
         <div class="row-fluid">
         <div class="card-group">
   <div class="card">
-    <img src="Imagens/Viking_conta_resized.png" class="card-img-top" alt="...">
+    <img href="contas_sistema.php" src="Imagens/Viking_conta_resized.png" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Contas Cadastradas no Sistema.</h5>
       <p class="card-text">Verificar todas as contas cadastradas no sistema.</p>
@@ -49,7 +50,7 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
     
   </div>
   <div class="card">
-    <img src="Imagens/Viking_contato.jpg" class="card-img-top" alt="...">
+    <img href="mensagens_sistema.php" src="Imagens/Viking_contato.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Mensagens de Contato</h5>
       <p class="card-text">Verificar todas as mensagens de contato enviadas pelo formulário.</p>
@@ -58,7 +59,7 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
     
   </div>
   <div class="card">
-    <img src="Imagens/Viking_compra.jpg" class="card-img-top" alt="...">
+    <img href="pedidos_sistema.php" src="Imagens/Viking_compra.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Pedidos</h5>
       <p class="card-text">Ver todos os pedidos realizados.</p>
