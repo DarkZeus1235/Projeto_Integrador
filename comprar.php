@@ -1,6 +1,10 @@
 <?php
 include("conexao.php");
 
+if(!isset($_SESSION)){
+  session_start();
+}
+
 if (isset($_GET["id"])) {
   $id_bebida = $_GET["id"];
 

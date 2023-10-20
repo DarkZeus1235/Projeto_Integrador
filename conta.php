@@ -11,6 +11,7 @@ if (isset($_SESSION['id_login'])) {
     $id = $_SESSION['id_login'];
 
     /* Consultar o banco de dados para obter informações do usuário */
+    $stmt = $mysqli->prepare("SELECT * FROM pedidos");
     $stmt = $mysqli->prepare("SELECT * FROM cadastro WHERE id_login = ? LIMIT 1");
     $stmt->bind_param("s", $id);
     $stmt->execute();
@@ -158,7 +159,7 @@ if (isset($_FILES["foto"])) {
                 <ul class="order-list">
                     <li class="order-item">
                         <strong>Pedido #68980</strong>
-                        <p>Data do Pedido: 10/09/2023 </p>
+                        <p>Pedido: </p>
                         <p>Valor: R$ 1.500,43</p>
                     </li>
                     <li class="order-item">
