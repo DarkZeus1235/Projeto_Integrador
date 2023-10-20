@@ -1,22 +1,23 @@
 /*CSS 1*/
 
 body {
-  font-family: sans-serif;
-  background-color: #FFFFF0;
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-color: #FFFFF0;
-}
-/* Botão informações do produto(página comprar)*/
-.btn{
-  color: #393c3d;
-  font-size: 20px;
-}
-
-.custom-btn {
+    font-family: sans-serif;
+    background-color: #FFFFF0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #FFFFF0;
+  }
+  
+  /* Botão informações do produto(página comprar)*/
+  .btn {
+    color: #393c3d;
+    font-size: 20px;
+  }
+  
+  .custom-btn {
     background-color: #6B4B21;
     color: #fff;
     /* Outros estilos do botão (opcional) */
@@ -25,474 +26,1272 @@ body {
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
-}
-
-.custom-btn:hover {
-    background-color: #543814; /* Cor mais escura ao passar o mouse (opcional) */
-}
-
-/* Espaco botão contato */
-#esp{
-  margin-top: 10px;
-}
-
-
-
-
-/*CSS 2*/
-
-.login-container {
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  width: 300px;
-  margin-left: 500px;
-  margin-top: 180px;
-}
-
-.plv{
-  margin-top: 7px;
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-#registro{
-  color: #E25822;
-  text-decoration: none;
-}
-#entrar{
-  color: #E25822;
-  text-decoration: none;
-  margin-left: 98px;
-}
-
-.login-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.login-container input[type="text"],
-.login-container input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-
-
-
-.login-container input[type="submit"]:hover {
-  background-color: #6B4B21;
-}
-
-.login-container p {
-  text-align: center;
-}
-
-#container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.signup-container {
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  width: 300px;
-  margin-top: 0px;
-  margin-left: 0px;
-}
-
-.signup-container h2 {
-  text-align: center;
-    margin-bottom: 20px;
-}
-
-.signup-container input[type="text"],
-.signup-container input[type="tel"],
-.signup-container input[type="email"],
-.signup-container input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-
-.signup-container input[type="submit"] {
-  width: 100%;
-    background-color: #6B4B21;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.signup-container input[type="submit"]:hover {
-  background-color: #6B4B21;
-}
-
-/*CSS Navbar*/
-/* CSS personalizado para o navbar */
-.custom-navbar {
-  background-color: burlywood; 
-  color: #fff; /* Texto branco */
-}
-
-
-/* CSS Cards */
-
-#testec{
-  margin-left: 10px;
-}
-#textc{
-  color: white;
-  font-size: 18px;
-  margin-left: 37px;
-}
-#textc:hover{
-  color: black;
-}
-.card-text{
-  text-align: center;
-}
-#card-text{
-  text-align: center;
-  font-weight: bold;
-}
-.card-title{
-  text-align: center;
-  font-weight: bold;
-}
-
-/* CSS Página Compra */
-
-#quad{
-  border: 25px solid burlywood;
-  background-color: white;
-  width: 1100px;
-  height: 1000px;
-  margin-left: 420px;
-  margin-top: 70px;
-  border-radius: 25px;
-}
-.pedi{
-  text-align: center;
-  color: #000000;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 35px;
-  font-weight: bold;
-}
-#img-pedi{
-  width: 250px;
-  margin-left: 10px;
-}
-.text-pedi{
-  margin-left: 15px;
-  display: inline-block;
-  font-weight: bold;
-}
-#quad2{
-  border: 5px solid burlywood;
-}
-#boleto-icon{
-  margin-left: 10px;
-}
-#aviso-compra{
-  margin-left: 100px;
-  margin-top: 100px;
-}
-#botao-comp{
-  color: white;
-  margin-left: 940px;
-}
-#botao-car{
-  color: white;
-  margin-left: 830px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
-.span-comp{
-  font-weight: bold;
-  margin-left: 10px;
-}
-a{
-  color: #000000;
-}
-
-/*CSS Cards Informação Conta Cliente*/
-
-.col-lg-3{
-  display: inline-block;
-}
-#cardi1{
-  margin-left: 150px;
-}
-#cardi2{
-  margin-left: 30px;
-}
-#cardi3{
-  margin-left: 30px;
-}
-#cardi4{
-  margin-left: 30px;
-}
-#cardi5{
-  margin-left: 30px;
-}
-#min-conta{
-  margin-left: 500px;
-}
-/*CSS Faixa Contato*/
-
-.faixa-contact{
-  height: 10px;
-  width: 1987px;
-  background-color: burlywood;
-  margin-top: 40px;
-  margin-left: -390px;
-}
-.faixa-contacto{
-  height: 110px;
-  width: 1899px;
-  background-color: #6B4B21;
-  margin-top: -90px;
-  margin-left: -300px;
-}
-#insta{
-  margin-left: 530px;
-}
-.insta{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-.space{
-  margin-top: 30px;
-}
-#face{
-  margin-left: 530px;
-}
-.face{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-#zap{
-  margin-left: 530px;
-}
-.zap{
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-#mail{
-  margin-left: 530px;
-  margin-top: -7px;
-}
-.mail{
-  margin-top: -100px;
-  font-size: 20px;
-  display: inline-block;
-}
-
-/*IMAGEM DO VIKING DA NAVBAR*/
-
-#viking{
-  width: 600px;
-  height: 700px;
-  margin-top: 30px;
-}
-
-.logo-img {
-  width: 78px; /* Defina o tamanho desejado para a largura */
-  height: auto; /* A altura será ajustada proporcionalmente com base na largura */
-}
-#h1-index{
-  text-align: center;
-} 
-
-/* Efeito texto Navbar*/
-.nav-link{
-  position: relative;
-  font-size: 20px;
-  color: #6B4B21;
-  font-weight: 500;
-  text-decoration: none;
-  margin-left: 40px;
-}
-.nav-link::before{
-  content: '';
-  position: absolute;
-  top: 80%;
-  left: 0;
-  width: 0 ;
-  height: 2px;
-  background: #000;
-  transition: .3s;
-}
-.nav-link:hover::before{
-  width: 95%;
-}
-#nav-link:hover::before{
-  width: 90%;
-}
-#nav-link2:hover::before{
-  width: 72%;
-}
-
-/* TEXTO DA LOGO */
-#Texto_da_logo{
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: #6B4B21;
-  font-size: 34px;
-  text-decoration: none;
-}
-#Texto_da_logo:hover{
-  color: white;
-}
-#princesa{
-  width: 240px;
-  margin-top: -350px;
-  margin-left: 860px;
-}
-#bárbaro{
-  width: 240px;
-  margin-top: -90px;
-  margin-left: -550px;
-  margin-bottom: -13px;
-}
-
-/* Atributo para tornar responsivel no celular */
-@media screen and (max-width: 1000px) {
-  .signup-container{
-    margin-top: -200px;
-    margin-left: 10px;
-    height: 615px;
-    width: 500px;
   }
-  #cadatro{
-    width: 458px;
+  
+  .custom-btn:hover {
+    background-color: #543814;
+    /* Cor mais escura ao passar o mouse (opcional) */
   }
-  #insta{
-    margin-left:  390px;
-  }
-  #face{
-    margin-left:  390px;
-  }
-  #zap{
-    margin-left:  390px;
-  }
-  #mail{
-    margin-left: 390px;
-  }
-  #testec{
-    margin-left: 130px; 
-  }
-  #bárbaro{
-    width: 0px;
-    margin-top: -250px;
-    margin-left: -100px;
-  }
-  .faixa-contact{
-    width: 1358px;
-  }
-  #princesa{
-    margin-left: 325px;
-  }
-  .faixa-contacto{
-    width: 1268px;
+  
+  /* Espaco botão contato */
+  #esp {
     margin-top: 10px;
   }
-  #testee_mobile{
-    width: 730px;
+  
+  
+  
+  
+  /*CSS 2*/
+  
+  .login-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 300px;
   }
-  .login-container{
-    margin-left: 320px;
+  
+  #botao_login {
+    color: white;
+    background-color: #6B4B21;
   }
-}
-@media screen and (max-width: 500px) {
-  #insta{
-    margin-left:  150px;
+  
+  .plv {
+    margin-top: 7px;
+    margin-bottom: 5px;
+    text-align: center;
   }
-  #face{
+  
+  #registro {
+    color: #E25822;
+    text-decoration: none;
+    margin-left: 90px;
+  }
+  
+  #entrar {
+    color: #E25822;
+    text-decoration: none;
+    margin-left: 109px;
+  }
+  
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .login-container input[type="submit"]:hover {
+    background-color: #6B4B21;
+  }
+  
+  .login-container p {
+    text-align: center;
+  }
+  
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .signup-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #34495e;
+    padding: 20px;
+    width: 50%;
+    margin-top: 0px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .signup-container {
+    text-align: left';
+  
+  }
+  
+  .signup-container input[type="text"],
+  .signup-container input[type="tel"],
+  .signup-container input[type="email"],
+  .signup-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2.5px solid #34495e;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+  
+  .signup-container input[type="submit"] {
+    width: 100%;
+    background-color: #6B4B21;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .signup-container input[type="submit"]:hover {
+    background-color: #6B4B21;
+  }
+  
+  #img-cadastro {
+    width: 50%;
+    height: 50%;
+    justify-content: space-around;
+    margin-left: -30px;
+    margin-top: 100px;
+  }
+  
+  /*CSS Navbar*/
+  
+  
+  /* CSS Cards */
+  
+  #testec {
+    margin-left: 10px;
+  }
+  
+  #textc {
+    color: white;
+    font-size: 18px;
+    margin-left: 37px;
+  }
+  
+  #textc:hover {
+    color: black;
+  }
+  
+  .card-text {
+    text-align: center;
+  }
+  
+  #card-text {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .card-title {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* CSS Página Compra */
+  
+  .pedi {
+    text-align: center;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  #img-pedi {
+    width: 250px;
+    margin-left: 500px;
+    margin-top: 60px;
+  }
+  
+  .arrumartextopagcompra {
+    margin-left: 750px;
+  
+  }
+  
+  .text-pedi {
+    margin-left: 15px;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  #aviso-compra {
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  
+  #botao-comp {
+    color: white;
+    margin-left: 940px;
+  }
+  
+  #botao-car {
+    color: white;
+    margin-left: 830px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .span-comp {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  a {
+    color: #000000;
+  }
+  
+  /*CSS Cards Informação Conta Cliente*/
+  
+  .col-lg-3 {
+    display: inline-block;
+  }
+  
+  #cardi1 {
+    margin-left: 150px;
+  }
+  
+  #cardi2 {
+    margin-left: 30px;
+  }
+  
+  #cardi3 {
+    margin-left: 30px;
+  }
+  
+  #cardi4 {
+    margin-left: 30px;
+  }
+  
+  #cardi5 {
+    margin-left: 30px;
+  }
+  
+  #min-conta {
+    margin-left: 500px;
+  }
+  
+  
+  
+  
+  
+  /*IMAGEM DO VIKING DA NAVBAR*/
+  
+  
+  .logo-img {
+    width: 78px;
+    /* Defina o tamanho desejado para a largura */
+    height: auto;
+    /* A altura será ajustada proporcionalmente com base na largura */
+  }
+  
+  #h1-index {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Efeito texto Navbar*/
+  .nav-link {
+    position: relative;
+    font-size: 20px;
+    color: #6B4B21;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: .3s;
+  }
+  
+  .nav-link:hover::before {
+    width: 95%;
+  }
+  
+  #nav-link:hover::before {
+    width: 90%;
+  }
+  
+  #nav-link2:hover::before {
+    width: 72%;
+  }
+  
+  /* Estilo para a notificação */
+  .notification {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  /* TEXTO DA LOGO */
+  #Texto_da_logo {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #6B4B21;
+    font-size: 34px;
+    text-decoration: none;
+  }
+  
+  #Texto_da_logo:hover {
+    color: white;
+  }
+  
+  /* Atributo para tornar responsivel no celular */
+  @media (min-width: 1701px) and (max-width: 1800px) {
+    #rowtest {
+      margin-left: 125px;
+    }
+  }
+  
+  @media (min-width: 1601px) and (max-width: 1700px) {
+    #rowtest {
+      margin-left: 45px;
+    }
+  }
+  
+  @media (min-width: 1501px) and (max-width: 1600px) {
+    #rowtest {
+      margin-left: 6px;
+    }
+  }
+  
+  @media (min-width: 1401px) and (max-width: 1501px) {
+    #rowtest {
+      margin-left: 95px;
+    }
+  }
+  
+  @media (min-width: 1301px) and (max-width: 1400px) {
+    #rowtest {
+      margin-left: 56px;
+    }
+  
+    #margintop {
+      margin-top: 900px;
+    }
+  }
+  
+  @media (min-width: 1101px) and (max-width: 1300px) {
+    #rowtest {
+      margin-left: 105px;
+    }
+  }
+  
+  @media (min-width: 1001px) and (max-width: 1100px) {
+    #rowtest {
+      margin-left: 65px;
+    }
+  }
+  
+  @media (min-width: 923px) and (max-width: 1000px) {
+    .signup-container {
+      margin-top: -200px;
+      margin-left: 10px;
+      height: 400px;
+      width: 500px;
+    }
+  
+    #cadatro {
+      width: 458px;
+    }
+  
+    .faixa-contact {
+      width: 1012px;
+    }
+  
+    .faixa-contacto {
+      width: 920px;
+    }
+  
+    #testee_mobile {
+      width: 986px;
+    }
+  
+    #rowtest {
+      margin-left: 185px;
+    }
+  }
+  
+  @media (min-width: 900px) and (max-width: 922px) {
+    #rowtest {
+      margin-left: 300px;
+    }
+  }
+  
+  @media (min-width: 800px) and (max-width: 830px) {
+    #rowtest {
+      margin-left: 220px;
+    }
+  
+    #h1-index {
+      margin-left: 30px;
+    }
+  }
+  
+  @media (min-width: 700px) and (max-width: 799px) {
+    #rowtest {
+      margin-left: 50px;
+    }
+  
+  }
+  
+  @media (min-width: 621px) and (max-width: 699px) {
+    #rowtest {
+      margin-left: 20px;
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 620px) {
+    #testec {
+      margin-left: 120px;
+    }
+  }
+  
+  @media (min-width: 500px) and (max-width: 525px) {
+    #rowtest {
+      margin-left: 125px;
+    }
+  }
+  
+  @media (min-width: 526px) and (max-width: 599px) {
+    #rowtest {
+      margin-left: 150px;
+    }
+  }
+  
+  @media (min-width: 461px) and (max-width: 499px) {
+    #rowtest {
+      margin-left: 80px;
+    }
+  }
+  
+  @media (min-width: 421px) and (max-width: 460px) {
+    #rowtest {
+      margin-left: 70px;
+    }
+  }
+  
+  @media (min-width: 300px) and (max-width: 420px) {
+    #rowtest {
+      margin-left: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 300px) {
+    #testec {
+      margin-left: 100px;
+    }
+  
+    .faixa-contact {
+      width: 700px;
+    }
+  }
+  
+  /* ATRIBUTO PARA ALINHAR A MENSAGEM DE BEM-VINDO */
+  .bem-vindo {
+    text-align: center;
+  }
+  
+  /* DESIGN DO  "MINHA CONTA" */
+  /* Page Container Styles */
+  #contaaiiner {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Account Sections */
+  .account-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .account-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Profile Section Styles */
+  .profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .profile-info .info-item {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  /* Orders Section Styles */
+  .order-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  /* Delete Account Styles */
+  .delete-account {
+    text-align: center;
+    color: #f00;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .profile-info .info-item {
+      flex: 1;
+      min-width: 100%;
+    }
+  }
+  
+  /* IMAGEM DO LOGIN */
+  #icon_login {
+    margin-left: auto;
+    padding: 15px;
+  }
+  
+  #login-text {
+    margin-left: 150px;
+  }
+  
+  /* IMAGEM DO LOGIN_ADM */
+  #img-cadastro_adm {
+    margin-top: 10px;
+    width: 380px;
+    height: 450px;
+  }
+  
+  /* CSS DO MEU CADASTRO*/
+  #conta {
+    width: 40px;
+    height: 40px;
+  }
+  
+  #menuzinho {
+    margin-left: 100px;
+    width: 70%;
+    margin-top: -400px;
+  }
+  
+  #pedidos {
+    width: 40px;
+    height: 40px;
+  }
+  
+  #minhas_info {
+    text-align: center;
+  }
+  
+  .infos {
     margin-left: 100px;
   }
-  #zap{
-    margin-left: 100px;
+  
+  .text_info {
+    font-size: 24px;
+    padding: 10px;
   }
-  #mail{
-    margin-left: 100px;
+  
+  #botão {
+    color: white;
   }
-  #testec{
-    margin-left: 100px; 
+  
+  #botão2 {
+    color: white;
+    text-decoration: none;
   }
-}
-@media screen and (max-width: 400px) {
-  #insta{
-    margin-left:  100px;
+  
+  #rowtest {
+    margin-left: 40px;
   }
-  #face{
-    margin-left: 100px;
+  
+  /*Espaçamento entre botão e rodapé página de contato*/
+  #expacin {
+    margin-bottom: 10px;
   }
-  #zap{
-    margin-left: 100px;
+  
+  /* INÍCIO DO CSS DA PÁGINA DE COMPRA */
+  #payment {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: solid #6B4B21;
+  
+  
   }
-  #mail{
-    margin-left: 100px;
+  
+  #but-compra {
+    margin-left: 300px;
+    border-radius: 200px;
+    text-align: center;
   }
-  #testec{
-    margin-left: 100px; 
+  
+  /* Estilos do produto */
+  .product {
+    text-align: center;
+    margin-bottom: 20px;
   }
-}
-@media screen and (max-width: 375px) {
-  #insta{
-    margin-left: 60px;
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
   }
-  #face{
-    margin-left: 60px;
+  
+  .product h2 {
+    font-size: 24px;
+    margin-top: 10px;
   }
-  #zap{
-    margin-left: 60px;
+  
+  .product p {
+    font-size: 16px;
+    margin-top: 10px;
   }
-  #mail{
-    margin-left: 60px;
+  
+  .product .price {
+    font-size: 28px;
+    color: #e74c3c;
+    font-weight: bold;
   }
-  #testec{
-    margin-left: 45px; 
+  
+  /* Estilos do formulário de pagamento */
+  .payment {
+    text-align: center;
   }
-}
-@media screen and (max-width: 300px) {
-  #insta{
-    margin-left:  0px;
+  
+  .payment h2 {
+    font-size: 24px;
+    margin-top: 20px;
   }
-  #face{
-    margin-left: 100px;
+  
+  .payment form {
+    margin-top: 20px;
   }
-  #zap{
-    margin-left: 100px;
+  
+  .payment label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
   }
-  #mail{
-    margin-left: 100px;
+  
+  .payment input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
   }
-  #testec{
-    margin-left: 100px; 
+  
+  .payment input[type="text"] {
+    text-transform: uppercase;
   }
-  .faixa-contact{
-    width: 700px;
+  
+  .payment button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
   }
-}
+  
+  .payment button:hover {
+    background-color: #2980b9;
+  }
+  
+  #pixx {
+    width: 20px;
+    height: 20px;
+  }
+  
+  #boletoo {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .text {
+    text-align: center;
+    margin-top: 35px;
+  }
+  
+  @media (min-width: 731px) and (max-width: 760px) {
+    #but-compra {
+      margin-left: 260px;
+    }
+  }
+  
+  @media (min-width: 701px) and (max-width: 730px) {
+    #but-compra {
+      margin-left: 260px;
+    }
+  }
+  
+  @media (min-width: 661px) and (max-width: 700px) {
+    #but-compra {
+      margin-left: 230px;
+    }
+  }
+  
+  @media (min-width: 631px) and (max-width: 660px) {
+    #but-compra {
+      margin-left: 200px;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 630px) {
+    #but-compra {
+      margin-left: 200px;
+    }
+  }
+  
+  @media (min-width: 531px) and (max-width: 600px) {
+    #but-compra {
+      margin-left: 170px;
+    }
+  }
+  
+  @media (min-width: 501px) and (max-width: 530px) {
+    #but-compra {
+      margin-left: 160px;
+    }
+  }
+  
+  @media (min-width: 471px) and (max-width: 500px) {
+    #but-compra {
+      margin-left: 144px;
+    }
+  }
+  
+  @media (min-width: 431px) and (max-width: 470px) {
+    #but-compra {
+      margin-left: 124px;
+    }
+  }
+  
+  @media (min-width: 400px) and (max-width: 430px) {
+    #but-compra {
+      margin-left: 100px;
+    }
+  }
+  
+  @media (min-width: 361px) and (max-width: 399px) {
+    #but-compra {
+      margin-left: 70px;
+    }
+  }
+  
+  @media (min-width: 330px) and (max-width: 360px) {
+    #but-compra {
+      margin-left: 70px;
+    }
+  }
+  
+  /* FIM DO CSS DA PÁGINA DE COMPRA */
+  #h2-contacto {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-left: 350px;
+    margin-bottom: 30px;
+  }
+  
+  /*CSS Página Novidade*/
+  #espaconovidad {
+    margin-bottom: 70px;
+  }
+  
+  #h1-novid {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+  }
+  
+  .h1-card-novid {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .span-novid {
+    font-weight: bolder;
+  }
+  
+  
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos gerais */
+  
+  #containeer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos das notícias */
+  .news {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .news-item {
+    flex: 0 0 calc(33.33% - 20px);
+    /* Isso cria um layout de 3 colunas */
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .date {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .news-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .news-item p {
+    font-size: 16px;
+  }
+  
+  /*CSS DA PAGINA METODO_PAG*/
+  
+  .continer {
+    margin: auto;
+    margin-top: 100px;
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  
+  
+  }
+  
+  @media (max-width: 600px) {
+    .continer {
+  
+      margin: 0 auto;
+      margin-top: 100px;
+      width: 90%;
+      max-width: 600px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+      padding: 60px;
+  
+    }
+  }
+  
+  
+  .but {
+  
+    margin: 0 auto;
+    padding: 5px;
+    width: 100%;
+  
+    background-color: #6B4B21;
+    color: #fff;
+    /* Outros estilos do botão (opcional) */
+  
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  
+  
+    position: relative;
+    top: 10px;
+    left: 0px;
+  }
+  
+  @media (max-width: 600px) {
+    .but {
+  
+      padding: 5px;
+      width: 100%;
+  
+      /* Ajuste a posição conforme necessário */
+      position: relative;
+      top: 35px;
+      left: 0px;
+  
+  
+  
+      background-color: #6B4B21;
+      color: #fff;
+      /* Outros estilos do botão (opcional) */
+  
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  
+  /*
+  as divs 
+  */
+  .payment-option {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    border: color;
+  
+  
+  }
+  
+  .payment-option input[type="radio"] {
+    padding: 10px;
+    margin-right: 0px;
+  
+  }
+  
+  .payment-option label {
+    font-size: 20px;
+  }
+  
+  .payment-option img {
+    max-width: 50px;
+    margin-left: 10px;
+  }
+  
+  .divo {
+  
+    padding: 20px;
+    margin-top: 3px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    border: 1px solid rgb(0, 0, 0);
+  
+    /* Borda sólida de 2px na cor azul */
+  
+    width: 100%;
+    /* Largura em relação ao elemento pai */
+    max-width: 600px;
+    /* Largura máxima */
+    margin: 0 auto;
+    /* Centralizar horizontalmente */
+  
+    background-color: #f2f2f2;
+  
+    /* Inclui preenchimento e borda na largura total */
+  }
+  
+  @media (max-width: 600px) {
+    .divo {
+      width: 100%;
+      /* Reduz a largura em telas menores */
+      font-size: 16px;
+      /* Ajusta o tamanho da fonte */
+      position: relative;
+      /* Posicionamento relativo */
+      top: 25px;
+      /* Move 20px para baixo */
+    }
+  }
+  
+  .divo:hover {
+  
+    background-color: rgb(226, 221, 221);
+  }
+  
+  /*FIM*/
+  /*CSS DA PAGINA CARTAO PHP*/
+  .cad_cart {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .ldc[type="text"],
+  .ldc[type="password"],
+  select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .but-cart {
+    width: 100%;
+    padding: 10px;
+    background-color: #6B4B21;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #6B4B21;
+  }
+  
+  /*FIM*/
+  /* INÍCIO DO DESIGN DO ANÚNCIO DOS PRODUTOS */
+  #coontainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos do produto */
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  
+  }
+  
+  .product-image {
+    flex: 0 0 calc(50% - 20px);
+    max-width: 50%;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  
+  .product-info {
+    flex: 0 0 calc(50% - 20px);
+    max-width: 50%;
+  }
+  
+  .product h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .product-description {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .product-price {
+    font-size: 28px;
+    color: black;
+    margin-bottom: 30px;
+  }
+  
+  .product-actions {
+    display: flex;
+    margin-left: 95px;
+    gap: 15px;
+    align-items: center;
+    /* Alinhar verticalmente os botões e o ícone de favorito */
+  }
+  
+  .add-to-cart,
+  .buy-now {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .add-to-cart:hover,
+  .buy-now:hover {
+    background-color: black;
+  }
+  
+  .favorite {
+    font-size: 24px;
+    /* Tamanho do ícone de favorito */
+    color: goldenrod;
+    /* Cor do ícone de favorito (vermelho) */
+    cursor: pointer;
+  }
+  
+  /* INÍCIO DO DESIGN DO AGRADECIMENTO */
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos responsivos */
+  @media screen and (max-width: 768px) {
+    main {
+      margin: 10px;
+      padding: 10px;
+    }
+  }
+  
+  #butao-adm {
+    color: white;
+  }
+  
+  #alinhar_dashboard {
+    text-align: center;
+  }
+  
+  #botao-aviso {
+    text-decoration: none;
+  }
+  
+  /* FIM DO DESIGN DO AGRADECIMENTO */
+  
+  /* Adicione estas regras no seu arquivo style.css */
+  .contaaiiner {
+    width: 90%;
+    justify-content: center;
+    margin-left: 70px;
+  }
+  
+  /* Defina um tamanho mínimo para as células da tabela */
+  td.text-center {
+    min-width: 100px;
+    /* Ajuste conforme necessário */
+  }
+  
+  /* Estilize os botões para garantir que eles se ajustem bem em telas menores */
+  #butao-adm {
+    white-space: nowrap;
+    /* Impede a quebra de texto */
+  }
+  
+  /*Espaçamentos*/
+  #espacamentonovidades {
+    margin-top: 124px;
+  }
+  
+  /*FIM Espaçamentos*/
+  
+  /*FIM CSS*/
+  
+  
+  .profile-container {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 50px;
+  }
+  
+  .profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .info-title {
+    font-weight: bold;
+  }
+  #registre{
+    font-size: 19px;
+  }
+  #registre2{
+    font: 20px;
+    color: #6B4B21;
+  }
+  #contas{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+  }
+  #butao{
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    margin-left: 30%;
+    border-radius: 15px;
+  }
+  #butao2{
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    margin-left: 35%;
+    width: 30%;
+    border-radius: 15px;
+  }
 
-/* Imagem Vikings Bebendo */
-#img-vikbebendo{
-  width: 1903px;
-  height: 650px;
-}
+  #risco{
+    text-decoration: line-through;
+  }

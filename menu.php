@@ -16,7 +16,7 @@
                         <a class="nav-link" href="#">Sobre nós</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Promoções</a>
+                        <a class="nav-link" href="promocoes.php">Promoções</a>
 </li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
