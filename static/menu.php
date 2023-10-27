@@ -20,7 +20,7 @@
                             Bebidas</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
-                                <a id="nav-link2" class="nav-link" href="champ.php">Champanhe</a>
+                                <a id="nav-link2" class="nav-link" href="../page/champ.php">Champanhe</a>
                             </li>
                             <li class="nav-item">
                                 <a id="nav-link" class="nav-link" href="vodka.php">Vodka</a>
