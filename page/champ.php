@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("../static/conexao.php");
 
 if (!isset($_SESSION)) {
   session_start();
@@ -19,15 +19,15 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="css/menu_dieimes.css">
-  <link rel="stylesheet" href="css/dieimes.css">
+  <link rel="stylesheet" href="../css/menu_dieimes.css">
+  <link rel="stylesheet" href="../css/dieimes.css">
   <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PWJ7GD"></script>
   <title>Vinhos - Taverna de Valhalla</title>
 </head>
 
 <body>
   <?php
-  include("menu.php");
+  include("../static/menu.php");
   ?>
 
   <div class="container my-5">
@@ -57,7 +57,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
   </div>
   <?php
-  include('rodape.php');
+  include('../static/rodape.php');
   ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
