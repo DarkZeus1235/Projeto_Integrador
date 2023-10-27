@@ -83,7 +83,7 @@
                             Minha conta</a>
                         <ul class="dropdown-menu">
                             <?php
-                            if (!isset($_SESSION['nome'])) {
+                            if (!isset($_SESSION['id_login'])) {
                                 ?>
                                 <li class="nav-item">
                                     <a id="nav-link2" class="nav-link" href="../login.php">Entrar</a>
