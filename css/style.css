@@ -1313,4 +1313,10 @@ td.text-center {
 #h2-alterar{
   text-align: center;
 }
+@media (min-width: 900px) and (max-width: 999px){
+  .signup-container{
+    height: 800px;
+    margin-top: 5%;
+  }
+}
 /* FIM DO CSS DO ALTERAR */

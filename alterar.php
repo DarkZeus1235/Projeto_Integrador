@@ -54,7 +54,7 @@ if (isset($_POST['bt_id'])) {
         include('menu.php');
     ?>
     <div class="container-fluid" id="container">
-    <div" class="signup-container">
+    <div class="signup-container">
     <h2 id="h2-alterar">Alterar Cadastro</h2>
         <form action="" method="POST">
             <label for="">ID</label>
