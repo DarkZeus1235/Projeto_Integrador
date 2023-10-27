@@ -5,8 +5,8 @@ require('../protect/protect_adm.php');
 
 if(!isset($_SESSION)){
     session_start();
-
 }
+
 if (isset($_POST['bt_email'])) {
 
 
@@ -17,13 +17,13 @@ if (isset($_POST['bt_email'])) {
     $username = $_POST['bt_username'];
     $endereco = $_POST['bt_endereco'];
 
-    $sql_alterar = "UPDATE cadastro
+    $sql_alterar = "UPDATE cadastro_adm
         SET email = '$email',
         senha = '$senha',
         nome = '$nome',
         username = '$username',
         endereco = '$endereco'
-        WHERE id_login = '$id_cadastro_alterar'";
+        WHERE id_login_adm = '$id_cadastro_alterar'";
 
 
     $mysqli_alterar = $mysqli->query($sql_alterar) or die($mysqli->error);
@@ -32,7 +32,7 @@ if (isset($_POST['bt_email'])) {
 
 if (isset($_POST['bt_id'])) {
     $id_cadastro = $_POST['bt_id'];
-    $sql_consultar = "SELECT * FROM cadastro WHERE id_login = '$id_cadastro'";
+    $sql_consultar = "SELECT * FROM cadastro_adm WHERE id_login_adm = '$id_cadastro'";
     $mysqli_consultar = $mysqli->query($sql_consultar) or die($mysqli->error);
     $consultar = $mysqli_consultar->fetch_assoc();
 }
@@ -46,12 +46,13 @@ if (isset($_POST['bt_id'])) {
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu_dieimes.css">
     <link rel="stylesheet" href="../css/dieimes.css">
-    <title>Tela de Cadastro</title>
+    <link rel="icon" href="../Imagens/icon.png" type="image/x-icon">
+    <title>Alterar Informações</title>
 </head>
 
 <body>
     <?php
-        include('../menu.php');
+        include('menu_adm.php');
     ?>
     <div class="container-fluid" id="container">
     <div class="signup-container">
@@ -81,16 +82,10 @@ if (isset($_POST['bt_id'])) {
             echo $consultar['nome'];
             }
             ?>">
-            <label for="">Usuário</label>
-            <input type="text" name="bt_username" placeholder="Sem valor" required value="<?php
-            if (isset($consultar['username'])) {
-            echo $consultar['username'];
-            }
-            ?>">
-            <label for="">Endereço</label>
-            <input type="text" name="bt_endereco" placeholder="Sem valor" required value="<?php
+            <label for="">Função:</label>
+            <input type="text" name="bt_funcao" placeholder="Sem valor" required value="<?php
             if (isset($consultar['senha'])) {
-            echo $_SESSION['endereco'];
+            echo $_SESSION['funcao'];
             }
             ?>">
             <input type="submit" value="Cadastrar" onclick="return validateFields()">
