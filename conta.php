@@ -113,7 +113,7 @@ if (isset($_FILES["foto"])) {
                 <input type="file" name="foto" class="form-control" placeholder="Mudar foto de perfil" required>
             </div>
             <div class="text-center">
-                <input type="submit" value="Envie a sua foto" class="btn btn-primary">
+                <input id="btn-alterar" type="submit" value="Envie a sua foto" class="btn btn-primary">
             </div>
         </form>
         <script>
@@ -151,7 +151,9 @@ if (isset($_FILES["foto"])) {
             <p><span class="info-title">Endereço:</span> <?php echo $usuario['endereco']; ?></p>
             <p><span class="info-title">Email:</span> <?php echo $_SESSION["email"]; ?></p>
             <div class="text-center mt-5">
-                <p><a href="logout.php" class="btn btn-danger">Sair</a></p>
+
+            <p><a id="btn-alterar" href="alterar.php" class="btn btn-success">Alterar Informações</a>
+            </p><p><a id="btn-alterar" href="logout.php" class="btn btn-danger">Sair</a></p>
         </main>
 
             <div class="account-section">
@@ -177,7 +179,7 @@ if (isset($_FILES["foto"])) {
             <div class="account-section delete-account">
                 <h2>Deletar Conta</h2>
                 <p>Se você quiser deletar sua conta, clique no botão abaixo:</p>
-                <button class="btn btn-danger"><a id="botao-aviso" href="deletar.php?codigo_cadastro=<?php echo $usuario['id_login']; ?>">Deletar Minha Conta</a></button>
+                <button class="btn btn-danger"><a id="btn-alterar" href="deletar.php?codigo_cadastro=<?php echo $usuario['id_login']; ?>">Deletar Minha Conta</a></button>
             </div>
         <?php
         }

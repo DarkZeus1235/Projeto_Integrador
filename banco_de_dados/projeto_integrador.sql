@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 17-Out-2023 às 14:43
+-- Tempo de geração: 27-Out-2023 às 10:22
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `endereco` varchar(100) NOT NULL,
   `foto_perfil_caminho` varchar(300) NOT NULL,
   PRIMARY KEY (`id_login`)
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro`
@@ -73,7 +73,7 @@ INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `telefone`, `usern
 (23, 'criscris@dieimes', '$2y$10$X4Q8yoh2D4v37dIquB88POoiw4doPm6kvBIER9G5Vs6spncjmS7ia', 'Matheus Henrique Vital', '(45) 99898-8776', 'Cr7', '443.122.333-52', 'Monte Castel', ''),
 (24, 'dieimes@dieimes', '$2y$10$0jJynhLheT0PYmt1Qu7Sv.J6TNSfUZMcA11lKQWpC8nbrKtk8i6gS', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '523.525.642-34', 'zere', ''),
 (25, 'zere01011@gmail.com', '$2y$10$jORO30a52RPqUe2GkM16h.BKT7EeNF4iK9xLxHaHHsk2lvVItN4Zq', 'zere', '(43) 99433-4325', 'Dieimes', '423.527.533-67', 'Monte Castel', ''),
-(26, 'jpfernandes@gmail.com', '$2y$10$rkBI07uy3bqN6/Dchb9pGeKhq/WSeXG1dUAHaVdwrCC59nelu7IUe', 'JoÃ£o Pedro Fernandes', '(43) 99650-6831', 'Jp', '114.434.889-76', 'Avenida Brasil', 'Imagens/ftperfil/651fe341efaa2.jpg'),
+(26, 'jpfernandes@gmail.com', '$2y$10$rkBI07uy3bqN6/Dchb9pGeKhq/WSeXG1dUAHaVdwrCC59nelu7IUe', 'JoÃ£o Pedro Fernandes', '(43) 99650-6831', 'Jp', '114.434.889-76', 'Avenida Brasil', 'Imagens/ftperfil/6532619cec0ef.jpg'),
 (27, 'zere010111111@gmail.com', '$2y$10$wRGScJE3Bh6wYWWskGpeAOK63P45gc0vStcMHpmPxQcKWCYtsLA0e', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '423.527.533-67', 'Monte Castel', 'Imagens/foto_padrao.png'),
 (28, 'zere213@gmail.com', '$2y$10$l9hjEu5gRsxunTzyNY3PIORT3anAlkO8eKFG5KwwfIL8YIubnKdZu', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '123.123.123-12', 'Monte Castel', 'Imagens/foto_padrao.png'),
 (29, 'zere3123@gmail.com', '$2y$10$b9CG7TkJTTO/s2a8A./WGuuNA9Dr0.0lh2HFR1WEOKMJEe7zgEcAu', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'Avenida Brasil', 'Imagens/foto_padrao.png'),
@@ -83,7 +83,9 @@ INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `telefone`, `usern
 (33, 'zere0101111111@gmail.com', '$2y$10$/wk8aTHEUOvfcD4s2lIiAeh16rBvVzmjnmbD8qnX.8nAZwwzGbyoK', 'Dieimes Nunes de Souza', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'Avenida Brasil', 'Imagens/foto_padrao.png'),
 (34, 'zere032110@gmail.com', '$2y$10$QTmFUzWygLkgF2rWy1fKQ.xTHWFtUauYJVr1hbjszyLoGT7wSkWdG', 'Matheus Henrique Vital', '(43) 99433-4325', 'Zere_br', '443.122.333-52', 'Avenida Brasil', 'Imagens/foto_padrao.png'),
 (35, 'zere0143160@gmail.com', '$2y$10$nABxcS.UkqfUeN8N65h.r.pmPTWeTJ25We7eR7pmrl6XzFR1NLZHm', 'zere', '(43) 99433-4325', 'Dieimes', '123.123.123-12', 'Avenida Brasil', 'Imagens/foto_padrao.png'),
-(36, 'zere01086@gmail.com', '$2y$10$UxWQJIP1lga2Xy7c7AsHKuMK6wTq9KjrOKZjBzVZx4RXo5w3mcZHy', 'Dieimes Nunes de Souza', '(43) 99433-4325', 'clecle', '123.123.123-12', 'Avenida Brasil', 'Imagens/ftperfil/6523e45ecbca8.jpg');
+(36, 'zere01086@gmail.com', '$2y$10$UxWQJIP1lga2Xy7c7AsHKuMK6wTq9KjrOKZjBzVZx4RXo5w3mcZHy', 'Dieimes Nunes de Souza', '(43) 99433-4325', 'clecle', '123.123.123-12', 'Avenida Brasil', 'Imagens/ftperfil/6523e45ecbca8.jpg'),
+(38, 'teste12@gmail.com', '$2y$10$/tysa1UyDqjTZLZOjiFmw.67CEg22rG7OHPXrhHc12OWQV8EizGhC', 'TESTE', '(43) 99433-4325', 'TESTE', '423.527.533-67', 'TESTE32', 'Imagens/foto_padrao.png'),
+(39, 'luizeduardobonfim@gmail.com', '$2y$10$uZQGBAo2u2.ddtQIbWuKeudYv/54goya6tlRAnVA8ZTYRHmZ.2uh6', 'Luiz Bonfim', '(43) 99855-5588', 'luizao', '105.619.629-78', 'rua londres', 'Imagens/ftperfil/653117334b981.jpg');
 
 -- --------------------------------------------------------
 
@@ -100,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `cadastro_adm` (
   `senha` varchar(200) NOT NULL,
   `foto_perfil_caminho` varchar(300) NOT NULL,
   PRIMARY KEY (`id_login_adm`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro_adm`
@@ -109,7 +111,11 @@ CREATE TABLE IF NOT EXISTS `cadastro_adm` (
 INSERT INTO `cadastro_adm` (`id_login_adm`, `nome`, `funcao`, `email`, `senha`, `foto_perfil_caminho`) VALUES
 (4, 'Administrador JoÃ£o', 'Administrador Geral', 'admin@hotmail.com', '$2y$10$yJWty84YANLS8qAdcEhBwO7mti/YGhQ5Ny8tYze/VCmrBTUfbGcQq', 'Imagens/ftperfil/651fe2b969308.jpg'),
 (2, 'Matheus Henrique Vital', 'Administrador Vice', 'zere@gmail.com', '$2y$10$2DExTYMdWNh5rcjkyC/5AOewBGdwkKG9bmEUm1qjpgkegDEYEi2ju', ''),
-(3, 'JoÃ£o Rafael de Carvalho Bissoloti (Jraffis)', 'Vice - LÃ­der e Vice - Administrador', 'jraffis@gmail.com', '$2y$10$fi44MPPKeoQplD3o6DCKKu1mpJwHdyLUnneSMikWEzLvcv6CTUHRO', '');
+(3, 'JoÃ£o Rafael de Carvalho Bissoloti (Jraffis)', 'Vice - LÃ­der e Vice - Administrador', 'jraffis@gmail.com', '$2y$10$fi44MPPKeoQplD3o6DCKKu1mpJwHdyLUnneSMikWEzLvcv6CTUHRO', ''),
+(6, 'Matheus Henrique Vital', 'Administrador ', 'zeres@gmail.com', '$2y$10$pjgXIWbfRpDTQmoRZo./DuTbM16FqzpRyZYnzCmQWrd2fau/b/mXO', 'Imagens/foto_padrao.png'),
+(7, 'Matheus Henrique Vital', 'Administrador ', 'zeres@gmail.com', '$2y$10$xAQBF4NcD9f.cquYPXxJJeTF5yBN.aHHb3nagPeC3C48LAMKmHiEm', 'Imagens/foto_padrao.png'),
+(8, 'Cleverson ', 'Administrador ', 'zeres@gmail.com', '$2y$10$DX8sdZRDkOsxRY9ucoooju5Luym29H6srCxpMlpvJpbz6W/dAFgl2', 'Imagens/foto_padrao.png'),
+(9, 'Cleverson ', 'Administrador ', 'zeres@gmail.com', '$2y$10$0BvOlI9SqUffVd/l1.DaYuZI7FgE.u333j5T6CV.trIWEVBimr5Hu', 'Imagens/foto_padrao.png');
 
 -- --------------------------------------------------------
 
@@ -406,7 +412,7 @@ CREATE TABLE IF NOT EXISTS `cartoes` (
   `cvv` varchar(200) NOT NULL,
   `cpf` varchar(200) NOT NULL,
   PRIMARY KEY (`id_cartao`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cartoes`
@@ -418,7 +424,10 @@ INSERT INTO `cartoes` (`id_cartao`, `titular`, `numero_cartao`, `data_validade`,
 (3, 'matheus vital', '3436  5476  4756  8756', '17/09', '111', '131.313.123-21'),
 (4, 'Indoali', '1431  4134  3252  3524', '56/57', '542', '323.549.254-69'),
 (5, 'Indoali', '1431  4134  3252  3524', '56/57', '542', '323.549.254-69'),
-(6, 'JOÃƒO RAFAEL DE CARVALHO', '5427  4373  4327  4244', '14/31', '234', '323.549.254-69');
+(6, 'JOÃƒO RAFAEL DE CARVALHO', '5427  4373  4327  4244', '14/31', '234', '323.549.254-69'),
+(7, 'luiz bonfim', '1234  5678  9987  9778', '13/98', '159', '323.549.254-69'),
+(8, 'SSSSSSS', '1313  1311  3131  3131', '13/13', '331', '313.131.313-13'),
+(9, 'joaoda silva', '3131  3131  313', '13/13', '313', '313.123.313-13');
 
 -- --------------------------------------------------------
 
@@ -433,14 +442,22 @@ CREATE TABLE IF NOT EXISTS `mensagem_formulario_contato` (
   `email` varchar(200) NOT NULL,
   `mensagem` varchar(200) NOT NULL,
   PRIMARY KEY (`id_mensagem`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `mensagem_formulario_contato`
 --
 
 INSERT INTO `mensagem_formulario_contato` (`id_mensagem`, `nome`, `email`, `mensagem`) VALUES
-(1, 'Joaquim', 'joaquim@gmail.com', 'Mensagem teste 4\r\n');
+(1, 'Joaquim', 'joaquim@gmail.com', 'Mensagem teste 4\r\n'),
+(2, 'JoÃ£o Rafael', 'admin@hotmail.com', 'teste3131'),
+(3, 'JoÃ£o Rafael', 'admin@hotmail.com', 'Teste45'),
+(4, '3131', 'jpfernandes@gmail.com', '1313131231'),
+(5, 'JoÃ£o Rafael', 'admin@hotmail.com', '123131'),
+(6, 'JoÃ£o Rafael', 'admin@hotmail.com', 'TESTE MENSAGEM NOVA'),
+(7, 'JoÃ£o Rafael', 'admin@hotmail.com', '1312312'),
+(8, 'JoÃ£o Rafael', 'admin@hotmail.com', '31313'),
+(9, 'JoÃ£o Rafael', 'jpfernandes@gmail.com', '1313131');
 
 -- --------------------------------------------------------
 
@@ -450,12 +467,24 @@ INSERT INTO `mensagem_formulario_contato` (`id_mensagem`, `nome`, `email`, `mens
 
 DROP TABLE IF EXISTS `pedidos`;
 CREATE TABLE IF NOT EXISTS `pedidos` (
-  `codigo_pedido` int(200) NOT NULL AUTO_INCREMENT,
-  `nome_pedido` varchar(200) NOT NULL,
-  `data_pedido` varchar(200) NOT NULL,
-  `valor_pedido` varchar(200) NOT NULL,
-  PRIMARY KEY (`codigo_pedido`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `id_bebida` int(200) NOT NULL AUTO_INCREMENT,
+  `nome_bebida` varchar(200) NOT NULL,
+  `descricao` varchar(200) NOT NULL,
+  `valor` varchar(200) NOT NULL,
+  `quantidade` varchar(200) NOT NULL,
+  `arquivo_caminho` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_bebida`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `pedidos`
+--
+
+INSERT INTO `pedidos` (`id_bebida`, `nome_bebida`, `descricao`, `valor`, `quantidade`, `arquivo_caminho`) VALUES
+(1, 'Vinho Marques De Riscal Reserva Rioja 750 ml', 'Vinho exÃ³tico e com sabor artesanal e produzido em boa safra.', '0', '1', 'recebidos/649457424fa56.jpg'),
+(4, 'Vinho Marques De Riscal Reserva Rioja 750 ml', 'Vinho exÃ³tico e com sabor artesanal e produzido em boa safra.', '0', '1', 'recebidos/649457424fa56.jpg'),
+(5, 'Vinho Marques De Riscal Reserva Rioja 750 ml', 'Vinho exÃ³tico e com sabor artesanal e produzido em boa safra.', '0', '1', 'recebidos/649457424fa56.jpg'),
+(6, 'Vinho Marques De Riscal Reserva Rioja 750 ml', 'Vinho exÃ³tico e com sabor artesanal e produzido em boa safra.', '0', '1', 'recebidos/649457424fa56.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
