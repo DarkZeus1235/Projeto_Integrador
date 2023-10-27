@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("static/conexao.php");
 
 if (!isset($_SESSION)) {
   session_start();
@@ -36,7 +36,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
 <body>
   <?php
-  include('menu.php');
+  include('static/menu.php');
   ?>
   <img src="Imagens/Banner_testes" class="img-fluid" id="banner">
   <div class="container my-5">
@@ -56,7 +56,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
               <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
               <h5 class="card-text"><?php echo $bebidas['valor']; ?></h5>
               <div class="text-center mt-4">
-                <a href="comprar.php?id=<?php echo $bebidas['id_bebida'] ?>" class="btn custom-btn">Comprar Agora</a>
+                <a href="user/comprar.php?id=<?php echo $bebidas['id_bebida'] ?>" class="btn custom-btn">Comprar Agora</a>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
   </div>
-  <?php include 'rodape.php'; ?>
+  <?php include 'static/rodape.php'; ?>
   <script>
     // Verifique se a URL contém um parâmetro chamado "login" com o valor "success"
     const urlParams = new URLSearchParams(window.location.search);

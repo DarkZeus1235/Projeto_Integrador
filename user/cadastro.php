@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('../static/conexao.php');
 
 
 $mensagem = ''; // Inicializa a variável de mensagem
@@ -71,7 +71,7 @@ if (isset($_POST['bt_nome'])) {
 
 <body>
     <?php
-    include('menu.php');
+    include('../static/menu.php');
     ?>
     <div id="container" class="container">
         <div class="signup-container">
@@ -142,7 +142,7 @@ if (isset($_POST['bt_nome'])) {
         </div>
     </div>
     <?php
-    include('rodape.php');
+    include('../static/rodape.php');
     ?>
     <script src="script/zere.js"></script>
 </body>

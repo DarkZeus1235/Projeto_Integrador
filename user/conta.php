@@ -153,7 +153,7 @@ if (isset($_FILES["foto"])) {
             <div class="text-center mt-5">
 
             <p><a id="btn-alterar" href="alterar.php" class="btn btn-success">Alterar Informações</a>
-            </p><p><a id="btn-alterar" href="logout.php" class="btn btn-danger">Sair</a></p>
+            </p><p><a id="btn-alterar" href="static/logout.php" class="btn btn-danger">Sair</a></p>
         </main>
 
             <div class="account-section">

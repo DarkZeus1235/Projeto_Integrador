@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include('../static/conexao.php');
 
 if(!isset($_SESSION)){
   session_start();
@@ -22,10 +22,10 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/dieimes.css">
-  <link rel="stylesheet" href="css/menu_dieimes.css">
-  <link rel="icon" href="Imagens/Icon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dieimes.css">
+  <link rel="stylesheet" href="../css/menu_dieimes.css">
+  <link rel="icon" href="../Imagens/Icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taverna de Valhalla</title>
 </head>
@@ -33,7 +33,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 <body>
 
   <?php
-  include('menu.php');
+  include('../static/menu.php');
   ?>
   <div id="coontainer" class="container">
     <?php
@@ -63,10 +63,10 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
       </main>
   </div>
   <?php
-  include('espacamento.php');
+  include('../static/espacamento.php');
   ?>
   <?php
-  include('rodape.php');
+  include('../static/rodape.php');
   ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
