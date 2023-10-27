@@ -1,6 +1,8 @@
 <?php
 include('conexao.php');
 
+require('protect/protect.php');
+
 if(!isset($_SESSION)){
     session_start();
 
