@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("../static/conexao.php");
 
 if (isset($_POST['email']) && isset($_POST['senha'])) {
   $email = $mysqli->real_escape_string($_POST['email']);
@@ -41,9 +41,9 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
   <title>Login</title>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="css/menu_dieimes.css">
-  <link rel="stylesheet" href="css/dieimes.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" href="../css/menu_dieimes.css">
+  <link rel="stylesheet" href="../css/dieimes.css">
   <link rel="icon" href="Imagens/icon.png">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
@@ -51,7 +51,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
 
 <body>
   <?php
-  include('menu.php');
+  include('../static/menu.php');
   ?>
   <div id="container" class="container">
     <div class="signup-container">
@@ -92,7 +92,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
                 }).then((result) => {
                   if (result.isConfirmed) {
                     // Redirecione para a página desejada após o login bem-sucedido
-                    window.location.href = 'index.php';
+                    window.location.href = '../index.php';
                   }
                 });
               } else {
@@ -122,7 +122,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
     </div>
   </div>
   <?php
-  include('rodape.php');
+  include('../static/rodape.php');
   ?>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

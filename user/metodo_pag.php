@@ -1,7 +1,7 @@
 <?php
-include("conexao.php");
+include("../static/conexao.php");
 
-include('protect/protect.php');
+include('../protect/protect.php');
 if (isset($_POST['bt_nome'])) {
     if (isset($_FILES['bt_arquivo'])) {
         $arquivo = $_FILES['bt_arquivo'];
@@ -54,25 +54,25 @@ if (isset($_POST['bt_nome'])) {
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/menu_dieimes.css">
-    <link rel="stylesheet" href="css/dieimes.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu_dieimes.css">
+    <link rel="stylesheet" href="../css/dieimes.css">
     <title>Cadastro de Champagne</title>
 
 </head>
 
 <body>
     <?php
-    include("menu.php");
+    include("../static/menu.php");
     ?>
 
     <div class="continer">
         <h2>Selecione um Meio de Pagamento</h2>
         <div class="divo">
-            <form method="post" action="opcao_esc.php">
+            <form method="post" action="../page/opcao_esc.php">
                 <div class="payment-option">
                     <input type="radio" id="credit-card" name="metodo" value="cartao">
-                    <img src="Imagens/credit-card.png" alt="" width="35px">
+                    <img src="../Imagens/credit-card.png" alt="" width="35px">
                     <label for="credit-card"> Cartão de Crédito</label>
 
                 </div>
@@ -80,7 +80,7 @@ if (isset($_POST['bt_nome'])) {
         <div class="divo">
             <div class="payment-option">
                 <input type="radio" id="pix" name="metodo" value="pix">
-                <img src="imagens/logo-pix-png-icone-520x520.png" alt="" width="25px">
+                <img src="../imagens/logo-pix-png-icone-520x520.png" alt="" width="25px">
                 <label for="Pix"> Pix</label>
 
             </div>
@@ -88,7 +88,7 @@ if (isset($_POST['bt_nome'])) {
         <div class="divo">
             <div class="payment-option">
                 <input type="radio" id="bolet" name="metodo" value="boleto">
-                <img src="imagens/boleto.png" alt="">
+                <img src="../imagens/boleto.png" alt="">
                 <label for="bank-transfer"> Boleto</label>
 
             </div>
@@ -98,10 +98,10 @@ if (isset($_POST['bt_nome'])) {
     </div>
 
     <?php
-    include('espacamento.php');
+    include('../static/espacamento.php');
     ?>
     <?php
-    include('rodape.php');
+    include('../static/rodape.php');
     ?>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

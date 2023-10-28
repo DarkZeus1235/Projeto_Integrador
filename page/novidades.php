@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('../static/conexao.php');
 
 if (!isset($_SESSION)) {
     session_start();
@@ -14,16 +14,16 @@ if (!isset($_SESSION)) {
     <title>Novidades - Taverna de Valhalla</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css"> <!-- Arquivo de estilo personalizado -->
-    <link rel="stylesheet" href="css/dieimes.css">
-    <link rel="stylesheet" href="css/menu_dieimes.css">
+    <link rel="stylesheet" href="../css/style.css"> <!-- Arquivo de estilo personalizado -->
+    <link rel="stylesheet" href="../css/dieimes.css">
+    <link rel="stylesheet" href="../css/menu_dieimes.css">
     <link rel="icon" href="Imagens/icon.png">
 
 </head>
 
 <body>
     <?php
-    include('menu.php');
+    include('../static/menu.php');
     ?>
     <div class="container">
         <br>
@@ -115,7 +115,7 @@ if (!isset($_SESSION)) {
     </div>
     <div id="espacamentonovidades"></div>
     <?php
-    include('rodape.php');
+    include('../static/rodape.php');
     ?>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

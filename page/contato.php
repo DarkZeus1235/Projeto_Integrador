@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('../static/conexao.php');
 
 if (!isset($_SESSION)) {
     session_start();
@@ -39,9 +39,9 @@ if (isset($_POST['nome'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/menu_dieimes.css">
-    <link rel="stylesheet" href="css/dieimes.css">
-    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="../css/menu_dieimes.css">
+    <link rel="stylesheet" href="../css/dieimes.css">
+    <link rel="stylesheet" href="../css/contato.css">
     <link rel="icon" href="Imagens/Icon.png">
     <title>Contato</title>
 
@@ -50,7 +50,7 @@ if (isset($_POST['nome'])) {
 
 <body>
     <?php
-    include('menu.php');
+    include('../static/menu.php');
     ?>
     <div id="container" class="container">
         <header>
@@ -131,7 +131,7 @@ if (isset($_POST['nome'])) {
         </section>
     </div>
     <?php
-    include('rodape.php');
+    include('../static/rodape.php');
     ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>''
