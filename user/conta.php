@@ -50,7 +50,7 @@ if (isset($_FILES["foto"])) {
     }
 
     // Defina o local para salvar a imagem
-    $diretorioUpload = "Imagens/ftperfil/";
+    $diretorioUpload = "../Imagens/ftperfil/";
     $novoNomeArquivo = uniqid() . "." . $extensaoArquivo;
     $caminhoFinal = $diretorioUpload . $novoNomeArquivo;
 
@@ -96,7 +96,7 @@ if (isset($_FILES["foto"])) {
     <div class="container profile-container">
         <div class="text-center mb-4">
             <?php
-            $imgPath = isset($usuario["foto_perfil_caminho"]) && !empty($usuario["foto_perfil_caminho"]) ? $usuario["foto_perfil_caminho"] : 'Imagens/Foto_padrao.png';
+            $imgPath = isset($usuario["foto_perfil_caminho"]) && !empty($usuario["foto_perfil_caminho"]) ? $usuario["foto_perfil_caminho"] : '../Imagens/Foto_padrao.png';
             //echo "Caminho da imagem: " . $imgPath . "<br>";
             if (file_exists($imgPath)) {
                 echo "<img class='profile-picture' src='$imgPath' alt='Foto de perfil'>";

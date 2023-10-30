@@ -3,6 +3,7 @@ include("static/conexao.php");
 
 if (!isset($_SESSION)) {
   session_start();
+
   if(isset($_SESSION['nome'])){
     if (!isset($_SESSION['boas-vindas_exibida'])) {
       echo "<script>alert('Bem-vindo, " . $_SESSION['nome'] . "');</script>";
@@ -35,7 +36,9 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 </head>
 
 <body>
-
+<?php
+    if(isset($_SESSION['nome'])){
+?>
 <header>
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
@@ -201,6 +204,9 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
         </div>
     </nav>
 </header>
+<?php
+    }
+?>
 
   <img src="Imagens/Banner_testes" class="img-fluid" id="banner">
   <div class="container my-5">

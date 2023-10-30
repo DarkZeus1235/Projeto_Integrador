@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="../index.php">
-                <img src="../Imagens/viking.png.png" alt="Logo Taverna de Valhalla" class="logo-img">
+                <img src="Imagens/viking.png.png" alt="Logo Taverna de Valhalla" class="logo-img">
             </a>
             <span class="logo-text">
                 <a href="../index.php">Taverna de Valhalla</a>
@@ -63,7 +63,7 @@
                         if(isset($_SESSION['id_login_adm'])){
                     ?>
                     <li class="nav-item">
-                    <a class="nav-link" href="dashboard.php"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                    <a class="nav-link" href="../Projeto_Integrador/adm/dashboard.php"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
   <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
 </svg> Painel</a>
                     </li>
