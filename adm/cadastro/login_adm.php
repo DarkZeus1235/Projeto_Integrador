@@ -1,5 +1,5 @@
 <?php
-include("../conexao.php");
+include("../Projeto_Integrador/static/conexao.php");
 
 if (isset($_POST['email']) && isset($_POST['senha'])) {
   $email = $mysqli->real_escape_string($_POST['email']);

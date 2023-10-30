@@ -36,7 +36,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 
 <body>
   <?php
-  include('../Projeto_Integrador/static/menu.php');
+  include('static/menu.php');
   ?>
   <img src="Imagens/Banner_testes" class="img-fluid" id="banner">
   <div class="container my-5">
@@ -66,7 +66,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
   </div>
-  <?php include '../Projeto_Integrador/static/rodape.php'; ?>
+  <?php include 'static/rodape.php'; ?>
   <script>
     // Verifique se a URL contém um parâmetro chamado "login" com o valor "success"
     const urlParams = new URLSearchParams(window.location.search);
