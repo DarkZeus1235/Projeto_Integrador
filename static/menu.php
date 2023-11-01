@@ -64,6 +64,7 @@
                     ?>
                     <?php
                     if (!isset($_SESSION['id_login'])) {
+                    if (!isset($_SESSION['id_login_adm'])){   
                     ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" aria-expanded="false">
@@ -73,7 +74,7 @@
                                 </svg></i>
                                 Minha conta</a>
                         <?php
-                    }
+                    }}
                         ?>
                         <?php
                         if (isset($_SESSION['nome'])) {
@@ -91,7 +92,7 @@
                         ?>
                         <ul class="dropdown-menu">
                             <?php
-                            if (!isset($_SESSION['id_login'])) {
+                            if (!isset($_SESSION['nome'])) {
                             ?>
                                 <li class="nav-item">
                                     <a id="nav-link2" class="nav-link" href="../user/login.php">Entrar</a>
@@ -125,7 +126,7 @@
 
                                 ?>
                                     <li class="nav-item">
-                                        <a id="nav-link" class="nav-link" href="../Projeto_Integrador/adm/cadastro_adm.php">Cadastrar Administrador</a>
+                                        <a id="nav-link" class="nav-link" href="../Projeto_Integrador/adm/cadastro/cadastro_adm.php">Cadastrar Administrador</a>
                                     </li>
                                 <?php
                                 }

@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("../static/conexao.php");
 
 if (!isset($_SESSION)) {
     session_start();
@@ -22,7 +22,7 @@ if (isset($_FILES["foto"])) {
     }
 
     // Defina o local para salvar a imagem
-    $diretorioUpload = "Imagens/ftperfil/";
+    $diretorioUpload = "../Imagens/ftperfil/";
     $novoNomeArquivo = uniqid() . "." . $extensaoArquivo;
     $caminhoFinal = $diretorioUpload . $novoNomeArquivo;
 
