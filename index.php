@@ -39,7 +39,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
 <header>
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
-            <a class="navbar-brand" href="../index.php">
+            <a class="navbar-brand" href="index.php">
                 <img src="Imagens/viking.png.png" alt="Logo Taverna de Valhalla" class="logo-img">
             </a>
             <span class="logo-text">
