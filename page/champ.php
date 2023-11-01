@@ -41,7 +41,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
       <?php while ($bebidas = $retorno_consulta->fetch_assoc()) : ?>
         <div class="col-md-4 mb-4">
           <div class="card h-100">
-            <img src="<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
+            <img src="../<?php echo $bebidas['arquivo_caminho'] ?>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><?php echo $bebidas['nome_bebida'] ?></h5>
               <p class="card-text"><?php echo $bebidas['descricao'] ?></p>
