@@ -45,7 +45,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
       <br>
       <main class="product">
         <div class="product-image">
-          <img src="<?php echo $bebidas['arquivo_caminho']; ?>" alt="Produto Exemplo">
+          <img src="../<?php echo $bebidas['arquivo_caminho']; ?>" alt="Produto Exemplo">
         </div>
         <div class="product-info">
           <h2><?php echo $bebidas['nome_bebida']; ?></h2>
