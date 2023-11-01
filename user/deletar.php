@@ -1,5 +1,5 @@
 <?php
-include("conexao.php"); // Arquivo php referente ao banco de dados   
+include("../static/conexao.php"); // Arquivo php referente ao banco de dados   
 
 if (isset($_GET['codigo_cadastro'])) {
     $id_cadastro = $_GET['codigo_cadastro'];
@@ -34,17 +34,18 @@ if (isset($_GET['codigo_cadastro'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deletar Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dieimes.css">
-    <link rel="stylesheet" href="css/menu_dieimes.css">
-    <link rel="icon" href="Imagens/icon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dieimes.css">
+    <link rel="stylesheet" href="../css/menu_dieimes.css">
+    <link rel="icon" href="../Imagens/icon.png">
 </head>
 
 <body>
     <?php
-        include('menu.php');
+        include('../static/menu.php');
     ?>
     <div class="container">
+        <br>
         <h1>Tela de Exclusão de Cadastro</h1>
         <h1>ID do Cadastro:
             <?php echo $logins['id_login']?>
@@ -76,10 +77,10 @@ if (isset($_GET['codigo_cadastro'])) {
     <br>
     <br>
     <?php
-        include('espacamento.php');
+        include('../static/espacamento.php');
     ?>
     <?php
-        include('rodape.php');
+        include('../static/rodape.php');
     ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

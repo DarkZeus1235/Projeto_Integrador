@@ -1,7 +1,7 @@
 <?php
-include('conexao.php');
+include('../static/conexao.php');
 
-require('protect/protect.php');
+require('../protect/protect.php');
 
 if(!isset($_SESSION)){
     session_start();
@@ -43,15 +43,15 @@ if (isset($_POST['bt_id'])) {
 
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/menu_dieimes.css">
-    <link rel="stylesheet" href="css/dieimes.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu_dieimes.css">
+    <link rel="stylesheet" href="../css/dieimes.css">
     <title>Tela de Cadastro</title>
 </head>
 
 <body>
     <?php
-        include('menu.php');
+        include('../static/menu.php');
     ?>
     <div class="container-fluid" id="container">
     <div class="signup-container">
@@ -110,7 +110,7 @@ if (isset($_POST['bt_id'])) {
     </div>
     </div>
     <?php
-       include('rodape.php');
+       include('../static/rodape.php');
     ?>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>

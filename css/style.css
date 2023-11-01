@@ -38,7 +38,15 @@ body {
   margin-top: 10px;
 }
 
-
+@media screen and (max-width:900px){
+    .product-actions{
+      width: 30%;
+      margin-left: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+}
 
 
 /*CSS 2*/
