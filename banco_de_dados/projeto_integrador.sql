@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 01-Nov-2023 às 12:53
+-- Tempo de geração: 01-Nov-2023 às 14:50
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -142,18 +142,18 @@ CREATE TABLE IF NOT EXISTS `cadastro_bebidas` (
 --
 
 INSERT INTO `cadastro_bebidas` (`id_bebida`, `nome_bebida`, `quantidade`, `descricao`, `arquivo_caminho`, `valor`) VALUES
-(32, 'Vinho Marques De Riscal Reserva Rioja 750 ml', '4', 'Vinho exÃ³tico e com sabor artesanal e produzido em boa safra.', '../recebidos/649457424fa56.jpg', 'R$192,00'),
-(31, 'Vinho Mau Criado Malbec 750 ml 2019', '6', 'Um vinho artesanal produzido da melhor safra de uvas', '../recebidos/649456d3ab39d.jpg', 'R$486,00'),
-(30, 'Conhaque Cortel Napoleon Vsop 700 ml', '3', 'Um Ã³timo conhaque, perfeito para noites de inverno!', '../recebidos/649456815abb2.webp', 'R$158,90'),
-(29, 'Conhaque RÃ©my Martin V.S.O.P 700 ml', '4', 'Um conhaque francÃªs fino de cor amarelo-ouro, Ã¢mbar.', '../recebidos/64945643364d9.webp', 'R$398,00'),
-(28, 'Conhaque Martell Vsop 700 ml', '4', 'Um conhaque elegante para o seu par.', '../recebidos/649450bcd1c77.webp', 'R$408,90'),
-(33, 'Vinho Caballo Loco Grand Cru Sagrada Familia 750 ml', '4', 'Um vinho que foi inspirado em um artista renascentista.', '../recebidos/649457c018a78.jpg', 'R$355,00'),
-(34, 'Vinho Kaiken Ultra Merlot 750 ml', '3', 'Um vinho em tons de cor mais escuros porÃ©m saborosos como sempre.', '../recebidos/6494584d875fb.jpg', 'R$159,00'),
-(35, 'Whisky The Macallan David Carson Concept NÂº3 - 700 ml', '3', 'Conceito nÂº 3 delÃ­cias com notas de pÃªra, canela e baunilha.', '../recebidos/649458fac043a.jpg', 'R$ 3.180,90'),
-(36, 'Whisky Kura Blended Malt Rum Cask 700 ml', '3', 'Ã‰ um whisky de malte misturado feito com cevada maltada, fermento e Ã¡gua.', '../recebidos/649459143ac3e.jpg', 'R$ 825,90'),
-(37, 'Whisky Glenfiddich 18 Anos', '3', 'Ã‰ um whisky escocÃªs com um toque adocicado e frutado da madeira espanhola Oloroso', '../recebidos/649459a05d1c5.webp', 'R$ 748,90'),
-(38, 'Champagne Laurent Perrier Grand Siecle 750 ml', '4', 'Um champanhe utilizado em comemoraÃ§Ãµes, um dos melhores', '../recebidos/649459e3ae5f5.jpg', 'R$1.456,00'),
-(39, 'Champagne Moet Chandon Nectar Imperial Demi Sec 750 ml', '5', 'Um champanhe com cor mais escura, e saboroso.', '../recebidos/64945a0560f37.webp', 'R$477,00');
+(32, 'Vinho Marques De Riscal Reserva Rioja 750 ml', '4', 'Vinho exÃ³tico e com sabor artesanal e produzido em boa safra.', 'recebidos/649457424fa56.jpg', 'R$192,00'),
+(31, 'Vinho Mau Criado Malbec 750 ml 2019', '6', 'Um vinho artesanal produzido da melhor safra de uvas', 'recebidos/649456d3ab39d.jpg', 'R$486,00'),
+(30, 'Conhaque Cortel Napoleon Vsop 700 ml', '3', 'Um Ã³timo conhaque, perfeito para noites de inverno!', 'recebidos/649456815abb2.webp', 'R$158,90'),
+(29, 'Conhaque RÃ©my Martin V.S.O.P 700 ml', '4', 'Um conhaque francÃªs fino de cor amarelo-ouro, Ã¢mbar.', 'recebidos/64945643364d9.webp', 'R$398,00'),
+(28, 'Conhaque Martell Vsop 700 ml', '4', 'Um conhaque elegante para o seu par.', 'recebidos/649450bcd1c77.webp', 'R$408,90'),
+(33, 'Vinho Caballo Loco Grand Cru Sagrada Familia 750 ml', '4', 'Um vinho que foi inspirado em um artista renascentista.', 'recebidos/649457c018a78.jpg', 'R$355,00'),
+(34, 'Vinho Kaiken Ultra Merlot 750 ml', '3', 'Um vinho em tons de cor mais escuros porÃ©m saborosos como sempre.', 'recebidos/6494584d875fb.jpg', 'R$159,00'),
+(35, 'Whisky The Macallan David Carson Concept NÂº3 - 700 ml', '3', 'Conceito nÂº 3 delÃ­cias com notas de pÃªra, canela e baunilha.', 'recebidos/649458fac043a.jpg', 'R$ 3.180,90'),
+(36, 'Whisky Kura Blended Malt Rum Cask 700 ml', '3', 'Ã‰ um whisky de malte misturado feito com cevada maltada, fermento e Ã¡gua.', 'recebidos/649459143ac3e.jpg', 'R$ 825,90'),
+(37, 'Whisky Glenfiddich 18 Anos', '3', 'Ã‰ um whisky escocÃªs com um toque adocicado e frutado da madeira espanhola Oloroso', 'recebidos/649459a05d1c5.webp', 'R$ 748,90'),
+(38, 'Champagne Laurent Perrier Grand Siecle 750 ml', '4', 'Um champanhe utilizado em comemoraÃ§Ãµes, um dos melhores', 'recebidos/649459e3ae5f5.jpg', 'R$1.456,00'),
+(39, 'Champagne Moet Chandon Nectar Imperial Demi Sec 750 ml', '5', 'Um champanhe com cor mais escura, e saboroso.', 'recebidos/64945a0560f37.webp', 'R$477,00');
 
 -- --------------------------------------------------------
 
@@ -216,8 +216,8 @@ INSERT INTO `cadastro_conhaque` (`id_conhaque`, `nome_bebida`, `quantidade`, `de
 (2, 'Conhaque Comte Joseph VS 700 ml', '2', 'Uma elegante bebida destilada para degustacao.', '../recebidos/64886d59cf0ad.jpg', 'R$806,90'),
 (3, 'Conhaque Hennessy Vsop Cognac 700 ml', '5', 'O elegante conhaque frances esta na nossa loja.', '../recebidos/64886f2409951.webp', 'R$ 753,90'),
 (5, 'Conhaque Casa Valduga Xv Anos 700 ml', '8', 'Elegante, requintado, expressivo e potente.', '../recebidos/648997e880ac6.webp', 'R$ 575,90'),
-(4, 'Conhaque Fundador Solera Reserva 750 ml', '9', 'Um Ã³timo conhaque e um bom preÃ§o.', '..recebidos/648996979a5c9.webp', 'R$ 128,90'),
-(6, 'Conhaque RÃ©my Martin V.S.O.P 700 ml', '10', 'Um conhaque francÃªs fino de cor amarelo-ouro, Ã¢mbar.', 'recebidos/6489988db692f.webp', 'R$ 398,00'),
+(4, 'Conhaque Fundador Solera Reserva 750 ml', '9', 'Um Ã³timo conhaque e um bom preÃ§o.', '../recebidos/648996979a5c9.webp', 'R$ 128,90'),
+(6, 'Conhaque RÃ©my Martin V.S.O.P 700 ml', '10', 'Um conhaque francÃªs fino de cor amarelo-ouro, Ã¢mbar.', '../recebidos/6489988db692f.webp', 'R$ 398,00'),
 (7, 'Conhaque Osborne Brandy 700 ml', '20', 'O destilado ideal para curtir bons momentos.', '../recebidos/648998e6c2247.webp', 'R$ 160,90'),
 (8, 'Conhaque Bache - Gabrielsen ', '12', 'Com um sabor delicado e distinto.', '../recebidos/648999afe007d.webp', 'R$ 374,68'),
 (9, 'Conhaque Cortel Brandy XO 700 ml', '23', 'Um destilado de uvas vinÃ­feras francesas.', '../recebidos/64899b5247888.webp', 'R$ 308,36'),
@@ -415,7 +415,7 @@ CREATE TABLE IF NOT EXISTS `cartoes` (
   `cvv` varchar(200) NOT NULL,
   `cpf` varchar(200) NOT NULL,
   PRIMARY KEY (`id_cartao`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cartoes`
@@ -430,7 +430,8 @@ INSERT INTO `cartoes` (`id_cartao`, `titular`, `numero_cartao`, `data_validade`,
 (6, 'JOÃƒO RAFAEL DE CARVALHO', '5427  4373  4327  4244', '14/31', '234', '323.549.254-69'),
 (7, 'luiz bonfim', '1234  5678  9987  9778', '13/98', '159', '323.549.254-69'),
 (8, 'SSSSSSS', '1313  1311  3131  3131', '13/13', '331', '313.131.313-13'),
-(9, 'joaoda silva', '3131  3131  313', '13/13', '313', '313.123.313-13');
+(9, 'joaoda silva', '3131  3131  313', '13/13', '313', '313.123.313-13'),
+(10, 'matheus vital', '2213  1313  1313  1313', '13/13', '131', '131.312.321-32');
 
 -- --------------------------------------------------------
 
