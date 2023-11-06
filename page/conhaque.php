@@ -20,7 +20,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="../css/menu_dieimes.css">
   <link rel="stylesheet" href="../css/dieimes.css">
-    <link rel="icon" href="Imagens/vikingpinguço.png">
+  <link rel="icon" href="../Imagens/Icon.png">
   <title>Conhaque - Taverna de Valhalla</title>
 </head>
 
