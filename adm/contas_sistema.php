@@ -65,7 +65,7 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
                                 <a id="butao-adm" class="btn btn-danger" href="deletar.php?codigo_cadastro=<?php echo $logins['id_login']; ?>">Deletar</a>
                             </td>
                             <td class="text-center">
-                                <a id="butao-adm" class="btn btn-primary" href="alterar.php">Alterar</a>
+                                <a id="butao-adm" class="btn btn-primary" href="alterar/alterar_adm.php">Alterar</a>
                             </td>
                         </tr>
                     <?php
