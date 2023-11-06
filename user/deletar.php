@@ -13,13 +13,12 @@ if (isset($_GET['codigo_cadastro'])) {
 
         $deu_certo = $mysqli->query($sql_deletar) or die($mysqli->error);
 
-        header("location: index.php");
+        header("location: ../index.php");
         // var_dump($mysqli);
     }
 } else {
     echo "Não tem código de consulta disponível";
 }
-
 ?>
 
 
