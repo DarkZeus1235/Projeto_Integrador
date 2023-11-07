@@ -1,11 +1,22 @@
 <?php
-    if(!isset($_SESSION)){
+if (!isset($_SESSION)) {
     session_start();
-    }
+}
 
-    /*$_SESSION['id_login_adm'] */
+if (!isset($_SESSION['id_login_adm'])) {
+    // Configuração de um alerta personalizado
+    echo '<div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; font-weight: bold;">
+        Acesso negado: Você não pode acessar esta página porque não está logado como administrador. <a href="login.php" style="color: #721c24; font-weight: bold; text-decoration: underline;">Clique aqui para entrar</a>.
+    </div>';
     
-    if(!isset($_SESSION['id_login_adm'])) {
-        die("Voce não pode acessar está página porque você não é um administrador. <p><a href=\"login_adm.php\">Entrar</p>");
-    }
+    // Você também pode adicionar um redirecionamento automático após alguns segundos
+    echo '<script>
+        setTimeout(function() {
+            window.location.href = "login_adm.php";
+        }, 5000); // Redirecionar após 5 segundos
+    </script>';
+    
+    // Encerre a execução do código
+    exit();
+}
 ?>
