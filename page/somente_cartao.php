@@ -33,7 +33,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
         <center>
   <h1>No momento nosso sistema só aceita cartões de crédito em uma parceria com uma empresa financeira terceirizada...</h1>
 
-  <button class="btn btn-warning"><a id="botao-aviso" href="metodo_pag.php">Voltar para metódo de Pagamento</a></button>
+  <button class="btn btn-warning"><a id="botao-aviso" href="../user/metodo_pag.php">Voltar para metódo de Pagamento</a></button>
   </center>
   <br>
   <br>
