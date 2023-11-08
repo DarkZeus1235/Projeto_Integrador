@@ -1,6 +1,12 @@
 <?php
 include("../static/conexao.php");
+
+if(!isset($_SESSION)){
+    require('../protect/protect.php');
+    }
+if(!isset($_SESSION)){
 session_start();
+}
 $itens_carrinho = isset($_SESSION['carrinho']) ? $_SESSION['carrinho'] : array();
 
 
@@ -43,7 +49,7 @@ if (isset($_POST['confirmarPedido'])) {
     ?>
     <div class="container-fluid">
         <div class="row-fluid">
-            <div id="alinhar_dashboard" class="table-responsive"> <!-- Adicione a classe 'table-responsive' para tornar a tabela responsiva -->
+            <div id="alinhar_dashboard" class="table-responsive-md"> <!-- Adicione a classe 'table-responsive' para tornar a tabela responsiva -->
             <br>
                 <h2><center>Pedidos feitos no Sistema:</center></h2>
                 <div class="table-responsive">
@@ -103,8 +109,11 @@ if (isset($_POST['confirmarPedido'])) {
                     </table>
                 </div>
             </div>
+            <button class="btn btn-danger"><a class="btn btn-danger" href="../index.php">Cancelar</a></button>
+            <button  class="btn btn-success"><a id="finalizar_compra" class="btn btn-success" href="../user/metodo_pag.php">Finalizar Compra</a></button>
         </div>
 
 </body>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </html>
