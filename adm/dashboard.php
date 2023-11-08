@@ -224,7 +224,7 @@ $quantidade_cadastros = $retorno_consulta->num_rows;
   <div class="card">
     <img href="pedidos_sistema.php" src="../Imagens/Viking_compra.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Pedidos</h5>
+      <h5 class="card-title">Produtos</h5>
       <p class="card-text">Ver todos os produtos cadastrados no sistema.</p>
       <button id="butao2" class="custom-btn"><a id="contas" href="produtos_cadastrados.php">Produtos Cadastrados</a></button>
     </div>
