@@ -47,7 +47,7 @@ if (isset($_POST['confirmarPedido'])) {
             <br>
                 <h2><center>Pedidos feitos no Sistema:</center></h2>
                 <div class="table-responsive">
-                    <table id="table" class="table table-striped">
+                    <table id="table" class="table align-middle">
                         <thead> <!-- Adicione um cabeçalho de tabela -->
                             <tr>
                                 <th>Imagem do Produto:</th>
