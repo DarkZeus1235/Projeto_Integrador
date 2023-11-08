@@ -11,6 +11,22 @@ if (isset($_GET["id"])) {
   $consultar_banco = "SELECT * FROM cadastro_bebidas WHERE id_bebida = $id_bebida";
 }
 
+if (isset($_GET['addtocart'])) {
+  $id_bebida = $_GET['addtocart'];
+  // Verificar se o produto já está no carrinho
+  if (!isset($_SESSION['carrinho'])) {
+      $_SESSION['carrinho'] = array();
+  }
+  if (!isset($_SESSION['carrinho'][$id_bebida])) {
+      $_SESSION['carrinho'][$id_bebida] = 1; // Quantidade inicial
+  } else {
+      $_SESSION['carrinho'][$id_bebida]++; // Incrementa a quantidade
+  }
+  header('Location: ../page/carrinho.php'); // Redireciona para a página do carrinho
+  exit;
+}
+
+
 $retorno_consulta = $mysqli->query($consultar_banco) or die($mysqli->error);
 $quantidade_pedidos = $retorno_consulta->num_rows;
 ?>
@@ -53,8 +69,11 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
           <p class="product-price"><?php echo $bebidas['valor']; ?></p>
           <p class="product-price">Estoque Disponível: <?php echo $bebidas['quantidade']; ?></p>
           <div class="product-actions">
-            <a href="metodo_pag.php" class="custom-btn" class="buy-now">Comprar Agora</a>
+            <a href="metodo_pag.php" class="custom-btn buy-now" >Comprar Agora</a>
+            <button class="custom-btn" type="button" onclick="window.location.href='comprar.php?addtocart=<?php echo $bebidas['id_bebida']; ?>'">Adicionar ao Carrinho</button>
             <span class="favorite">&#9733;</span> <!-- Ícone de estrela para favoritar -->
+            
+
           </div>
         </div>
       <?php
