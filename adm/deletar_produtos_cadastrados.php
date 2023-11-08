@@ -70,7 +70,7 @@ if (isset($_GET['codigo_bebida'])) {
 
         <form action="" method="post">
             <input name="btn_deletar" id="butao-adm" class="btn btn-danger" type="submit" value="DELETAR">
-            <a id="butao-adm" class="btn btn-warning" href="conta.php">Voltar</a>
+            <a id="butao-adm" class="btn btn-warning" href="produtos_cadastrados.php">Voltar</a>
         </form>
 
     </div>

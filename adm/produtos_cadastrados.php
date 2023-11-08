@@ -31,6 +31,18 @@
       // Consulta SQL para selecionar dados da tabela4
       $query_tabela4 = "SELECT * FROM cadastro_uisque";
       $result_tabela4 = $mysqli->query($query_tabela4);
+
+      // Consulta SQL para selecionar dados da tabela5
+      $query_tabela5 = "SELECT * FROM cadastro_rum";
+      $result_tabela5 = $mysqli->query($query_tabela5);
+
+      // Consulta SQL para selecionar dados da tabela6
+      $query_tabela6 = "SELECT * FROM cadastro_vinhos";
+      $result_tabela6 = $mysqli->query($query_tabela6);
+
+      // Consulta SQL para selecionar dados da tabela7
+      $query_tabela7 = "SELECT * FROM cadastro_conhaque";
+      $result_tabela7 = $mysqli->query($query_tabela7);
     ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -186,6 +198,111 @@
                             <td><?php echo $logins['valor']; ?></td>
                             <td class="text-center">
                                 <a id="butao-adm" class="btn btn-danger" href="deletar_produtos_cadastrados.php?codigo_bebida=<?php echo $logins['id_uisque']; ?>">Deletar</a>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <div id="alinhar_dashboard" class="table-responsive"> <!-- Adicione a classe 'table-responsive' para tornar a tabela responsiva -->
+            <h2>Rum Cadastrados no Sistema:</h2>
+            <div class="table-responsive">
+            <table id="table" class="table table-striped">
+                <thead> <!-- Adicione um cabeçalho de tabela -->
+                    <tr>
+                        <th>Imagem da Bebida:</th>
+                        <th>ID da Bebida:</th>
+                        <th>Nome:</th>
+                        <th>Quantidade:</th>
+                        <th>Valor:</th>
+                        <th>Funcionalidades:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    while ($logins = $result_tabela5->fetch_assoc()) {
+                    ?>
+                        <tr>
+                            <td><img class="img-fluid" src="<?php echo $logins['arquivo_caminho'];?>" alt="" width="80px" height="80px"></td>
+                            <td><?php echo $logins['id_rum']; ?></td>
+                            <td><?php echo $logins['nome_bebida']; ?> </td>
+                            <td><?php echo $logins['quantidade']; ?> </td>
+                            <td><?php echo $logins['valor']; ?></td>
+                            <td class="text-center">
+                                <a id="butao-adm" class="btn btn-danger" href="deletar_produtos_cadastrados.php?codigo_bebida=<?php echo $logins['id_rum']; ?>">Deletar</a>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <div id="alinhar_dashboard" class="table-responsive"> <!-- Adicione a classe 'table-responsive' para tornar a tabela responsiva -->
+            <h2>Vinhos Cadastrados no Sistema:</h2>
+            <div class="table-responsive">
+            <table id="table" class="table table-striped">
+                <thead> <!-- Adicione um cabeçalho de tabela -->
+                    <tr>
+                        <th>Imagem da Bebida:</th>
+                        <th>ID da Bebida:</th>
+                        <th>Nome:</th>
+                        <th>Quantidade:</th>
+                        <th>Valor:</th>
+                        <th>Funcionalidades:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    while ($logins = $result_tabela6->fetch_assoc()) {
+                    ?>
+                        <tr>
+                            <td><img class="img-fluid" src="<?php echo $logins['arquivo_caminho'];?>" alt="" width="80px" height="80px"></td>
+                            <td><?php echo $logins['id_vinho']; ?></td>
+                            <td><?php echo $logins['nome_bebida']; ?> </td>
+                            <td><?php echo $logins['quantidade']; ?> </td>
+                            <td><?php echo $logins['valor']; ?></td>
+                            <td class="text-center">
+                                <a id="butao-adm" class="btn btn-danger" href="deletar_produtos_cadastrados.php?codigo_bebida=<?php echo $logins['id_vinho']; ?>">Deletar</a>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <div id="alinhar_dashboard" class="table-responsive"> <!-- Adicione a classe 'table-responsive' para tornar a tabela responsiva -->
+            <h2>Conhaque Cadastrados no Sistema:</h2>
+            <div class="table-responsive">
+            <table id="table" class="table table-striped">
+                <thead> <!-- Adicione um cabeçalho de tabela -->
+                    <tr>
+                        <th>Imagem da Bebida:</th>
+                        <th>ID da Bebida:</th>
+                        <th>Nome:</th>
+                        <th>Quantidade:</th>
+                        <th>Valor:</th>
+                        <th>Funcionalidades:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    while ($logins = $result_tabela7->fetch_assoc()) {
+                    ?>
+                        <tr>
+                            <td><img class="img-fluid" src="<?php echo $logins['arquivo_caminho'];?>" alt="" width="80px" height="80px"></td>
+                            <td><?php echo $logins['id_conhaque']; ?></td>
+                            <td><?php echo $logins['nome_bebida']; ?> </td>
+                            <td><?php echo $logins['quantidade']; ?> </td>
+                            <td><?php echo $logins['valor']; ?></td>
+                            <td class="text-center">
+                                <a id="butao-adm" class="btn btn-danger" href="deletar_produtos_cadastrados.php?codigo_bebida=<?php echo $logins['id_conhaque']; ?>">Deletar</a>
                             </td>
                         </tr>
                     <?php
