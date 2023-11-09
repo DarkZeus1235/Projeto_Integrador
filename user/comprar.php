@@ -70,7 +70,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
           <p class="product-price">Estoque Disponível: <?php echo $bebidas['quantidade']; ?></p>
           <div class="product-actions">
             <a href="metodo_pag.php" class="custom-btn buy-now" >Comprar Agora</a>
-            <button class="custom-btn buy-now" type="button" onclick="window.location.href='comprar.php?addtocart=<?php echo $bebidas['id_bebida']; ?>'">Adicionar ao Carrinho</button>
+            <button class="custom-btn" type="button" onclick="window.location.href='comprar.php?addtocart=<?php echo $bebidas['id_bebida']; ?>'">Adicionar ao Carrinho</button>
             <span class="favorite">&#9733;</span> <!-- Ícone de estrela para favoritar -->
             
 

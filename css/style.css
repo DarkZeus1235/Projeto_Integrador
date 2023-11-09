@@ -23,7 +23,7 @@ body {
   /* Outros estilos do botão (opcional) */
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1174,13 +1174,13 @@ button:hover {
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
+  margin-left: -10%;
 }
 
 .add-to-cart:hover,
 .buy-now:hover {
   background-color: black;
 }
-
 .favorite {
   font-size: 24px;
   /* Tamanho do ícone de favorito */

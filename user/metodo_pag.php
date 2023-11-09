@@ -2,6 +2,10 @@
 include("../static/conexao.php");
 
 include('../protect/protect.php');
+
+if(!isset($_SESSION)){
+    session_start();
+}
 if (isset($_POST['bt_nome'])) {
     if (isset($_FILES['bt_arquivo'])) {
         $arquivo = $_FILES['bt_arquivo'];
