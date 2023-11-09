@@ -91,15 +91,15 @@ if (isset($_FILES["foto"])) {
 </head>
 
 <body>
-    <?php include("../static/menu.php"); ?>
+    <?php include("../static/menu_conta.php"); ?>
 
     <div class="container profile-container">
         <div class="text-center mb-4">
             <?php
-            $imgPath = isset($usuario["foto_perfil_caminho"]) && !empty($usuario["foto_perfil_caminho"]) ? $usuario["foto_perfil_caminho"] : '../Imagens/Foto_padrao.png';
+            $imgPath = isset($usuario["foto_perfil_caminho"]) && !empty($usuario["foto_perfil_caminho"]) ? $usuario["foto_perfil_caminho"] : '../../Imagens/Foto_padrao.png';
             //echo "Caminho da imagem: " . $imgPath . "<br>";
             if (file_exists($imgPath)) {
-                echo "<img class='profile-picture' src='../'$imgPath' alt='Foto de perfil'>";
+                echo "<img class='profile-picture' src='$imgPath' alt='Foto de perfil'>";
             } else {
                 echo "<img class='profile-picture' src='../Imagens/Foto_padrao.png' alt='Foto de perfil'>";
             }
