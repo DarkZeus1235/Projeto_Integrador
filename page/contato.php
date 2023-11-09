@@ -56,7 +56,7 @@ if (isset($_POST['nome'])) {
                 <img src="../Imagens/viking.png.png" alt="Logo Taverna de Valhalla" class="logo-img">
             </a>
             <span class="logo-text">
-                <a href="index.php">Taverna de Valhalla</a>
+                <a href="../index.php">Taverna de Valhalla</a>
             </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -105,7 +105,7 @@ if (isset($_POST['nome'])) {
                     if (isset($_SESSION['id_login_adm'])) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="adm/dashboard.php"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                            <a class="nav-link" href="../adm/dashboard.php"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
                                     <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z" />
                                 </svg> Painel</a>
                         </li>
@@ -147,13 +147,13 @@ if (isset($_POST['nome'])) {
                             if (!isset($_SESSION['nome'])){
                             ?>
                                 <li class="nav-item">
-                                    <a id="nav-link2" class="nav-link" href="user/login.php">Entrar</a>
+                                    <a id="nav-link2" class="nav-link" href="../user/login.php">Entrar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="nav-link" class="nav-link" href="user/cadastro.php">Cadastrar</a>
+                                    <a id="nav-link" class="nav-link" href="../user/cadastro.php">Cadastrar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="nav-link2" class="nav-link" href="adm/cadastro/login_adm.php">Login de Administrador</a>
+                                    <a id="nav-link2" class="nav-link" href="../adm/cadastro/login_adm.php">Login de Administrador</a>
                                 </li>
                             <?php
                             } else {
@@ -164,7 +164,7 @@ if (isset($_POST['nome'])) {
 
                                 ?>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="adm/conta_adm.php">
+                                        <a class="nav-link" href="../adm/conta_adm.php">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
                                                 <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z" />
                                             </svg>

@@ -282,7 +282,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
     </div>
   </div>
   <?php
-  include('../rodape.php')
+  include('../../static/rodape.php')
   ?>
 </body>
 
