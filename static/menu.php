@@ -38,6 +38,17 @@
                                 <a id="nav-link" class="nav-link" href="../page/conhaque.php">Conhaque</a>
                             </li>
                         </ul>
+                        <?php
+                            if(isset($_SESSION['id_login'])){
+                        ?>
+                        <li class="nav-item">
+                        <a class="nav-link" href="page/carrinho.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                            </svg> Carrinho</a>
+                    </li>
+                    <?php
+                            }
+                    ?>
                     <li class="nav-item">
                         <a class="nav-link" href="../page/novidades.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
                                 <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
@@ -64,102 +75,103 @@
                     ?>
                     <?php
                     if (!isset($_SESSION['id_login'])) {
-                    if (!isset($_SESSION['id_login_adm'])){   
+                        if (!isset($_SESSION['id_login_adm'])) {
                     ?>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" aria-expanded="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                                </svg></i>
-                                Minha conta</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                    </svg></i>
+                                    Minha conta</a>
                         <?php
-                    }}
+                        }
+                    }
                         ?>
                         <?php
                         if (isset($_SESSION['nome'])) {
 
                         ?>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" aria-expanded="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                                </svg></i>
-                                <?php echo $_SESSION['nome']; ?></a>
-                        <?php
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                    </svg></i>
+                                    <?php echo $_SESSION['nome']; ?></a>
+                            <?php
                         }
-                        ?>
-                        <ul class="dropdown-menu">
-                            <?php
-                            if (!isset($_SESSION['nome'])) {
                             ?>
-                                <li class="nav-item">
-                                    <a id="nav-link2" class="nav-link" href="../user/login.php">Entrar</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a id="nav-link" class="nav-link" href="../user/cadastro.php">Cadastrar</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a id="nav-link2" class="nav-link" href="../adm/cadastro/login_adm.php">Login de Administrador</a>
-                                </li>
-                            <?php
-                            } else {
-                            ?>
-
+                            <ul class="dropdown-menu">
                                 <?php
-                                if (isset($_SESSION['id_login_adm'])) {
-
+                                if (!isset($_SESSION['nome'])) {
                                 ?>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="conta_adm.php">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
-                                                <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z" />
+                                        <a id="nav-link2" class="nav-link" href="../user/login.php">Entrar</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="nav-link" class="nav-link" href="../user/cadastro.php">Cadastrar</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="nav-link2" class="nav-link" href="../adm/cadastro/login_adm.php">Login de Administrador</a>
+                                    </li>
+                                <?php
+                                } else {
+                                ?>
+
+                                    <?php
+                                    if (isset($_SESSION['id_login_adm'])) {
+
+                                    ?>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="conta_adm.php">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
+                                                    <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z" />
+                                                </svg>
+                                                Minhas Informações</a>
+                                        </li>
+                                    <?php
+                                    }
+                                    ?>
+                                    <?php
+                                    if (isset($_SESSION['id_login_adm'])) {
+
+                                    ?>
+                                        <li class="nav-item">
+                                            <a id="nav-link" class="nav-link" href="../Projeto_Integrador/adm/cadastro/cadastro_adm.php">Cadastrar Administrador</a>
+                                        </li>
+                                    <?php
+                                    }
+                                    ?>
+
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="logout" href="../Projeto_Integrador/static/logout.php">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
                                             </svg>
-                                            Minhas Informações</a>
+                                            Sair</a>
                                     </li>
+                                    <?php
+                                    if (isset($_SESSION['id_login'])) {
+
+                                    ?>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../Projeto_Integrador/user/conta.php">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
+                                                    <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z" />
+                                                </svg>
+                                                Minhas Informações</a>
+                                        </li>
+                                    <?php
+                                    }
+                                    ?>
                                 <?php
                                 }
                                 ?>
-                                <?php
-                                if (isset($_SESSION['id_login_adm'])) {
-
-                                ?>
-                                    <li class="nav-item">
-                                        <a id="nav-link" class="nav-link" href="../Projeto_Integrador/adm/cadastro/cadastro_adm.php">Cadastrar Administrador</a>
-                                    </li>
-                                <?php
-                                }
-                                ?>
-
-
-                                <li class="nav-item">
-                                    <a class="nav-link" id="logout" href="../Projeto_Integrador/static/logout.php">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
-                                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
-                                        </svg>
-                                        Sair</a>
-                                </li>
-                                <?php
-                                if (isset($_SESSION['id_login'])) {
-
-                                ?>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="../Projeto_Integrador/user/conta.php">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
-                                                <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z" />
-                                            </svg>
-                                            Minhas Informações</a>
-                                    </li>
-                                <?php
-                                }
-                                ?>
-                            <?php
-                            }
-                            ?>
-                        </ul>
-                        </form>
+                            </ul>
+                            </form>
             </div>
         </div>
     </nav>
