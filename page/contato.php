@@ -52,7 +52,7 @@ if (isset($_POST['nome'])) {
 <header>
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="../index.php">
                 <img src="../Imagens/viking.png.png" alt="Logo Taverna de Valhalla" class="logo-img">
             </a>
             <span class="logo-text">
@@ -93,7 +93,7 @@ if (isset($_POST['nome'])) {
                             if(isset($_SESSION['id_login'])){
                         ?>
                         <li class="nav-item">
-                        <a class="nav-link" href="page/carrinho.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                        <a class="nav-link" href="../page/carrinho.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
                                 <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
                             </svg> Carrinho</a>
                     </li>

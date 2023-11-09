@@ -52,7 +52,7 @@ if (isset($_POST['confirmarPedido'])) {
 
 <body>
     <?php
-    include('../static/menu.php');
+    include('../static/menu_conta.php');
     ?>
     <div class="container-fluid">
         <div class="row-fluid">

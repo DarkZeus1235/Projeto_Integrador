@@ -89,8 +89,8 @@ if (isset($_POST['bt_id'])) {
             ?>">
             <label for="">Endereço</label>
             <input type="text" name="bt_endereco" placeholder="Sem valor" required value="<?php
-            if (isset($consultar['senha'])) {
-            echo $_SESSION['endereco'];
+            if (isset($consultar['endereco'])) {
+            echo $consultar['endereco'];
             }
             ?>">
             <input type="submit" value="Cadastrar" onclick="return validateFields()">
