@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
 if (!isset($_SESSION['id_login_adm'])) {
     // Configuração de um alerta personalizado
     echo '<div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; font-weight: bold;">
-        Acesso negado: Você não pode acessar esta página porque não está logado como administrador. <a href="login.php" style="color: #721c24; font-weight: bold; text-decoration: underline;">Clique aqui para entrar</a>.
+        Acesso negado: Você não pode acessar esta página porque não está logado como administrador. <a href="login_adm.php" style="color: #721c24; font-weight: bold; text-decoration: underline;">Clique aqui para entrar</a>.
     </div>';
     
     // Você também pode adicionar um redirecionamento automático após alguns segundos

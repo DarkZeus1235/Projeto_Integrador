@@ -99,10 +99,9 @@ if (isset($_FILES["foto"])) {
             $imgPath = isset($usuario["foto_perfil_caminho"]) && !empty($usuario["foto_perfil_caminho"]) ? $usuario["foto_perfil_caminho"] : '../Imagens/Foto_padrao.png';
             //echo "Caminho da imagem: " . $imgPath . "<br>";
             if (file_exists($imgPath)) {
-                echo "<img class='profile-picture' src='$imgPath' alt='Foto de perfil'>";
+                echo "<img class='profile-picture' src='../'$imgPath' alt='Foto de perfil'>";
             } else {
-                echo "<img class='profile-picture' src='Imagens/Foto_padrao.png' alt='Foto de perfil'>";
-                echo "O arquivo $imgPath não foi encontrado."; // isso é apenas para depuração
+                echo "<img class='profile-picture' src='../Imagens/Foto_padrao.png' alt='Foto de perfil'>";
             }
             ?>
             <h1 class="mt-3">Olá <?php echo $_SESSION["nome"]; ?></h1>
