@@ -12,7 +12,7 @@ if (!isset($_SESSION['id_login'])) {
     // Você também pode adicionar um redirecionamento automático após alguns segundos
     echo '<script>
         setTimeout(function() {
-            window.location.href = "login.php";
+            window.location.href = "../user/login.php";
         }, 5000); // Redirecionar após 5 segundos
     </script>';
     
