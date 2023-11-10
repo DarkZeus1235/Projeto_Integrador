@@ -1,33 +1,12 @@
 <?php
+
+include('../static/conexao.php');
+
+
+if(!isset($_SESSION)){
 session_start();
-
-// Certifique-se de que a sessão do carrinho existe
-if (isset($_SESSION['carrinho']) && !empty($_SESSION['carrinho'])) {
-    // Você pode acessar os itens do carrinho aqui
-    $itens_carrinho = $_SESSION['carrinho'];
-
-    // Agora, você pode iterar sobre os itens do carrinho e calcular o valor total
-    $total = 0;
-    foreach ($itens_carrinho as $id_bebida => $quantidade) {
-        // Consulte o banco de dados ou onde quer que você tenha as informações dos produtos
-        $valor_unitario = obter_valor_unitario_do_banco($id_bebida);
-
-        // Calcule o subtotal para este item
-        $subtotal = $valor_unitario * $quantidade;
-
-        // Adicione ao total
-        $total += $subtotal;
-
-        // Exiba os detalhes do pedido
-        echo "Produto ID: $id_bebida, Quantidade: $quantidade, Valor Unitário: $valor_unitario, Subtotal: $subtotal<br>";
-    }
-
-    // Exiba o total da compra
-    echo "Total da Compra: $total";
-} else {
-    // Carrinho vazio
-    echo "Seu carrinho está vazio.";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -55,28 +34,11 @@ if (isset($_SESSION['carrinho']) && !empty($_SESSION['carrinho'])) {
         <p>Obrigado por fazer sua compra na Taverna de Valhalla. Seu pedido foi processado com sucesso!</p>
 
         <h2>Detalhes do Pedido</h2>
+        <h3>Nome do Produto: Whisky The Macallan David Carson Concept Nº3 - 700 ml</h3>
+        <h3>Quantidade: 1</h3>
         <ul>
-            <?php
-            $total = 0; // Variável para calcular o total da compra
-            foreach ($itens_carrinho as $id_bebida => $quantidade) {
-                // Consulta para obter informações do produto com base no ID
-                $stmt = $mysqli->prepare("SELECT * FROM cadastro_bebidas WHERE id_bebida = ?");
-                $stmt->bind_param("i", $id_bebida);
-                $stmt->execute();
-                $resultado = $stmt->get_result();
-                $bebida = $resultado->fetch_assoc();
-
-                echo "<li><strong>Produto:</strong> " . $bebida['nome_bebida'] . "</li>";
-                echo "<li><strong>Quantidade:</strong> " . $quantidade . "</li>";
-                echo "<li><strong>Valor Unitário:</strong> R$" . number_format((float) $bebida['valor'], 2, ',', '.') . "</li>";
-                $subtotal = (float) $bebida['valor'] * (int) $quantidade; // Calcula o subtotal
-                echo "<li><strong>Subtotal:</strong> R$" . number_format($subtotal, 2, ',', '.') . "</li>";
-                $total += $subtotal; // Atualiza o total da compra
-            }
-            ?>
         </ul>
-        <p><strong>Total da Compra:</strong> R$
-            <?php echo number_format($total, 2, ',', '.'); ?>
+        <p><strong>Total da Compra: 3.180,90</strong> R$
         </p>
         <p>Os itens do seu pedido serão enviados para o endereço que você forneceu durante a criação de sua conta. Você
             receberá um e-mail de confirmação em breve com mais informações sobre o envio.</p>
