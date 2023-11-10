@@ -61,7 +61,7 @@ if (isset($_POST['bt_id'])) {
                 <label for="">ID</label>
                 <input type="text" name="bt_id_alterar" value="<?php
                                                                 echo $_SESSION['id_login'];
-                                                                ?>">
+                                                                ?>" disabled>
                 <label>Email</label>
                 <input class="form-control" type="email" name="bt_email" placeholder="Sem valor" value="<?php
                                                                                                         echo $_SESSION['email'];
