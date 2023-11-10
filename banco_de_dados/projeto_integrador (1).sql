@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 10-Nov-2023 às 10:24
+-- Tempo de geração: 10-Nov-2023 às 12:02
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `endereco` varchar(100) NOT NULL,
   `foto_perfil_caminho` varchar(300) NOT NULL,
   PRIMARY KEY (`id_login`)
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro`
@@ -71,6 +71,7 @@ INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `telefone`, `usern
 (23, 'criscris@dieimes', '$2y$10$X4Q8yoh2D4v37dIquB88POoiw4doPm6kvBIER9G5Vs6spncjmS7ia', 'Matheus Henrique Vital', '(45) 99898-8776', 'Cr7', '443.122.333-52', 'Monte Castel', ''),
 (24, 'dieimes@dieimes', '$2y$10$0jJynhLheT0PYmt1Qu7Sv.J6TNSfUZMcA11lKQWpC8nbrKtk8i6gS', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '523.525.642-34', 'zere', ''),
 (25, 'zere01011@gmail.com', '$2y$10$jORO30a52RPqUe2GkM16h.BKT7EeNF4iK9xLxHaHHsk2lvVItN4Zq', 'zere', '(43) 99433-4325', 'Dieimes', '423.527.533-67', 'Monte Castel', ''),
+(50, 'jpfernandes@gmail.com', '$2y$10$3k.9w0tGyyjIuGnomTORnexiA5tlQaqOHAhr7LfIiIjy.x31c/Hym', 'Matheus Henrique Vital', '(43) 99433-4325', 'Tchecolosváquia', '423.527.533-67', '            Monte Castel', 'Imagens/foto_padrao.png'),
 (27, 'zere010111111@gmail.com', '$2y$10$wRGScJE3Bh6wYWWskGpeAOK63P45gc0vStcMHpmPxQcKWCYtsLA0e', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '423.527.533-67', 'Monte Castel', 'Imagens/foto_padrao.png'),
 (28, 'zere213@gmail.com', '$2y$10$l9hjEu5gRsxunTzyNY3PIORT3anAlkO8eKFG5KwwfIL8YIubnKdZu', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '123.123.123-12', 'Monte Castel', 'Imagens/foto_padrao.png'),
 (29, 'zere3123@gmail.com', '$2y$10$b9CG7TkJTTO/s2a8A./WGuuNA9Dr0.0lh2HFR1WEOKMJEe7zgEcAu', 'Matheus Henrique Vital', '(43) 99433-4325', 'Dieimes', '443.122.333-52', 'Avenida Brasil', 'Imagens/foto_padrao.png'),
@@ -85,7 +86,8 @@ INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `telefone`, `usern
 (38, 'teste12@gmail.com', '$2y$10$/tysa1UyDqjTZLZOjiFmw.67CEg22rG7OHPXrhHc12OWQV8EizGhC', 'TESTE', '(43) 99433-4325', 'TESTE', '423.527.533-67', 'TESTE32', 'Imagens/foto_padrao.png'),
 (39, 'luizeduardobonfim@gmail.com', '$2y$10$uZQGBAo2u2.ddtQIbWuKeudYv/54goya6tlRAnVA8ZTYRHmZ.2uh6', 'Luiz Bonfim', '(43) 99855-5588', 'luizao', '105.619.629-78', 'rua londres', 'Imagens/ftperfil/653117334b981.jpg'),
 (49, 'LIND@CAPA', '121', 'LINDA', '(43) 99433-4325', 'LINDOMORFO', '423.527.533-67', 'Monte ', '../Imagens/ftperfil/654cf048378f9.jpg'),
-(42, 'matheuszanoni84@gmail.com', '$2y$10$uV3mBZbulzBtAx4NyrmlTewxok31IM6ocTuEvOoER/Hgxmzb1LCMy', 'matheus zanoni bittencourt de oliveira', '(43) 99433-4325', 'crazy7', '089.328.649-42', 'rua juarez cleves', '../Imagens/ftperfil/654ce7952552c.png');
+(42, 'matheuszanoni84@gmail.com', '$2y$10$uV3mBZbulzBtAx4NyrmlTewxok31IM6ocTuEvOoER/Hgxmzb1LCMy', 'matheus zanoni bittencourt de oliveira', '(43) 99433-4325', 'crazy7', '089.328.649-42', 'rua juarez cleves', '../Imagens/ftperfil/654ce7952552c.png'),
+(51, 'cleverson153@gmail.com', '$2y$10$V7HyNZkBVAl1OEMhCqaf8e1e5OjKD5XN2zFN1tfR1R9svStDne3Hi', 'Cleverson ', '(43) 99433-4325', 'Zere_br', '443.122.333-52', 'Avenida Brasil', 'Imagens/foto_padrao.png');
 
 -- --------------------------------------------------------
 
@@ -447,23 +449,19 @@ CREATE TABLE IF NOT EXISTS `mensagem_formulario_contato` (
   `email` varchar(200) NOT NULL,
   `mensagem` varchar(200) NOT NULL,
   PRIMARY KEY (`id_mensagem`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `mensagem_formulario_contato`
 --
 
 INSERT INTO `mensagem_formulario_contato` (`id_mensagem`, `nome`, `email`, `mensagem`) VALUES
-(10, 'JoÃ£o Rafael', 'zere@gmail.com', 'VAI TOMAR NO CU DE TODO MUNDO'),
-(2, 'JoÃ£o Rafael', 'admin@hotmail.com', 'teste3131'),
-(3, 'JoÃ£o Rafael', 'admin@hotmail.com', 'Teste45'),
-(4, '3131', 'jpfernandes@gmail.com', '1313131231'),
-(5, 'JoÃ£o Rafael', 'admin@hotmail.com', '123131'),
-(6, 'JoÃ£o Rafael', 'admin@hotmail.com', 'TESTE MENSAGEM NOVA'),
-(7, 'JoÃ£o Rafael', 'admin@hotmail.com', '1312312'),
-(8, 'JoÃ£o Rafael', 'admin@hotmail.com', '31313'),
-(9, 'JoÃ£o Rafael', 'jpfernandes@gmail.com', '1313131'),
-(11, 'JoÃ£o Rafael', 'zere@gmail.com', 'ESTOU COM DUVIDAS ONDE COMPRA PINGA?');
+(15, 'Juan', 'Juan_Vitor@gmail.com', 'Para que serve a opÃ§Ã£o de Login de Administrador?'),
+(14, 'Luiz', 'luiz@gmail.com', 'Gostaria de saber quando que serÃ¡ liberada a opÃ§Ã£o de PIX?'),
+(13, 'Joaquim', 'jao@gmail.com', 'Qual a previsÃ£o de volta do Sistema apÃ³s o feriado?'),
+(12, 'JoÃ£o Rafael', 'jraffis@gmail.com', 'Meu produto jÃ¡ estÃ¡ em Curitiba faz 10 dias, podem me ajudar?'),
+(11, 'JoÃ£o Rafael', 'zere@gmail.com', 'ESTOU COM DUVIDAS ONDE COMPRA PINGA?'),
+(16, 'Dieimes', 'Dieimes@gmail.com', 'Como efetuar a compra de um produto?');
 
 -- --------------------------------------------------------
 
