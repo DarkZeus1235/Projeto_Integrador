@@ -137,7 +137,7 @@
 
                                 ?>
                                     <li class="nav-item">
-                                        <a id="nav-link" class="nav-link" href="../Projeto_Integrador/adm/cadastro/cadastro_adm.php">Cadastrar Administrador</a>
+                                        <a id="nav-link" class="nav-link" href="../adm/cadastro/cadastro_adm.php">Cadastrar Administrador</a>
                                     </li>
                                 <?php
                                 }
