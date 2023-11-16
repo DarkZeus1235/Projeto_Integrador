@@ -16,7 +16,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
       if (!isset($_SESSION)) {
         session_start();
       }
-
+      
       $_SESSION['id_login'] = $usuario['id_login'];
       $_SESSION['nome'] = $usuario['nome'];
       $_SESSION['endereco'] = $usuario['endereco'];
@@ -44,7 +44,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" href="../css/menu_dieimes.css">
   <link rel="stylesheet" href="../css/dieimes.css">
-  <link rel="icon" href="Imagens/icon.png">
+  <link rel="icon" href="../Imagens/icon.png">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </head>

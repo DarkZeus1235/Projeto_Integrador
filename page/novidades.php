@@ -17,7 +17,7 @@ if (!isset($_SESSION)) {
     <link rel="stylesheet" href="../css/style.css"> <!-- Arquivo de estilo personalizado -->
     <link rel="stylesheet" href="../css/dieimes.css">
     <link rel="stylesheet" href="../css/menu_dieimes.css">
-    <link rel="icon" href="Imagens/icon.png">
+    <link rel="icon" href="../Imagens/icon.png">
 
 </head>
 

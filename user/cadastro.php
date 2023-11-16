@@ -49,7 +49,7 @@ if (isset($_POST['bt_nome'])) {
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu_dieimes.css">
     <link rel="stylesheet" href="../css/dieimes.css">
-    <link rel="icon" href="Imagens/icon.png">
+    <link rel="icon" href="../Imagens/icon.png">
     <style>
         /* Estilo para a notificação */
         .notification {
