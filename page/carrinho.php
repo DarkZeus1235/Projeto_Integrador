@@ -136,7 +136,6 @@ if (isset($_POST['confirmarPedido'])) {
 
                     </table>
                 </div>
-                <p>Valor total = R$ <?php echo number_format($total, 2, ',', '.'); ?></p>
             </div>
             <button class="btn btn-danger"><a class="btn btn-danger" href="../index.php">Cancelar</a></button>
             <button class="btn btn-success"><a id="finalizar_compra" class="btn btn-success"

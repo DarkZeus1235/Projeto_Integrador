@@ -1,25 +1,40 @@
 <?php
-include('../static/conexao.php');
-require('../protect/protect.php');
+include("../static/conexao.php");
+require("../protect/protect.php");
 
+/* Iniciar a sessão se não estiver iniciada */
 if (!isset($_SESSION)) {
     session_start();
 }
 
+/* Adicione o seguinte trecho para exibir mensagens de erro */
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 if (isset($_POST['bt_email'])) {
-    $id_cadastro_alterar = $_POST['bt_id_alterar'];
+    // Verifique se 'bt_id_alterar' está definido antes de usá-lo
+    $id_cadastro_alterar = isset($_POST['bt_id_alterar']) ? $_POST['bt_id_alterar'] : null;
+
+    // Restante do código permanece o mesmo
     $email = $_POST['bt_email'];
     $senha = $_POST['bt_senha'];
     $nome = $_POST['bt_nome'];
     $username = $_POST['bt_username'];
     $endereco = $_POST['bt_endereco'];
 
+    // Adicione mensagens de depuração
+    var_dump($id_cadastro_alterar, $email, $senha, $nome, $username, $endereco);
+
     // Use instruções preparadas para evitar SQL Injection
     $stmt = $mysqli->prepare("UPDATE cadastro
         SET email = ?, senha = ?, nome = ?, username = ?, endereco = ?
         WHERE id_login = ?");
     $stmt->bind_param("sssssi", $email, $senha, $nome, $username, $endereco, $id_cadastro_alterar);
-    $stmt->execute();
+
+    // Verifique o retorno do execute
+    if (!$stmt->execute()) {
+        die("Erro ao executar a consulta: " . $stmt->error);
+    }
     $stmt->close();
 
     // Atualizar as variáveis de sessão
@@ -28,7 +43,6 @@ if (isset($_POST['bt_email'])) {
     $_SESSION['nome'] = $nome;
     $_SESSION['username'] = $username;
     $_SESSION['endereco'] = $endereco;
-
 }
 
 if (isset($_POST['bt_id'])) {

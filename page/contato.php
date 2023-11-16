@@ -42,7 +42,7 @@ if (isset($_POST['nome'])) {
     <link rel="stylesheet" href="../css/menu_dieimes.css">
     <link rel="stylesheet" href="../css/dieimes.css">
     <link rel="stylesheet" href="../css/contato.css">
-    <link rel="icon" href="../Imagens/Icon.png">
+    <link rel="icon" href="../#Imagens/Icon.png">
     <title>Contato</title>
 
 
