@@ -43,6 +43,9 @@ session_start();
         <p>Os itens do seu pedido serão enviados para o endereço que você forneceu durante a criação de sua conta. Você
             receberá um e-mail de confirmação em breve com mais informações sobre o envio.</p>
     </main>
+   <center>
+   <a class="custom-btn" href="../user/conta.php">Ver meu pedidos</a>
+   </center>
     <?php
     include('../static/espacamento.php');
     ?>
