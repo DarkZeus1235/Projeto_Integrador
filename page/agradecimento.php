@@ -44,7 +44,7 @@ session_start();
             receberá um e-mail de confirmação em breve com mais informações sobre o envio.</p>
     </main>
    <center>
-   <a class="custom-btn" href="../user/conta.php">Ver meu pedidos</a>
+   <a class="custom-btn" href="../user/conta.php">Ver meus pedidos</a>
    </center>
     <?php
     include('../static/espacamento.php');
