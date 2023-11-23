@@ -215,7 +215,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
     </nav>
 </header>
 
-  <img src="Imagens/Banner_testes" class="img-fluid" id="banner">
+  <img src="Imagens/banner cortado" class="img-fluid" id="banner">
   <div class="container my-5">
     <h1 class="text-center mb-5">Produtos em Destaque</h1>
 
