@@ -1,7 +1,6 @@
 <?php
 include('../static/conexao.php');
 
-
 $mensagem = ''; // Inicializa a variável de mensagem
 
 if (isset($_POST['bt_nome'])) {
@@ -22,17 +21,23 @@ if (isset($_POST['bt_nome'])) {
     $result = $stmt_verificar->get_result();
 
     if ($result->num_rows > 0) {
-        // Email já cadastrado, retorne uma mensagem de erro
-        echo "error_email_exists"; // Ou outra mensagem de erro adequada
+        // Email já cadastrado, retorne uma mensagem de erro específica
+        echo "error_email_exists";
+        exit; // Certifique-se de que nenhum conteúdo adicional seja enviado
     } else {
         // Insira os dados no banco de dados
         $query = "INSERT INTO cadastro (email, senha, nome, telefone, username, cpf, endereco, foto_perfil_caminho) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param("ssssssss", $email, $senha, $nome, $telefone, $username, $cpf, $endereco, $caminho_imagem);
 
-
         if ($stmt->execute()) {
-            // Cadastro bem-sucedido
+            // Cadastro bem-sucedido, retorne uma mensagem de sucesso
+            echo "success";
+            exit; // Certifique-se de que nenhum conteúdo adicional seja enviado
+        } else {
+            // Cadastro falhou, retorne uma mensagem de erro
+            echo "error";
+            exit; // Certifique-se de que nenhum conteúdo adicional seja enviado
         }
     }
 }
@@ -89,51 +94,59 @@ if (isset($_POST['bt_nome'])) {
                 <input type="submit" name="cadastrar" value="Cadastrar">
             </form>
             <script>
-                // Manipule o evento de envio do formulário
-                $('#cadastro').on('submit', function(e) {
-                    e.preventDefault(); // Impede o envio padrão do formulário
+          // Manipule o evento de envio do formulário
+$('#cadastro').on('submit', function (e) {
+    e.preventDefault(); // Impede o envio padrão do formulário
 
-                    // Coleta os dados do formulário
-                    var formData = $(this).serialize();
+    // Coleta os dados do formulário
+    var formData = $(this).serialize();
 
-                    // Faça uma solicitação AJAX para enviar os dados ao servidor
-                    $.ajax({
-                        type: 'POST',
-                        url: 'cadastro.php', // Substitua 'processa_cadastro.php' pelo nome do arquivo de processamento real
-                        data: formData,
-                        success: function(response) {
-                            if (response === 'success') {
-                                // Redirecione para a página de login após o cadastro bem-sucedido
-                                Swal.fire({
-                                    title: 'Error',
-                                    text: 'Erro no cadastro!',
-                                    icon: 'error',
-                                    confirmButtonText: 'OK'
-                                })
-                            } else {
-                                Swal.fire({
-                                    title: 'Sucesso',
-                                    text: 'Cadastro criado com sucesso!',
-                                    icon: 'success',
-                                    confirmButtonText: 'OK'
-                                }).then((result) => {
-                                    if (result.isConfirmed) {
-                                        // Redirecione para a página de login após o cadastro bem-sucedido
-                                        window.location.href = 'login.php'; // Substitua 'login.php' pela página desejada
-                                    }
-                                });
-                            }
-                        },
-                        error: function() {
-                            Swal.fire({
-                                title: 'Erro',
-                                text: 'Erro na comunicação com o servidor.',
-                                icon: 'error',
-                                confirmButtonText: 'OK'
-                            });
-                        }
-                    });
+    // Faça uma solicitação AJAX para enviar os dados ao servidor
+    $.ajax({
+        type: 'POST',
+        url: 'cadastro.php',
+        data: formData,
+        success: function (response) {
+            if (response.trim() === 'success') { // Use trim para remover espaços em branco adicionais
+                // Redirecione para a página de login após o cadastro bem-sucedido
+                Swal.fire({
+                    title: 'Sucesso',
+                    text: 'Cadastro criado com sucesso!',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = 'login.php';
+                    }
                 });
+            } else if (response.trim() === 'error_email_exists') {
+                // Exiba uma notificação de erro específica para e-mail duplicado
+                Swal.fire({
+                    title: 'Erro',
+                    text: 'E-mail já cadastrado. Por favor, use outro e-mail.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            } else {
+                // Exiba uma notificação de erro padrão
+                Swal.fire({
+                    title: 'Erro',
+                    text: 'Erro no cadastro!',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        },
+        error: function () {
+            Swal.fire({
+                title: 'Erro',
+                text: 'Erro na comunicação com o servidor.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        }
+    });
+});
             </script>
             <!-- Adicione a div para exibir a notificação -->
             <div id="notification" class="notification">
