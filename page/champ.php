@@ -22,7 +22,7 @@ $quantidade_pedidos = $retorno_consulta->num_rows;
   <link rel="stylesheet" href="../css/menu_dieimes.css">
   <link rel="stylesheet" href="../css/dieimes.css">
   <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PWJ7GD"></script>
-  <title>Vinhos - Taverna de Valhalla</title>
+  <title>Champanhe - Taverna de Valhalla</title>
 </head>
 
 <body>
