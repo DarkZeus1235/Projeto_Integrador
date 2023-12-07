@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 10-Nov-2023 às 12:02
+-- Tempo de geração: 07-Dez-2023 às 11:20
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `endereco` varchar(100) NOT NULL,
   `foto_perfil_caminho` varchar(300) NOT NULL,
   PRIMARY KEY (`id_login`)
-) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cadastro`
@@ -87,7 +87,8 @@ INSERT INTO `cadastro` (`id_login`, `email`, `senha`, `nome`, `telefone`, `usern
 (39, 'luizeduardobonfim@gmail.com', '$2y$10$uZQGBAo2u2.ddtQIbWuKeudYv/54goya6tlRAnVA8ZTYRHmZ.2uh6', 'Luiz Bonfim', '(43) 99855-5588', 'luizao', '105.619.629-78', 'rua londres', 'Imagens/ftperfil/653117334b981.jpg'),
 (49, 'LIND@CAPA', '121', 'LINDA', '(43) 99433-4325', 'LINDOMORFO', '423.527.533-67', 'Monte ', '../Imagens/ftperfil/654cf048378f9.jpg'),
 (42, 'matheuszanoni84@gmail.com', '$2y$10$uV3mBZbulzBtAx4NyrmlTewxok31IM6ocTuEvOoER/Hgxmzb1LCMy', 'matheus zanoni bittencourt de oliveira', '(43) 99433-4325', 'crazy7', '089.328.649-42', 'rua juarez cleves', '../Imagens/ftperfil/654ce7952552c.png'),
-(51, 'cleverson153@gmail.com', '$2y$10$V7HyNZkBVAl1OEMhCqaf8e1e5OjKD5XN2zFN1tfR1R9svStDne3Hi', 'Cleverson ', '(43) 99433-4325', 'Zere_br', '443.122.333-52', 'Avenida Brasil', 'Imagens/foto_padrao.png');
+(51, 'cleverson153@gmail.com', '$2y$10$V7HyNZkBVAl1OEMhCqaf8e1e5OjKD5XN2zFN1tfR1R9svStDne3Hi', 'Cleverson ', '(43) 99433-4325', 'Zere_br', '443.122.333-52', 'Avenida Brasil', 'Imagens/foto_padrao.png'),
+(52, 'jrafael@gmail.com', '$2y$10$Bm27M00apm.hwVtxSJyutOcLuthlGjOUsRV/4bTGXRHOCAklAWdii', 'Jraffis', '(43) 64565-6565', 'Jraffis Bi', '114.314.131-31', 'rua rio grande ', '../Imagens/ftperfil/655236534b68b.jpeg');
 
 -- --------------------------------------------------------
 
@@ -417,7 +418,7 @@ CREATE TABLE IF NOT EXISTS `cartoes` (
   `cvv` varchar(200) NOT NULL,
   `cpf` varchar(200) NOT NULL,
   PRIMARY KEY (`id_cartao`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cartoes`
@@ -434,7 +435,9 @@ INSERT INTO `cartoes` (`id_cartao`, `titular`, `numero_cartao`, `data_validade`,
 (8, 'SSSSSSS', '1313  1311  3131  3131', '13/13', '331', '313.131.313-13'),
 (9, 'joaoda silva', '3131  3131  313', '13/13', '313', '313.123.313-13'),
 (10, 'matheus vital', '2213  1313  1313  1313', '13/13', '131', '131.312.321-32'),
-(11, 'LINDAMIRA T J VITAL', '2231  2423  5436  3655', '13/23', '123', '111.643.635-65');
+(11, 'LINDAMIRA T J VITAL', '2231  2423  5436  3655', '13/23', '123', '111.643.635-65'),
+(12, 'luiz', '1453  2187  7454  9626', '14/84', '366', '781.846.151-51'),
+(13, 'luiz', '1234  5786  8464  6461', '03/27', '158', '226.644.885-56');
 
 -- --------------------------------------------------------
 
@@ -449,7 +452,7 @@ CREATE TABLE IF NOT EXISTS `mensagem_formulario_contato` (
   `email` varchar(200) NOT NULL,
   `mensagem` varchar(200) NOT NULL,
   PRIMARY KEY (`id_mensagem`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `mensagem_formulario_contato`
@@ -461,7 +464,10 @@ INSERT INTO `mensagem_formulario_contato` (`id_mensagem`, `nome`, `email`, `mens
 (13, 'Joaquim', 'jao@gmail.com', 'Qual a previsÃ£o de volta do Sistema apÃ³s o feriado?'),
 (12, 'JoÃ£o Rafael', 'jraffis@gmail.com', 'Meu produto jÃ¡ estÃ¡ em Curitiba faz 10 dias, podem me ajudar?'),
 (11, 'JoÃ£o Rafael', 'zere@gmail.com', 'ESTOU COM DUVIDAS ONDE COMPRA PINGA?'),
-(16, 'Dieimes', 'Dieimes@gmail.com', 'Como efetuar a compra de um produto?');
+(16, 'Dieimes', 'Dieimes@gmail.com', 'Como efetuar a compra de um produto?'),
+(17, 'JoÃ£o Benetton Junior', 'Benetton@gmail.com', 'VocÃªs trabalham apenas com varejo? Ou uma compra de maior quantidade vocÃªs fazem preÃ§o de atacado?'),
+(18, 'SÃ©rgio Reis', 'sergreis@gmail.com', 'Como vocÃªs realizam os envios?'),
+(19, 'Enzo Ferrari', 'enzferrari@hotmail.com', 'Qual o prazo para realizar a troca de um produto?\r\n');
 
 -- --------------------------------------------------------
 
